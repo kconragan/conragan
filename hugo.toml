@@ -5,6 +5,7 @@ title = 'Kai Conragan'
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
+publishDir = "docs"
 
 [markup.highlight]
 style = "github-dark"
