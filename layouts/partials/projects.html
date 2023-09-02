@@ -1,17 +1,26 @@
 <section class="container list">
   <header>
     <h1 class="title">
-        Projects
+        Locations
     </h1>
   </header>
   {{ .Content }}
-  <ul>
+  <div class="columns">
     {{ range .Paginator.Pages }}
-    <li>
-      <span class="date">{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
-      <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
-    </li>
+    <div class="column">
+        <div class="image is-3by2">
+             <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">
+        {{- $image := .Resources.GetMatch .Params.cover -}}
+          {{ with $image }}
+            <img src="{{ ($image.Fill "600x400 q100 Center").RelPermalink }}">
+          {{ end }}
+          
+      </a>
+        </div>
+
+        <h2>{{ .Title }}</h2>
+    </div>
     {{ end }}
-  </ul>
+  </div>
   {{ partial "pagination.html" . }}
 </section>

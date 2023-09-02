@@ -1,0 +1,66 @@
+
+ <section class="container page">
+
+ <section class="cover is-primary">
+    {{- $image := .Resources.GetMatch .Params.cover -}}
+    {{ with $image }}
+        <img src="{{ ($image).RelPermalink }}" class="hero-background" />
+    {{ end }}    
+</section>
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="{{ .Permalink | safeURL }}">
+          {{ .Title }}
+        </a>
+      </h1>
+    </header>
+    <h2>{{ .Params.date.Format "January 2006" }}</h2>
+    {{ .Content }}
+    <div class="photo-container" id="lightgallery">
+    {{- $context := . -}}
+    {{- range $src := .Page.Resources.Match "gallery/**.jpg" -}}
+      {{- $title := (replace .Title "gallery/" "") -}}
+
+      <div class="photo-item" data-src="{{ .Permalink }}" data-sub-html="<h4>{{ $title }}</h4>">
+        {{- $crop := default "smart" -}}
+        {{- $tinyw := printf "500x375 %s Lanczos q85" $crop -}}
+        {{- $smallw := printf "800x600 %s Lanczos q80" $crop -}}
+        {{- $mediumw := printf "1200x900 %s Lanczos q40" $crop -}}
+        {{- $largew := printf "1600x1200 %s Lanczos q30" $crop -}}
+
+        {{- $srcset := slice -}}
+
+        {{- $tiny := ($src.Fill $tinyw) -}}
+        {{- $srcset = $srcset | append (printf "%s 500w" $tiny.Permalink) -}}
+        {{- $img := dict "src" $tiny.RelPermalink "w" $tiny.Width "h" $src.Height -}}
+
+        {{- if and (ge $src.Width "800") (ne $src.MediaType.SubType "png") -}}
+            {{- $small := ($src.Fill $smallw) -}}
+            {{- $srcset = $srcset | append (printf "%s 800w" $small.Permalink) -}}
+            {{- $img = dict "src" $small.RelPermalink "w" $small.Width "h" $small.Height -}}
+        {{- end -}}
+        {{- if and (ge $src.Width "1200") (ne $src.MediaType.SubType "png") -}}
+            {{- $medium := ($src.Fill $mediumw) -}}
+            {{- $srcset = $srcset | append (printf "%s 1200w" $medium.Permalink) -}}
+        {{- end -}}
+        {{- if and (ge $src.Width "1600") (ne $src.MediaType.SubType "png") -}}
+            {{- $large := ($src.Fill $largew) -}}
+            {{- $srcset = $srcset | append (printf "%s 1600w" $large.Permalink) -}}
+        {{- end -}}
+
+        {{- $sizes := "(min-width: 900px) 420px, (min-width: 684px) 310px, calc(100vw - 40px)" -}}
+
+        <a href="{{ .Permalink }}">
+            <picture>
+            <source type="{{ $src.MediaType }}" sizes="{{ $sizes }}" srcset='{{ delimit $srcset ", " }}'>
+            <img loading="lazy" class="center"
+              src="{{ $img.src }}" width="{{ $img.w }}" height="{{ $img.h }}" alt="{{ $title }}" />
+            </picture>
+        </a>
+      </div>
+    {{ end }}
+
+    </div>
+  </article>
+</section>

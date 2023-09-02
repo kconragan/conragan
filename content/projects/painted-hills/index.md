@@ -1,0 +1,9 @@
+---
+title: "Painted Hills Landscape Photography"
+date: 2023-08-12T19:31:54-07:00
+cover: cover.jpg
+draft: false
+---
+
+
+Since buying a place in Central Oregon, I've been growing more and more fascinated with the eastern desert. As someone who grew up on the California coast, it's a foreign landscape, and environment. Deadly but beautiful.

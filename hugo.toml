@@ -25,6 +25,8 @@ style = "github-dark"
   colorScheme = "auto"
   hidecolorschemetoggle = false
   
+  customCSS = ["css/bulma.min.css", "css/conragan.css"]
+  
   # Social links
 [[params.social]]
   name = "Github"
@@ -43,7 +45,7 @@ style = "github-dark"
   url = "https://twitter.com/kconragan/"
 
 # Menu links
-#[[menu.main]]
-#  name = "Projects"
-#  weight = 1
-#  url  = "projects/"
+[[menu.main]]
+  name = "Projects"
+  weight = 1
+  url  = "projects/"
