@@ -12,7 +12,7 @@ style = "github-dark"
 
 [params]
   author = "Kai Conragan"
-  info = "Tech leader, UX Designer, and Photographer."
+  info = "Tech leader, UX Designer, AND Photographer."
   description = "Kai Conragan's personal website"
   keywords = "ux, ui, design, technology, google, photography"
   avatarurl = "img/headshot.png"
