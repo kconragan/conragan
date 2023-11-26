@@ -62,6 +62,53 @@ h1 {
     padding: 0;
 }
 
+.gallery header, .gallery header p {
+    text-align: center;
+}
+
+.gallery header button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+}
+
+.colorscheme-dark .gallery header button {
+  background-color: #343434;
+  border: 1px solid #343434;
+  color: #d8e1e8;
+}
+
+.gallery header button:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+  color: #202124;
+}
+
+.colorscheme-dark .gallery header button:hover {
+  border-color: #4b4c4f;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+  color: #d8e1e8;
+}
+
+.gallery header button:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+}
+
 .image {
     overflow: hidden;
 }
@@ -139,7 +186,8 @@ h1 {
 }
 
 .photo-container .photo-item {
-    padding: 0 2px;
+    position: relative;
+    padding: 8px;
     width: 50%;
 
     @media(max-width:683px) {
@@ -148,4 +196,27 @@ h1 {
     @media(min-width: 1152px) {
         width: 33.3%;
     }
+
+    .overlay {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: 12px;
+        background-color: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+}
+
+.photo-container .photo-item:hover .overlay {
+    opacity: 1;
+}
+
+.photo-item:hover {
+    cursor: pointer;
+}
+
+#lg-components-1 h4 {
+    color: #fff;
 }

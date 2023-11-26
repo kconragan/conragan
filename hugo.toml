@@ -25,7 +25,7 @@ style = "github-dark"
   colorScheme = "auto"
   hidecolorschemetoggle = false
   
-  customCSS = ["css/bulma.min.css", "css/conragan.css"]
+  customCSS = ["css/bulma.min.css", "css/lightgallery.min.css", "css/conragan.css"]
   
   # Social links
 [[params.social]]
@@ -46,6 +46,74 @@ style = "github-dark"
 
 # Menu links
 [[menu.main]]
-  # name = "Projects"
-  # weight = 1
-  # url  = "projects/"
+   name = "Photography"
+   weight = 1
+   url  = "photography/"
+
+# future self, this is the command for exporting json data
+# exiftool -w %f.%e.json -json -struct -G -XMP:All -EXIF:All -IPTC:All . | sed -e "s/^EXIF:|^XMP://g"
+
+# Set to enable Plausible Analytics.
+plausible_domain = ""
+
+[params.gallerydeluxe]
+
+    # Shuffle the images in the gallery to give the impression of a new gallery each page load.
+    shuffle = false
+
+    # Reverse the order of the images in the gallery.
+    reverse = true
+
+    # Enable Exif data in the gallery.
+    # See https://gohugo.io/content-management/image-processing/#exif-data for how to filter tags.
+    enable_exif = true
+
+    # Optional watermark file for the large images.
+    [params.gallerydeluxe.watermark]
+        image = "images/gopher-hero8.png" # relative to /assets
+        posx  = "left"                    # one of "left", "center", "right"
+        posy  = "bottom"                  # one of "top", "center", "bottom"
+
+[build]
+    [[build.cacheBusters]]
+        source = 'content/.*\.(png|jpg|jpeg)'
+        target = '(json)'
+    [[build.cacheBusters]]
+        source = 'layouts/.*'
+        target = '(json)'
+
+[caches]
+    [caches.images]
+        dir    = ':cacheDir/gallerydeluxe'
+        maxAge = "4320h"                   # 6 months.
+
+[imaging]
+    resampleFilter = "CatmullRom"
+    quality        = 71
+    anchor         = "smart"
+    [imaging.exif]
+        disableDate    = false
+        disableLatLong = true
+        includeFields  = 'Artist|LensModel|FNumber|ExposureTime'
+
+[server]
+    [[server.headers]]
+        for = '/**'
+        [server.headers.values]
+            Referrer-Policy = 'strict-origin-when-cross-origin'
+
+[module]
+    [[module.mounts]]
+        source = "assets"
+        target = "assets"
+    [[module.mounts]]
+        source = "layouts"
+        target = "layouts"
+    [[module.mounts]]
+        source = "content"
+        target = "content"
+    [[module.mounts]]
+        source = "static"
+        target = "static"
+    [[module.imports]]
+        path = "github.com/bep/gallerydeluxe"

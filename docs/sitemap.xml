@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://conragan.com/</loc>
+    <lastmod>2023-08-12T21:23:43-07:00</lastmod>
+  </url><url>
+    <loc>https://conragan.com/projects/</loc>
+    <lastmod>2023-08-12T21:23:43-07:00</lastmod>
+  </url><url>
+    <loc>https://conragan.com/projects/crater-lake/</loc>
+    <lastmod>2023-08-12T19:31:54-07:00</lastmod>
+  </url><url>
+    <loc>https://conragan.com/projects/painted-hills/</loc>
+    <lastmod>2023-08-12T19:31:54-07:00</lastmod>
+  </url><url>
+    <loc>https://conragan.com/projects/photos/</loc>
+    <lastmod>2023-08-12T19:31:54-07:00</lastmod>
+  </url><url>
+    <loc>https://conragan.com/projects/eastern-sierras/</loc>
+    <lastmod>2023-06-01T19:31:54-07:00</lastmod>
+  </url><url>
     <loc>https://conragan.com/categories/</loc>
   </url><url>
-    <loc>https://conragan.com/</loc>
+    <loc>https://conragan.com/photography/</loc>
   </url><url>
     <loc>https://conragan.com/tags/</loc>
   </url>
