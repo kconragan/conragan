@@ -10,11 +10,13 @@ publishDir = "docs"
 [markup.highlight]
 style = "github-dark"
 
+enableGitInfo = true
+
 [params]
   author = "Kai Conragan"
-  info = "Tech leader, UX Designer, and Photographer."
+  info = "Tech leader, UX Designer, Writer, and [Photographer](/photography/)."
   description = "Kai Conragan's personal website"
-  keywords = "ux, ui, design, technology, google, photography"
+  keywords = "landscape photography, sports photography, wildlife photogrpahy, bird photography, design, travel, ux, user experience"
   avatarurl = "img/headshot.png"
   #gravatar = "kai@conragan.com"
 
@@ -27,6 +29,11 @@ style = "github-dark"
   
   customCSS = ["css/bulma.min.css", "css/lightgallery.min.css", "css/conragan.css"]
   
+# Pinterest
+[params.meta]
+  name = "p:domain_verify"
+  content = "5e42b91db4d05707d32a9894e67423c5"
+
 # Google Analytics
 [params.googleTagManager]
   id = "G-4R2W76V53L"
@@ -53,6 +60,10 @@ style = "github-dark"
    name = "Photography"
    weight = 1
    url  = "photography/"
+#[[menu.main]]
+#   name = "Blog"
+#   weight = 2
+#   url = "blog/"
 
 # future self, this is the command for exporting json data
 # exiftool -w %f.%e.json -json -struct -G -XMP:All -EXIF:All -IPTC:All . | sed -e "s/^EXIF:|^XMP://g"

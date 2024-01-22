@@ -1,3 +1,138 @@
 {{ define "content" }}
-  {{ partial "photography.html" . }}
+<section class="container page gallery">
+  <article>
+    <header>
+      <h1 class="title">{{ .Title }}</h1>
+      <!--
+            <p>Use the filters below to sort images. Click on an image to take a closer look!</p>
+            <div id="tag-buttons">
+                <button role="button" data-tag="all">All</button>
+                <button role="button" data-tag="seascapes">Seascapes</button>
+                <button role="button" data-tag="water">Rivers and Lakes</button>
+                <button role="button" data-tag="trees">Trees</button>
+                <button role="button" data-tag="bw">Black and White</button>
+                <button role="button" data-tag="fall">Fall</button>
+                <button role="button" data-tag="moody">Moody</button>
+                <button role="button" data-tag="birds">Birds</button>
+            </div>
+            -->
+    </header>
+    {{ .Content }}
+    <div class="photo-container" id="lightgallery">
+      {{- $context := . -}}
+            {{- range $src := sort (.Page.Resources.Match "photos/**.jpg") "Title" "desc" -}}
+
+            {{- $title := (replace .Title "gallery/" "") -}}
+
+            {{- $exifJson := $context.Page.Resources.GetMatch (printf "%s.json" .Name) -}}
+
+            {{- $exif := slice -}}
+            {{- $tags := slice -}}
+            {{- with $exifJson -}}
+            {{- with (index (.Content | unmarshal) 0) -}}
+            {{ with .Category -}}
+            {{- $tags = $tags | append (printf "%s" .) -}}
+            {{- end -}}
+            {{- with .Headline -}}{{- $title = . -}}{{- end -}}
+            {{- with .Make -}}{{- $exif = $exif | append (printf "Make: %s" .) -}}{{- end -}}
+            {{- with .Model -}}{{- $exif = $exif | append (printf "Camera: %s" .) -}}{{- end -}}
+            {{- with .LensModel -}}{{- $exif = $exif | append (printf "Lens: %s" .) -}}{{- end -}}
+            {{- with .FocalLength -}}{{- $exif = $exif | append (printf "Focal length: %s" .) -}}{{- end -}}
+            {{- with .FNumber -}}{{- $exif = $exif | append (printf "Aperture: ƒ/%.1f" .) -}}{{- end -}}
+            {{- with .ExposureTime -}}
+            {{- if eq (printf "%T" .) "float64" -}}
+            {{- $exif = $exif | append (printf "Exposure time: %.1f s" .) -}}
+            {{- else -}}
+            {{- $exif = $exif | append (printf "Exposure time: %s s" .) -}}
+            {{- end -}}
+            {{- end -}}
+            {{- with .ISO -}}{{- $exif = $exif | append (printf "ISO: %.0f" .) -}}{{- end -}}
+            {{- end -}}
+            {{- end -}}
+
+
+
+            <div class="photo-item {{ delimit $tags " | " }}" data-src="{{ .Permalink }}"
+                data-sub-html="<h4>{{ $title }}</h4><p>{{ delimit $exif " | " }}</p>">
+                {{- $resize := default "smart" -}}
+                {{- $small := ($src.Resize "x700" ) -}}
+                {{- $medium := ($src.Resize "x900" ) -}}
+                {{- $large := ($src.Resize "x1200" ) -}}
+                <picture>
+                    <source srcset="{{ $large.RelPermalink }}" media="(min-width: 900px)">
+                    <source srcset="{{ $medium.RelPermalink }}" media="(min-width: 600px) and (max-width: 899px)">
+                    <img src="{{ $small.RelPermalink }}" width="{{ $small.Width }}" height="{{ $small.Height }}"
+                        alt="{{ $title }}" />
+                </picture>
+                <div class="overlay"></div>
+            </div>
+            {{ end }}
+    </div>
+  </article>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+<script>
+  // initiate the masonry layout with
+  var macy = Macy({
+    container: "#lightgallery",
+    trueOrder: false,
+    waitForImages: false,
+    margin: 0,
+    columns: 3,
+    breakAt: {
+      1200: 3,
+      940: 2,
+      340: 1,
+    },
+  });
+
+  // initiate the lightgallery response
+  lightGallery(document.getElementById("lightgallery"), {
+    download: false,
+  });
+
+  // Setup click handlers for filtering images
+  window.addEventListener("DOMContentLoaded", function () {
+    // Get all the buttons and posts
+    const buttons = document.querySelectorAll("#tag-buttons button");
+    const posts = document.querySelectorAll(".photo-item");
+
+    // Add click event listener to each button
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        // Remove 'active' class from all buttons
+        buttons.forEach(function (btn) {
+          btn.classList.remove("bg-blue-500", "text-white");
+          btn.classList.add("bg-gray-200", "text-gray-700");
+        });
+
+        // Add 'active' class to the clicked button
+        button.classList.remove("bg-gray-200", "text-gray-700");
+        button.classList.add("bg-blue-500", "text-white");
+
+        if (button.textContent === "All") {
+          // Show all posts if 'All' button is clicked
+          posts.forEach(function (post) {
+            post.style.display = "block";
+          });
+        } else {
+          const tag = button.dataset.tag.toLocaleLowerCase();
+          console.log(tag);
+          // Hide all posts
+          posts.forEach(function (post) {
+            post.style.display = "none";
+          });
+
+          // Show only posts with the selected tag
+          const filteredPosts = document.querySelectorAll("." + tag);
+          filteredPosts.forEach(function (post) {
+            post.style.display = "block";
+          });
+        }
+        macy.reInit();
+      });
+    });
+  });
+</script>
 {{ end }}
