@@ -1,0 +1,258 @@
+:root {
+  --gap: 5rem;
+}
+@media (max-width: 767px) {
+  :root {
+    --h1-size: 3.2rem !important;
+    --gap: 2rem;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  font-kerning: normal;
+  font-size: 1.6rem;
+  letter-spacing: -0.015em;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: "lg";
+  src:
+    url("/fonts/lg.woff2?io9a6k") format("woff2"),
+    url("/fonts/lg.ttf?io9a6k") format("truetype"),
+    url("/fonts/lg.woff?io9a6k") format("woff"),
+    url("/fonts/lg.svg?io9a6k#lg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.block:not(:last-child),
+.box:not(:last-child),
+.breadcrumb:not(:last-child),
+.content:not(:last-child),
+.level:not(:last-child),
+.message:not(:last-child),
+.notification:not(:last-child),
+.pagination:not(:last-child),
+.progress:not(:last-child),
+.subtitle:not(:last-child),
+.table-container:not(:last-child),
+.table:not(:last-child),
+.tabs:not(:last-child),
+.title:not(:last-child),
+.content {
+  margin-bottom: 3.2rem;
+}
+
+.navigation .container {
+  margin-top: 1em;
+}
+
+.navigation .container .navigation-title {
+  @media (max-width: 768px) {
+    line-height: 3.5rem;
+  }
+}
+
+/* Homepage */
+.centered .about h1 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 3.4rem;
+  font-weight: 500;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: auto;
+}
+
+.content p,
+.content li {
+  font-size: 1.6rem;
+  @media (min-width: 1152px) {
+    font-size: 2rem;
+  }
+}
+
+.content .caption {
+  font-size: 1.4rem;
+  @media (min-width: 1152px) {
+    font-size: 1.6rem;
+    font-style: normal;
+  }
+}
+
+.footer {
+  background-color: inherit;
+  padding: 0;
+}
+
+.gallery header,
+.gallery header p {
+  text-align: center;
+}
+
+.gallery header button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+}
+
+.colorscheme-dark .gallery header button {
+  background-color: #343434;
+  border: 1px solid #343434;
+  color: #d8e1e8;
+}
+
+.gallery header button:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
+  color: #202124;
+}
+
+.colorscheme-dark .gallery header button:hover {
+  border-color: #4b4c4f;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
+  color: #d8e1e8;
+}
+
+.gallery header button:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+
+.image {
+  overflow: hidden;
+}
+
+.image-grid {
+  margin-bottom: 2rem;
+}
+
+.image-grid ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-grid li {
+  height: 30rem;
+  margin-right: 0.4rem;
+}
+
+.image-grid li + li {
+  margin-top: 0;
+}
+
+.image-grid li:last-child {
+  margin-right: 0;
+}
+
+.image-grid li img {
+  height: 100%;
+}
+
+.image img {
+  transition: 0.1s all ease-in-out;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+}
+
+figure.cover {
+  margin: 0 auto;
+  max-width: none;
+  width: 100%;
+  grid-column: wide-start/wide-end;
+}
+
+.cover img {
+  width: 100%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.photo-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 899px) {
+    margin: 0;
+  }
+}
+
+.photo-container .photo-item {
+  position: relative;
+  padding: 8px;
+  width: 50%;
+
+  @media (max-width: 683px) {
+    width: 50%;
+  }
+  @media (min-width: 1152px) {
+    width: 33.3%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+
+.photo-container .photo-item:hover .overlay {
+  opacity: 1;
+}
+
+.photo-item:hover {
+  cursor: pointer;
+}
+
+#lg-components-1 h4 {
+  color: #fff;
+}
+
+.gh-canvas {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--gap), auto) [wide-start] minmax(auto, 240px)
+    [main-start] min(var(--content-width, 720px), calc(100% - var(--gap) * 2))
+    [main-end] minmax(auto, 240px)
+    [wide-end] minmax(var(--gap), auto) [full-end];
+}
+
+.gh-canvas > * {
+  grid-column: main-start/main-end;
+}

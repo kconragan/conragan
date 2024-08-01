@@ -6,4 +6,4 @@ layout: single
 cover: "cover.jpg"
 ---
 
-Bird & Wildlife photography is a relatively new interest for me, but combines two other genres of photography I've long pursued: landscapes and sports. I see the opportunity to shoot wildlife in natural habitats as an extension of being outdoors. And birds and widlife aspect introduces a need to capture subjects in motion, something I started in my earliest days of photography when I did outdoor sports like surfing, mountain biking, snowboarding, equestrian, and more.
+Bird & wildlife photography combines my love for the outdoors with the excitement of capturing (at times) fast-paced action. A seamless blend of my early pursuits of both landscape and sports photography, these images represent an extension of both. Capturing the natural world allows me to immerse myself in the wonders of this place we call home.

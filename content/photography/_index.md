@@ -1,5 +1,6 @@
 ---
 title: "Photography"
-type: "photography"
-layout: "photography"
+date: 2024-07-31
 ---
+
+hello

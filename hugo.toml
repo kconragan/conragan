@@ -5,55 +5,12 @@ title = 'Kai Conragan'
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
-publishDir = "docs"
+publishDir = "docs" # to support github pages
 
 [markup.highlight]
 style = "github-dark"
 
 enableGitInfo = true
-
-[params]
-  author = "Kai Conragan"
-  info = "Tech leader, UX Designer, Writer, and [Photographer](/photography/)."
-  description = "Kai Conragan's personal website"
-  keywords = "landscape photography, sports photography, wildlife photogrpahy, bird photography, design, travel, ux, user experience"
-  avatarurl = "img/headshot.png"
-  #gravatar = "kai@conragan.com"
-
-  faviconSVG = "img/favicon.svg"
-  favicon_32 = "img/favicon-32x32.png"
-  favicon_16 = "img/favicon-16x16.png"
-  
-  colorScheme = "auto"
-  hidecolorschemetoggle = false
-  
-  customCSS = ["css/bulma.min.css", "css/lightgallery.min.css", "css/conragan.css"]
-  
-# Pinterest
-[params.meta]
-  name = "p:domain_verify"
-  content = "5e42b91db4d05707d32a9894e67423c5"
-
-# Google Analytics
-[params.googleTagManager]
-  id = "G-4R2W76V53L"
-
-# Social links
-[[params.social]]
-  name = "Github"
-  icon = "fa fa-github fa-2x"
-  weight = 1
-  url = "https://github.com/kconragan/"
-[[params.social]]
-  name = "LinkedIn"
-  icon = "fa fa-linkedin fa-2x"
-  weight = 2
-  url = "https://www.linkedin.com/in/kconragan/"
-[[params.social]]
-  name = "Twitter"
-  icon = "fa fa-twitter fa-2x"
-  weight = 3
-  url = "https://twitter.com/kconragan/"
 
 # Menu links
 [[menu.main]]
@@ -64,6 +21,52 @@ enableGitInfo = true
 #   name = "Blog"
 #   weight = 2
 #   url = "blog/"
+
+[params]
+
+  # info
+  author = "Kai Conragan"
+  info = "Tech leader, UX Designer, Writer, and [Photographer](/photography/)."
+  description = "Kai Conragan's personal website"
+  keywords = "landscape photography, sports photography, wildlife photogrpahy, bird photography, design, travel, ux, user experience"
+
+  # images
+  avatarurl = "img/headshot.png"
+  faviconSVG = "img/favicon.svg"
+  favicon_32 = "img/favicon-32x32.png"
+  favicon_16 = "img/favicon-16x16.png"
+  
+  # style
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+  customCSS = ["css/bulma.min.css", "css/lightgallery.min.css", "css/conragan.css"]
+  
+  # Google Analytics
+  [params.googleTagManager]
+    id = "G-4R2W76V53L"
+
+  # Pinterest
+  [params.meta]
+    name = "p:domain_verify"
+    content = "5e42b91db4d05707d32a9894e67423c5"
+
+  # Social links
+  [[params.social]]
+    name = "Github"
+    icon = "fa fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/kconragan/"
+  [[params.social]]
+    name = "LinkedIn"
+    icon = "fa fa-linkedin fa-2x"
+    weight = 2
+    url = "https://www.linkedin.com/in/kconragan/"
+  [[params.social]]
+    name = "Twitter"
+    icon = "fa fa-twitter fa-2x"
+    weight = 3
+    url = "https://twitter.com/kconragan/"
+
 
 # future self, this is the command for exporting json data
 # exiftool -w %f.%e.json -json -struct -G -XMP:All -EXIF:All -IPTC:All . | sed -e "s/^EXIF:|^XMP://g"
