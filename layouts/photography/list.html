@@ -4,9 +4,8 @@
     <h1 class="title"></h1>
   </header>
   <div class="columns">
-    {{ range (readDir "content/photography/") }} {{ if .IsDir }} {{ $path :=
-    printf "photography/%s/" .Name }} {{ range where (where $.Site.RegularPages
-    "Type" "photography") "File.Dir" $path }}
+    {{ $section := .Site.GetPage "section" "photography" }} {{ range
+    $section.Pages }}
     <div class="column">
       <div class="image is-3by2">
         <a class="title" href="{{ .RelPermalink}}">
@@ -17,7 +16,7 @@
         <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
     </div>
-    {{ end }} {{ end }} {{ end }}
+    {{ end }}
   </div>
 </div>
 {{ end }}
