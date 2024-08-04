@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kai Conragan</title>
-    <link>https://conragan.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Kai Conragan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://conragan.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Guides</title>
-      <link>https://conragan.com/tags/guides/</link>
+      <link>http://localhost:1313/tags/guides/</link>
       <pubDate>Sat, 02 Mar 2024 17:22:37 -0800</pubDate>
-      <guid>https://conragan.com/tags/guides/</guid>
+      <guid>http://localhost:1313/tags/guides/</guid>
       <description></description>
     </item>
   </channel>

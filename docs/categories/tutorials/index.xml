@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorials on Kai Conragan</title>
-    <link>https://conragan.com/categories/tutorials/</link>
+    <link>http://localhost:1313/categories/tutorials/</link>
     <description>Recent content in Tutorials on Kai Conragan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://conragan.com/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating the Orton Effect In Capture One (without Photoshop)</title>
-      <link>https://conragan.com/blog/orton-effect-capture-one/</link>
+      <link>http://localhost:1313/blog/orton-effect-capture-one/</link>
       <pubDate>Sat, 02 Mar 2024 17:22:37 -0800</pubDate>
-      <guid>https://conragan.com/blog/orton-effect-capture-one/</guid>
+      <guid>http://localhost:1313/blog/orton-effect-capture-one/</guid>
       <description>blah blah blah</description>
     </item>
   </channel>
