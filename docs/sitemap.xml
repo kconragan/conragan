@@ -2,52 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://conragan.com/</loc>
     <lastmod>2024-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photography/</loc>
+    <loc>https://conragan.com/photography/</loc>
     <lastmod>2024-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://conragan.com/categories/</loc>
     <lastmod>2024-03-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/orton-effect-capture-one/</loc>
+    <loc>https://conragan.com/blog/orton-effect-capture-one/</loc>
     <lastmod>2024-03-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/guides/</loc>
+    <loc>https://conragan.com/tags/guides/</loc>
     <lastmod>2024-03-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://conragan.com/tags/</loc>
     <lastmod>2024-03-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tutorials/</loc>
+    <loc>https://conragan.com/categories/tutorials/</loc>
     <lastmod>2024-03-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/capture-one-orton-effect/</loc>
-    <lastmod>2024-03-01T13:00:18-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/pillar-point-bird-photography/</loc>
-    <lastmod>2023-12-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/guides/</loc>
-    <lastmod>2023-12-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://conragan.com/blog/</loc>
     <lastmod>2023-08-12T21:23:43-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/crater-lake/</loc>
+    <loc>https://conragan.com/blog/crater-lake/</loc>
     <lastmod>2023-08-12T19:31:54-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/painted-hills/</loc>
+    <loc>https://conragan.com/blog/painted-hills/</loc>
     <lastmod>2023-08-12T19:31:54-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/eastern-sierras/</loc>
+    <loc>https://conragan.com/blog/eastern-sierras/</loc>
     <lastmod>2023-06-01T19:31:54-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photography/wildlife/</loc>
+    <loc>https://conragan.com/photography/wildlife/</loc>
   </url><url>
-    <loc>http://localhost:1313/photography/equestrian/</loc>
+    <loc>https://conragan.com/photography/equestrian/</loc>
   </url><url>
-    <loc>http://localhost:1313/photography/landscape/</loc>
+    <loc>https://conragan.com/photography/landscape/</loc>
   </url>
 </urlset>

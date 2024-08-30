@@ -2,25 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Kai Conragan</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://conragan.com/categories/</link>
     <description>Recent content in Categories on Kai Conragan</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 17:22:37 -0800</lastBuildDate><atom:link href="https://conragan.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tutorials</title>
-      <link>http://localhost:1313/categories/tutorials/</link>
+      <link>https://conragan.com/categories/tutorials/</link>
       <pubDate>Sat, 02 Mar 2024 17:22:37 -0800</pubDate>
-      <guid>http://localhost:1313/categories/tutorials/</guid>
+      
+      <guid>https://conragan.com/categories/tutorials/</guid>
       <description></description>
     </item>
-    <item>
-      <title>Guides</title>
-      <link>http://localhost:1313/categories/guides/</link>
-      <pubDate>Sat, 16 Dec 2023 17:22:37 -0800</pubDate>
-      <guid>http://localhost:1313/categories/guides/</guid>
-      <description></description>
-    </item>
+    
   </channel>
 </rss>

@@ -52,7 +52,7 @@
 
 
 
-            <div class="photo-item {{ delimit $tags " | " }}" data-src="{{ .Permalink }}"
+            <div class="photo-item {{ delimit $tags " | " }}" data-src="{{ .RelPermalink }}"
                 data-sub-html="<h4>{{ $title }}</h4><p>{{ delimit $exif " | " }}</p>">
                 {{- $resize := default "smart" -}}
                 {{- $small := ($src.Resize "x700" ) -}}

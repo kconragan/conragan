@@ -2,25 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guides on Kai Conragan</title>
-    <link>http://localhost:1313/tags/guides/</link>
+    <link>https://conragan.com/tags/guides/</link>
     <description>Recent content in Guides on Kai Conragan</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/guides/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 17:22:37 -0800</lastBuildDate><atom:link href="https://conragan.com/tags/guides/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating the Orton Effect In Capture One (without Photoshop)</title>
-      <link>http://localhost:1313/blog/orton-effect-capture-one/</link>
+      <link>https://conragan.com/blog/orton-effect-capture-one/</link>
       <pubDate>Sat, 02 Mar 2024 17:22:37 -0800</pubDate>
-      <guid>http://localhost:1313/blog/orton-effect-capture-one/</guid>
+      
+      <guid>https://conragan.com/blog/orton-effect-capture-one/</guid>
       <description>blah blah blah</description>
     </item>
-    <item>
-      <title>Exploring Pillar Point for Bird Photography</title>
-      <link>http://localhost:1313/blog/pillar-point-bird-photography/</link>
-      <pubDate>Sat, 16 Dec 2023 17:22:37 -0800</pubDate>
-      <guid>http://localhost:1313/blog/pillar-point-bird-photography/</guid>
-      <description>Growing up in Half Moon Bay, I&amp;rsquo;ve spent an a lot of time near Pillar Point looking for waves because some of my favorite surf spots are in the area. More recently, I&amp;rsquo;ve been returning here not just for waves, but for photos of the incredible sea life.&#xA;Pillar Point is a photographer&amp;rsquo;s paradise. It&amp;rsquo;s almost impossible to leave empty-handed, whether you&amp;rsquo;re capturing the vibrant flashes of migrating songbirds or the patient stalking of a Marsh Owl amid the reeds.</description>
-    </item>
+    
   </channel>
 </rss>
