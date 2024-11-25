@@ -4,16 +4,17 @@
     <title>Tags on Kai Conragan</title>
     <link>https://conragan.com/tags/</link>
     <description>Recent content in Tags on Kai Conragan</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://conragan.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 17:22:37 -0800</lastBuildDate><atom:link href="https://conragan.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Guides</title>
       <link>https://conragan.com/tags/guides/</link>
       <pubDate>Sat, 02 Mar 2024 17:22:37 -0800</pubDate>
+      
       <guid>https://conragan.com/tags/guides/</guid>
       <description></description>
     </item>
+    
   </channel>
 </rss>
