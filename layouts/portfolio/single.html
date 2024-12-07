@@ -33,4 +33,8 @@
   </ul>
   {{- end }}
 </article>
-{{ end }}
+{{ $pages := .CurrentSection.Pages.ByWeight.Reverse }} {{ with $pages.Prev . }}
+<a href="{{ .RelPermalink }}">Previous</a>
+{{ end }} {{ with $pages.Next . }}
+<a href="{{ .RelPermalink }}">Next</a>
+{{ end }} {{ end }}

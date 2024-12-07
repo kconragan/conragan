@@ -39,8 +39,14 @@
   </url><url>
     <loc>http://localhost:1313/photography/equestrian/</loc>
   </url><url>
+    <loc>http://localhost:1313/portfolio/01/</loc>
+  </url><url>
     <loc>http://localhost:1313/photography/landscape/</loc>
   </url><url>
     <loc>http://localhost:1313/portfolio/</loc>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/02/</loc>
+  </url><url>
+    <loc>http://localhost:1313/portfolio/03/</loc>
   </url>
 </urlset>
