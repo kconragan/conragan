@@ -2,47 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog Posts on Kai Conragan</title>
-    <link>https://conragan.com/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in Blog Posts on Kai Conragan</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Aug 2023 21:23:43 -0700</lastBuildDate><atom:link href="https://conragan.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating the Orton Effect In Capture One (without Photoshop)</title>
-      <link>https://conragan.com/blog/orton-effect-capture-one/</link>
+      <link>http://localhost:1313/blog/orton-effect-capture-one/</link>
       <pubDate>Sat, 02 Mar 2024 17:22:37 -0800</pubDate>
-      
-      <guid>https://conragan.com/blog/orton-effect-capture-one/</guid>
+      <guid>http://localhost:1313/blog/orton-effect-capture-one/</guid>
       <description>blah blah blah</description>
     </item>
-    
     <item>
       <title>Crater Lake</title>
-      <link>https://conragan.com/blog/crater-lake/</link>
+      <link>http://localhost:1313/blog/crater-lake/</link>
       <pubDate>Sat, 12 Aug 2023 19:31:54 -0700</pubDate>
-      
-      <guid>https://conragan.com/blog/crater-lake/</guid>
+      <guid>http://localhost:1313/blog/crater-lake/</guid>
       <description> A sunset and sunrise in Crater National Park Link to heading </description>
     </item>
-    
     <item>
       <title>The Painted Hills of Oregon</title>
-      <link>https://conragan.com/blog/painted-hills/</link>
+      <link>http://localhost:1313/blog/painted-hills/</link>
       <pubDate>Sat, 12 Aug 2023 19:31:54 -0700</pubDate>
-      
-      <guid>https://conragan.com/blog/painted-hills/</guid>
-      <description>Since buying a place in Central Oregon, I&amp;rsquo;ve been growing more and more fascinated with the eastern desert. As someone who grew up on the California coast, it&amp;rsquo;s a foreign landscape, and environment. Deadly but beautiful.
-During our first summer in Oregon, my brother and sister-in-law recommended us a book titled, aptly, The Oregon Desert</description>
+      <guid>http://localhost:1313/blog/painted-hills/</guid>
+      <description>Since buying a place in Central Oregon, I&amp;rsquo;ve been growing more and more fascinated with the eastern desert. As someone who grew up on the California coast, it&amp;rsquo;s a foreign landscape, and environment. Deadly but beautiful.&#xA;During our first summer in Oregon, my brother and sister-in-law recommended us a book titled, aptly, The Oregon Desert</description>
     </item>
-    
     <item>
       <title>A photography road trip through the Eastern Sierras</title>
-      <link>https://conragan.com/blog/eastern-sierras/</link>
+      <link>http://localhost:1313/blog/eastern-sierras/</link>
       <pubDate>Thu, 01 Jun 2023 19:31:54 -0700</pubDate>
-      
-      <guid>https://conragan.com/blog/eastern-sierras/</guid>
+      <guid>http://localhost:1313/blog/eastern-sierras/</guid>
       <description>The Eastern Sierras have long captivated me. Growing up along the California coast, for many years my trips to the Sierras were in the western range out of sheer practicality. Getting to the Eastern Sierras is a commitment, especially in winter when the high passes close. But what awaits is a stunning landscape, far more rugged and, to my eyes, dramatic than the Western half. This is truly a geologic wonderland, with both the highest peak in the continental united states, less than 50 miles from one of the lowest places on the planet in Death Valley.</description>
     </item>
-    
   </channel>
 </rss>

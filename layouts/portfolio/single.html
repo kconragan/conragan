@@ -1,0 +1,36 @@
+{{ define "content" }}
+<article>
+  {{- $image := .Resources.GetMatch "*.jpg*" }} {{- with $image }}
+  <h1>{{ .Title }}</h1>
+  <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
+
+  {{ end }}
+
+  <!-- Render JSON file -->
+  {{- $json := .Resources.GetMatch "*.json*" }}
+
+  <!-- itereate over json -->
+  {{- with $json }}
+  <!-- using the metadata -->
+  {{- $metadata := unmarshal .Content }}
+
+  <ul>
+    {{ with index $metadata 0 }} {{ with .Make }}
+    <li><strong>Make:</strong> {{ . }}</li>
+    {{ end }} {{ with .Model }}
+    <li><strong>Model:</strong> {{ . }}</li>
+    {{ end }} {{ with .LensModel }}
+    <li><strong>Lens:</strong> {{ . }}</li>
+    {{ end }} {{ with .FocalLength }}
+    <li><strong>Focal Length:</strong> {{ . }}</li>
+    {{ end }} {{ with .FNumber }}
+    <li><strong>Aperture:</strong> {{ . }}</li>
+    {{ end }} {{ with .ExposureTime }}
+    <li><strong>Exposure Time:</strong> {{ . }}</li>
+    {{ end }} {{ with .ISO }}
+    <li><strong>ISO:</strong> {{ . }}</li>
+    {{ end }} {{ end }}
+  </ul>
+  {{- end }}
+</article>
+{{ end }}

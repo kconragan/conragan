@@ -2,74 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kai Conragan</title>
-    <link>https://conragan.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Kai Conragan</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://conragan.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating the Orton Effect In Capture One (without Photoshop)</title>
-      <link>https://conragan.com/blog/orton-effect-capture-one/</link>
+      <link>http://localhost:1313/blog/orton-effect-capture-one/</link>
       <pubDate>Sat, 02 Mar 2024 17:22:37 -0800</pubDate>
-      
-      <guid>https://conragan.com/blog/orton-effect-capture-one/</guid>
+      <guid>http://localhost:1313/blog/orton-effect-capture-one/</guid>
       <description>blah blah blah</description>
     </item>
-    
     <item>
       <title>Crater Lake</title>
-      <link>https://conragan.com/blog/crater-lake/</link>
+      <link>http://localhost:1313/blog/crater-lake/</link>
       <pubDate>Sat, 12 Aug 2023 19:31:54 -0700</pubDate>
-      
-      <guid>https://conragan.com/blog/crater-lake/</guid>
+      <guid>http://localhost:1313/blog/crater-lake/</guid>
       <description> A sunset and sunrise in Crater National Park Link to heading </description>
     </item>
-    
     <item>
       <title>The Painted Hills of Oregon</title>
-      <link>https://conragan.com/blog/painted-hills/</link>
+      <link>http://localhost:1313/blog/painted-hills/</link>
       <pubDate>Sat, 12 Aug 2023 19:31:54 -0700</pubDate>
-      
-      <guid>https://conragan.com/blog/painted-hills/</guid>
-      <description>Since buying a place in Central Oregon, I&amp;rsquo;ve been growing more and more fascinated with the eastern desert. As someone who grew up on the California coast, it&amp;rsquo;s a foreign landscape, and environment. Deadly but beautiful.
-During our first summer in Oregon, my brother and sister-in-law recommended us a book titled, aptly, The Oregon Desert</description>
+      <guid>http://localhost:1313/blog/painted-hills/</guid>
+      <description>Since buying a place in Central Oregon, I&amp;rsquo;ve been growing more and more fascinated with the eastern desert. As someone who grew up on the California coast, it&amp;rsquo;s a foreign landscape, and environment. Deadly but beautiful.&#xA;During our first summer in Oregon, my brother and sister-in-law recommended us a book titled, aptly, The Oregon Desert</description>
     </item>
-    
     <item>
       <title>A photography road trip through the Eastern Sierras</title>
-      <link>https://conragan.com/blog/eastern-sierras/</link>
+      <link>http://localhost:1313/blog/eastern-sierras/</link>
       <pubDate>Thu, 01 Jun 2023 19:31:54 -0700</pubDate>
-      
-      <guid>https://conragan.com/blog/eastern-sierras/</guid>
+      <guid>http://localhost:1313/blog/eastern-sierras/</guid>
       <description>The Eastern Sierras have long captivated me. Growing up along the California coast, for many years my trips to the Sierras were in the western range out of sheer practicality. Getting to the Eastern Sierras is a commitment, especially in winter when the high passes close. But what awaits is a stunning landscape, far more rugged and, to my eyes, dramatic than the Western half. This is truly a geologic wonderland, with both the highest peak in the continental united states, less than 50 miles from one of the lowest places on the planet in Death Valley.</description>
     </item>
-    
     <item>
       <title>Birds &amp; Wildlife</title>
-      <link>https://conragan.com/photography/wildlife/</link>
+      <link>http://localhost:1313/photography/wildlife/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://conragan.com/photography/wildlife/</guid>
+      <guid>http://localhost:1313/photography/wildlife/</guid>
       <description>Bird &amp;amp; wildlife photography combines my love for the outdoors with the excitement of capturing (at times) fast-paced action. A seamless blend of my early pursuits of both landscape and sports photography, these images represent an extension of both. Capturing the natural world allows me to immerse myself in the wonders of this place we call home.</description>
     </item>
-    
     <item>
       <title>Equestrian Photography</title>
-      <link>https://conragan.com/photography/equestrian/</link>
+      <link>http://localhost:1313/photography/equestrian/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://conragan.com/photography/equestrian/</guid>
+      <guid>http://localhost:1313/photography/equestrian/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Landscape Photography</title>
-      <link>https://conragan.com/photography/landscape/</link>
+      <link>http://localhost:1313/photography/landscape/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://conragan.com/photography/landscape/</guid>
+      <guid>http://localhost:1313/photography/landscape/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
