@@ -1,0 +1,22 @@
+{{ define "content" }}
+<main class="container list">
+  <h1>{{ .Title }}</h1>
+
+  <div class="photo-container" id="lightgallery">
+    {{- range .Pages }}
+    <a href="{{ .Permalink }}" class="photo-item">
+      {{- $image := .Resources.GetMatch "*.*" -}} {{- with $image -}} {{- $small
+      := (.Resize "x700") -}}
+      <img
+        src="{{ $small.RelPermalink }}"
+        width="{{ $small.Width }}"
+        height="{{ $small.Height }}"
+        alt="{{ .Title }}"
+      />
+      {{- end -}}
+      <div class="overlay"></div>
+    </a>
+    {{- end }}
+  </div>
+</main>
+{{ end }}
