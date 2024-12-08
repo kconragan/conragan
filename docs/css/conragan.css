@@ -261,6 +261,13 @@ figure.cover {
   opacity: 0;
   transition: opacity 200ms ease-in-out; /* Add a smooth transition for opacity */
 }
+#imgFrame img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Ensures the image takes up the full width */
+  margin-left: auto;
+  margin-right: auto; /* Centers the image */
+}
 
 #imgFrame.fade-in {
   opacity: 1;

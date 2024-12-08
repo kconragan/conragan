@@ -1,50 +1,38 @@
 {{ define "content" }}
 <article class="container page gallery" id="imgFrame">
   {{- $image := .Resources.GetMatch "*.jpg*" }} {{- with $image }}
-  <h1>{{ .Title }}</h1>
   <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
-
   {{ end }}
 
-  <!-- Render JSON file -->
-  {{- $json := .Resources.GetMatch "*.json*" }}
+  <section id="metadata">
+    <h1 class="photo-title">{{ .Title }}</h1>
+    <!-- Render JSON file -->
+    {{- $json := .Resources.GetMatch "*.json*" }}
 
-  <!-- itereate over json -->
-  {{- with $json }}
-  <!-- using the metadata -->
-  {{- $metadata := unmarshal .Content }}
-  {{- with index $metadata 0 }}
-  <p>
-    {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make") -}}
-  {{- $make := . -}} 
-  {{- with or (index $metadata 0 "Model") (index $metadata 0 "EXIF:Model") -}}
-    <strong>Camera:</strong> {{ $make }} {{ . }} | 
-  {{- end -}}
-{{- end -}}
+    <!-- itereate over json -->
+    {{- with $json }}
 
-  {{- with or (index $metadata 0 "LensModel") (index $metadata 0 "EXIF:LensModel") }}
-    <strong>Lens:</strong> {{ . }} | 
-  {{- end }}
-
-  {{- with or (index $metadata 0 "FocalLength") (index $metadata 0 "EXIF:FocalLength") }}
-    <strong>Focal length:</strong> {{ . }} | 
-  {{- end }}
-
-  {{- with or (index $metadata 0 "FNumber") (index $metadata 0 "EXIF:FNumber") }}
-    <strong>Aperture:</strong> ƒ/{{ . }} | 
-  {{- end }}
-
-  {{- with or (index $metadata 0 "ExposureTime") (index $metadata 0 "EXIF:ExposureTime") }}
-    <strong>Exposure time:</strong> {{ . }} s | 
-  {{- end }}
-
-  {{- with or (index $metadata 0 "ISO") (index $metadata 0 "EXIF:ISO") }}
-    <strong>ISO:</strong> {{ . }}
-  {{- end }}
-</p>
-  {{- end }}
-  {{- end }} {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }} {{ with
-  $pages.Prev . }}
+    <!-- using the metadata -->
+    {{- $metadata := unmarshal .Content }} {{- with index $metadata 0 }}
+    <p>
+      {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make") -}}
+      {{- $make := . -}} {{- with or (index $metadata 0 "Model") (index
+      $metadata 0 "EXIF:Model") -}}
+      <strong>Camera:</strong> {{ $make }} {{ . }} | {{- end -}} {{- end -}} {{-
+      with or (index $metadata 0 "LensModel") (index $metadata 0
+      "EXIF:LensModel") }} <strong>Lens:</strong> {{ . }} | {{- end }} {{- with
+      or (index $metadata 0 "FocalLength") (index $metadata 0
+      "EXIF:FocalLength") }} <strong>Focal length:</strong> {{ . }} | {{- end }}
+      {{- with or (index $metadata 0 "FNumber") (index $metadata 0
+      "EXIF:FNumber") }} <strong>Aperture:</strong> ƒ/{{ . }} | {{- end }} {{-
+      with or (index $metadata 0 "ExposureTime") (index $metadata 0
+      "EXIF:ExposureTime") }} <strong>Exposure time:</strong> {{ . }} s | {{-
+      end }} {{- with or (index $metadata 0 "ISO") (index $metadata 0
+      "EXIF:ISO") }} <strong>ISO:</strong> {{ . }} {{- end }}
+    </p>
+  </section>
+  {{- end }} {{- end }} {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}
+  {{ with $pages.Prev . }}
   <a href="{{ .RelPermalink }}" id="prevLink">Previous</a>
   {{ end }} {{ with $pages.Next . }}
   <a href="{{ .RelPermalink }}" id="nextLink">Next</a>
@@ -52,105 +40,135 @@
 </article>
 
 <script>
-// Function to prefetch a page
-function prefetchPage(url) {
-  if (url) {
-    fetch(url, { rel: "prefetch" });
-  }
-}
-
-// Prefetch previous and next pages on load
-prefetchPage(document.getElementById("prevLink")?.href);
-prefetchPage(document.getElementById("nextLink")?.href);
-
-// Function to handle navigation (triggered by click or key press)
-function navigateToPage(url) {
-  if (!url) {
-    return; // Don't navigate if the URL is null
+  // Function to prefetch a page
+  function prefetchPage(url) {
+    if (url) {
+      fetch(url, { rel: "prefetch" });
+    }
   }
 
-  const article = document.getElementById("imgFrame");
-  article.style.visibility = "hidden";
+  // Function to update Image Size for best display of gallery
+  function adjustImageSize() {
+    console.log("adjusting image size");
+    const imgFrame = document.getElementById("imgFrame");
+    const img = imgFrame.querySelector("img");
+    const metadata = document.getElementById("metadata");
 
-  fetch(url)
-    .then((response) => response.text())
-    .then((html) => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, "text/html");
-      const newArticle = doc.querySelector("article");
-      article.innerHTML = newArticle.innerHTML;
+    // Check if the image is already loaded
+    if (img.complete) {
+      console.log("image ready to be resized");
+      const imageTop = img.getBoundingClientRect().top;
+      const imageAndMetadataHeight = img.clientHeight + metadata.clientHeight;
+      const availableHeight = window.innerHeight - imageTop;
+
+      if (imageAndMetadataHeight > availableHeight) {
+        const newImageHeight = availableHeight - metadata.clientHeight;
+        img.style.height = newImageHeight + "px";
+        img.style.width = "auto";
+      }
+    } else {
+      // If not, wait for the image to load
+      img.onload = function () {
+        adjustImageSize(); // Call the function recursively after the image loads
+      };
+    }
+  }
+  // Add transition effect (example using fade-in)
+  function updateTransition() {
+    const article = document.getElementById("imgFrame");
+    article.style.visibility = "hidden";
+    article.classList.remove("fade-in");
+    setTimeout(() => {
+      article.classList.add("fade-in");
       article.style.visibility = "visible";
-
-      // Update the URL after the content is loaded
-      history.pushState(null, "", url); 
-
-      // Apply the transition effect
-      updateTransition();
-      prefetchPage(getNextPageUrl());
-      prefetchPage(getPreviousPageUrl());
-
-    })
-    .catch((error) => console.error("Error fetching content:", error));
-}
-
-// Handle keydown events
-document.addEventListener("keydown", (event) => {
-  console.log('key press detected')
-  if (event.key === "ArrowLeft") {
-    console.log('left arrow')
-    navigateToPage(getPreviousPageUrl());
-  } else if (event.key === "ArrowRight") {
-    console.log('right arrow')
-    navigateToPage(getNextPageUrl());
+    }, 200);
   }
-});
 
-// Event listeners for clicks on navigation links
-document.getElementById("prevLink")?.addEventListener("click", (event) => {
-  event.preventDefault();
-  navigateToPage(getPreviousPageUrl());
-});
+  // Make the function globally accessible (for debugging)
+  window.updateTransition = updateTransition;
 
-document.getElementById("nextLink")?.addEventListener("click", (event) => {
-  event.preventDefault();
-  navigateToPage(getNextPageUrl());
-});
+  // Function to handle navigation (triggered by click or key press)
+  function navigateToPage(url) {
+    if (!url) {
+      return; // Don't navigate if the URL is null
+    }
 
-// Add transition effect (example using fade-in)
-function updateTransition() {
-  const article = document.getElementById("imgFrame");
+    const article = document.getElementById("imgFrame");
+    article.style.visibility = "hidden";
 
-  // Hide the article
-  article.style.visibility = 'hidden'; 
+    fetch(url)
+      .then((response) => response.text())
+      .then((html) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+        const newArticle = doc.querySelector("article");
+        article.innerHTML = newArticle.innerHTML;
+        article.style.visibility = "visible";
 
-  article.classList.remove("fade-in");
-  setTimeout(() => {
-    article.classList.add("fade-in");
+        history.pushState(null, "", url);
 
-    // Make the article visible again
-    article.style.visibility = 'visible'; 
-  }, 200); 
-}
+        // Adjust image size and apply transition after content update
+        requestAnimationFrame(() => {
+          adjustImageSize();
+          updateTransition();
+        });
 
-// Make the function globally accessible
-window.updateTransition = updateTransition;
+        prefetchPage(getNextPageUrl());
+        prefetchPage(getPreviousPageUrl());
+      })
+      .catch((error) => console.error("Error fetching content:", error));
+  }
 
-// Apply fade-in class on initial page load
-window.addEventListener("load", updateTransition);
+  window.addEventListener("load", () => {
+    const imgFrame = document.getElementById("imgFrame");
+    const img = imgFrame.querySelector("img");
 
-// Helper functions to get the URLs of the previous and next pages
-function getPreviousPageUrl() {
-  const prevLink = document.getElementById("prevLink");
-  return prevLink ? prevLink.href : null;
-}
+    // Check if the image is already loaded
+    if (img.complete) {
+      console.log("image complete");
+      adjustImageSize();
+    } else {
+      // If not, wait for the image to load
+      img.onload = function () {
+        console.log("image loaded");
+        adjustImageSize();
+      };
+    }
 
-function getNextPageUrl() {
-  const nextLink = document.getElementById("nextLink");
-  return nextLink ? nextLink.href : null;
-}
+    updateTransition();
+  });
+  // Handle keydown events
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      navigateToPage(getPreviousPageUrl());
+    } else if (event.key === "ArrowRight") {
+      navigateToPage(getNextPageUrl());
+    }
+  });
+
+  // Event listeners for clicks on navigation links
+  document.getElementById("prevLink")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    navigateToPage(getPreviousPageUrl());
+  });
+
+  document.getElementById("nextLink")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    navigateToPage(getNextPageUrl());
+  });
+
+  // Helper functions to get the URLs of the previous and next pages
+  function getPreviousPageUrl() {
+    const prevLink = document.getElementById("prevLink");
+    return prevLink ? prevLink.href : null;
+  }
+
+  function getNextPageUrl() {
+    const nextLink = document.getElementById("nextLink");
+    return nextLink ? nextLink.href : null;
+  }
 </script>
-  
-</script>
+
 <noscript>
   <style>
     #imgFrame {
