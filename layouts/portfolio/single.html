@@ -14,21 +14,20 @@
 
     <!-- using the metadata -->
     {{- $metadata := unmarshal .Content }} {{- with index $metadata 0 }}
-    <p>
+    <p class="exif">
       {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make") -}}
       {{- $make := . -}} {{- with or (index $metadata 0 "Model") (index
       $metadata 0 "EXIF:Model") -}}
-      <strong>Camera:</strong> {{ $make }} {{ . }} | {{- end -}} {{- end -}} {{-
-      with or (index $metadata 0 "LensModel") (index $metadata 0
-      "EXIF:LensModel") }} <strong>Lens:</strong> {{ . }} | {{- end }} {{- with
-      or (index $metadata 0 "FocalLength") (index $metadata 0
-      "EXIF:FocalLength") }} <strong>Focal length:</strong> {{ . }} | {{- end }}
-      {{- with or (index $metadata 0 "FNumber") (index $metadata 0
-      "EXIF:FNumber") }} <strong>Aperture:</strong> ƒ/{{ . }} | {{- end }} {{-
-      with or (index $metadata 0 "ExposureTime") (index $metadata 0
-      "EXIF:ExposureTime") }} <strong>Exposure time:</strong> {{ . }} s | {{-
-      end }} {{- with or (index $metadata 0 "ISO") (index $metadata 0
-      "EXIF:ISO") }} <strong>ISO:</strong> {{ . }} {{- end }}
+      <em>Camera:</em> {{ $make }} {{ . }} | {{- end -}} {{- end -}} {{- with or
+      (index $metadata 0 "LensModel") (index $metadata 0 "EXIF:LensModel") }}
+      <em>Lens:</em> {{ . }} | {{- end }} {{- with or (index $metadata 0
+      "FocalLength") (index $metadata 0 "EXIF:FocalLength") }}
+      <em>Focal length:</em> {{ . }} | {{- end }} {{- with or (index $metadata 0
+      "FNumber") (index $metadata 0 "EXIF:FNumber") }} <em>Aperture:</em> ƒ/{{ .
+      }} | {{- end }} {{- with or (index $metadata 0 "ExposureTime") (index
+      $metadata 0 "EXIF:ExposureTime") }} <em>Exposure time:</em> {{ . }} s |
+      {{- end }} {{- with or (index $metadata 0 "ISO") (index $metadata 0
+      "EXIF:ISO") }} <em>ISO:</em> {{ . }} {{- end }}
     </p>
   </section>
   {{- end }} {{- end }} {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}

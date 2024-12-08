@@ -260,18 +260,36 @@ figure.cover {
 #imgFrame {
   opacity: 0;
   transition: opacity 200ms ease-in-out; /* Add a smooth transition for opacity */
+  text-align: center;
 }
+
 #imgFrame img {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Ensures the image takes up the full width */
-  margin-left: auto;
-  margin-right: auto; /* Centers the image */
+  margin: 0 auto;
 }
 
 #imgFrame.fade-in {
   opacity: 1;
 }
-#imgFrame.fade-out {
-  opacity: 0;
+
+#metadata {
+  text-align: center;
+}
+
+#metadata p {
+  text-align: center;
+}
+
+#metadata .photo-title,
+#metadata .exif {
+  margin: 0;
+  font-size: 12px;
+}
+
+#metadata .photo-title {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.exif em {
+  font-style: normal;
 }
