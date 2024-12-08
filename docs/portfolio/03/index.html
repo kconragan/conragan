@@ -137,11 +137,21 @@
     <div class="content">
       
 <article class="container page gallery" id="imgFrame">
+  <nav id="paginate">
+    <div class="inner">
+       
+      <a href="/portfolio/02/" id="prevLink" class="arrow left"
+        >Previous</a
+      >
+       
+    </div>
+  </nav>
   <img src="/portfolio/03/03.jpg" alt="03.jpg" />
   
 
   <section id="metadata">
     <h1 class="photo-title">Third Image</h1>
+
     
 
     
@@ -151,10 +161,7 @@
       <em>Lens:</em> XF16-50mmF2.8-4.8 R LM WR |
       <em>Focal length:</em> 50.0 mm | <em>Aperture:</em> ƒ/7.1 | <em>Exposure time:</em> 1/400 s | <em>ISO:</em> 160
     </p>
-  </section> 
-  
-  <a href="/portfolio/02/" id="prevLink">Previous</a>
-   
+  </section>
 </article>
 
 <script>
@@ -167,20 +174,19 @@
 
   
   function adjustImageSize() {
-    console.log("adjusting image size");
     const imgFrame = document.getElementById("imgFrame");
     const img = imgFrame.querySelector("img");
     const metadata = document.getElementById("metadata");
 
     
     if (img.complete) {
-      console.log("image ready to be resized");
       const imageTop = img.getBoundingClientRect().top;
       const imageAndMetadataHeight = img.clientHeight + metadata.clientHeight;
       const availableHeight = window.innerHeight - imageTop;
 
       if (imageAndMetadataHeight > availableHeight) {
-        const newImageHeight = availableHeight - metadata.clientHeight;
+        const newImageHeight = availableHeight - metadata.clientHeight - 24;
+        console.log(newImageHeight);
         img.style.height = newImageHeight + "px";
         img.style.width = "auto";
       }

@@ -1,11 +1,24 @@
 {{ define "content" }}
 <article class="container page gallery" id="imgFrame">
+  <nav id="paginate">
+    <div class="inner">
+      {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }} {{ with $pages.Prev
+      . }}
+      <a href="{{ .RelPermalink }}" id="prevLink" class="arrow left"
+        >Previous</a
+      >
+      {{ end }} {{ with $pages.Next . }}
+      <a href="{{ .RelPermalink }}" id="nextLink" class="arrow right">Next</a>
+      {{ end }}
+    </div>
+  </nav>
   {{- $image := .Resources.GetMatch "*.jpg*" }} {{- with $image }}
   <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
   {{ end }}
 
   <section id="metadata">
     <h1 class="photo-title">{{ .Title }}</h1>
+
     <!-- Render JSON file -->
     {{- $json := .Resources.GetMatch "*.json*" }}
 
@@ -30,12 +43,7 @@
       "EXIF:ISO") }} <em>ISO:</em> {{ . }} {{- end }}
     </p>
   </section>
-  {{- end }} {{- end }} {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}
-  {{ with $pages.Prev . }}
-  <a href="{{ .RelPermalink }}" id="prevLink">Previous</a>
-  {{ end }} {{ with $pages.Next . }}
-  <a href="{{ .RelPermalink }}" id="nextLink">Next</a>
-  {{ end }}
+  {{- end }} {{- end }}
 </article>
 
 <script>
@@ -48,20 +56,19 @@
 
   // Function to update Image Size for best display of gallery
   function adjustImageSize() {
-    console.log("adjusting image size");
     const imgFrame = document.getElementById("imgFrame");
     const img = imgFrame.querySelector("img");
     const metadata = document.getElementById("metadata");
 
     // Check if the image is already loaded
     if (img.complete) {
-      console.log("image ready to be resized");
       const imageTop = img.getBoundingClientRect().top;
       const imageAndMetadataHeight = img.clientHeight + metadata.clientHeight;
       const availableHeight = window.innerHeight - imageTop;
 
       if (imageAndMetadataHeight > availableHeight) {
-        const newImageHeight = availableHeight - metadata.clientHeight;
+        const newImageHeight = availableHeight - metadata.clientHeight - 24;
+        console.log(newImageHeight);
         img.style.height = newImageHeight + "px";
         img.style.width = "auto";
       }

@@ -137,11 +137,19 @@
     <div class="content">
       
 <article class="container page gallery" id="imgFrame">
+  <nav id="paginate">
+    <div class="inner">
+        
+      <a href="/portfolio/02/" id="nextLink" class="arrow right">Next</a>
+      
+    </div>
+  </nav>
   <img src="/portfolio/01/01.jpg" alt="01.jpg" />
   
 
   <section id="metadata">
     <h1 class="photo-title">First Image</h1>
+
     
 
     
@@ -151,10 +159,7 @@
       <em>Lens:</em> Fujifilm Fujinon XF10-24mmF4 R OIS |
       <em>Focal length:</em> 12.6 mm | <em>Aperture:</em> ƒ/9 | <em>Exposure time:</em> 1/60 s | <em>ISO:</em> 160
     </p>
-  </section> 
-   
-  <a href="/portfolio/02/" id="nextLink">Next</a>
-  
+  </section>
 </article>
 
 <script>
@@ -167,20 +172,19 @@
 
   
   function adjustImageSize() {
-    console.log("adjusting image size");
     const imgFrame = document.getElementById("imgFrame");
     const img = imgFrame.querySelector("img");
     const metadata = document.getElementById("metadata");
 
     
     if (img.complete) {
-      console.log("image ready to be resized");
       const imageTop = img.getBoundingClientRect().top;
       const imageAndMetadataHeight = img.clientHeight + metadata.clientHeight;
       const availableHeight = window.innerHeight - imageTop;
 
       if (imageAndMetadataHeight > availableHeight) {
-        const newImageHeight = availableHeight - metadata.clientHeight;
+        const newImageHeight = availableHeight - metadata.clientHeight - 24;
+        console.log(newImageHeight);
         img.style.height = newImageHeight + "px";
         img.style.width = "auto";
       }

@@ -293,3 +293,29 @@ figure.cover {
 .exif em {
   font-style: normal;
 }
+
+.arrow {
+  border: solid #444;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  height: 0;
+  padding: 4px;
+  text-indent: -9999px;
+  margin: 0 24px;
+}
+
+.arrow:hover {
+  border-color: white;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: auto;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-right: auto;
+}
