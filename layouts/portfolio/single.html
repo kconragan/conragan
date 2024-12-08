@@ -1,5 +1,5 @@
 {{ define "content" }}
-<article>
+<article class="container page gallery" id="imgFrame">
   {{- $image := .Resources.GetMatch "*.jpg*" }} {{- with $image }}
   <h1>{{ .Title }}</h1>
   <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
@@ -31,10 +31,119 @@
     <li><strong>ISO:</strong> {{ . }}</li>
     {{ end }} {{ end }}
   </ul>
-  {{- end }}
+  {{- end }} {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }} {{ with
+  $pages.Prev . }}
+  <a href="{{ .RelPermalink }}" id="prevLink">Previous</a>
+  {{ end }} {{ with $pages.Next . }}
+  <a href="{{ .RelPermalink }}" id="nextLink">Next</a>
+  {{ end }}
 </article>
-{{ $pages := .CurrentSection.Pages.ByWeight.Reverse }} {{ with $pages.Prev . }}
-<a href="{{ .RelPermalink }}">Previous</a>
-{{ end }} {{ with $pages.Next . }}
-<a href="{{ .RelPermalink }}">Next</a>
-{{ end }} {{ end }}
+
+<script>
+// Function to prefetch a page
+function prefetchPage(url) {
+  if (url) {
+    fetch(url, { rel: "prefetch" });
+  }
+}
+
+// Prefetch previous and next pages on load
+prefetchPage(document.getElementById("prevLink")?.href);
+prefetchPage(document.getElementById("nextLink")?.href);
+
+// Function to handle navigation (triggered by click or key press)
+function navigateToPage(url) {
+  if (!url) {
+    return; // Don't navigate if the URL is null
+  }
+
+  const article = document.getElementById("imgFrame");
+  article.style.visibility = "hidden";
+
+  fetch(url)
+    .then((response) => response.text())
+    .then((html) => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const newArticle = doc.querySelector("article");
+      article.innerHTML = newArticle.innerHTML;
+      article.style.visibility = "visible";
+
+      // Update the URL after the content is loaded
+      history.pushState(null, "", url); 
+
+      // Apply the transition effect
+      updateTransition();
+      prefetchPage(getNextPageUrl());
+      prefetchPage(getPreviousPageUrl());
+
+    })
+    .catch((error) => console.error("Error fetching content:", error));
+}
+
+// Handle keydown events
+document.addEventListener("keydown", (event) => {
+  console.log('key press detected')
+  if (event.key === "ArrowLeft") {
+    console.log('left arrow')
+    navigateToPage(getPreviousPageUrl());
+  } else if (event.key === "ArrowRight") {
+    console.log('right arrow')
+    navigateToPage(getNextPageUrl());
+  }
+});
+
+// Event listeners for clicks on navigation links
+document.getElementById("prevLink")?.addEventListener("click", (event) => {
+  event.preventDefault();
+  navigateToPage(getPreviousPageUrl());
+});
+
+document.getElementById("nextLink")?.addEventListener("click", (event) => {
+  event.preventDefault();
+  navigateToPage(getNextPageUrl());
+});
+
+// Add transition effect (example using fade-in)
+function updateTransition() {
+  const article = document.getElementById("imgFrame");
+
+  // Hide the article
+  article.style.visibility = 'hidden'; 
+
+  article.classList.remove("fade-in");
+  setTimeout(() => {
+    article.classList.add("fade-in");
+
+    // Make the article visible again
+    article.style.visibility = 'visible'; 
+  }, 200); 
+}
+
+// Make the function globally accessible
+window.updateTransition = updateTransition;
+
+// Apply fade-in class on initial page load
+window.addEventListener("load", updateTransition);
+
+// Helper functions to get the URLs of the previous and next pages
+function getPreviousPageUrl() {
+  const prevLink = document.getElementById("prevLink");
+  return prevLink ? prevLink.href : null;
+}
+
+function getNextPageUrl() {
+  const nextLink = document.getElementById("nextLink");
+  return nextLink ? nextLink.href : null;
+}
+</script>
+  
+</script>
+<noscript>
+  <style>
+    #imgFrame {
+      opacity: 1; /* Make the image visible by default */
+    }
+  </style>
+</noscript>
+{{ end }}

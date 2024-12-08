@@ -256,3 +256,12 @@ figure.cover {
 .gh-canvas > * {
   grid-column: main-start/main-end;
 }
+
+#imgFrame {
+  opacity: 0;
+  transition: opacity 3s ease-in-out; /* Add a smooth transition for opacity */
+}
+
+#imgFrame.fade-in {
+  opacity: 1;
+}
