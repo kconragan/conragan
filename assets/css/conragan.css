@@ -294,16 +294,6 @@ figure.cover {
   font-style: normal;
 }
 
-.gallery {
-  position: relative;
-}
-
-#paginate {
-  position: absolute;
-  right: 0;
-  background-color: #212121;
-}
-
 .arrow {
   border: solid #444;
   border-width: 0 3px 3px 0;

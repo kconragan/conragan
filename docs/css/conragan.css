@@ -301,7 +301,8 @@ figure.cover {
   height: 0;
   padding: 4px;
   text-indent: -9999px;
-  margin: 0 24px;
+  margin: 8px 16px;
+  vertical-align: middle;
 }
 
 .arrow:hover {

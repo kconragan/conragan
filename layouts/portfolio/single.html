@@ -1,72 +1,75 @@
 {{ define "content" }}
-<article class="container page gallery" id="imgFrame">
-  {{- $image := .Resources.GetMatch "*.jpg*" }} {{- with $image }}
-  <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
-  {{ end }}
+<article class="container page gallery">
+  <nav id="paginate">
+    <div class="inner">
+      {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}
+      <a
+        href="{{ with $pages.Prev . }}{{ .RelPermalink }}{{ end }}"
+        id="prevLink"
+        class="arrow left"
+        {{
+        if
+        not
+        ($pages.Prev
+        .)
+        }}disabled{{
+        end
+        }}
+        >Previous</a
+      >
+      <a
+        href="{{ with $pages.Next . }}{{ .RelPermalink }}{{ end }}"
+        id="nextLink"
+        class="arrow right"
+        {{
+        if
+        not
+        ($pages.Next
+        .)
+        }}disabled{{
+        end
+        }}
+        >Next</a
+      >
+    </div>
+  </nav>
+  <div id="imgFrame" class="gallery">
+    {{- $image := .Resources.GetMatch "*.jpg*" }} {{- with $image }}
+    <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
+    {{ end }}
 
-  <section id="metadata">
-    <h1 class="photo-title">{{ .Title }}</h1>
+    <section id="metadata">
+      <h1 class="photo-title">{{ .Title }}</h1>
 
-    <!-- Render JSON file -->
-    {{- $json := .Resources.GetMatch "*.json*" }}
+      <!-- Render JSON file -->
+      {{- $json := .Resources.GetMatch "*.json*" }}
 
-    <!-- itereate over json -->
-    {{- with $json }}
+      <!-- itereate over json -->
+      {{- with $json }}
 
-    <!-- using the metadata -->
-    {{- $metadata := unmarshal .Content }} {{- with index $metadata 0 }}
-    <p class="exif" style="display: none">
-      {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make") -}}
-      {{- $make := . -}} {{- with or (index $metadata 0 "Model") (index
-      $metadata 0 "EXIF:Model") -}}
-      <em>Camera:</em> {{ $make }} {{ . }} | {{- end -}} {{- end -}} {{- with or
-      (index $metadata 0 "LensModel") (index $metadata 0 "EXIF:LensModel") }}
-      <em>Lens:</em> {{ . }} | {{- end }} {{- with or (index $metadata 0
-      "FocalLength") (index $metadata 0 "EXIF:FocalLength") }}
-      <em>Focal length:</em> {{ . }} | {{- end }} {{- with or (index $metadata 0
-      "FNumber") (index $metadata 0 "EXIF:FNumber") }} <em>Aperture:</em> ƒ/{{ .
-      }} | {{- end }} {{- with or (index $metadata 0 "ExposureTime") (index
-      $metadata 0 "EXIF:ExposureTime") }} <em>Exposure time:</em> {{ . }} s |
-      {{- end }} {{- with or (index $metadata 0 "ISO") (index $metadata 0
-      "EXIF:ISO") }} <em>ISO:</em> {{ . }} {{- end }}
-    </p>
-  </section>
-  {{- end }} {{- end }}
+      <!-- using the metadata -->
+      {{- $metadata := unmarshal .Content }} {{- with index $metadata 0 }}
+      <p class="exif" style="display: none">
+        {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make")
+        -}} {{- $make := . -}} {{- with or (index $metadata 0 "Model") (index
+        $metadata 0 "EXIF:Model") -}}
+        <em>Camera:</em> {{ $make }} {{ . }} | {{- end -}} {{- end -}} {{- with
+        or (index $metadata 0 "LensModel") (index $metadata 0 "EXIF:LensModel")
+        }} <em>Lens:</em> {{ . }} | {{- end }} {{- with or (index $metadata 0
+        "FocalLength") (index $metadata 0 "EXIF:FocalLength") }}
+        <em>Focal length:</em> {{ . }} | {{- end }} {{- with or (index $metadata
+        0 "FNumber") (index $metadata 0 "EXIF:FNumber") }}
+        <em>Aperture:</em> ƒ/{{ . }} | {{- end }} {{- with or (index $metadata 0
+        "ExposureTime") (index $metadata 0 "EXIF:ExposureTime") }}
+        <em>Exposure time:</em> {{ . }} s | {{- end }} {{- with or (index
+        $metadata 0 "ISO") (index $metadata 0 "EXIF:ISO") }} <em>ISO:</em> {{ .
+        }} {{- end }}
+      </p>
+    </section>
+    {{- end }} {{- end }}
+  </div>
 </article>
 
-<nav id="paginate">
-  <div class="inner">
-    {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}
-    <a
-      href="{{ with $pages.Prev . }}{{ .RelPermalink }}{{ end }}"
-      id="prevLink"
-      class="arrow left"
-      {{
-      if
-      not
-      ($pages.Prev
-      .)
-      }}disabled{{
-      end
-      }}
-      >Previous</a
-    >
-    <a
-      href="{{ with $pages.Next . }}{{ .RelPermalink }}{{ end }}"
-      id="nextLink"
-      class="arrow right"
-      {{
-      if
-      not
-      ($pages.Next
-      .)
-      }}disabled{{
-      end
-      }}
-      >Next</a
-    >
-  </div>
-</nav>
 <script>
   // Function to prefetch a page
   function prefetchPage(url) {
@@ -75,13 +78,16 @@
     }
   }
 
-  // Function to update Image Size for best display of gallery
+  // Prefetch previous and next pages on load
+  prefetchPage(document.getElementById("prevLink")?.href);
+  prefetchPage(document.getElementById("nextLink")?.href);
+
+  // Function to adjust image size
   function adjustImageSize() {
     const imgFrame = document.getElementById("imgFrame");
     const img = imgFrame.querySelector("img");
     const metadata = document.getElementById("metadata");
 
-    // Check if the image is already loaded
     if (img.complete) {
       const imageTop = img.getBoundingClientRect().top;
       const imageAndMetadataHeight = img.clientHeight + metadata.clientHeight;
@@ -89,17 +95,16 @@
 
       if (imageAndMetadataHeight > availableHeight) {
         const newImageHeight = availableHeight - metadata.clientHeight - 24;
-        console.log(newImageHeight);
         img.style.height = newImageHeight + "px";
         img.style.width = "auto";
       }
     } else {
-      // If not, wait for the image to load
       img.onload = function () {
-        adjustImageSize(); // Call the function recursively after the image loads
+        adjustImageSize();
       };
     }
   }
+
   // Add transition effect (example using fade-in)
   function updateTransition() {
     const article = document.getElementById("imgFrame");
@@ -119,9 +124,8 @@
     if (!url) {
       return; // Don't navigate if the URL is null
     }
-    const article = document.getElementById("imgFrame");
 
-    // Hide the article BEFORE fetching the new content
+    const article = document.getElementById("imgFrame");
     article.style.visibility = "hidden";
 
     fetch(url)
@@ -129,45 +133,33 @@
       .then((html) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
-        const newArticle = doc.querySelector("article");
-        article.innerHTML = newArticle.innerHTML;
+
+        // Extract the new imgFrame content, INCLUDING the image and metadata
+        const newImgFrame = doc.getElementById("imgFrame").innerHTML;
+
+        // Update the imgFrame with the new content
+        article.innerHTML = newImgFrame;
+
         article.style.visibility = "visible";
 
-        // Update the next and previous links
-        const newDoc = new DOMParser().parseFromString(html, "text/html");
-        const newNextLink = newDoc.getElementById("nextLink");
-        const newPrevLink = newDoc.getElementById("prevLink");
+        // Update the URL after the content is loaded
+        history.pushState(null, "", url);
 
-        // Update or remove next link
-        const currentNextLink = document.getElementById("nextLink");
-        if (newNextLink && currentNextLink) {
-          currentNextLink.href = newNextLink.href;
-          currentNextLink.disabled = newNextLink.disabled; // Update disabled state
-        } else if (currentNextLink) {
-          currentNextLink.remove();
-        } else if (newNextLink) {
-          // Add the next link if it doesn't exist
-          const paginationDiv = document.getElementById("pagination");
-          paginationDiv.appendChild(newNextLink);
-        }
+        // Extract and update the navigation HTML separately
+        const newPagination = doc.getElementById("paginate").outerHTML;
+        document.getElementById("paginate").outerHTML = newPagination;
 
-        // Update or remove previous link (similar logic)
-        const currentPrevLink = document.getElementById("prevLink");
-        if (newPrevLink && currentPrevLink) {
-          currentPrevLink.href = newPrevLink.href;
-          currentPrevLink.disabled = newPrevLink.disabled; // Update disabled state
-        } else if (currentPrevLink) {
-          currentPrevLink.remove();
-        } else if (newPrevLink) {
-          // Add the previous link if it doesn't exist
-          const paginationDiv = document.getElementById("pagination");
-          paginationDiv.appendChild(newPrevLink);
-        }
         // Adjust image size and apply transition after content update
-        requestAnimationFrame(() => {
+        const img = article.querySelector("img");
+        if (img.complete) {
           adjustImageSize();
           updateTransition();
-        });
+        } else {
+          img.addEventListener("load", () => {
+            adjustImageSize();
+            updateTransition();
+          });
+        }
 
         prefetchPage(getNextPageUrl());
         prefetchPage(getPreviousPageUrl());
@@ -175,71 +167,50 @@
       .catch((error) => console.error("Error fetching content:", error));
   }
 
+  // Apply fade-in class and adjust image size on initial page load
   window.addEventListener("load", () => {
     const imgFrame = document.getElementById("imgFrame");
     const img = imgFrame.querySelector("img");
 
-    // Check if the image is already loaded
     if (img.complete) {
-      console.log("image complete");
       adjustImageSize();
     } else {
-      // If not, wait for the image to load
       img.onload = function () {
-        console.log("image loaded");
         adjustImageSize();
       };
     }
 
     updateTransition();
   });
-  // Handle keydown events
 
+  // Handle keydown events
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
-      const prevPageUrl = getPreviousPageUrl(); // Get the URL here
-      if (prevPageUrl) {
-        navigateToPage(prevPageUrl);
-        history.pushState(null, "", prevPageUrl);
-      }
+      navigateToPage(getPreviousPageUrl());
     } else if (event.key === "ArrowRight") {
-      const nextPageUrl = getNextPageUrl(); // Get the URL here
-      if (nextPageUrl) {
-        navigateToPage(nextPageUrl);
-        history.pushState(null, "", nextPageUrl);
-      }
+      navigateToPage(getNextPageUrl());
     }
   });
 
   // Event listeners for clicks on navigation links
   document.getElementById("prevLink")?.addEventListener("click", (event) => {
     event.preventDefault();
-    const prevPageUrl = getPreviousPageUrl();
-    if (prevPageUrl) {
-      navigateToPage(prevPageUrl);
-      history.pushState(null, "", prevPageUrl); // Update URL before navigating
-    }
+    navigateToPage(getPreviousPageUrl());
   });
 
   document.getElementById("nextLink")?.addEventListener("click", (event) => {
     event.preventDefault();
-    const nextPageUrl = getNextPageUrl();
-    if (nextPageUrl) {
-      navigateToPage(nextPageUrl);
-      history.pushState(null, "", nextPageUrl); // Update URL before navigating
-    }
+    navigateToPage(getNextPageUrl());
   });
 
   // Helper functions to get the URLs of the previous and next pages
   function getPreviousPageUrl() {
     const prevLink = document.getElementById("prevLink");
-    console.log("previous link was " + prevLink);
     return prevLink ? prevLink.href : null;
   }
 
   function getNextPageUrl() {
     const nextLink = document.getElementById("nextLink");
-    console.log("next link is " + nextLink);
     return nextLink ? nextLink.href : null;
   }
 </script>

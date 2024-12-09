@@ -136,30 +136,45 @@
 
     <div class="content">
       
-<article class="container page gallery" id="imgFrame">
+<article class="container page gallery">
   <nav id="paginate">
     <div class="inner">
-        
-      <a href="/portfolio/02/" id="nextLink" class="arrow right">Next</a>
       
+      <a
+        href=""
+        id="prevLink"
+        class="arrow left"
+        disabled
+        >Previous</a
+      >
+      <a
+        href="/portfolio/02/"
+        id="nextLink"
+        class="arrow right"
+        
+        >Next</a
+      >
     </div>
   </nav>
-  <img src="/portfolio/01/01.jpg" alt="01.jpg" />
-  
-
-  <section id="metadata">
-    <h1 class="photo-title">First Image</h1>
-
+  <div id="imgFrame" class="gallery">
+    <img src="/portfolio/01/01.jpg" alt="01.jpg" />
     
 
-    
+    <section id="metadata">
+      <h1 class="photo-title">First Image</h1>
 
-    
-    <p class="exif"><em>Camera:</em> FUJIFILM X-T3 |
-      <em>Lens:</em> Fujifilm Fujinon XF10-24mmF4 R OIS |
-      <em>Focal length:</em> 12.6 mm | <em>Aperture:</em> ƒ/9 | <em>Exposure time:</em> 1/60 s | <em>ISO:</em> 160
-    </p>
-  </section>
+      
+
+      
+
+      
+      <p class="exif" style="display: none"><em>Camera:</em> FUJIFILM X-T3 | <em>Lens:</em> Fujifilm Fujinon XF10-24mmF4 R OIS |
+        <em>Focal length:</em> 12.6 mm |
+        <em>Aperture:</em> ƒ/9 |
+        <em>Exposure time:</em> 1/60 s | <em>ISO:</em> 160
+      </p>
+    </section>
+  </div>
 </article>
 
 <script>
@@ -171,12 +186,15 @@
   }
 
   
+  prefetchPage(document.getElementById("prevLink")?.href);
+  prefetchPage(document.getElementById("nextLink")?.href);
+
+  
   function adjustImageSize() {
     const imgFrame = document.getElementById("imgFrame");
     const img = imgFrame.querySelector("img");
     const metadata = document.getElementById("metadata");
 
-    
     if (img.complete) {
       const imageTop = img.getBoundingClientRect().top;
       const imageAndMetadataHeight = img.clientHeight + metadata.clientHeight;
@@ -184,17 +202,16 @@
 
       if (imageAndMetadataHeight > availableHeight) {
         const newImageHeight = availableHeight - metadata.clientHeight - 24;
-        console.log(newImageHeight);
         img.style.height = newImageHeight + "px";
         img.style.width = "auto";
       }
     } else {
-      
       img.onload = function () {
-        adjustImageSize(); 
+        adjustImageSize();
       };
     }
   }
+
   
   function updateTransition() {
     const article = document.getElementById("imgFrame");
@@ -223,17 +240,33 @@
       .then((html) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
-        const newArticle = doc.querySelector("article");
-        article.innerHTML = newArticle.innerHTML;
+
+        
+        const newImgFrame = doc.getElementById("imgFrame").innerHTML;
+
+        
+        article.innerHTML = newImgFrame;
+
         article.style.visibility = "visible";
 
+        
         history.pushState(null, "", url);
 
         
-        requestAnimationFrame(() => {
+        const newPagination = doc.getElementById("paginate").outerHTML;
+        document.getElementById("paginate").outerHTML = newPagination;
+
+        
+        const img = article.querySelector("img");
+        if (img.complete) {
           adjustImageSize();
           updateTransition();
-        });
+        } else {
+          img.addEventListener("load", () => {
+            adjustImageSize();
+            updateTransition();
+          });
+        }
 
         prefetchPage(getNextPageUrl());
         prefetchPage(getPreviousPageUrl());
@@ -241,24 +274,22 @@
       .catch((error) => console.error("Error fetching content:", error));
   }
 
+  
   window.addEventListener("load", () => {
     const imgFrame = document.getElementById("imgFrame");
     const img = imgFrame.querySelector("img");
 
-    
     if (img.complete) {
-      console.log("image complete");
       adjustImageSize();
     } else {
-      
       img.onload = function () {
-        console.log("image loaded");
         adjustImageSize();
       };
     }
 
     updateTransition();
   });
+
   
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
