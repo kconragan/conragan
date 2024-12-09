@@ -144,7 +144,8 @@
         href=""
         id="prevLink"
         class="arrow left"
-        disabled
+        style="pointer-events: none"
+        
         >Previous</a
       >
       <a
@@ -293,32 +294,45 @@
   
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
-      navigateToPage(getPreviousPageUrl());
+      const prevLink = document.getElementById("prevLink");
+      if (prevLink && !prevLink.style.pointerEvents) {
+        
+        navigateToPage(getPreviousPageUrl());
+      }
     } else if (event.key === "ArrowRight") {
-      navigateToPage(getNextPageUrl());
+      const nextLink = document.getElementById("nextLink");
+      if (nextLink && !nextLink.style.pointerEvents) {
+        
+        navigateToPage(getNextPageUrl());
+      }
     }
   });
 
-  
   document.getElementById("prevLink")?.addEventListener("click", (event) => {
-    event.preventDefault();
-    navigateToPage(getPreviousPageUrl());
+    const prevPageUrl = getPreviousPageUrl();
+    if (prevPageUrl) {
+      console.log("Previous page URL found:", prevPageUrl);
+      navigateToPage(prevPageUrl);
+    }
   });
 
   document.getElementById("nextLink")?.addEventListener("click", (event) => {
-    event.preventDefault();
-    navigateToPage(getNextPageUrl());
+    const nextPageUrl = getNextPageUrl();
+    if (nextPageUrl) {
+      console.log("Next page URL found:", nextPageUrl);
+      navigateToPage(nextPageUrl);
+    }
   });
-
-  
   function getPreviousPageUrl() {
     const prevLink = document.getElementById("prevLink");
-    return prevLink ? prevLink.href : null;
+    
+    return prevLink && prevLink.href !== "" ? prevLink.href : null;
   }
 
   function getNextPageUrl() {
     const nextLink = document.getElementById("nextLink");
-    return nextLink ? nextLink.href : null;
+    
+    return nextLink && nextLink.href !== "" ? nextLink.href : null;
   }
 </script>
 
