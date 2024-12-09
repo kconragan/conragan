@@ -294,6 +294,16 @@ figure.cover {
   font-style: normal;
 }
 
+.gallery {
+  position: relative;
+}
+
+#paginate {
+  position: absolute;
+  right: 0;
+  background-color: #212121;
+}
+
 .arrow {
   border: solid #444;
   border-width: 0 3px 3px 0;
@@ -301,7 +311,8 @@ figure.cover {
   height: 0;
   padding: 4px;
   text-indent: -9999px;
-  margin: 0 24px;
+  margin: 8px 16px;
+  vertical-align: middle;
 }
 
 .arrow:hover {

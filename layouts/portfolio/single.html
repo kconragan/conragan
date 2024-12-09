@@ -1,17 +1,5 @@
 {{ define "content" }}
 <article class="container page gallery" id="imgFrame">
-  <nav id="paginate">
-    <div class="inner">
-      {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }} {{ with $pages.Prev
-      . }}
-      <a href="{{ .RelPermalink }}" id="prevLink" class="arrow left"
-        >Previous</a
-      >
-      {{ end }} {{ with $pages.Next . }}
-      <a href="{{ .RelPermalink }}" id="nextLink" class="arrow right">Next</a>
-      {{ end }}
-    </div>
-  </nav>
   {{- $image := .Resources.GetMatch "*.jpg*" }} {{- with $image }}
   <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
   {{ end }}
@@ -46,6 +34,39 @@
   {{- end }} {{- end }}
 </article>
 
+<nav id="paginate">
+  <div class="inner">
+    {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}
+    <a
+      href="{{ with $pages.Prev . }}{{ .RelPermalink }}{{ end }}"
+      id="prevLink"
+      class="arrow left"
+      {{
+      if
+      not
+      ($pages.Prev
+      .)
+      }}disabled{{
+      end
+      }}
+      >Previous</a
+    >
+    <a
+      href="{{ with $pages.Next . }}{{ .RelPermalink }}{{ end }}"
+      id="nextLink"
+      class="arrow right"
+      {{
+      if
+      not
+      ($pages.Next
+      .)
+      }}disabled{{
+      end
+      }}
+      >Next</a
+    >
+  </div>
+</nav>
 <script>
   // Function to prefetch a page
   function prefetchPage(url) {
@@ -98,8 +119,9 @@
     if (!url) {
       return; // Don't navigate if the URL is null
     }
-
     const article = document.getElementById("imgFrame");
+
+    // Hide the article BEFORE fetching the new content
     article.style.visibility = "hidden";
 
     fetch(url)
@@ -111,8 +133,36 @@
         article.innerHTML = newArticle.innerHTML;
         article.style.visibility = "visible";
 
-        history.pushState(null, "", url);
+        // Update the next and previous links
+        const newDoc = new DOMParser().parseFromString(html, "text/html");
+        const newNextLink = newDoc.getElementById("nextLink");
+        const newPrevLink = newDoc.getElementById("prevLink");
 
+        // Update or remove next link
+        const currentNextLink = document.getElementById("nextLink");
+        if (newNextLink && currentNextLink) {
+          currentNextLink.href = newNextLink.href;
+          currentNextLink.disabled = newNextLink.disabled; // Update disabled state
+        } else if (currentNextLink) {
+          currentNextLink.remove();
+        } else if (newNextLink) {
+          // Add the next link if it doesn't exist
+          const paginationDiv = document.getElementById("pagination");
+          paginationDiv.appendChild(newNextLink);
+        }
+
+        // Update or remove previous link (similar logic)
+        const currentPrevLink = document.getElementById("prevLink");
+        if (newPrevLink && currentPrevLink) {
+          currentPrevLink.href = newPrevLink.href;
+          currentPrevLink.disabled = newPrevLink.disabled; // Update disabled state
+        } else if (currentPrevLink) {
+          currentPrevLink.remove();
+        } else if (newPrevLink) {
+          // Add the previous link if it doesn't exist
+          const paginationDiv = document.getElementById("pagination");
+          paginationDiv.appendChild(newPrevLink);
+        }
         // Adjust image size and apply transition after content update
         requestAnimationFrame(() => {
           adjustImageSize();
@@ -155,22 +205,32 @@
   // Event listeners for clicks on navigation links
   document.getElementById("prevLink")?.addEventListener("click", (event) => {
     event.preventDefault();
-    navigateToPage(getPreviousPageUrl());
+    const prevPageUrl = getPreviousPageUrl();
+    if (prevPageUrl) {
+      navigateToPage(prevPageUrl);
+      history.pushState(null, "", prevPageUrl); // Update URL before navigating
+    }
   });
 
   document.getElementById("nextLink")?.addEventListener("click", (event) => {
     event.preventDefault();
-    navigateToPage(getNextPageUrl());
+    const nextPageUrl = getNextPageUrl();
+    if (nextPageUrl) {
+      navigateToPage(nextPageUrl);
+      history.pushState(null, "", nextPageUrl); // Update URL before navigating
+    }
   });
 
   // Helper functions to get the URLs of the previous and next pages
   function getPreviousPageUrl() {
     const prevLink = document.getElementById("prevLink");
+    console.log("previous link was " + prevLink);
     return prevLink ? prevLink.href : null;
   }
 
   function getNextPageUrl() {
     const nextLink = document.getElementById("nextLink");
+    console.log("next link is " + nextLink);
     return nextLink ? nextLink.href : null;
   }
 </script>
