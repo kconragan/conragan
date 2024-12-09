@@ -15,7 +15,7 @@
 
     <!-- using the metadata -->
     {{- $metadata := unmarshal .Content }} {{- with index $metadata 0 }}
-    <p class="exif">
+    <p class="exif" style="display: none">
       {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make") -}}
       {{- $make := . -}} {{- with or (index $metadata 0 "Model") (index
       $metadata 0 "EXIF:Model") -}}
@@ -194,11 +194,20 @@
     updateTransition();
   });
   // Handle keydown events
+
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
-      navigateToPage(getPreviousPageUrl());
+      const prevPageUrl = getPreviousPageUrl(); // Get the URL here
+      if (prevPageUrl) {
+        navigateToPage(prevPageUrl);
+        history.pushState(null, "", prevPageUrl);
+      }
     } else if (event.key === "ArrowRight") {
-      navigateToPage(getNextPageUrl());
+      const nextPageUrl = getNextPageUrl(); // Get the URL here
+      if (nextPageUrl) {
+        navigateToPage(nextPageUrl);
+        history.pushState(null, "", nextPageUrl);
+      }
     }
   });
 
