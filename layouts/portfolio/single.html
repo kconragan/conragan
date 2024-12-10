@@ -100,13 +100,16 @@
         img.style.height = newImageHeight + "px";
         img.style.width = "auto";
       }
+
+      // Fade in the title after the image is resized
+      const title = document.querySelector("h1.photo-title");
+      title.classList.add("fade-in");
     } else {
       img.onload = function () {
         adjustImageSize();
       };
     }
   }
-
   // Add transition effect (example using fade-in)
   function updateTransition() {
     const article = document.getElementById("imgFrame");

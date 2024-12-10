@@ -205,13 +205,16 @@
         img.style.height = newImageHeight + "px";
         img.style.width = "auto";
       }
+
+      
+      const title = document.querySelector("h1.photo-title");
+      title.classList.add("fade-in");
     } else {
       img.onload = function () {
         adjustImageSize();
       };
     }
   }
-
   
   function updateTransition() {
     const article = document.getElementById("imgFrame");

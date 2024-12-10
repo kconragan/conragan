@@ -288,6 +288,12 @@ figure.cover {
 #metadata .photo-title {
   font-weight: 700;
   font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#metadata .photo-title.fade-in {
+  opacity: 1;
 }
 
 .exif em {
