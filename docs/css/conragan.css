@@ -257,6 +257,44 @@ figure.cover {
   grid-column: main-start/main-end;
 }
 
+#paginate {
+  text-align: center;
+}
+
+/* Show EXIF toggle */
+
+.plus::before {
+  content: "➕";
+  color: white;
+}
+
+#toggleMetadata {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
+
+#toggleMetadata,
+a.paginate {
+  display: inline-block;
+  margin: 0 16px;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a.paginate {
+  color: #363636;
+}
+
+.colorscheme-dark a.paginate {
+  color: #dadada;
+}
+
 #imgFrame {
   opacity: 0;
   transition: opacity 200ms ease-in-out; /* Add a smooth transition for opacity */
@@ -300,29 +338,75 @@ figure.cover {
   font-style: normal;
 }
 
-.arrow {
-  border: solid #444;
-  border-width: 0 3px 3px 0;
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v142/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2)
+    format("woff2");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  color: #777;
+  letter-spacing: normal;
+  text-transform: none;
   display: inline-block;
-  height: 0;
-  padding: 4px;
-  text-indent: -9999px;
-  margin: 8px 16px;
-  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-.arrow:hover {
-  border-color: white;
+#exif {
+  width: 18em;
+  background: #fff;
 }
 
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  margin-left: auto;
+#exif th,
+#exif td {
+  text-align: left;
+  border: 0;
 }
 
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  margin-right: auto;
+.exif thead .material-icons {
+  font-size: 32px;
+}
+
+tbody {
+  font-size: 1em;
+  line-height: 1.4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+tbody tr {
+  width: 50%;
+}
+
+th {
+}
+
+i {
+  padding: 2px;
+  margin: 2px;
+  display: block;
+  float: left;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  width: 100%;
+  clear: both;
+}
+
+tr {
+  display: flex;
 }

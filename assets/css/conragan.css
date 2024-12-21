@@ -257,6 +257,44 @@ figure.cover {
   grid-column: main-start/main-end;
 }
 
+#paginate {
+  text-align: center;
+}
+
+/* Show EXIF toggle */
+
+.plus::before {
+  content: "➕";
+  color: white;
+}
+
+#toggleMetadata {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
+
+#toggleMetadata,
+a.paginate {
+  display: inline-block;
+  margin: 0 16px;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a.paginate {
+  color: #363636;
+}
+
+.colorscheme-dark a.paginate {
+  color: #dadada;
+}
+
 #imgFrame {
   opacity: 0;
   transition: opacity 200ms ease-in-out; /* Add a smooth transition for opacity */
@@ -300,29 +338,29 @@ figure.cover {
   font-style: normal;
 }
 
-.arrow {
-  border: solid #444;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  height: 0;
-  padding: 4px;
-  text-indent: -9999px;
-  margin: 8px 16px;
-  vertical-align: middle;
-}
-
-.arrow:hover {
-  border-color: white;
-}
-
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  margin-left: auto;
-}
-
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  margin-right: auto;
-}
+/* .arrow { */
+/*   border: solid #444; */
+/*   border-width: 0 3px 3px 0; */
+/*   display: inline-block; */
+/*   height: 0; */
+/*   padding: 4px; */
+/*   text-indent: -9999px; */
+/*   margin: 8px 16px; */
+/*   vertical-align: middle; */
+/* } */
+/**/
+/* .arrow:hover { */
+/*   border-color: white; */
+/* } */
+/**/
+/* .right { */
+/*   transform: rotate(-45deg); */
+/*   -webkit-transform: rotate(-45deg); */
+/*   margin-left: auto; */
+/* } */
+/**/
+/* .left { */
+/*   transform: rotate(135deg); */
+/*   -webkit-transform: rotate(135deg); */
+/*   margin-right: auto; */
+/* } */

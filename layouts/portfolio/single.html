@@ -6,7 +6,7 @@
       <a
         href="{{ with $pages.Prev . }}{{ .RelPermalink }}{{ end }}"
         id="prevLink"
-        class="arrow left"
+        class="paginate arrow left"
         {{
         if
         not
@@ -18,10 +18,11 @@
         }}
         >Previous</a
       >
+      <button id="toggleMetadata">EXIF</button>
       <a
         href="{{ with $pages.Next . }}{{ .RelPermalink }}{{ end }}"
         id="nextLink"
-        class="arrow right"
+        class="paginate arrow right"
         {{
         if
         not
@@ -48,24 +49,57 @@
 
       <!-- itereate over json -->
       {{- with $json }}
+      <table id="exif">
+        <thead>
+          <tr>
+            <th>
+              <i class="material-icons camera_alt">&#xe3b0;</i>
+            </th>
+            <td>
+              <i class="">Fujifilm X-H2s<br>
+                Fujinon XF 10–24mm f4</i>
+            </td>
+          </tr>
+        </thead>
+  <tbody>
+    <tr>
+      <th> <i class="material-icons camera">&#xe3af</i></th>
+     <td>f/1.4</td>
+    </tr>
+        <tr>
+      <th><i class="material-icons shutter_speed">&#xe43d;</i></th>
+     <td>1/60s</td>
+    </tr>
+    <tr>
+      <th data-table="iso"><i class="material-icons iso">&#xe3f6;</i>
+</th>
+     <td>160 iso</td>
+    </tr>
+    <tr>
+      <th><i class="material-icons fullscreen">&#xe5d0;</i>
+</th>
+     <td>16mm</td>
+    </tr>
+  </tbody>
+</table>
 
       <!-- using the metadata -->
       {{- $metadata := unmarshal .Content }} {{- with index $metadata 0 }}
-      <p class="exif" style="display: none">
+      <p id="exif" style="display: none">
         {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make")
         -}} {{- $make := . -}} {{- with or (index $metadata 0 "Model") (index
         $metadata 0 "EXIF:Model") -}}
-        <em>Camera:</em> {{ $make }} {{ . }} | {{- end -}} {{- end -}} {{- with
-        or (index $metadata 0 "LensModel") (index $metadata 0 "EXIF:LensModel")
-        }} <em>Lens:</em> {{ . }} | {{- end }} {{- with or (index $metadata 0
-        "FocalLength") (index $metadata 0 "EXIF:FocalLength") }}
-        <em>Focal length:</em> {{ . }} | {{- end }} {{- with or (index $metadata
-        0 "FNumber") (index $metadata 0 "EXIF:FNumber") }}
-        <em>Aperture:</em> ƒ/{{ . }} | {{- end }} {{- with or (index $metadata 0
-        "ExposureTime") (index $metadata 0 "EXIF:ExposureTime") }}
-        <em>Exposure time:</em> {{ . }} s | {{- end }} {{- with or (index
-        $metadata 0 "ISO") (index $metadata 0 "EXIF:ISO") }} <em>ISO:</em> {{ .
-        }} {{- end }}
+        <img src="/img/camera.png" />{{ $make }} {{ . }} | {{- end -}} {{- end
+        -}} {{- with or (index $metadata 0 "LensModel") (index $metadata 0
+        "EXIF:LensModel") }} <em><img src="/img/camera-lens.png" /></em> {{ . }}
+        | {{- end }} {{- with or (index $metadata 0 "FocalLength") (index
+        $metadata 0 "EXIF:FocalLength") }} <em>Focal length:</em> {{ . }} | {{-
+        end }} {{- with or (index $metadata 0 "FNumber") (index $metadata 0
+        "EXIF:FNumber") }} <em>Aperture:</em> ƒ/{{ . }} | {{- end }} {{- with or
+        (index $metadata 0 "ExposureTime") (index $metadata 0
+        "EXIF:ExposureTime") }} <em>Exposure time:</em> {{ . }} s | {{- end }}
+        {{- with or (index $metadata 0 "ISO") (index $metadata 0 "EXIF:ISO") }}
+        <em>ISO:</em> {{ . }} {{- end }}
       </p>
     </section>
     {{- end }} {{- end }}
@@ -231,6 +265,16 @@
     // Check if the href is not empty
     return nextLink && nextLink.href !== "" ? nextLink.href : null;
   }
+  const toggleButton = document.getElementById("toggleMetadata");
+  const metadataSection = document.getElementById("exif");
+
+  toggleButton.addEventListener("click", () => {
+    if (metadataSection.style.display === "none") {
+      metadataSection.style.display = "block";
+    } else {
+      metadataSection.style.display = "none";
+    }
+  });
 </script>
 
 <noscript>
