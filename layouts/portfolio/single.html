@@ -41,7 +41,7 @@
     <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
     {{ end }}
 
-    <section id="metadata">
+    <section id="exif">
       <h1 class="photo-title">{{ .Title }}</h1>
 
       <!-- Render JSON file -->
@@ -49,43 +49,41 @@
 
       <!-- itereate over json -->
       {{- with $json }}
-      <table id="exif">
-        <thead>
-          <tr>
-            <th>
-              <i class="material-icons camera_alt">&#xe3b0;</i>
-            </th>
-            <td>
-              <i class="">Fujifilm X-H2s<br>
-                Fujinon XF 10–24mm f4</i>
-            </td>
-          </tr>
-        </thead>
-  <tbody>
-    <tr>
-      <th> <i class="material-icons camera">&#xe3af</i></th>
-     <td>f/1.4</td>
-    </tr>
-        <tr>
-      <th><i class="material-icons shutter_speed">&#xe43d;</i></th>
-     <td>1/60s</td>
-    </tr>
-    <tr>
-      <th data-table="iso"><i class="material-icons iso">&#xe3f6;</i>
-</th>
-     <td>160 iso</td>
-    </tr>
-    <tr>
-      <th><i class="material-icons fullscreen">&#xe5d0;</i>
-</th>
-     <td>16mm</td>
-    </tr>
-  </tbody>
-</table>
+      <!-- <table id="exif"> -->
+      <!--   <thead> -->
+      <!--     <tr> -->
+      <!--       <th> -->
+      <!--         <i class="material-icons camera_alt">&#xe3b0;</i> -->
+      <!--       </th> -->
+      <!--       <td> -->
+      <!--         <i class="">Fujifilm X-H2s<br> -->
+      <!--           Fujinon XF 10–24mm f4</i> -->
+      <!--       </td> -->
+      <!--     </tr> -->
+      <!--   </thead> -->
+      <!--   <tbody> -->
+      <!--     <tr> -->
+      <!--       <th> <i class="material-icons camera">&#xe3af</i></th> -->
+      <!--       <td>f/1.4</td> -->
+      <!--     </tr> -->
+      <!--     <tr> -->
+      <!--       <th><i class="material-icons shutter_speed">&#xe43d;</i></th> -->
+      <!--       <td>1/60s</td> -->
+      <!--     </tr> -->
+      <!--     <tr> -->
+      <!--       <th data-table="iso"><i class="material-icons iso">&#xe3f6;</i></th> -->
+      <!--       <td>160 iso</td> -->
+      <!--     </tr> -->
+      <!--     <tr> -->
+      <!--       <th><i class="material-icons fullscreen">&#xe5d0;</i></th> -->
+      <!--       <td>16mm</td> -->
+      <!--     </tr> -->
+      <!--   </tbody> -->
+      <!-- </table> -->
 
       <!-- using the metadata -->
       {{- $metadata := unmarshal .Content }} {{- with index $metadata 0 }}
-      <p id="exif" style="display: none">
+      <p id="metadata">
         {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make")
         -}} {{- $make := . -}} {{- with or (index $metadata 0 "Model") (index
         $metadata 0 "EXIF:Model") -}}
@@ -101,8 +99,8 @@
         {{- with or (index $metadata 0 "ISO") (index $metadata 0 "EXIF:ISO") }}
         <em>ISO:</em> {{ . }} {{- end }}
       </p>
+      {{- end }} {{- end }}
     </section>
-    {{- end }} {{- end }}
   </div>
 </article>
 
@@ -144,7 +142,7 @@
       };
     }
   }
-  // Add transition effect (example using fade-in)
+  // Add transition effect
   function updateTransition() {
     const article = document.getElementById("imgFrame");
     article.style.visibility = "hidden";

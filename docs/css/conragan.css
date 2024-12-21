@@ -363,6 +363,11 @@ a.paginate {
   -webkit-font-smoothing: antialiased;
 }
 
+#metadata {
+  position: fixed;
+  top: 50%;
+}
+
 #exif {
   width: 18em;
   background: #fff;
