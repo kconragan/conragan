@@ -1,6 +1,11 @@
+/**************************************************************************
+ * GLOBAL STYLES
+ **************************************************************************/
+
 :root {
   --gap: 5rem;
 }
+
 @media (max-width: 767px) {
   :root {
     --h1-size: 3.2rem !important;
@@ -50,6 +55,14 @@ body {
 .title:not(:last-child),
 .content {
   margin-bottom: 3.2rem;
+}
+
+.navigation {
+  z-index: 1;
+}
+
+.footer {
+  display: none;
 }
 
 .navigation .container {
@@ -191,7 +204,7 @@ figure.cover {
   margin: 0 auto;
   max-width: none;
   width: 100%;
-  grid-column: wide-start/wide-end;
+  grid-column: wide-start / wide-end;
 }
 
 .cover img {
@@ -254,18 +267,50 @@ figure.cover {
 }
 
 .gh-canvas > * {
-  grid-column: main-start/main-end;
+  grid-column: main-start / main-end;
 }
 
-#paginate {
-  text-align: center;
+/**************************************************************************
+ * SINGLE IMAGE VIEW
+ **************************************************************************/
+
+/* --- Page Navigation --- */
+
+#page-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem; /* Set the fixed height here */
 }
 
-/* Show EXIF toggle */
+#photo-content {
+  transform: translateY(
+    calc(100% - 6rem)
+  ); /* Hide most of the container initially and ensure this matches #page-navigation */
+}
 
-.plus::before {
-  content: "➕";
-  color: white;
+#toggleMetadata,
+a.paginate {
+  display: inline-block;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.colorscheme-dark a.paginate {
+  color: #dadada;
+}
+
+.colorscheme-dark .c-project-content__toggle::before,
+.colorscheme-dark .c-project-content__toggle::after {
+  background-color: #dadada;
+}
+
+/* --- Toggle Button --- */
+
+#metadata-toggle {
+  transform: scale(90%);
 }
 
 #toggleMetadata {
@@ -277,90 +322,190 @@ figure.cover {
   outline: inherit;
 }
 
-#toggleMetadata,
-a.paginate {
-  display: inline-block;
-  margin: 0 16px;
-  font-size: 13px;
-  line-height: 1.4;
-  font-weight: bold;
-  text-transform: uppercase;
+.c-project-content__toggle {
+  position: relative;
+  float: left;
+  height: 24px;
+  width: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
-a.paginate {
-  color: #363636;
+.c-project-content__toggle::before,
+.c-project-content__toggle::after {
+  background-color: #363636;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-.colorscheme-dark a.paginate {
-  color: #dadada;
+.c-project-content__toggle::before {
+  height: 9px;
+  width: 24px;
 }
 
-#imgFrame {
+.c-project-content__toggle::after {
+  height: 24px;
+  width: 8px;
+  -webkit-transition:
+    height 0.3s,
+    width 0.3s;
+  -o-transition:
+    height 0.3s,
+    width 0.3s;
+  transition:
+    height 0.3s,
+    width 0.3s;
+}
+
+.is-active .c-project-content__toggle::after {
+  height: 8px;
+  width: 24px;
+}
+
+/* --- Photo Content --- */
+
+#photo-content {
+  height: 50%; /* Adjust this if your content height is different */
+  left: 0;
+  line-height: 120%;
+  position: fixed;
+  bottom: 0; /* Position from the bottom */
+  -webkit-transition:
+    background-color 0.3s,
+    transform 0.3s;
+  -o-transition:
+    background-color 0.3s,
+    transform 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+  width: 100%;
+  padding: 0 2rem; /* Add some padding */
+}
+
+/* Adjust this padding if needed */
+.is-active #photo-content {
+  transform: translateY(0); /* Show the container when active */
+}
+
+/* --- Photo Image --- */
+
+#photo-image {
   opacity: 0;
-  transition: opacity 200ms ease-in-out; /* Add a smooth transition for opacity */
+  transition:
+    opacity 200ms ease-in-out,
+    transform 0.3s; /* Add a smooth transition for opacity */
   text-align: center;
+  transform: translateY(0); /* Initial state: no vertical translation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh; /* Default height */
 }
 
-#imgFrame img {
+/* Add a class to move the image up when #photo-content is active */
+.is-active #photo-image {
+  transform: translateY(-50%); /* Adjust this value as needed */
+}
+
+#photo-image img {
   margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
-#imgFrame.fade-in {
+#photo-image.fade-in {
   opacity: 1;
 }
 
+/* Media queries for different screen sizes */
+
+/* Small screens */
+@media (max-width: 767px) {
+  #photo-content .photo-title {
+    font-size: 18px;
+  }
+
+  #photo-image {
+    height: auto; /* Adjust height for small screens */
+    padding: 10px;
+  }
+  #photo-image.image-portrait {
+    max-height: 70vh;
+  }
+  #photo-image.image-landscape {
+    max-height: 50vh;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #photo-content .photo-title {
+    font-size: 20px;
+  }
+  #photo-image.image-portrait,
+  #photo-image.image-landscape,
+  #photo-image.image-square {
+    height: 75vh; /* Example height for medium screens */
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  #photo-content .photo-title {
+    font-size: 24px;
+  }
+  #photo-image.image-portrait,
+  #photo-image.image-landscape,
+  #photo-image.image-square {
+    height: 85vh;
+  }
+}
+
+/* --- Metadata --- */
+
 #metadata {
-  text-align: center;
 }
 
 #metadata p {
-  text-align: center;
 }
 
-#metadata .photo-title,
-#metadata .exif {
-  margin: 0;
-  font-size: 12px;
-}
-
-#metadata .photo-title {
+#photo-content .photo-title {
   font-weight: 700;
-  font-size: 13px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-#metadata .photo-title.fade-in {
+#photo-content .photo-title.fade-in {
   opacity: 1;
 }
 
-.exif em {
+#metadata em {
   font-style: normal;
 }
 
-/* .arrow { */
-/*   border: solid #444; */
-/*   border-width: 0 3px 3px 0; */
-/*   display: inline-block; */
-/*   height: 0; */
-/*   padding: 4px; */
-/*   text-indent: -9999px; */
-/*   margin: 8px 16px; */
-/*   vertical-align: middle; */
-/* } */
-/**/
-/* .arrow:hover { */
-/*   border-color: white; */
-/* } */
-/**/
-/* .right { */
-/*   transform: rotate(-45deg); */
-/*   -webkit-transform: rotate(-45deg); */
-/*   margin-left: auto; */
-/* } */
-/**/
-/* .left { */
-/*   transform: rotate(135deg); */
-/*   -webkit-transform: rotate(135deg); */
-/*   margin-right: auto; */
-/* } */
+/* --- Utilities --- */
+
+.u-visually-hide {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
