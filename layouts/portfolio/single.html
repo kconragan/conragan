@@ -9,10 +9,7 @@
     <div id="photo-content">
       <nav id="page-navigation">
         <div class="metadata-toggle">
-          <button
-            id="toggleMetadata"
-            class="c-project-content__toggle js-project-content-toggle"
-          >
+          <button id="toggleMetadata" class="project-content-toggle">
             <span class="u-visually-hide">Info</span>
           </button>
         </div>
@@ -21,7 +18,7 @@
           <a
             href="{{ with $pages.Prev . }}{{ .RelPermalink }}{{ end }}"
             id="prevLink"
-            class="paginate arrow left"
+            class="paginate arrow left {{ if not ($pages.Prev .) }}disabled{{ end }}"
             {{
             if
             not
@@ -33,11 +30,11 @@
             }}
             >Prev</a
           >
-          &nbsp;
+
           <a
             href="{{ with $pages.Next . }}{{ .RelPermalink }}{{ end }}"
             id="nextLink"
-            class="paginate arrow right"
+            class="paginate arrow right {{ if not ($pages.Next .) }}disabled{{ end }}"
             {{
             if
             not
@@ -64,8 +61,8 @@
         <div id="metadata">
           {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make")
           -}} {{- $make := . -}} {{- with or (index $metadata 0 "Model") (index
-          $metadata 0 "EXIF:Model") -}} {{ $make }} {{ . }} | {{- end -}} {{-
-          end -}} {{- with or (index $metadata 0 "LensModel") (index $metadata 0
+          $metadata 0 "EXIF:Model") -}} {{ $make }} {{ . }} {{- end -}} {{- end
+          -}} {{- with or (index $metadata 0 "LensModel") (index $metadata 0
           "EXIF:LensModel") }} {{ . }} | {{- end }} {{- with or (index $metadata
           0 "FocalLength") (index $metadata 0 "EXIF:FocalLength") }}
           <em>Focal length:</em> {{ . }} | {{- end }} {{- with or (index
@@ -122,21 +119,13 @@
   function adjustImageSize() {
     const imgFrame = document.getElementById("photo-image");
     const img = imgFrame.querySelector("img");
-    const metadata = document.getElementById("metadata");
 
     if (img.complete) {
-      categorizeImage(img); // Categorize the image
-      const imageTop = img.getBoundingClientRect().top;
-      const imageAndMetadataHeight = img.clientHeight + metadata.clientHeight;
-      const availableHeight = window.innerHeight - imageTop;
+      categorizeImage(img); // Categorize the image based on aspect ratio
 
-      if (imageAndMetadataHeight > availableHeight) {
-        const newImageHeight = availableHeight - metadata.clientHeight - 24;
-        img.style.height = newImageHeight + "px";
-        img.style.width = "auto";
-      }
+      // No need to set height manually anymore
 
-      // Fade in the title after the image is resized
+      // Fade in the title after the image is categorized
       const title = document.querySelector("h1.photo-title");
       title.classList.add("fade-in");
     } else {

@@ -298,13 +298,30 @@ a.paginate {
   text-transform: uppercase;
 }
 
+a.paginate {
+  color: #363636;
+  transition: 0.3s color;
+}
+
+a.paginate.disabled {
+  color: #dadada;
+}
+
+a.paginate:hover {
+  color: #111;
+  text-decoration: none;
+}
+
 .colorscheme-dark a.paginate {
   color: #dadada;
 }
 
-.colorscheme-dark .c-project-content__toggle::before,
-.colorscheme-dark .c-project-content__toggle::after {
-  background-color: #dadada;
+.colorscheme-dark a.paginate:hover {
+  color: #fefefe;
+}
+
+.colorscheme-dark a.paginate.disabled {
+  color: #363636;
 }
 
 /* --- Toggle Button --- */
@@ -322,7 +339,7 @@ a.paginate {
   outline: inherit;
 }
 
-.c-project-content__toggle {
+.project-content-toggle {
   position: relative;
   float: left;
   height: 24px;
@@ -338,8 +355,8 @@ a.paginate {
   transition: color 0.3s;
 }
 
-.c-project-content__toggle::before,
-.c-project-content__toggle::after {
+.project-content-toggle::before,
+.project-content-toggle::after {
   background-color: #363636;
   content: "";
   position: absolute;
@@ -348,14 +365,15 @@ a.paginate {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  transition: background 0.3s;
 }
 
-.c-project-content__toggle::before {
+.project-content-toggle::before {
   height: 9px;
   width: 24px;
 }
 
-.c-project-content__toggle::after {
+.project-content-toggle::after {
   height: 24px;
   width: 8px;
   -webkit-transition:
@@ -369,9 +387,24 @@ a.paginate {
     width 0.3s;
 }
 
-.is-active .c-project-content__toggle::after {
+.project-content-toggle:hover::before,
+.project-content-toggle:hover::after {
+  background-color: #111;
+}
+
+.is-active .project-content-toggle::after {
   height: 8px;
   width: 24px;
+}
+
+.colorscheme-dark .project-content-toggle::before,
+.colorscheme-dark .project-content-toggle::after {
+  background-color: #dadada;
+}
+
+.colorscheme-dark .project-content-toggle:hover::before,
+.colorscheme-dark .project-content-toggle:hover::after {
+  background-color: #fefefe;
 }
 
 /* --- Photo Content --- */
@@ -408,11 +441,11 @@ a.paginate {
     opacity 200ms ease-in-out,
     transform 0.3s; /* Add a smooth transition for opacity */
   text-align: center;
+  width: 100%; /* Ensure the container takes full width */
   transform: translateY(0); /* Initial state: no vertical translation */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh; /* Default height */
 }
 
 /* Add a class to move the image up when #photo-content is active */
@@ -423,9 +456,13 @@ a.paginate {
 #photo-image img {
   margin: 0 auto;
   max-width: 100%;
-  max-height: 100%;
   width: auto;
-  height: auto;
+  border: 2px solid #111;
+  transition: border 03s;
+}
+
+.colorscheme-dark #photo-image img {
+  border: 0;
 }
 
 #photo-image.fade-in {
@@ -440,27 +477,36 @@ a.paginate {
     font-size: 18px;
   }
 
-  #photo-image {
-    height: auto; /* Adjust height for small screens */
-    padding: 10px;
+  #photo-image img {
+    border-width: 2px;
   }
+
   #photo-image.image-portrait {
+    margin-top: 15%;
     max-height: 70vh;
   }
+
   #photo-image.image-landscape {
+    margin-top: 40%;
     max-height: 50vh;
   }
 }
 
 /* Medium screens */
 @media (min-width: 768px) and (max-width: 1024px) {
+  #photo-image img {
+    border-width: 4px;
+  }
+
   #photo-content .photo-title {
     font-size: 20px;
   }
-  #photo-image.image-portrait,
-  #photo-image.image-landscape,
-  #photo-image.image-square {
-    height: 75vh; /* Example height for medium screens */
+
+  #photo-image.image-portrait {
+    margin-top: 5%;
+  }
+  #photo-image.image-landscape {
+    margin-top: 18%;
   }
 }
 
@@ -469,10 +515,37 @@ a.paginate {
   #photo-content .photo-title {
     font-size: 24px;
   }
+
+  #photo-image img {
+    border-width: 6px;
+  }
+
   #photo-image.image-portrait,
   #photo-image.image-landscape,
   #photo-image.image-square {
     height: 85vh;
+  }
+}
+
+/* Landscape orientation on devices with small viewport heights */
+@media (max-height: 500px) and (orientation: landscape) {
+  #photo-image.image-landscape {
+    margin-top: 5%;
+    max-height: 50vh; /* Adjust this value as needed */
+    max-width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #photo-image.image-portrait {
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 50vh; /* Adjust this value as needed */
+    max-width: 50vw;
+  }
+
+  #photo-image.image-portrait img {
+    max-height: 80vh;
   }
 }
 
