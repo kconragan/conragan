@@ -503,10 +503,18 @@ a.paginate:hover {
   }
 
   #photo-image.image-portrait {
-    margin-top: 5%;
+    margin: 5% auto 0;
+    max-width: 70vw;
   }
   #photo-image.image-landscape {
-    margin-top: 18%;
+    margin: 5% auto 0;
+    max-width: 80vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #photo-image.image-landscape {
+    margin: 20% auto 0;
   }
 }
 
@@ -520,10 +528,13 @@ a.paginate:hover {
     border-width: 6px;
   }
 
-  #photo-image.image-portrait,
-  #photo-image.image-landscape,
-  #photo-image.image-square {
-    height: 85vh;
+  #photo-image.image-portrait {
+  }
+
+  #photo-image.image-landscape {
+    max-height: 40vh;
+    max-width: 80vw;
+    margin: 15% auto 0;
   }
 }
 
@@ -538,14 +549,21 @@ a.paginate:hover {
   }
 
   #photo-image.image-portrait {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 5% auto 0;
     max-height: 50vh; /* Adjust this value as needed */
     max-width: 50vw;
   }
 
   #photo-image.image-portrait img {
     max-height: 80vh;
+  }
+}
+
+/* Large screens AND Landscape Orientation */
+@media (min-width: 1025px) and (orientation: landscape) {
+  #photo-image.image-portrait {
+    max-width: 35vw;
+    margin: 0 auto;
   }
 }
 
