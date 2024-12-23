@@ -1,22 +1,21 @@
 {{ define "content" }}
-<div class="container list">
-  <header>
-    <h1 class="title"></h1>
-  </header>
-  <div class="columns">
-    {{ $section := .Site.GetPage "section" "photography" }} {{ range
-    $section.Pages }}
-    <div class="column">
-      <div class="image is-3by2">
-        <a class="title" href="{{ .RelPermalink}}">
-          <img src="{{.RelPermalink }}{{ .Params.cover }}" />
+<article class="container list">
+  <h1>{{ .Title }}</h1>
+
+  <section id="gallery-grid">
+    <div class="columns is-multiline">
+      {{ $currentSection := .Section }} {{ range .Pages }} {{ if eq .Section
+      $currentSection }}
+      <div class="column is-one-third photo-item">
+        <a href="{{ .RelPermalink }}">
+          {{ $image := .Resources.GetMatch "*.jpg*" }} {{ with $image }}
+          <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
+          {{ end }}
+          <h2>{{ .Title }}</h2>
         </a>
       </div>
-      <h2>
-        <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </h2>
+      {{ end }} {{ end }}
     </div>
-    {{ end }}
-  </div>
-</div>
+  </section>
+</article>
 {{ end }}

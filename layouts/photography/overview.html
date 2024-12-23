@@ -1,0 +1,30 @@
+{{ define "content" }}
+<article class="container list">
+  <h1>{{ .Title }}</h1>
+  <section id="gallery-sections">
+    <div class="columns">
+      {{ range .Sections }} {{ $section := . }}
+      <div class="column">
+        <div class="image is-3by2">
+          <a class="title" href="{{ $section.RelPermalink }}">
+            {{/* Look for cover image first */}} {{ $cover := "" }} {{ with
+            $section.Resources.GetMatch "cover.*" }} {{ $cover = .RelPermalink
+            }} {{ else }} {{/* Fallback to first image in section */}} {{ with
+            $section.Resources.ByType "image" }} {{ if gt (len .) 0 }} {{ $cover
+            = (index . 0).RelPermalink }} {{ end }} {{ end }} {{ end }} {{/*
+            Display the image if found */}} {{ if $cover }}
+            <img src="{{ $cover }}" alt="{{ $section.Title }} Cover" />
+            {{ end }}
+          </a>
+        </div>
+        <h2>
+          <a class="title" href="{{ $section.RelPermalink }}"
+            >{{ $section.Title }}</a
+          >
+        </h2>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+</article>
+{{ end }}

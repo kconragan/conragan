@@ -12,6 +12,13 @@ style = "github-dark"
 
 enableGitInfo = true
 
+# BaseURL Overrides based on environment
+[development]
+  baseURL = "http://localhost:1313/"
+
+[production]
+  baseURL = "https://conragan.com/"
+
 # Menu links
 [[menu.main]]
    name = "Photography"

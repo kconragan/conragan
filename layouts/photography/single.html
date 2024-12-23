@@ -1,138 +1,313 @@
 {{ define "content" }}
-<section class="container page gallery">
-  <article>
-    <header>
-      <h1 class="title">{{ .Title }}</h1>
-      <!--
-            <p>Use the filters below to sort images. Click on an image to take a closer look!</p>
-            <div id="tag-buttons">
-                <button role="button" data-tag="all">All</button>
-                <button role="button" data-tag="seascapes">Seascapes</button>
-                <button role="button" data-tag="water">Rivers and Lakes</button>
-                <button role="button" data-tag="trees">Trees</button>
-                <button role="button" data-tag="bw">Black and White</button>
-                <button role="button" data-tag="fall">Fall</button>
-                <button role="button" data-tag="moody">Moody</button>
-                <button role="button" data-tag="birds">Birds</button>
-            </div>
-            -->
-    </header>
-    {{ .Content }}
-    <div class="photo-container" id="lightgallery">
-      {{- $context := . -}}
-            {{- range $src := sort (.Page.Resources.Match "photos/**.jpg") "Title" "desc" -}}
-
-            {{- $title := (replace .Title "gallery/" "") -}}
-
-            {{- $exifJson := $context.Page.Resources.GetMatch (printf "%s.json" .Name) -}}
-
-            {{- $exif := slice -}}
-            {{- $tags := slice -}}
-            {{- with $exifJson -}}
-            {{- with (index (.Content | unmarshal) 0) -}}
-            {{ with .Category -}}
-            {{- $tags = $tags | append (printf "%s" .) -}}
-            {{- end -}}
-            {{- with .Headline -}}{{- $title = . -}}{{- end -}}
-            {{- with .Make -}}{{- $exif = $exif | append (printf "Make: %s" .) -}}{{- end -}}
-            {{- with .Model -}}{{- $exif = $exif | append (printf "Camera: %s" .) -}}{{- end -}}
-            {{- with .LensModel -}}{{- $exif = $exif | append (printf "Lens: %s" .) -}}{{- end -}}
-            {{- with .FocalLength -}}{{- $exif = $exif | append (printf "Focal length: %s" .) -}}{{- end -}}
-            {{- with .FNumber -}}{{- $exif = $exif | append (printf "Aperture: ƒ/%.1f" .) -}}{{- end -}}
-            {{- with .ExposureTime -}}
-            {{- if eq (printf "%T" .) "float64" -}}
-            {{- $exif = $exif | append (printf "Exposure time: %.1f s" .) -}}
-            {{- else -}}
-            {{- $exif = $exif | append (printf "Exposure time: %s s" .) -}}
-            {{- end -}}
-            {{- end -}}
-            {{- with .ISO -}}{{- $exif = $exif | append (printf "ISO: %.0f" .) -}}{{- end -}}
-            {{- end -}}
-            {{- end -}}
-
-
-
-            <div class="photo-item {{ delimit $tags " | " }}" data-src="{{ .RelPermalink }}"
-                data-sub-html="<h4>{{ $title }}</h4><p>{{ delimit $exif " | " }}</p>">
-                {{- $resize := default "smart" -}}
-                {{- $small := ($src.Resize "x700" ) -}}
-                {{- $medium := ($src.Resize "x900" ) -}}
-                {{- $large := ($src.Resize "x1200" ) -}}
-                <picture>
-                    <source srcset="{{ $large.RelPermalink }}" media="(min-width: 900px)">
-                    <source srcset="{{ $medium.RelPermalink }}" media="(min-width: 600px) and (max-width: 899px)">
-                    <img src="{{ $small.RelPermalink }}" width="{{ $small.Width }}" height="{{ $small.Height }}"
-                        alt="{{ $title }}" />
-                </picture>
-                <div class="overlay"></div>
-            </div>
-            {{ end }}
+<article class="container page gallery">
+  <div id="photo-container">
+    <div id="photo-image">
+      {{- $image := .Resources.GetMatch "*.jpg*" }} {{- with $image }}
+      <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
+      {{ end }}
     </div>
-  </article>
-</section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <div id="photo-content">
+      <nav id="page-navigation">
+        <div class="metadata-toggle">
+          <button id="toggleMetadata" class="project-content-toggle">
+            <span class="u-visually-hide">Info</span>
+          </button>
+        </div>
+        <div class="pagination-links">
+          {{ $pages := .CurrentSection.Pages.ByWeight.Reverse }}
+          <a
+            href="{{ with $pages.Prev . }}{{ .RelPermalink }}{{ end }}"
+            id="prevLink"
+            class="paginate arrow left {{ if not ($pages.Prev .) }}disabled{{ end }}"
+            {{
+            if
+            not
+            ($pages.Prev
+            .)
+            }}style="pointer-events: none"
+            {{
+            end
+            }}
+            >Prev</a
+          >
+
+          <a
+            href="{{ with $pages.Next . }}{{ .RelPermalink }}{{ end }}"
+            id="nextLink"
+            class="paginate arrow right {{ if not ($pages.Next .) }}disabled{{ end }}"
+            {{
+            if
+            not
+            ($pages.Next
+            .)
+            }}style="pointer-events: none"
+            {{
+            end
+            }}
+            >Next</a
+          >
+        </div>
+      </nav>
+      <h1 class="photo-title">{{ .Title }}</h1>
+      <section id="exif">
+        <!-- Render JSON file -->
+        {{- $json := .Resources.GetMatch "*.json*" }}
+
+        <!-- itereate over json -->
+        {{- with $json }}
+
+        <!-- using the metadata -->
+        {{- $metadata := unmarshal .Content }} {{- with index $metadata 0 }}
+        <div id="metadata">
+          {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make")
+          -}} {{- $make := . -}} {{- with or (index $metadata 0 "Model") (index
+          $metadata 0 "EXIF:Model") -}} {{ $make }} {{ . }} {{- end -}} {{- end
+          -}} {{- with or (index $metadata 0 "LensModel") (index $metadata 0
+          "EXIF:LensModel") }} {{ . }} | {{- end }} {{- with or (index $metadata
+          0 "FocalLength") (index $metadata 0 "EXIF:FocalLength") }}
+          <em>Focal length:</em> {{ . }} | {{- end }} {{- with or (index
+          $metadata 0 "FNumber") (index $metadata 0 "EXIF:FNumber") }}
+          <em>Aperture:</em> ƒ/{{ . }} | {{- end }} {{- with or (index $metadata
+          0 "ExposureTime") (index $metadata 0 "EXIF:ExposureTime") }}
+          <em>Exposure time:</em> {{ . }} s | {{- end }} {{- with or (index
+          $metadata 0 "ISO") (index $metadata 0 "EXIF:ISO") }} <em>ISO:</em> {{
+          . }} {{- end }}
+          <p>
+            Hiking in Switzerland near Grindewald with a dear friend, I came
+            across this abandoned shack with a view.
+          </p>
+        </div>
+        {{- end }} {{- end }}
+      </section>
+    </div>
+  </div>
+</article>
+
 <script>
-  // initiate the masonry layout with
-  var macy = Macy({
-    container: "#lightgallery",
-    trueOrder: false,
-    waitForImages: false,
-    margin: 0,
-    columns: 3,
-    breakAt: {
-      1200: 3,
-      940: 2,
-      340: 1,
-    },
-  });
+  // Function to prefetch a page
+  function prefetchPage(url) {
+    if (url) {
+      fetch(url, { rel: "prefetch" });
+    }
+  }
 
-  // initiate the lightgallery response
-  lightGallery(document.getElementById("lightgallery"), {
-    download: false,
-  });
+  // Prefetch previous and next pages on load
+  prefetchPage(document.getElementById("prevLink")?.href);
+  prefetchPage(document.getElementById("nextLink")?.href);
 
-  // Setup click handlers for filtering images
-  window.addEventListener("DOMContentLoaded", function () {
-    // Get all the buttons and posts
-    const buttons = document.querySelectorAll("#tag-buttons button");
-    const posts = document.querySelectorAll(".photo-item");
+  // Function to categorize image based on aspect ratio
+  function categorizeImage(img) {
+    const aspectRatio = img.naturalWidth / img.naturalHeight;
+    const imgFrame = document.getElementById("photo-image");
 
-    // Add click event listener to each button
-    buttons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        // Remove 'active' class from all buttons
-        buttons.forEach(function (btn) {
-          btn.classList.remove("bg-blue-500", "text-white");
-          btn.classList.add("bg-gray-200", "text-gray-700");
-        });
+    imgFrame.classList.remove(
+      "image-landscape",
+      "image-portrait",
+      "image-square",
+    );
 
-        // Add 'active' class to the clicked button
-        button.classList.remove("bg-gray-200", "text-gray-700");
-        button.classList.add("bg-blue-500", "text-white");
+    if (aspectRatio > 1.2) {
+      imgFrame.classList.add("image-landscape");
+    } else if (aspectRatio < 0.8) {
+      imgFrame.classList.add("image-portrait");
+    } else {
+      imgFrame.classList.add("image-square");
+    }
+  }
 
-        if (button.textContent === "All") {
-          // Show all posts if 'All' button is clicked
-          posts.forEach(function (post) {
-            post.style.display = "block";
-          });
-        } else {
-          const tag = button.dataset.tag.toLocaleLowerCase();
-          console.log(tag);
-          // Hide all posts
-          posts.forEach(function (post) {
-            post.style.display = "none";
-          });
+  // Function to adjust image size
+  function adjustImageSize() {
+    const imgFrame = document.getElementById("photo-image");
+    const img = imgFrame.querySelector("img");
 
-          // Show only posts with the selected tag
-          const filteredPosts = document.querySelectorAll("." + tag);
-          filteredPosts.forEach(function (post) {
-            post.style.display = "block";
-          });
+    if (img.complete) {
+      categorizeImage(img); // Categorize the image based on aspect ratio
+
+      // No need to set height manually anymore
+
+      // Fade in the title after the image is categorized
+      const title = document.querySelector("h1.photo-title");
+      title.classList.add("fade-in");
+    } else {
+      img.onload = function () {
+        adjustImageSize();
+      };
+    }
+  }
+
+  // Add transition effect
+  function updateTransition() {
+    const article = document.getElementById("photo-image");
+    article.style.visibility = "hidden";
+    article.classList.remove("fade-in");
+    setTimeout(() => {
+      article.classList.add("fade-in");
+      article.style.visibility = "visible";
+    }, 200);
+  }
+
+  // Make the function globally accessible (for debugging)
+  window.updateTransition = updateTransition;
+
+  // Function to handle navigation (triggered by click or key press)
+  function navigateToPage(url) {
+    if (!url) {
+      return; // Don't navigate if the URL is null
+    }
+
+    const article = document.getElementById("photo-image");
+    article.style.visibility = "hidden";
+
+    fetch(url)
+      .then((response) => response.text())
+      .then((html) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+
+        // Extract the new imgFrame content, INCLUDING the image and metadata
+        const newImgFrame = doc.getElementById("photo-image").innerHTML;
+        // Extract new metadata content
+        const newMetadata = doc.getElementById("photo-content").innerHTML;
+
+        // Update the imgFrame with the new content
+        article.innerHTML = newImgFrame;
+
+        // Update metadata
+        document.getElementById("photo-content").innerHTML = newMetadata;
+
+        article.style.visibility = "visible";
+
+        // Update the URL after the content is loaded
+        history.pushState(null, "", url);
+
+        // --- Update navigation without replacing the element ---
+        const newPageNavigation = doc.getElementById("page-navigation");
+        const existingPageNavigation =
+          document.getElementById("page-navigation");
+
+        // Replace only the children, not the page-navigation element itself
+        existingPageNavigation.innerHTML = newPageNavigation.innerHTML;
+
+        // --- End of navigation update ---
+
+        // Get the new image element
+        const img = article.querySelector("img");
+
+        // Wait for the new image to load before adjusting size
+        img.onload = function () {
+          adjustImageSize();
+          updateTransition();
+        };
+
+        // Adjust image size immediately if image is already loaded (cached)
+        if (img.complete) {
+          adjustImageSize();
+          updateTransition();
         }
-        macy.reInit();
-      });
-    });
+
+        prefetchPage(getNextPageUrl());
+        prefetchPage(getPreviousPageUrl());
+      })
+      .catch((error) => console.error("Error fetching content:", error));
+  }
+
+  // Apply fade-in class, adjust image size, and categorize image on initial page load
+  window.addEventListener("load", () => {
+    const imgFrame = document.getElementById("photo-image");
+    const img = imgFrame.querySelector("img");
+
+    if (img.complete) {
+      adjustImageSize();
+      categorizeImage(img); // Categorize the image on load
+    } else {
+      img.onload = function () {
+        adjustImageSize();
+        categorizeImage(img); // Categorize the image once loaded
+      };
+    }
+
+    updateTransition();
+    setupToggleEventListener();
   });
+
+  // Handle window resize
+  window.addEventListener("resize", () => {
+    const imgFrame = document.getElementById("photo-image");
+    const img = imgFrame.querySelector("img");
+    adjustImageSize();
+    categorizeImage(img); // Re-categorize the image on resize
+  });
+
+  // Handle keydown events
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      const prevLink = document.getElementById("prevLink");
+      if (prevLink && !prevLink.style.pointerEvents) {
+        // Check if the link is NOT disabled
+        navigateToPage(getPreviousPageUrl());
+      }
+    } else if (event.key === "ArrowRight") {
+      const nextLink = document.getElementById("nextLink");
+      if (nextLink && !nextLink.style.pointerEvents) {
+        // Check if the link is NOT disabled
+        navigateToPage(getNextPageUrl());
+      }
+    }
+  });
+
+  document.getElementById("prevLink")?.addEventListener("click", (event) => {
+    const prevPageUrl = getPreviousPageUrl();
+    if (prevPageUrl) {
+      console.log("Previous page URL found:", prevPageUrl);
+      navigateToPage(prevPageUrl);
+    }
+  });
+
+  document.getElementById("nextLink")?.addEventListener("click", (event) => {
+    const nextPageUrl = getNextPageUrl();
+    if (nextPageUrl) {
+      console.log("Next page URL found:", nextPageUrl);
+      navigateToPage(nextPageUrl);
+    }
+  });
+
+  function getPreviousPageUrl() {
+    const prevLink = document.getElementById("prevLink");
+    // Check if the href is not empty
+    return prevLink && prevLink.href !== "" ? prevLink.href : null;
+  }
+
+  function getNextPageUrl() {
+    const nextLink = document.getElementById("nextLink");
+    // Check if the href is not empty
+    return nextLink && nextLink.href !== "" ? nextLink.href : null;
+  }
+
+  // Function to set up the toggle event listener
+  function setupToggleEventListener() {
+    document.addEventListener("click", function (event) {
+      if (event.target.closest("#toggleMetadata")) {
+        console.log("toggle");
+        const metadataSection = document.getElementById("photo-container");
+        const photoImage = document.getElementById("photo-image");
+
+        metadataSection.classList.toggle("is-active");
+
+        // Remove the inline style to allow CSS to handle the transition
+        if (metadataSection.classList.contains("is-active")) {
+          photoImage.style.transform = ""; // Remove inline style
+        } else {
+          photoImage.style.transform = ""; // Remove inline style
+        }
+      }
+    });
+  }
 </script>
+<noscript>
+  <style>
+    #photo-image {
+      opacity: 1; /* Make the image visible by default */
+    }
+  </style>
+</noscript>
 {{ end }}
