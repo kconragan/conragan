@@ -19,15 +19,6 @@
             href="{{ with $pages.Prev . }}{{ .RelPermalink }}{{ end }}"
             id="prevLink"
             class="paginate arrow left {{ if not ($pages.Prev .) }}disabled{{ end }}"
-            {{
-            if
-            not
-            ($pages.Prev
-            .)
-            }}style="pointer-events: none"
-            {{
-            end
-            }}
             >Prev</a
           >
 
@@ -35,49 +26,40 @@
             href="{{ with $pages.Next . }}{{ .RelPermalink }}{{ end }}"
             id="nextLink"
             class="paginate arrow right {{ if not ($pages.Next .) }}disabled{{ end }}"
-            {{
-            if
-            not
-            ($pages.Next
-            .)
-            }}style="pointer-events: none"
-            {{
-            end
-            }}
             >Next</a
           >
         </div>
       </nav>
       <h1 class="photo-title">{{ .Title }}</h1>
       <section id="exif">
-        <!-- Render JSON file -->
-        {{- $json := .Resources.GetMatch "*.json*" }}
-
-        <!-- itereate over json -->
-        {{- with $json }}
-
-        <!-- using the metadata -->
-        {{- $metadata := unmarshal .Content }} {{- with index $metadata 0 }}
+        {{- $json := .Resources.GetMatch "*.json*" }} {{- with $json }} {{-
+        $metadata := unmarshal .Content }}
         <div id="metadata">
-          {{- with or (index $metadata 0 "Make") (index $metadata 0 "EXIF:Make")
-          -}} {{- $make := . -}} {{- with or (index $metadata 0 "Model") (index
-          $metadata 0 "EXIF:Model") -}} {{ $make }} {{ . }} {{- end -}} {{- end
-          -}} {{- with or (index $metadata 0 "LensModel") (index $metadata 0
-          "EXIF:LensModel") }} {{ . }} | {{- end }} {{- with or (index $metadata
-          0 "FocalLength") (index $metadata 0 "EXIF:FocalLength") }}
-          <em>Focal length:</em> {{ . }} | {{- end }} {{- with or (index
-          $metadata 0 "FNumber") (index $metadata 0 "EXIF:FNumber") }}
-          <em>Aperture:</em> ƒ/{{ . }} | {{- end }} {{- with or (index $metadata
-          0 "ExposureTime") (index $metadata 0 "EXIF:ExposureTime") }}
-          <em>Exposure time:</em> {{ . }} s | {{- end }} {{- with or (index
-          $metadata 0 "ISO") (index $metadata 0 "EXIF:ISO") }} <em>ISO:</em> {{
-          . }} {{- end }}
+          {{- with or ($metadata.Make) ($metadata.ExifTool.Make) }}
+          <p>Camera Make: {{ . }}</p>
+          {{- end }} {{- with or ($metadata.Model) ($metadata.ExifTool.Model) }}
+          <p>Camera Model: {{ . }}</p>
+          {{- end }} {{- with or ($metadata.LensModel) ($metadata.XMP.LensModel)
+          }}
+          <p>Lens Model: {{ . }}</p>
+          {{- end }} {{- with or ($metadata.FocalLength)
+          ($metadata.ExifTool.FocalLength) }}
+          <p>Focal Length: {{ . }}</p>
+          {{- end }} {{- with or ($metadata.FNumber)
+          ($metadata.ExifTool.FNumber) }}
+          <p>Aperture: ƒ/{{ . }}</p>
+          {{- end }} {{- with or ($metadata.ExposureTime)
+          ($metadata.ExifTool.ExposureTime) }}
+          <p>Exposure Time: {{ . }} seconds</p>
+          {{- end }} {{- with or ($metadata.ISO) ($metadata.ExifTool.ISO) }}
+          <p>ISO: {{ . }}</p>
+          {{- end }}
           <p>
-            Hiking in Switzerland near Grindewald with a dear friend, I came
-            across this abandoned shack with a view.
+            {{- with .Params.description }} {{ . }} {{- else }} No description
+            available. {{- end }}
           </p>
         </div>
-        {{- end }} {{- end }}
+        {{- end }}
       </section>
     </div>
   </div>
