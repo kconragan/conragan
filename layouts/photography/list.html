@@ -1,21 +1,51 @@
 {{ define "content" }}
-<article class="container list">
+<section class="photo-grid">
   <h1>{{ .Title }}</h1>
 
-  <section id="gallery-grid">
-    <div class="columns is-multiline">
-      {{ $currentSection := .Section }} {{ range .Pages }} {{ if eq .Section
-      $currentSection }}
-      <div class="column is-one-third photo-item">
+  <ul id="photos">
+    {{ $currentSection := .Section }} {{ range .Pages }} {{ if eq .Section
+    $currentSection }}
+    <li class="photo-item">
+      <figure>
         <a href="{{ .RelPermalink }}">
           {{ $image := .Resources.GetMatch "*.jpg*" }} {{ with $image }}
           <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
           {{ end }}
-          <h2>{{ .Title }}</h2>
         </a>
-      </div>
-      {{ end }} {{ end }}
-    </div>
-  </section>
-</article>
+        <h2 class="photo-title">
+          <a href="{{ .RelPermalink }}" class="text">
+            {{ $json := .Resources.GetMatch "*.json" }} {{ $title := "" }} {{/*
+            Initialize $title to empty string */}} {{/* 1. Try to get title from
+            JSON Headline */}} {{ with $json }} {{ $metadata := unmarshal
+            .Content }} {{ with $metadata.Headline }} {{ $title = . }} {{ end }}
+            {{ end }} {{/* 2. If title is still empty, use index.md Title */}}
+            {{ if eq $title "" }} {{ $title = .Title }} {{ end }} {{/* 3. If
+            title is still empty, use generic text */}} {{ if eq $title "" }} {{
+            $title = "View Image" }} {{ end }} {{ $title }}
+          </a>
+        </h2>
+      </figure>
+    </li>
+    {{ end }} {{ end }}
+  </ul>
+</section>
+{{ $js := resources.Get "js/masonry.min.js" }}
+<script src="{{ $js.RelPermalink }}"></script>
+<script>
+  var macy = Macy({
+    container: "#photos",
+    trueOrder: false,
+    waitForImages: false,
+    margin: {
+      x: 2,
+      y: 0,
+    },
+    columns: 3,
+    breakAt: {
+      1200: 3,
+      1024: 2,
+      340: 1,
+    },
+  });
+</script>
 {{ end }}
