@@ -35,8 +35,9 @@
         {{- $json := .Resources.GetMatch "*.json*" }} {{- with $json }} {{-
         $metadata := unmarshal .Content }}
         <div id="metadata">
-          {{- with or ($metadata.Make) ($metadata.ExifTool.Make) }}
-          <p>Camera Make: {{ . }}</p>
+          {{- with or ($metadata.Headline) ($metadata.ExifTool.Headline) }} {{-
+          with or ($metadata.Make) ($metadata.ExifTool.Make) }}{{- end }}
+          <h1>{{ . }}</h1>
           {{- end }} {{- with or ($metadata.Model) ($metadata.ExifTool.Model) }}
           <p>Camera Model: {{ . }}</p>
           {{- end }} {{- with or ($metadata.LensModel) ($metadata.XMP.LensModel)
