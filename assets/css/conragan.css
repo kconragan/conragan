@@ -230,6 +230,7 @@ li.photo-item + li.photo-item {
 }
 
 .photo-title a,
+body.colorscheme-dark .photo-title a,
 .photo-title a:hover {
   color: #dadada;
   text-decoration: none;
@@ -467,7 +468,6 @@ a.paginate:hover {
   }
 
   #photo-image.image-landscape {
-    max-height: 50vh;
   }
 }
 
@@ -510,8 +510,6 @@ a.paginate:hover {
   }
 
   #photo-image.image-landscape {
-    max-height: 40vh;
-    max-width: 80vw;
     margin: 0 auto;
   }
 }
@@ -520,14 +518,10 @@ a.paginate:hover {
 @media (max-height: 500px) and (orientation: landscape) {
   #photo-image.image-landscape {
     margin: 0 auto;
-    max-height: 50vh; /* Adjust this value as needed */
-    max-width: 50vw;
   }
 
   #photo-image.image-portrait {
     margin: 0 auto;
-    max-height: 50vh; /* Adjust this value as needed */
-    max-width: 50vw;
   }
 
   #photo-image.image-portrait img {
@@ -538,7 +532,6 @@ a.paginate:hover {
 /* Large screens AND Landscape Orientation */
 @media (min-width: 1025px) and (orientation: landscape) {
   #photo-image.image-portrait {
-    max-width: 35vw;
     margin: 0 auto;
   }
 }
