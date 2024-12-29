@@ -29,7 +29,9 @@
     {{ end }} {{ end }}
   </ul>
 </section>
-{{ $js := resources.Get "js/masonry.min.js" }}
+{{ $masonry:= resources.Get "js/masonry.min.js" }} {{ $js := resources.Get
+"js/conragan.js" }}
+<script src="{{ $masonry.RelPermalink }}"></script>
 <script src="{{ $js.RelPermalink }}"></script>
 <script>
   var macy = Macy({
@@ -47,5 +49,32 @@
       340: 1,
     },
   });
+  function setupClickableItems() {
+    const photoItems = document.querySelectorAll(".photo-item");
+
+    photoItems.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        // Check if the click is on the photo-item or its child
+        if (event.target.closest(".photo-item") !== item) {
+          return; // Ignore clicks on other elements
+        }
+
+        const link = item.querySelector("a");
+        if (link) {
+          // Check if Ctrl key or Meta key is pressed
+          if (event.ctrlKey || event.metaKey) {
+            // Open link in a new tab or window
+            window.open(link.href, "_blank");
+          } else {
+            // Navigate to the link in the same tab or window
+            window.location.href = link.href;
+          }
+        }
+      });
+    });
+  }
+</script>
+<script>
+  setupClickableItems(); // Call setupClickableItems on list.html load
 </script>
 {{ end }}

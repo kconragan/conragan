@@ -126,6 +126,11 @@ function navigateToPage(url) {
       // Get the new image element
       const img = article.querySelector("img");
 
+      // Re-initialize setup functions
+      setupToggleEventListener();
+      setupSwipeGestures();
+      setupClickableItems();
+
       // Wait for the new image to load before adjusting size
       img.onload = function () {
         adjustImageSize();
@@ -142,6 +147,32 @@ function navigateToPage(url) {
       prefetchPage(getPreviousPageUrl());
     })
     .catch((error) => console.error("Error fetching content:", error));
+}
+
+// Function to set up clickable items
+function setupClickableItems() {
+  const photoItems = document.querySelectorAll(".photo-item");
+
+  photoItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      // Check if the click is on the photo-item or its child
+      if (event.target.closest(".photo-item") !== item) {
+        return; // Ignore clicks on other elements
+      }
+
+      const link = item.querySelector("a");
+      if (link) {
+        // Check if Ctrl key or Meta key is pressed
+        if (event.ctrlKey || event.metaKey) {
+          // Open link in a new tab or window
+          window.open(link.href, "_blank");
+        } else {
+          // Navigate to the link in the same tab or window
+          window.location.href = link.href;
+        }
+      }
+    });
+  });
 }
 
 // Apply fade-in class, adjust image size, and categorize image on initial page load
@@ -161,6 +192,7 @@ window.addEventListener("load", () => {
 
   updateTransition();
   setupToggleEventListener();
+  setupClickableItems(); // set up clickable items
 });
 
 // Handle window resize
@@ -175,14 +207,12 @@ window.addEventListener("resize", () => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") {
     const prevLink = document.getElementById("prevLink");
-    if (prevLink && !prevLink.style.pointerEvents) {
-      // Check if the link is NOT disabled
+    if (prevLink && !prevLink.classList.contains("disabled")) {
       navigateToPage(getPreviousPageUrl());
     }
   } else if (event.key === "ArrowRight") {
     const nextLink = document.getElementById("nextLink");
-    if (nextLink && !nextLink.style.pointerEvents) {
-      // Check if the link is NOT disabled
+    if (nextLink && !nextLink.classList.contains("disabled")) {
       navigateToPage(getNextPageUrl());
     }
   }
