@@ -1,7 +1,9 @@
 {{ define "content" }}
 <section class="photo-grid">
-  <h1>{{ .Title }}</h1>
-
+  <header id="page-header">
+    <h1>{{ .Title }}</h1>
+    <div class="blurb">{{ .Content }}</div>
+  </header>
   <ul id="photos">
     {{ $currentSection := .Section }} {{ range .Pages }} {{ if eq .Section
     $currentSection }}
@@ -46,7 +48,12 @@
     breakAt: {
       1200: 3,
       1024: 2,
-      340: 1,
+      431: {
+        margin: {
+          y: 10,
+        },
+        columns: 1,
+      },
     },
   });
   function setupClickableItems() {
