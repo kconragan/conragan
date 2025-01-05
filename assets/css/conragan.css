@@ -262,6 +262,12 @@ h1 {
   line-height: 1;
 }
 
+@media (max-width: 430px) {
+  .photo-item {
+    margin-bottom: 1rem; /* Adjust the value as needed */
+  }
+}
+
 .photo-item a {
   display: block;
   line-height: 1;
@@ -305,6 +311,14 @@ li.photo-item + li.photo-item {
   text-shadow: 1px 1px 12px black;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+}
+
+/* overrride styles for overview template vs. list */
+
+#overview h2.photo-title {
+  opacity: 1;
+  font-size: 4.2rem;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .photo-title a,
