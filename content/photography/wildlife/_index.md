@@ -1,3 +1,4 @@
 ---
-Title: Wildlife
+Title: Birds & Wildlife
+weight: 2
 ---
