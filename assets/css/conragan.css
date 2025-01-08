@@ -315,10 +315,22 @@ li.photo-item + li.photo-item {
 
 /* overrride styles for overview template vs. list */
 
+#overview {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 #overview h2.photo-title {
   opacity: 1;
   font-size: 4.2rem;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Small screens */
+@media (max-width: 420px) {
+  #overview h2.photo-title {
+    font-size: 2.4rem;
+  }
 }
 
 .photo-title a,
