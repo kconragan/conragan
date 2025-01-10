@@ -33,7 +33,9 @@ function adjustImageSize() {
   const imgFrame = document.getElementById("photo-image");
   const img = imgFrame.querySelector("img");
   const photoContent = document.getElementById("photo-content");
-  const globalNav = document.getElementById("global-nav"); // Get the global navigation element
+  const globalNav = document.querySelector(
+    "main.wrapper > nav.navigation:first-of-type",
+  );
   const pageNav = document.getElementById("page-navigation"); // Get the page navigation element
 
   if (img.complete) {
