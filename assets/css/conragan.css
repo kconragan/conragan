@@ -656,6 +656,50 @@ a.paginate:hover {
   font-style: normal;
 }
 
+/**************************************************************************
+ * About
+ **************************************************************************/
+
+#about {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+#about .flex-column {
+  margin-bottom: 2rem;
+}
+
+#about .flex-column img {
+  display: block;
+  max-width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#about .flex-column p {
+  font-size: 2rem;
+  text-align: left;
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  #about .flex-column img {
+    max-width: 100%;
+  }
+  #about {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  }
+
+  #about .flex-column:first-child {
+    width: 25%; /* Headshot column takes 25% width */
+    padding-right: 2rem; /* Add some space between columns */
+  }
+
+  #about .flex-column:last-child {
+    width: 75%; /* Content column takes 75% width */
+  }
+}
+
 /* --- Utilities --- */
 
 .u-visually-hide {
