@@ -15,7 +15,7 @@ I’m a big fan of launchers, dating back to Launchbar and Quicksilver. Most rec
 
 ## 1. Tell Alfred about Capture One
 
-![[Recording 2025-01-11 at 11.25.59.gif]]
+![Alfred Preferences: Adding .cosessionsdb](alfred-preferences.gif)
 
 First, Alfred needs to know what a Capture One session file is:
 
