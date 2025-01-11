@@ -663,6 +663,8 @@ a.paginate:hover {
 #about {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 #about .flex-column {
@@ -677,12 +679,16 @@ a.paginate:hover {
 }
 
 #about .flex-column p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: left;
 }
 
 /* Tablet and larger screens */
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
+  #about {
+    max-width: 100%;
+  }
+
   #about .flex-column img {
     max-width: 100%;
   }
@@ -692,11 +698,11 @@ a.paginate:hover {
 
   #about .flex-column:first-child {
     width: 25%; /* Headshot column takes 25% width */
-    padding-right: 2rem; /* Add some space between columns */
+    margin-right: 10%; /* Add some space between columns */
   }
 
   #about .flex-column:last-child {
-    width: 75%; /* Content column takes 75% width */
+    width: 50%; /* Content column takes 75% width */
   }
 }
 
