@@ -22,7 +22,7 @@ body {
   font-feature-settings: "kern";
   font-kerning: normal;
   font-size: 1.6rem;
-  font-family: lg, sans-serif;
+  font-family: nunito-sans, sans-serif;
   letter-spacing: -0.015em;
   line-height: 1.6;
   min-height: 100vh;
@@ -73,14 +73,6 @@ body {
 }
 
 @font-face {
-  font-family: "bebas";
-  src: url("/fonts/BebasNeue-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
   font-family: "lato";
   src: url("/fonts/Lato-Light.woff2") format("woff2");
   font-weight: normal;
@@ -94,7 +86,37 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: lato, sans-serif;
+  font-family: nunito, sans-serif;
+}
+
+.navigation-title,
+.navigation-item,
+.navigation-link,
+.navigation a {
+  font-family: nunito, sans-serif;
+}
+
+a {
+  color: #3f88c5;
+}
+
+.content blockquote {
+  background-color: #f5f5f5;
+  border-left: 5px solid #393e41;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: 800;
+}
+
+.content article a:where(.external-link):not(:has(img)):after {
+  content: "";
+  padding-left: 0;
 }
 
 .block:not(:last-child),
@@ -654,6 +676,14 @@ a.paginate:hover {
 
 #metadata em {
   font-style: normal;
+}
+
+/**************************************************************************
+ * Blog
+ **************************************************************************/
+
+#post {
+  max-width: 720px;
 }
 
 /**************************************************************************
