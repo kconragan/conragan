@@ -37,7 +37,7 @@ enableGitInfo = true
 
   # info
   author = "Kai Conragan"
-  info = "Tech leader, UX Designer, Writer, and [Photographer](/photography/)."
+  info = "Tech leader, UX Designer, [Writer](/blog/), and [Photographer](/photography/)."
   description = "Kai Conragan's personal website"
   keywords = "landscape photography, sports photography, wildlife photogrpahy, bird photography, design, travel, ux, user experience"
 
