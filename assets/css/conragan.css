@@ -686,6 +686,18 @@ a.paginate:hover {
   max-width: 720px;
 }
 
+.content .blog-post-summary {
+  margin-bottom: 6rem;
+
+  .post-title {
+    margin-bottom: 1rem;
+  }
+
+  .post-meta {
+    margin-bottom: 2rem;
+  }
+}
+
 /**************************************************************************
  * About
  **************************************************************************/
