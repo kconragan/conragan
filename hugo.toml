@@ -19,6 +19,14 @@ enableGitInfo = true
 [production]
   baseURL = "https://conragan.com/"
 
+[permalinks]
+  blog = "/blog/:year/:filename/"
+
+[contentTypes]
+  [contentTypes.blog]
+    list = true
+    name = "Blog"
+
 # Menu links
 [[menu.main]]
    name = "Photography"
