@@ -1,7 +1,7 @@
 +++ 
 draft = true
 date = 2024-03-01T13:00:18-08:00
-title = "Tuorial: Create The Orton Effect In Capture One"
+title = "Create The Orton Effect In Capture One...Kind Of!"
 slug = "capture-one-orton-effect" 
 +++
 
