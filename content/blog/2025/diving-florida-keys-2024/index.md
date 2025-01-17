@@ -9,7 +9,7 @@ slug = "scuba-diving-florida-keys-2024"
 
 {{< youtube id=5W0FeY__CUY?si=ZN4XGSo0WDOs8qfN loading=lazy >}}
 
-Feel free to head on over to [YouTube](https://www.youtube.com/watch?v=dQw4w9WgXcQ) if you'd prefer. But as a bit of backstory:
+Feel free to head on over to [YouTube](https://www.youtube.com/watch?v=5W0FeY__CUY) if you'd prefer. But as a bit of backstory:
 
 This winter holiday, my family and I had the chance to dive the Florida Keys for the first time. We have some friends who've made a tradition of visiting the Keys around Christmas, and they'd been encouraging us to join them. With my wife being a PADI Scuba Instructor, me a PADI Divemaster, and our 12-year-old daughter recently certified as a Junior Open Water Diver, an excuse to go to Florida (my first time) seemed great! We're used to spending our winters skiing in Oregon, so trading snow for some tropical weather and warm water was a welcome change of pace.
 

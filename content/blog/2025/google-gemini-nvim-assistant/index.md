@@ -13,7 +13,7 @@ I went to [gemini.google.com](https://gemini.google.com/) and started a new chat
 
 > When I use `<leader>ff`, how can I make it so I see the full pathnames to better disambiguate files? Please give me the exact code snippet and file and line number to add it to.
 
----
+Gemini's response:
 
 > To see full pathnames when using `<leader>ff` to disambiguate files, you need to modify your Telescope configuration. Here's how:
 >
@@ -36,7 +36,5 @@ I went to [gemini.google.com](https://gemini.google.com/) and started a new chat
 > Explanation:
 >
 > The `path_display` setting in Telescope controls how file paths are displayed in the picker. By changing it to `"absolute"`, you'll see the full path for each file, making it easier to distinguish between files with the same name in different directories.
-
----
 
 This simple interaction saved me a ton of time, and it really highlights the potential of LLMs as collaborative "agents." (To clarify, "agent behavior" in this context refers to the ability of an AI to act autonomously and complete tasks with minimal human intervention.) Simon Willison recently published his [AI/LLM predictions for the next 1, 3, and 6 years](https://simonwillison.net/2025/Jan/10/ai-predictions/), and while he's generally bearish on the idea of fully autonomous "agents" in the near term, he does see potential in two key areas: coding assistants and research assistants. My experience with Gemini perfectly illustrates this. While it wasn't exhibiting full-blown agent behavior, it demonstrated the impressive reasoning capabilities of current LLMs and their ability to be incredibly helpful with specific, well-defined tasks right now. This, to me, is a glimpse into the future of how we'll work alongside these powerful tools.
