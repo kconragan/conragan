@@ -58,7 +58,7 @@ enableGitInfo = true
   # style
   colorScheme = "auto"
   hidecolorschemetoggle = false
-  customCSS = ["css/bulma.min.css", "css/lightgallery.min.css", "css/conragan.css"]
+  customCSS = ["css/bulma.min.css", "css/conragan.css"]
   
   # Google Analytics
   [params.googleTagManager]
