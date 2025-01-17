@@ -50,7 +50,7 @@ enableGitInfo = true
   keywords = "landscape photography, sports photography, wildlife photogrpahy, bird photography, design, travel, ux, user experience"
 
   # images
-  avatarurl = "img/headshot.png"
+  avatarurl = "img/headshot.webp"
   faviconSVG = "img/favicon.svg"
   favicon_32 = "img/favicon-32x32.png"
   favicon_16 = "img/favicon-16x16.png"
@@ -152,5 +152,3 @@ plausible_domain = ""
     [[module.mounts]]
         source = "static"
         target = "static"
-    [[module.imports]]
-        path = "github.com/bep/gallerydeluxe"
