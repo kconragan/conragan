@@ -438,6 +438,43 @@ a.paginate:hover {
   color: #363636;
 }
 
+h2#camera-make {
+  font-family: nunito-sans, sans-serif;
+  font-variation-settings: "wght" 500;
+  font-size: 2.1rem;
+  margin: 2rem 0 0.5rem;
+}
+
+dl#exif {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 0;
+}
+
+dl#exif dt {
+  font-variation-settings: "wght" 700;
+  margin-right: 0.5em;
+}
+
+dl#exif dt::after {
+  margin-right: 0.5em; /* Space after colon */
+}
+
+dl#exif dd {
+  margin: 0; /* Remove default margin */
+}
+
+dl#exif dd::after {
+  content: " |"; /* Add separator */
+  margin-right: 0.5em;
+  font-weight: normal;
+}
+
+dl#exif dd:last-of-type::after {
+  content: ""; /* Add period to last item */
+}
+
 /* --- Toggle Button --- */
 
 #metadata-toggle {
