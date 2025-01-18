@@ -130,7 +130,6 @@ function navigateToPage(url) {
 
       // Re-initialize setup functions
       setupToggleEventListener();
-      setupSwipeGestures();
       setupClickableItems();
 
       // Wait for the new image to load before adjusting size
