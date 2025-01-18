@@ -43,8 +43,20 @@ function adjustImageSize() {
 
     // 1. Calculate Available Height (when not active):
     const windowHeight = window.innerHeight;
-    const chromeHeight = pageNav.offsetHeight + globalNav.offsetHeight;
-    const availableHeight = windowHeight - chromeHeight; // Subtract page navigation height
+
+    // Get the computed border width (assuming it's the same on all sides)
+    const computedImgStyle = window.getComputedStyle(img);
+    const borderWidth = parseFloat(computedImgStyle.borderTopWidth); // Get top border width
+    const imageBuffer = 16; // manual tweak if you want extra space
+
+    // Calculate total space occupied by elements other than the image
+    const chromeHeight =
+      pageNav.offsetHeight +
+      globalNav.offsetHeight +
+      borderWidth * 2 +
+      imageBuffer; // Account for the border
+
+    const availableHeight = windowHeight - chromeHeight;
 
     // 2. Set Image Container Height (Dynamically):
     imgFrame.style.height = `${availableHeight}px`;
