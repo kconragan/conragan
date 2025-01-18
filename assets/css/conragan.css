@@ -295,7 +295,6 @@ h1 {
 
 .photo-item a {
   display: block;
-  line-height: 1;
   transition: background 0.2s;
 }
 
@@ -315,11 +314,11 @@ li.photo-item + li.photo-item {
   position: absolute;
   z-index: 1;
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 2px; /* because of weird Macy bug*/
+  bottom: 0;
 
   /* to center text inside */
   display: flex;
