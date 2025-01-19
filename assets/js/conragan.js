@@ -97,6 +97,18 @@ function updateTransition() {
 // Make the function globally accessible (for debugging)
 window.updateTransition = updateTransition;
 
+// Function to navigate from image to parent category
+function navigateToParentSection() {
+  const currentUrl = window.location.pathname;
+  const parts = currentUrl.split("/");
+  if (parts.length > 3) {
+    // Assuming URL structure: /photography/genre/image-name/
+    const parentSectionUrl = parts.slice(0, -2).join("/") + "/"; // Remove last two segments
+    console.log("Navigating to parent section:", parentSectionUrl); // Debugging
+    window.location.href = parentSectionUrl; // Use regular navigation for parent section
+  }
+}
+
 // Function to handle navigation (triggered by click or key press)
 function navigateToPage(url) {
   if (!url) {
@@ -112,9 +124,8 @@ function navigateToPage(url) {
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, "text/html");
 
-      // Extract the new imgFrame content, INCLUDING the image and metadata
+      // Assume we're on a single image page (since list pages are handled by direct navigation)
       const newImgFrame = doc.getElementById("photo-image").innerHTML;
-      // Extract new metadata content
       const newMetadata = doc.getElementById("photo-content").innerHTML;
 
       // Update the imgFrame with the new content
@@ -190,22 +201,23 @@ function setupClickableItems() {
 
 // Apply fade-in class, adjust image size, and categorize image on initial page load
 window.addEventListener("load", () => {
-  const imgFrame = document.getElementById("photo-image");
-  const img = imgFrame.querySelector("img");
+  if (document.getElementById("photo-image")) {
+    const imgFrame = document.getElementById("photo-image");
+    const img = imgFrame.querySelector("img");
 
-  if (img.complete) {
-    adjustImageSize();
-    categorizeImage(img); // Categorize the image on load
-  } else {
-    img.onload = function () {
+    if (img.complete) {
       adjustImageSize();
-      categorizeImage(img); // Categorize the image once loaded
-    };
+      categorizeImage(img); // Categorize the image on load
+    } else {
+      img.onload = function () {
+        adjustImageSize();
+        categorizeImage(img); // Categorize the image once loaded
+      };
+    }
+    updateTransition();
+    setupToggleEventListener();
+    setupClickableItems(); // set up clickable items
   }
-
-  updateTransition();
-  setupToggleEventListener();
-  setupClickableItems(); // set up clickable items
 });
 
 // Handle window resize
@@ -228,6 +240,9 @@ document.addEventListener("keydown", (event) => {
     if (nextLink && !nextLink.classList.contains("disabled")) {
       navigateToPage(getNextPageUrl());
     }
+  } else if (event.key === "p") {
+    // Add handler for parent section navigation
+    navigateToParentSection();
   }
 });
 
@@ -263,7 +278,6 @@ function getNextPageUrl() {
 function setupToggleEventListener() {
   document.addEventListener("click", function (event) {
     if (event.target.closest("#toggleMetadata")) {
-      console.log("toggle");
       const metadataSection = document.getElementById("photo-container");
       const photoImage = document.getElementById("photo-image");
 
