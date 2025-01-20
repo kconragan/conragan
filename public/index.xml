@@ -6,14 +6,77 @@
     <description>Recent content on Kai Conragan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jan 2025 10:30:00 -0800</lastBuildDate>
     <atom:link href="https://conragan.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Power of Learning in Public: A Forgotten Gist and a Lesson Learned</title>
+      <link>https://conragan.com/blog/2025/the-power-of-learning-in-public/</link>
+      <pubDate>Wed, 15 Jan 2025 10:30:00 -0800</pubDate>
+      <guid>https://conragan.com/blog/2025/the-power-of-learning-in-public/</guid>
+      <description>&lt;p&gt;I was cleaning up some repos in GitHub and came across an &lt;a href=&#34;https://gist.github.com/kconragan/2510186/revisions&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;old gist I created back in 2012&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Honestly, I&amp;rsquo;d completely forgotten about it! Back then, &lt;a href=&#34;https://www.sublimetext.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sublime Text&lt;/a&gt; was my IDE of choice, but I had recently started using Vim motions. I wasn&amp;rsquo;t quite ready to embrace &lt;a href=&#34;https://macvim-dev.github.io/macvim/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MacVim&lt;/a&gt; or the terminal as my full-time coding environment, though.&lt;/p&gt;&#xA;&lt;p&gt;When Apple released &lt;a href=&#34;https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;macOS X Lion&lt;/a&gt;, they introduced an iOS-like context menu that appeared when you pressed and held a key. As a designer, I understood this was another step in bringing macOS and iOS closer together in terms of user experience. But it was painful if you were a designer clumsily making his way through Vim like me. After digging around online, I figured out how to disable this context menu for Sublime Text and documented it in a Gist for posterity. Honestly, I didn&amp;rsquo;t think about it again.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Don&#39;t Underestimate The Good Internet</title>
+      <link>https://conragan.com/blog/2025/dont-underestimate-the-good-internet/</link>
+      <pubDate>Tue, 14 Jan 2025 19:13:53 -0800</pubDate>
+      <guid>https://conragan.com/blog/2025/dont-underestimate-the-good-internet/</guid>
+      <description>&lt;p&gt;Anil Dash in his post &lt;a href=&#34;https://www.anildash.com/2024/01/03/human-web-renaissance/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Web Renaissance takes off&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;And I should never have underestimated the passion and resilience of the people who create the good internet, those who never stopped making things just for the love of the medium.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;This captures so perfectly this unexplainable draw I&amp;rsquo;ve felt recently to resurrect a personal site. It&amp;rsquo;s not for traffic, eyeballs, money. Truthfully, I deeply regret not having made a personal site a ongoing committment. But here we are.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Google Gemini: My Neovim Configuration Assistant</title>
+      <link>https://conragan.com/blog/2025/google-gemini-nvim-assistant/</link>
+      <pubDate>Mon, 13 Jan 2025 11:42:40 -0800</pubDate>
+      <guid>https://conragan.com/blog/2025/google-gemini-nvim-assistant/</guid>
+      <description>&lt;p&gt;I love Vim. And while I&amp;rsquo;m a fan of its infinite customizability, I&amp;rsquo;m not a fan of having to remember every syntax and config parameter.&lt;/p&gt;&#xA;&lt;p&gt;I ran into a simple problem today: when using &lt;a href=&#34;https://github.com/nvim-telescope/telescope.nvim&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Telescope&lt;/a&gt; to find a file, I kept seeing repeated filenames in my tree (e.g., in this Hugo site, numerous files are duplicated between &lt;code&gt;/content&lt;/code&gt; and &lt;code&gt;/docs&lt;/code&gt;). This made it tough to know which file to choose. I wanted Telescope to show me the full pathname in order to help disambiguate the files. Easy enough, I assumed, but I don&amp;rsquo;t know Telescope and NeoVim&amp;rsquo;s syntax well enough to implement this without resorting to Google and clicking through some links. But then I remembered that Gemini now lets you &lt;a href=&#34;https://blog.google/products/gemini/google-gemini-learning-features/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;upload code folders&lt;/a&gt; and I thought, &lt;em&gt;why not just upload my entire NeoVim config and ask Gemini?&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Finding Capture One Sessions on a Mac with Alfred</title>
+      <link>https://conragan.com/blog/2025/finding-capture-one-sessions-mac-alfred/</link>
+      <pubDate>Sat, 11 Jan 2025 11:42:40 -0800</pubDate>
+      <guid>https://conragan.com/blog/2025/finding-capture-one-sessions-mac-alfred/</guid>
+      <description>&lt;p&gt;One of the unique advantages of using Capture One is its concept of Sessions, which doesn’t exist in alternatives like Adobe Lightroom. In my workflow I use both: Sessions for individual shoots, and Catalogs as a way to aggregate sessions and photos.&lt;/p&gt;&#xA;&lt;p&gt;What I particularly like about Sessions is they are directly tied to the filesystem. Each Session gets its own dedicated directory for all the images, adjustments, and metadata. For me this keeps things organized and integrates well with how I already manage my photos and back up system to my NAS. I still use catalogs but the majority of my photoshoots start as Sessions, and then I use catalogs to aggregate across them.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About</title>
       <link>https://conragan.com/about/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://conragan.com/about/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m a &lt;a href=&#34;https://google.com&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Senior Director of UX for Google Search&lt;/a&gt;, where I&amp;rsquo;ve spent the last 15 years shaping how billions of people make sense of information every single day. Prior to my current role, I was at &lt;a href=&#34;https://en.wikipedia.org/wiki/Metaweb&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MetaWeb&lt;/a&gt;, a startup &lt;a href=&#34;https://www.fastcompany.com/1671024/google-buys-metaweb-one-company-could-revolutionize-google-search&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;acquired by Google&lt;/a&gt;. It was here that we created Freebase, a pioneering knowledge base that became the foundation for &lt;a href=&#34;https://blog.google/products/search/introducing-knowledge-graph-things-not/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google’s Knowledge Graph&lt;/a&gt; and went on to inform much of Google’s early machine learning efforts.&lt;/p&gt;&#xA;&lt;p&gt;My design ethos centers on the artful management of friction – exploring when to remove it for ease and when to introduce it for meaning. Just as a well-worn Eames chair or a Yixing teapot gains value with time, I strive to create digital experiences that foster a collaborative relationship between humans and computers, prioritizing understanding and nuance over mere engagement. This approach has been honed through a diverse career, starting from my early days at Oracle and Network Associates (right in the thick of the Y2K frenzy!) to establishing a creative studio that provided design services for outdoor sports companies like Maxxis, Specialized, SFO Snowboarding, and FTC Skate.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Scuba Diving The Florida Keys</title>
+      <link>https://conragan.com/blog/2025/diving-florida-keys-2024/</link>
+      <pubDate>Sun, 05 Jan 2025 11:42:40 -0800</pubDate>
+      <guid>https://conragan.com/blog/2025/diving-florida-keys-2024/</guid>
+      <description>&lt;h3 id=&#34;i-made-a-diving-video&#34;&gt;&#xA;  I made a diving video!&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#i-made-a-diving-video&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/5W0FeY__CUY?si=ZN4XGSo0WDOs8qfN?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;p&gt;Feel free to head on over to &lt;a href=&#34;https://www.youtube.com/watch?v=5W0FeY__CUY&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;YouTube&lt;/a&gt; if you&amp;rsquo;d prefer. But as a bit of backstory:&lt;/p&gt;&#xA;&lt;p&gt;This winter holiday, my family and I had the chance to dive the Florida Keys for the first time. We have some friends who&amp;rsquo;ve made a tradition of visiting the Keys around Christmas, and they&amp;rsquo;d been encouraging us to join them. With my wife being a PADI Scuba Instructor, me a PADI Divemaster, and our 12-year-old daughter recently certified as a Junior Open Water Diver, an excuse to go to Florida (my first time) seemed great! We&amp;rsquo;re used to spending our winters skiing in Oregon, so trading snow for some tropical weather and warm water was a welcome change of pace.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Books I read in 2024</title>
+      <link>https://conragan.com/blog/2024/books-i-read-2024/</link>
+      <pubDate>Sat, 21 Dec 2024 11:42:40 -0800</pubDate>
+      <guid>https://conragan.com/blog/2024/books-i-read-2024/</guid>
+      <description>&lt;p&gt;BookTok, r/suggestmeabook, Tiermaker&amp;hellip; Everywhere you look online, people are ranking their yearly reads. I&amp;rsquo;m going old-school and just listing mine here. I read about 26 books in total this year, although some were larger commitments than others (ahem Brandon Sanderson). I read quite a bit more fiction than non-fiction and have no regrets. I&amp;rsquo;d like to get to a point where I process each book more thoroughly as I go. However, it&amp;rsquo;s also nice to look at the year in full, so here we go. This year I discovered some new favorite authors and genres, and found that themes of found family, resilience, and the power of nature resonated strongly with me.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2024 Woodside Fall International 3-day Event</title>
+      <link>https://conragan.com/blog/2024/woodside-fall-international-2024/</link>
+      <pubDate>Sat, 19 Oct 2024 11:42:40 -0800</pubDate>
+      <guid>https://conragan.com/blog/2024/woodside-fall-international-2024/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/rvI9ntMwRcs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Woodside Autumn Classic Horse Show</title>
+      <link>https://conragan.com/blog/2024/woodside-autumn-classic-2024/</link>
+      <pubDate>Mon, 23 Sep 2024 11:42:40 -0800</pubDate>
+      <guid>https://conragan.com/blog/2024/woodside-autumn-classic-2024/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/Z_3S24SExoc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Create The Orton Effect In Capture One...Kind Of!</title>
+      <link>https://conragan.com/blog/2024/capture-one-orton-effect/</link>
+      <pubDate>Fri, 01 Mar 2024 13:00:18 -0800</pubDate>
+      <guid>https://conragan.com/blog/2024/capture-one-orton-effect/</guid>
+      <description>&lt;p&gt;The Orton Effect is an extremely popular (some might say overused) technique that imbues images with a soft, ethereal glow and touch of blur to add a painterly quality to photographs. Used with restraint and on the right images, it is a wonderful effect for good reason.&lt;/p&gt;&#xA;&lt;p&gt;This effect was initially accomplished in the darkroom, pioneered by photographer Michael Orton in the 1980s. The technique involves a multi-exposure film process: one image shot in focus and correctly exposed, another slightly out-of-focus and overexposed. These slides are then physically &amp;ldquo;sandwiched&amp;rdquo; during printing, creating the signature blend of sharp and soft details with a luminous glow.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Kai Conragan</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="p:domain_verify" content="5e42b91db4d05707d32a9894e67423c5"/>
+
+
+
+
+<meta name="author" content="Kai Conragan">
+<meta name="description" content="One of the unique advantages of using Capture One is its concept of Sessions, which doesn’t exist in alternatives like Adobe Lightroom. In my workflow I use both: Sessions for individual shoots, and Catalogs as a way to aggregate sessions and photos.
+What I particularly like about Sessions is they are directly tied to the filesystem. Each Session gets its own dedicated directory for all the images, adjustments, and metadata. For me this keeps things organized and integrates well with how I already manage my photos and back up system to my NAS. I still use catalogs but the majority of my photoshoots start as Sessions, and then I use catalogs to aggregate across them.">
+<meta name="keywords" content="landscape photography, sports photography, wildlife photogrpahy, bird photography, design, travel, ux, user experience">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Finding Capture One Sessions on a Mac with Alfred">
+  <meta name="twitter:description" content="One of the unique advantages of using Capture One is its concept of Sessions, which doesn’t exist in alternatives like Adobe Lightroom. In my workflow I use both: Sessions for individual shoots, and Catalogs as a way to aggregate sessions and photos.
+What I particularly like about Sessions is they are directly tied to the filesystem. Each Session gets its own dedicated directory for all the images, adjustments, and metadata. For me this keeps things organized and integrates well with how I already manage my photos and back up system to my NAS. I still use catalogs but the majority of my photoshoots start as Sessions, and then I use catalogs to aggregate across them.">
+
+<meta property="og:url" content="https://conragan.com/blog/2025/finding-capture-one-sessions-mac-alfred/">
+  <meta property="og:site_name" content="Kai Conragan">
+  <meta property="og:title" content="Finding Capture One Sessions on a Mac with Alfred">
+  <meta property="og:description" content="One of the unique advantages of using Capture One is its concept of Sessions, which doesn’t exist in alternatives like Adobe Lightroom. In my workflow I use both: Sessions for individual shoots, and Catalogs as a way to aggregate sessions and photos.
+What I particularly like about Sessions is they are directly tied to the filesystem. Each Session gets its own dedicated directory for all the images, adjustments, and metadata. For me this keeps things organized and integrates well with how I already manage my photos and back up system to my NAS. I still use catalogs but the majority of my photoshoots start as Sessions, and then I use catalogs to aggregate across them.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-01-11T11:42:40-08:00">
+    <meta property="article:modified_time" content="2025-01-11T11:42:40-08:00">
+
+
+
+
+<link rel="canonical" href="https://conragan.com/blog/2025/finding-capture-one-sessions-mac-alfred/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.ed30115a76cdaa62f2229e973d5b1c89b2d3dd4b1d9c07a729baad06aa3b0cbe.css" integrity="sha256-7TARWnbNqmLyIp6XPVscibLT3UsdnAenKbqtBqo7DL4=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+  
+    
+    <link rel="stylesheet" href="/css/conragan.min.42f3c26ad07ad4b06645f82de160d454a6e796ab47d674fac6847452d501b438.css" integrity="sha256-QvPCatB61LBmRfgt4WDUVKbnlqtH1nT6xoR0UtUBtDg=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://conragan.com/">
+      Kai Conragan
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/photography/">Photography</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      <li class="navigation-item">
+        <a id="dark-mode-toggle" class="colorscheme-toggle">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+      </li>
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section id="post" class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://conragan.com/blog/2025/finding-capture-one-sessions-mac-alfred/">
+              Finding Capture One Sessions on a Mac with Alfred
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-01-11T11:42:40-08:00">
+                January 11, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>One of the unique advantages of using Capture One is its concept of Sessions, which doesn’t exist in alternatives like Adobe Lightroom. In my workflow I use both: Sessions for individual shoots, and Catalogs as a way to aggregate sessions and photos.</p>
+<p>What I particularly like about Sessions is they are directly tied to the filesystem. Each Session gets its own dedicated directory for all the images, adjustments, and metadata. For me this keeps things organized and integrates well with how I already manage my photos and back up system to my NAS. I still use catalogs but the majority of my photoshoots start as Sessions, and then I use catalogs to aggregate across them.</p>
+<p>However, one of the drawbacks of Sessions, especially as you get more than a handful, is retrieving them. Spotlight doesn’t index Capture One Sessions (or catalogs) by default, so you’re really left with navigating your folders manually. Enter Alfred.</p>
+<p>I’m a big fan of launchers, dating back to Launchbar and Quicksilver. Most recently I use Alfred. Here’s how I’ve set it up so you can retrieve your Capture One Sessions through Alfred.</p>
+<h2 id="1-tell-alfred-about-capture-one">
+  1. Tell Alfred about Capture One
+  <a class="heading-link" href="#1-tell-alfred-about-capture-one">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>
+  <img src="alfred-preferences.gif" alt="Alfred Preferences: Adding .cosessionsdb">
+</p>
+<p>First, Alfred needs to know what a Capture One session file is:</p>
+<ul>
+<li>Open Alfred&rsquo;s Preferences (⌘,).</li>
+<li>Go to <strong>Features &gt; Default Results</strong>.</li>
+<li>Click <strong>Advanced…</strong></li>
+<li>Click the <strong>+</strong> button to add a new user-defined file type</li>
+<li>Enter <code>.cosessiondb</code> and click <strong>Close</strong></li>
+</ul>
+<h2 id="2-include-your-external-drives">
+  2. Include Your External Drives
+  <a class="heading-link" href="#2-include-your-external-drives">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Note: you can skip this step if you store your photos on your Mac’s internal drive.</p>
+<p>I store my images on an external SSD. But Spotlight (which Alfred uses for indexing) doesn&rsquo;t always index external drives. Here&rsquo;s the fix:</p>
+<ul>
+<li>Open <strong>Terminal</strong> (Applications &gt; Utilities &gt; Terminal).</li>
+<li>Paste in this command, replacing <code>/Volumes/MyPhotoDrive</code> with the name of your drive:
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mdutil -i on /Volumes/MyPhotoDrive
+</span></span></code></pre></div></li>
+<li>Hit Enter, type in your password, and you&rsquo;re done!</li>
+</ul>
+<h2 id="3-expand-alfreds-search">
+  3. Expand Alfred&rsquo;s Search
+  <a class="heading-link" href="#3-expand-alfreds-search">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>If Alfred isn’t setup already to do so, ensure your the parent folder where you store all of your photos is part of the default search scope. You don’t need to do this if your photos are stored in your default home directory.</p>
+<ul>
+<li>Go back to <strong>Alfred Preferences &gt; Features &gt; Default Results &gt; Search Scope</strong>, and click the <strong>&quot;+&quot;</strong> button.</li>
+<li>Choose the folder where all your photography projects are stored.</li>
+</ul>
+<p><strong>That&rsquo;s it!</strong> Note: it will take a few minutes (or hours depending on the size of your index) for Spotlight to index the new files.</p>
+<p>Now, when I need a session, I just open Alfred (⌘ + Space), type space to trigger a file search, type part of the session name, and hit Enter. Alfred launches Capture One and opens the session.</p>
+<p>This is a fairly obvious solution in retrospect, but hopefully it helps!</p>
+
+      </div>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Kai Conragan 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2W76V53L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4R2W76V53L');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
