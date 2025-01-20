@@ -10,8 +10,21 @@
     <li class="photo-item">
       <figure>
         <a href="{{ .RelPermalink }}">
+          <!-- prettier-ignore -->
           {{ $image := .Resources.GetMatch "*.jpg*" }} {{ with $image }}
-          <img src="{{ .RelPermalink }}" alt="{{ .Title }}" />
+          {{ $resizedWebP := $image.Resize "800x webp" }}
+          {{ $resizedJPG := $image.Resize "800x jpg" }}
+          <picture>
+            <!-- prettier-ignore -->
+            <source srcset="{{ $resizedWebP.RelPermalink }}" type="image/webp" />
+            <source srcset="{{ $resizedJPG.RelPermalink }}" type="image/jpeg" />
+            <img
+              src="{{ $resizedJPG.RelPermalink }}"
+              alt="{{ .Title }}"
+              width="{{ $resizedJPG.Width }}"
+              height="{{ $resizedJPG.Height }}"
+            />
+          </picture>
           {{ end }}
         </a>
         <h2 class="photo-title">
