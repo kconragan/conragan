@@ -12,18 +12,18 @@
 
 
 <meta name="author" content="Kai Conragan">
-<meta name="description" content="hello">
+<meta name="description" content="Kai Conragan&#39;s personal website">
 <meta name="keywords" content="landscape photography, sports photography, wildlife photogrpahy, bird photography, design, travel, ux, user experience">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Photography">
-  <meta name="twitter:description" content="hello">
+  <meta name="twitter:description" content="Kai Conragan&#39;s personal website">
 
 <meta property="og:url" content="http://localhost:1313/photography/">
   <meta property="og:site_name" content="Kai Conragan">
   <meta property="og:title" content="Photography">
-  <meta property="og:description" content="hello">
+  <meta property="og:description" content="Kai Conragan&#39;s personal website">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
@@ -33,7 +33,9 @@
 <link rel="canonical" href="http://localhost:1313/photography/">
 
 
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
 
   
@@ -54,16 +56,6 @@
 
 
  
-  
-    
-    <link rel="stylesheet" href="/css/bulma.min.css" media="screen">
-  
-
-  
-    
-    <link rel="stylesheet" href="/css/lightgallery.min.css" media="screen">
-  
-
   
     
     <link rel="stylesheet" href="/css/conragan.css" media="screen">
@@ -101,33 +93,41 @@
 
 <body class="preload-transitions colorscheme-auto">
   
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
-
-
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
-    <a class="navigation-title" href="/">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
       Kai Conragan
     </a>
     
+    
       <input type="checkbox" id="menu-toggle" />
       <label class="menu-button float-right" for="menu-toggle">
-        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
         
           
             <li class="navigation-item">
-              <a class="navigation-link" href="/photography/">Photography</a>
+              <a class="navigation-link " href="/photography/">Photography</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/blog/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
             </li>
           
         
         
+      <li class="navigation-item">
+        <a id="dark-mode-toggle" class="colorscheme-toggle">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+      </li>
       </ul>
     
   </section>
@@ -136,47 +136,145 @@
 
     <div class="content">
       
-<div class="container list">
-  <header>
-    <h1 class="title"></h1>
-  </header>
-  <div class="columns">
-     
-    <div class="column">
-      <div class="image is-3by2">
-        <a class="title" href="/photography/wildlife/">
-          <img src="/photography/wildlife/cover.jpg" />
-        </a>
-      </div>
-      <h2>
-        <a class="title" href="/photography/wildlife/">Birds &amp; Wildlife</a>
-      </h2>
-    </div>
+<section id="overview" class="photo-grid">
+  <ul id="photos">
     
-    <div class="column">
-      <div class="image is-3by2">
-        <a class="title" href="/photography/equestrian/">
-          <img src="/photography/equestrian/cover.jpg" />
-        </a>
-      </div>
-      <h2>
-        <a class="title" href="/photography/equestrian/">Equestrian Photography</a>
-      </h2>
-    </div>
+      
+        
+        <li class="photo-item">
+          <figure>
+            <a class="" href="/photography/landscape/">
+                         
+              <img src="/photography/landscape/_cover.jpg" alt="Landscape Cover" />
+              
+            </a>
+            <h2 class="photo-title">
+              <a class="text" href="/photography/landscape/"
+              >Landscape</a
+              >
+            </h2>
+          </figure>
+        </li>
+      
+        
+        <li class="photo-item">
+          <figure>
+            <a class="" href="/photography/birds-wildlife/">
+                 
+                
+              <img src="/photography/birds-wildlife/cover.jpg" alt="Birds &amp; Wildlife Cover" />
+              
+            </a>
+            <h2 class="photo-title">
+              <a class="text" href="/photography/birds-wildlife/"
+              >Birds &amp; Wildlife</a
+              >
+            </h2>
+          </figure>
+        </li>
+      
+        
+        <li class="photo-item">
+          <figure>
+            <a class="" href="/photography/travel/">
+                         
+              <img src="/photography/travel/CRW_2587.jpg" alt="Travel Cover" />
+              
+            </a>
+            <h2 class="photo-title">
+              <a class="text" href="/photography/travel/"
+              >Travel</a
+              >
+            </h2>
+          </figure>
+        </li>
+      
+        
+        <li class="photo-item">
+          <figure>
+            <a class="" href="/photography/equestrian/">
+                 
+                
+              <img src="/photography/equestrian/cover.jpg" alt="Equestrian Cover" />
+              
+            </a>
+            <h2 class="photo-title">
+              <a class="text" href="/photography/equestrian/"
+              >Equestrian</a
+              >
+            </h2>
+          </figure>
+        </li>
+      
+        
+        <li class="photo-item">
+          <figure>
+            <a class="" href="/photography/mavericks/">
+                 
+                
+              <img src="/photography/mavericks/cover.jpg" alt="Mavericks Cover" />
+              
+            </a>
+            <h2 class="photo-title">
+              <a class="text" href="/photography/mavericks/"
+              >Mavericks</a
+              >
+            </h2>
+          </figure>
+        </li>
+      
     
-    <div class="column">
-      <div class="image is-3by2">
-        <a class="title" href="/photography/landscape/">
-          <img src="/photography/landscape/cover.jpg" />
-        </a>
-      </div>
-      <h2>
-        <a class="title" href="/photography/landscape/">Landscape Photography</a>
-      </h2>
-    </div>
-    
-  </div>
-</div>
+</section>
+ 
+<script src="/js/masonry.min.js"></script>
+<script src="/js/conragan.js"></script>
+<script>
+  var macy = Macy({
+    container: "#photos",
+    trueOrder: true,
+    waitForImages: false,
+    margin: {
+      x: 2,
+      y: 20,
+    },
+    columns: 1,
+    breakAt: {
+      431: {
+        margin: {
+          y: 10,
+        },
+        columns: 1,
+      },
+    },
+  });
+  function setupClickableItems() {
+    const photoItems = document.querySelectorAll(".photo-item");
+
+    photoItems.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        
+        if (event.target.closest(".photo-item") !== item) {
+          return; 
+        }
+
+        const link = item.querySelector("a");
+        if (link) {
+          
+          if (event.ctrlKey || event.metaKey) {
+            
+            window.open(link.href, "_blank");
+          } else {
+            
+            window.location.href = link.href;
+          }
+        }
+      });
+    });
+  }
+</script>
+<script>
+  setupClickableItems(); 
+</script>
 
     </div>
 
@@ -184,7 +282,7 @@
   <section class="container">
     ©
     
-    2024
+    2025
      Kai Conragan 
     ·
     
@@ -208,9 +306,6 @@
 
 
   
-  
-
-
 
   
 
@@ -236,6 +331,12 @@
   gtag('config', 'G-4R2W76V53L');
 </script>
 
+
+  
+
+  
+
+  
 
   
 

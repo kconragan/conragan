@@ -6,76 +6,1119 @@
     <description>Recent content on Kai Conragan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jan 2025 10:30:00 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creating the Orton Effect In Capture One (without Photoshop)</title>
-      <link>http://localhost:1313/blog/orton-effect-capture-one/</link>
-      <pubDate>Sat, 02 Mar 2024 17:22:37 -0800</pubDate>
-      <guid>http://localhost:1313/blog/orton-effect-capture-one/</guid>
-      <description>blah blah blah</description>
+      <title>The Power of Learning in Public: A Forgotten Gist and a Lesson Learned</title>
+      <link>http://localhost:1313/blog/2025/the-power-of-learning-in-public/</link>
+      <pubDate>Wed, 15 Jan 2025 10:30:00 -0800</pubDate>
+      <guid>http://localhost:1313/blog/2025/the-power-of-learning-in-public/</guid>
+      <description>&lt;p&gt;I was cleaning up some repos in GitHub and came across an &lt;a href=&#34;https://gist.github.com/kconragan/2510186/revisions&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;old gist I created back in 2012&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Honestly, I&amp;rsquo;d completely forgotten about it! Back then, &lt;a href=&#34;https://www.sublimetext.com/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sublime Text&lt;/a&gt; was my IDE of choice, but I had recently started using Vim motions. I wasn&amp;rsquo;t quite ready to embrace &lt;a href=&#34;https://macvim-dev.github.io/macvim/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MacVim&lt;/a&gt; or the terminal as my full-time coding environment, though.&lt;/p&gt;&#xA;&lt;p&gt;When Apple released &lt;a href=&#34;https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;macOS X Lion&lt;/a&gt;, they introduced an iOS-like context menu that appeared when you pressed and held a key. As a designer, I understood this was another step in bringing macOS and iOS closer together in terms of user experience. But it was painful if you were a designer clumsily making his way through Vim like me. After digging around online, I figured out how to disable this context menu for Sublime Text and documented it in a Gist for posterity. Honestly, I didn&amp;rsquo;t think about it again.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Crater Lake</title>
-      <link>http://localhost:1313/blog/crater-lake/</link>
-      <pubDate>Sat, 12 Aug 2023 19:31:54 -0700</pubDate>
-      <guid>http://localhost:1313/blog/crater-lake/</guid>
-      <description> A sunset and sunrise in Crater National Park Link to heading </description>
+      <title>Don&#39;t Underestimate The Good Internet</title>
+      <link>http://localhost:1313/blog/2025/dont-underestimate-the-good-internet/</link>
+      <pubDate>Tue, 14 Jan 2025 19:13:53 -0800</pubDate>
+      <guid>http://localhost:1313/blog/2025/dont-underestimate-the-good-internet/</guid>
+      <description>&lt;p&gt;Anil Dash in his post &lt;a href=&#34;https://www.anildash.com/2024/01/03/human-web-renaissance/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Web Renaissance takes off&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;And I should never have underestimated the passion and resilience of the people who create the good internet, those who never stopped making things just for the love of the medium.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;This captures so perfectly this unexplainable draw I&amp;rsquo;ve felt recently to resurrect a personal site. It&amp;rsquo;s not for traffic, eyeballs, money. Truthfully, I deeply regret not having made a personal site a ongoing committment. But here we are.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>The Painted Hills of Oregon</title>
-      <link>http://localhost:1313/blog/painted-hills/</link>
-      <pubDate>Sat, 12 Aug 2023 19:31:54 -0700</pubDate>
-      <guid>http://localhost:1313/blog/painted-hills/</guid>
-      <description>Since buying a place in Central Oregon, I&amp;rsquo;ve been growing more and more fascinated with the eastern desert. As someone who grew up on the California coast, it&amp;rsquo;s a foreign landscape, and environment. Deadly but beautiful.&#xA;During our first summer in Oregon, my brother and sister-in-law recommended us a book titled, aptly, The Oregon Desert</description>
+      <title>Google Gemini: My Neovim Configuration Assistant</title>
+      <link>http://localhost:1313/blog/2025/google-gemini-nvim-assistant/</link>
+      <pubDate>Mon, 13 Jan 2025 11:42:40 -0800</pubDate>
+      <guid>http://localhost:1313/blog/2025/google-gemini-nvim-assistant/</guid>
+      <description>&lt;p&gt;I love Vim. And while I&amp;rsquo;m a fan of its infinite customizability, I&amp;rsquo;m not a fan of having to remember every syntax and config parameter.&lt;/p&gt;&#xA;&lt;p&gt;I ran into a simple problem today: when using &lt;a href=&#34;https://github.com/nvim-telescope/telescope.nvim&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Telescope&lt;/a&gt; to find a file, I kept seeing repeated filenames in my tree (e.g., in this Hugo site, numerous files are duplicated between &lt;code&gt;/content&lt;/code&gt; and &lt;code&gt;/docs&lt;/code&gt;). This made it tough to know which file to choose. I wanted Telescope to show me the full pathname in order to help disambiguate the files. Easy enough, I assumed, but I don&amp;rsquo;t know Telescope and NeoVim&amp;rsquo;s syntax well enough to implement this without resorting to Google and clicking through some links. But then I remembered that Gemini now lets you &lt;a href=&#34;https://blog.google/products/gemini/google-gemini-learning-features/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;upload code folders&lt;/a&gt; and I thought, &lt;em&gt;why not just upload my entire NeoVim config and ask Gemini?&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>A photography road trip through the Eastern Sierras</title>
-      <link>http://localhost:1313/blog/eastern-sierras/</link>
-      <pubDate>Thu, 01 Jun 2023 19:31:54 -0700</pubDate>
-      <guid>http://localhost:1313/blog/eastern-sierras/</guid>
-      <description>The Eastern Sierras have long captivated me. Growing up along the California coast, for many years my trips to the Sierras were in the western range out of sheer practicality. Getting to the Eastern Sierras is a commitment, especially in winter when the high passes close. But what awaits is a stunning landscape, far more rugged and, to my eyes, dramatic than the Western half. This is truly a geologic wonderland, with both the highest peak in the continental united states, less than 50 miles from one of the lowest places on the planet in Death Valley.</description>
+      <title>Finding Capture One Sessions on a Mac with Alfred</title>
+      <link>http://localhost:1313/blog/2025/finding-capture-one-sessions-mac-alfred/</link>
+      <pubDate>Sat, 11 Jan 2025 11:42:40 -0800</pubDate>
+      <guid>http://localhost:1313/blog/2025/finding-capture-one-sessions-mac-alfred/</guid>
+      <description>&lt;p&gt;One of the unique advantages of using Capture One is its concept of Sessions, which doesn’t exist in alternatives like Adobe Lightroom. In my workflow I use both: Sessions for individual shoots, and Catalogs as a way to aggregate sessions and photos.&lt;/p&gt;&#xA;&lt;p&gt;What I particularly like about Sessions is they are directly tied to the filesystem. Each Session gets its own dedicated directory for all the images, adjustments, and metadata. For me this keeps things organized and integrates well with how I already manage my photos and back up system to my NAS. I still use catalogs but the majority of my photoshoots start as Sessions, and then I use catalogs to aggregate across them.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Birds &amp; Wildlife</title>
-      <link>http://localhost:1313/photography/wildlife/</link>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m a &lt;a href=&#34;https://google.com&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Senior Director of UX for Google Search&lt;/a&gt;, where I&amp;rsquo;ve spent the last 15 years shaping how billions of people make sense of information every single day. Prior to my current role, I was at &lt;a href=&#34;https://en.wikipedia.org/wiki/Metaweb&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MetaWeb&lt;/a&gt;, a startup &lt;a href=&#34;https://www.fastcompany.com/1671024/google-buys-metaweb-one-company-could-revolutionize-google-search&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;acquired by Google&lt;/a&gt;. It was here that we created Freebase, a pioneering knowledge base that became the foundation for &lt;a href=&#34;https://blog.google/products/search/introducing-knowledge-graph-things-not/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google’s Knowledge Graph&lt;/a&gt; and went on to inform much of Google’s early machine learning efforts.&lt;/p&gt;&#xA;&lt;p&gt;My design ethos centers on the artful management of friction – exploring when to remove it for ease and when to introduce it for meaning. Just as a well-worn Eames chair or a Yixing teapot gains value with time, I strive to create digital experiences that foster a collaborative relationship between humans and computers, prioritizing understanding and nuance over mere engagement. This approach has been honed through a diverse career, starting from my early days at Oracle and Network Associates (right in the thick of the Y2K frenzy!) to establishing a creative studio that provided design services for outdoor sports companies like Maxxis, Specialized, SFO Snowboarding, and FTC Skate.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Scuba Diving The Florida Keys</title>
+      <link>http://localhost:1313/blog/2025/diving-florida-keys-2024/</link>
+      <pubDate>Sun, 05 Jan 2025 11:42:40 -0800</pubDate>
+      <guid>http://localhost:1313/blog/2025/diving-florida-keys-2024/</guid>
+      <description>&lt;h3 id=&#34;i-made-a-diving-video&#34;&gt;&#xA;  I made a diving video!&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#i-made-a-diving-video&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&#xA;    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/5W0FeY__CUY?si=ZN4XGSo0WDOs8qfN?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA;&#xA;&lt;p&gt;Feel free to head on over to &lt;a href=&#34;https://www.youtube.com/watch?v=5W0FeY__CUY&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;YouTube&lt;/a&gt; if you&amp;rsquo;d prefer. But as a bit of backstory:&lt;/p&gt;&#xA;&lt;p&gt;This winter holiday, my family and I had the chance to dive the Florida Keys for the first time. We have some friends who&amp;rsquo;ve made a tradition of visiting the Keys around Christmas, and they&amp;rsquo;d been encouraging us to join them. With my wife being a PADI Scuba Instructor, me a PADI Divemaster, and our 12-year-old daughter recently certified as a Junior Open Water Diver, an excuse to go to Florida (my first time) seemed great! We&amp;rsquo;re used to spending our winters skiing in Oregon, so trading snow for some tropical weather and warm water was a welcome change of pace.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Books I read in 2024</title>
+      <link>http://localhost:1313/blog/2024/books-i-read-2024/</link>
+      <pubDate>Sat, 21 Dec 2024 11:42:40 -0800</pubDate>
+      <guid>http://localhost:1313/blog/2024/books-i-read-2024/</guid>
+      <description>&lt;p&gt;BookTok, r/suggestmeabook, Tiermaker&amp;hellip; Everywhere you look online, people are ranking their yearly reads. I&amp;rsquo;m going old-school and just listing mine here. I read about 26 books in total this year, although some were larger commitments than others (ahem Brandon Sanderson). I read quite a bit more fiction than non-fiction and have no regrets. I&amp;rsquo;d like to get to a point where I process each book more thoroughly as I go. However, it&amp;rsquo;s also nice to look at the year in full, so here we go. This year I discovered some new favorite authors and genres, and found that themes of found family, resilience, and the power of nature resonated strongly with me.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2024 Woodside Fall International 3-day Event</title>
+      <link>http://localhost:1313/blog/2024/woodside-fall-international-2024/</link>
+      <pubDate>Sat, 19 Oct 2024 11:42:40 -0800</pubDate>
+      <guid>http://localhost:1313/blog/2024/woodside-fall-international-2024/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/rvI9ntMwRcs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Woodside Autumn Classic Horse Show</title>
+      <link>http://localhost:1313/blog/2024/woodside-autumn-classic-2024/</link>
+      <pubDate>Mon, 23 Sep 2024 11:42:40 -0800</pubDate>
+      <guid>http://localhost:1313/blog/2024/woodside-autumn-classic-2024/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/Z_3S24SExoc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Create The Orton Effect In Capture One...Kind Of!</title>
+      <link>http://localhost:1313/blog/2024/capture-one-orton-effect/</link>
+      <pubDate>Fri, 01 Mar 2024 13:00:18 -0800</pubDate>
+      <guid>http://localhost:1313/blog/2024/capture-one-orton-effect/</guid>
+      <description>&lt;p&gt;The Orton Effect is an extremely popular (some might say overused) technique that imbues images with a soft, ethereal glow and touch of blur to add a painterly quality to photographs. Used with restraint and on the right images, it is a wonderful effect for good reason.&lt;/p&gt;&#xA;&lt;p&gt;This effect was initially accomplished in the darkroom, pioneered by photographer Michael Orton in the 1980s. The technique involves a multi-exposure film process: one image shot in focus and correctly exposed, another slightly out-of-focus and overexposed. These slides are then physically &amp;ldquo;sandwiched&amp;rdquo; during printing, creating the signature blend of sharp and soft details with a luminous glow.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/allans-hummingbird-ii/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/photography/wildlife/</guid>
-      <description>Bird &amp;amp; wildlife photography combines my love for the outdoors with the excitement of capturing (at times) fast-paced action. A seamless blend of my early pursuits of both landscape and sports photography, these images represent an extension of both. Capturing the natural world allows me to immerse myself in the wonders of this place we call home.</description>
+      <guid>http://localhost:1313/photography/birds-wildlife/allans-hummingbird-ii/</guid>
+      <description></description>
     </item>
     <item>
-      <title>Equestrian Photography</title>
-      <link>http://localhost:1313/photography/equestrian/</link>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/allans-hummingbird/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/photography/equestrian/</guid>
+      <guid>http://localhost:1313/photography/birds-wildlife/allans-hummingbird/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/annas-mid-flight/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/annas-mid-flight/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/baby-balinese-macaque/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/baby-balinese-macaque/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/backlit-wings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/backlit-wings/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/backyard-squirrel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/backyard-squirrel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/bad-hair-day/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/bad-hair-day/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/banksia-perch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/banksia-perch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/baxteri-bloom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/baxteri-bloom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/black-tailed-black-white/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/black-tailed-black-white/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/black-tailed-buck/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/black-tailed-buck/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/brewers-blackbird-portrait/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/brewers-blackbird-portrait/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/coastal-blue-heron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/coastal-blue-heron/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/coyote-stalking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/coyote-stalking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/coyote-standing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/coyote-standing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/duck-concentric-rings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/duck-concentric-rings/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/duck-mirror/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/duck-mirror/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/egret-in-flight/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/egret-in-flight/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/feather-egret-strut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/feather-egret-strut/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/get-off-my-lawn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/get-off-my-lawn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/golden-eye/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/golden-eye/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/golden-hour-heron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/golden-hour-heron/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/goldeneye-heron/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/goldeneye-heron/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/goldeneye-reflection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/goldeneye-reflection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/green-heron-perch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/green-heron-perch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/gulls-gaze/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/gulls-gaze/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/harbor-seal-bed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/harbor-seal-bed/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/hawaii-short-eared-owl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/hawaii-short-eared-owl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/hawk-wingspan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/hawk-wingspan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/high-key-melody/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/high-key-melody/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/jonathan-livingston/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/jonathan-livingston/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/joshua-tree-phainopepla/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/joshua-tree-phainopepla/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/migrating-geese/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/migrating-geese/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/monochrome-gull-portrait/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/monochrome-gull-portrait/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/moss-beach-sunset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/moss-beach-sunset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/osprey-overlook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/osprey-overlook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/osprey-soaring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/osprey-soaring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/osprey-warning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/osprey-warning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/red-naped-sapsucker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/red-naped-sapsucker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/santa-cruz-jewel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/santa-cruz-jewel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/savannah-sparrow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/savannah-sparrow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/seagull-strive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/seagull-strive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/song-sparrow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/song-sparrow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/water-off-ducks-back/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/water-off-ducks-back/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/birds-wildlife/yellow-finch-apple-tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/birds-wildlife/yellow-finch-apple-tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/2023-pumpkin-ponies-finale-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/2023-pumpkin-ponies-finale-01/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/2023-pumpkin-ponies-finale-02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/2023-pumpkin-ponies-finale-02/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/2023-pumpkin-ponies-hunters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/2023-pumpkin-ponies-hunters/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/2024-woodside-fall-finale-deacon-julie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/2024-woodside-fall-finale-deacon-julie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/2024-woodside-fall-finale-mirrored-moment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/2024-woodside-fall-finale-mirrored-moment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/deacon-blue-ribbon-2024/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/deacon-blue-ribbon-2024/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/deacon-julie-woodside-horse-park-2024/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/deacon-julie-woodside-horse-park-2024/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/deacon-september-training/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/deacon-september-training/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/deacon-xc-training/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/deacon-xc-training/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/gidget-yellow-ribbon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/gidget-yellow-ribbon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/heart-horse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/heart-horse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/josh-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/josh-01/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/josh-02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/josh-02/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/josh-03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/josh-03/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/oh-henry-lila/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/oh-henry-lila/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/oh-henry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/oh-henry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/ritual/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/ritual/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/woodside-arena/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/woodside-arena/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/woodside-fall-finale-2023-01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/woodside-fall-finale-2023-01/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/equestrian/woodside-fall-finale-2023-02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/equestrian/woodside-fall-finale-2023-02/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/coastal-contrast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/coastal-contrast/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/crimson-reflection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/crimson-reflection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/davenport-milky-way/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/davenport-milky-way/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/falling-rainbow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/falling-rainbow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/fleeting-timeless-rejoice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/fleeting-timeless-rejoice/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/golden-gate-blue-hour/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/golden-gate-blue-hour/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/hazy-hues/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/hazy-hues/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/heart-shaped-box/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/heart-shaped-box/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/icons-smith-rock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/icons-smith-rock/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/inception/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/inception/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/joshua-tree-rock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/joshua-tree-rock/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/joshua-tree-shared-summit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/joshua-tree-shared-summit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/joshua-tree-sunset-panorama/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/joshua-tree-sunset-panorama/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/light-the-beam/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/light-the-beam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/martins-beach-panorama/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/martins-beach-panorama/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/painted-hills-panorama/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/painted-hills-panorama/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/peach-dream/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/peach-dream/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/rainbow-bridge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/rainbow-bridge/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/rock-bud/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/rock-bud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/rooted-resting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/rooted-resting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/sierra-moonset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/sierra-moonset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/sierra-swirl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/sierra-swirl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/storm-remnants/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/storm-remnants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/take-me-to-church/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/take-me-to-church/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/the-crown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/the-crown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/tunnel-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/tunnel-view/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/watchman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/watchman/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/landscape/yosemite-hoarfrost/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/yosemite-hoarfrost/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/anthony-tashnick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/anthony-tashnick/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/barney-flea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/barney-flea/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/barney-opening-ceremony/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/barney-opening-ceremony/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/barney/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/barney/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/carlos-burle-paddle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/carlos-burle-paddle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/carlos-burle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/carlos-burle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/empty-wave-mavericks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/empty-wave-mavericks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/flea-mavs-tow-in/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/flea-mavs-tow-in/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/flea-whipped/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/flea-whipped/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/jay-frosty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/jay-frosty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/jay-mavs-memorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/jay-mavs-memorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/jay-moriarity-drop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/jay-moriarity-drop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/jeff-clark-bottom-turn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/jeff-clark-bottom-turn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/jeff-clark-jay-memorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/jeff-clark-jay-memorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/jeff-clark-mavs-tow-in/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/jeff-clark-mavs-tow-in/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/jeff-clark-small-glassy-mavs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/jeff-clark-small-glassy-mavs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/low-tide-mavericks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/low-tide-mavericks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/mavericks-backlit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/mavericks-backlit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/mavericks-late-drop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/mavericks-late-drop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/mavericks-overlook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/mavericks-overlook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/mavericks-shoulder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/mavericks-shoulder/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/peter-mel-the-condor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/peter-mel-the-condor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/peter-mel-tow-in/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/peter-mel-tow-in/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/scramble/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/scramble/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/mavericks/tow-partners/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/mavericks/tow-partners/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/a-monks-laundry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/a-monks-laundry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/anjo-chairs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/anjo-chairs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/anjo-hat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/anjo-hat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/balinese-ceremony-wayan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/balinese-ceremony-wayan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/balinese-fisherman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/balinese-fisherman/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/balinese-offering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/balinese-offering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/casco-viejo-doors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/casco-viejo-doors/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/dreamland/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/dreamland/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/kalimantan-peakaboo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/kalimantan-peakaboo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/kuala-lumpur-mall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/kuala-lumpur-mall/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/late-for-class/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/late-for-class/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/monastery-doors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/monastery-doors/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/monastery-stairs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/monastery-stairs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/potala-students/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/potala-students/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/shanghai-alley/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/shanghai-alley/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/shangri-la/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/shangri-la/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/sibuan-dock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/sibuan-dock/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/sibuan-siblings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/sibuan-siblings/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/tibetan-prayer-wheels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/tibetan-prayer-wheels/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/tsongkhapa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/tsongkhapa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/ubud-rice-farmer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/ubud-rice-farmer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/xian-train-station/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/xian-train-station/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/xian-wall-tower/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/xian-wall-tower/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/yunan-tea-merchant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/yunan-tea-merchant/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/zhongdian-door-lock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/zhongdian-door-lock/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/photography/travel/zhongdian-snack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/travel/zhongdian-snack/</guid>
       <description></description>
     </item>
     <item>
       <title>First Image</title>
-      <link>http://localhost:1313/portfolio/01/</link>
+      <link>http://localhost:1313/photography/landscape/shed-with-a-view-ii/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/portfolio/01/</guid>
+      <guid>http://localhost:1313/photography/landscape/shed-with-a-view-ii/</guid>
       <description></description>
     </item>
     <item>
-      <title>Landscape Photography</title>
-      <link>http://localhost:1313/photography/landscape/</link>
+      <title>First Image</title>
+      <link>http://localhost:1313/photography/landscape/shed-with-a-view/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/photography/landscape/</guid>
+      <guid>http://localhost:1313/photography/landscape/shed-with-a-view/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Martin&#39;s Beach</title>
+      <link>http://localhost:1313/photography/landscape/martins-beach/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/photography/landscape/martins-beach/</guid>
       <description></description>
     </item>
     <item>
       <title>Second Image</title>
-      <link>http://localhost:1313/portfolio/02/</link>
+      <link>http://localhost:1313/photography/landscape/rock-dance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/portfolio/02/</guid>
+      <guid>http://localhost:1313/photography/landscape/rock-dance/</guid>
       <description></description>
     </item>
     <item>
       <title>Third Image</title>
-      <link>http://localhost:1313/portfolio/03/</link>
+      <link>http://localhost:1313/photography/landscape/joshua-tree-valley/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/portfolio/03/</guid>
+      <guid>http://localhost:1313/photography/landscape/joshua-tree-valley/</guid>
       <description></description>
     </item>
   </channel>
