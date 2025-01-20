@@ -5,7 +5,7 @@ title = 'Kai Conragan'
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
-publishDir = "docs" # to support github pages
+publishDir = "public" # to support github pages
 
 [markup.highlight]
 style = "github-dark"
