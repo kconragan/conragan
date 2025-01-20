@@ -1,5 +1,4 @@
 +++ 
-draft = true
 date = 2025-01-11T11:42:40-08:00
 title = "Finding Capture One Sessions on a Mac with Alfred"
 slug = "finding-capture-one-sessions-mac-alfred" 

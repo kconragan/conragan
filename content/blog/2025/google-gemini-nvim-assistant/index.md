@@ -1,5 +1,4 @@
 ---
-draft: true
 date: 2025-01-13T11:42:40-08:00
 title: "Google Gemini: My Neovim Configuration Assistant"
 slug: "google-gemini-nvim-assistant"

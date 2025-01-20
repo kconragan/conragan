@@ -1,5 +1,4 @@
 ---
-draft: true
 date: 2024-12-21T11:42:40-08:00
 title: "The Books I read in 2024"
 slug: "books-i-read-2024"

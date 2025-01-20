@@ -1,5 +1,4 @@
 ---
-draft: true
 date: 2025-01-15T10:30:00-08:00
 title: "The Power of Learning in Public: A Forgotten Gist and a Lesson Learned"
 slug: "learning-in-public-forgotten-gist"
