@@ -3,7 +3,37 @@
  **************************************************************************/
 
 :root {
+  color-scheme: light dark; /* Indicates that the website supports both light and dark color schemes */
+
+  &[data-color-scheme="light"] {
+    color-scheme: light;
+  }
+
+  &[data-color-scheme="dark"] {
+    color-scheme: dark;
+  }
   --gap: 5rem;
+  --c-white: #fff; /*utility color */
+  --c-light: #fafafa;
+  --c-light-gray: #dadada;
+  --c-med-gray: #555;
+  --c-med-dark-gray: #212121;
+  --c-dark: #111;
+  --c-black: #000;
+  --link-color-light: #1565c0; /* default link color for light theme */
+  --link-color-dark: #42a5f5; /* $link-color-dark */
+
+  --blockquote-bg-color-light: rgba(0, 0, 0, 0.05);
+  --blockquote-bg-color-dark: rgba(255, 255, 255, 0.05);
+
+  /* Use light-dark() to switch between light and dark mode colors */
+  --bg-color: light-dark(var(--c-light), var(--c-dark));
+  --fg-color: light-dark(var(--c-dark), var(--c-light));
+  --link-color: light-dark(var(--link-color-light), var(--link-color-dark));
+  --blockquote-bg-color: light-dark(
+    var(--blockquote-bg-color-light),
+    var(--blockquote-bg-color-dark)
+  );
 }
 
 @media (max-width: 767px) {
@@ -17,7 +47,10 @@ html {
   font-size: 62.5%;
 }
 
-body {
+body,
+body.colorscheme-dark {
+  color: var(--fg-color);
+  background-color: var(--bg-color);
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
   font-kerning: normal;
@@ -63,7 +96,7 @@ body {
 /* override theme setting of 500 */
 a {
   font-weight: normal;
-  color: #3f88c5;
+  color: var(--link-color);
 }
 
 h1,
@@ -90,16 +123,26 @@ h6 a {
   font-variation-settings: "wght" 700;
 }
 
+/* normalize global nav colors */
+body .navigation a.navigation-title,
+body .navigation a.navigation-title:hover,
+body.colorscheme-dark a.navigation-title,
+body.colorscheme-dark a.navigation-title:hover,
+body.colorscheme-dark .navigation-item a:hover,
+body .navigation-item a:hover,
+body .navigation i,
+body .navigation i:hover,
+body.colorscheme-dark .navigation i,
+body.colorscheme-dark .navigation i:hover {
+  color: light-dark(var(--c-dark), var(--c-light));
+}
+
 .content blockquote {
-  background-color: #f5f5f5;
+  background-color: var(--blockquote-bg-color);
   border-left: 5px solid #393e41;
   margin: 0;
   padding: 1rem 2rem;
   line-height: 1.6;
-}
-
-body.colorscheme-dark .content blockquote {
-  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .content article a:where(.external-link):not(:has(img)):after {
@@ -134,14 +177,6 @@ body.colorscheme-dark .content blockquote {
   position: static;
   font-size: 1.7rem;
   margin: 0 1rem;
-}
-
-.navigation i:hover {
-  color: #212121;
-}
-
-body.colorscheme-dark .navigation i:hover {
-  color: #dadada;
 }
 
 .footer {
@@ -228,7 +263,6 @@ h1 {
   border-radius: 4px;
   color: #3c4043;
   cursor: pointer;
-  font-family: arial, sans-serif;
   font-size: 14px;
   height: 36px;
   line-height: 27px;
@@ -241,22 +275,10 @@ h1 {
   white-space: pre;
 }
 
-.colorscheme-dark .gallery header button {
-  background-color: #343434;
-  border: 1px solid #343434;
-  color: #d8e1e8;
-}
-
 .gallery header button:hover {
   border-color: #dadce0;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
   color: #202124;
-}
-
-.colorscheme-dark .gallery header button:hover {
-  border-color: #4b4c4f;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
-  color: #d8e1e8;
 }
 
 .gallery header button:focus {
@@ -327,7 +349,7 @@ li.photo-item + li.photo-item {
 
   /* display */
   background-color: rgba(0, 0, 0, 0.4);
-  color: #dadada;
+  color: var(--c-light-gray);
   font-variation-settings: "wght" 300;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -347,7 +369,7 @@ li.photo-item + li.photo-item {
 #overview h2.photo-title {
   opacity: 1;
   font-size: 4.2rem;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2); /* scrim */
 }
 
 .photo-title a,
@@ -365,7 +387,7 @@ li.photo-item + li.photo-item {
 .photo-title a,
 body.colorscheme-dark .photo-title a,
 .photo-title a:hover {
-  color: #dadada;
+  color: var(--c-light-gray);
   text-decoration: none;
 }
 
@@ -396,11 +418,7 @@ body.colorscheme-dark .photo-title a,
   transform: translateY(
     calc(100% - 6rem)
   ); /* Hide most of the container initially and ensure this matches #page-navigation */
-  background-color: rgb(250, 250, 250);
-}
-
-.colorscheme-dark #photo-content {
-  background-color: rgb(33, 33, 33);
+  background-color: light-dark(var(--c-light), var(--c-dark));
 }
 
 #toggleMetadata,
@@ -413,29 +431,23 @@ a.paginate {
 }
 
 a.paginate {
-  color: #363636;
+  color: light-dark(
+    var(--fg-color-medium-light),
+    var(--bg-color-light)
+  ) !important;
   transition: 0.3s color;
 }
 
-a.paginate.disabled {
-  color: #dadada;
-}
-
 a.paginate:hover {
-  color: #111;
+  color: light-dar(var(--color-black), var(--color-white)) !important;
   text-decoration: none;
 }
 
-.colorscheme-dark a.paginate {
-  color: #dadada;
-}
-
-.colorscheme-dark a.paginate:hover {
-  color: #fefefe;
-}
-
-.colorscheme-dark a.paginate.disabled {
-  color: #363636;
+a.paginate.disabled {
+  color: light-dark(
+    var(--fg-color-dark),
+    var(--fg-color-medium-light)
+  ) !important;
 }
 
 h2#camera-make {
@@ -508,7 +520,7 @@ dl#exif dd:last-of-type::after {
 
 .project-content-toggle::before,
 .project-content-toggle::after {
-  background-color: #363636;
+  background-color: light-dark(var(--c-dark), var(--c-light));
   content: "";
   position: absolute;
   left: 50%;
@@ -540,22 +552,12 @@ dl#exif dd:last-of-type::after {
 
 .project-content-toggle:hover::before,
 .project-content-toggle:hover::after {
-  background-color: #111;
+  background-color: light-dark(var(--c-black), var(--c-white));
 }
 
 .is-active .project-content-toggle::after {
   height: 8px;
   width: 24px;
-}
-
-.colorscheme-dark .project-content-toggle::before,
-.colorscheme-dark .project-content-toggle::after {
-  background-color: #dadada;
-}
-
-.colorscheme-dark .project-content-toggle:hover::before,
-.colorscheme-dark .project-content-toggle:hover::after {
-  background-color: #fefefe;
 }
 
 /* --- Photo Content --- */
@@ -609,12 +611,8 @@ dl#exif dd:last-of-type::after {
   max-width: 100%;
   max-height: 100%;
   width: auto;
-  border: 2px solid #111;
+  border: 2px solid var(--fg-color-medium-dark);
   transition: border 03s;
-}
-
-.colorscheme-dark #photo-image img {
-  border: 0;
 }
 
 #photo-image.fade-in {
@@ -635,9 +633,6 @@ dl#exif dd:last-of-type::after {
 
   #photo-image.image-portrait {
     max-height: 70vh;
-  }
-
-  #photo-image.image-landscape {
   }
 }
 
@@ -674,9 +669,6 @@ dl#exif dd:last-of-type::after {
 
   #photo-image img {
     border-width: 6px;
-  }
-
-  #photo-image.image-portrait {
   }
 
   #photo-image.image-landscape {
@@ -802,4 +794,36 @@ dl#exif dd:last-of-type::after {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+  #photo-image img {
+    border: 0;
+  }
+
+  .colorscheme-dark .gallery header button {
+    background-color: var(--fg-color-medium);
+    border: 1px solid var(--fg-color-medium);
+    color: #d8e1e8;
+  }
+  .colorscheme-dark .gallery header button {
+    background-color: var(--fg-color-medium);
+    border: 1px solid var(--fg-color-medium);
+    color: #d8e1e8;
+  }
+  .colorscheme-dark .gallery header button:hover {
+    border-color: #4b4c4f;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
+    color: #d8e1e8;
+  }
+  .colorscheme-dark .gallery header button:hover {
+    border-color: #4b4c4f;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
+    color: #d8e1e8;
+  }
+  .colorscheme-dark .gallery header button:hover {
+    border-color: #4b4c4f;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px;
+    color: #d8e1e8;
+  }
 }
