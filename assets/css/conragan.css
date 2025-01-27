@@ -93,6 +93,23 @@ body.colorscheme-dark {
   font-display: block;
 }
 
+.fa-2x {
+  font-size: 1.6em;
+}
+
+.fa.fa-threads,
+.fa.fa-bluesky {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa-threads:before {
+  content: "\E618";
+}
+.fa-bluesky:before {
+  content: "\E671";
+}
+
 /* override theme setting of 500 */
 body a,
 body.colorscheme-dark a {
