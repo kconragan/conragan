@@ -1,5 +1,5 @@
 {{ define "content" }}
-<section id="post" class="container post">
+<section id="recent-posts" class="recent-posts container post">
 
   {{ $paginator := .Paginate (where .Pages "Type" "blog") 20 }}
 
