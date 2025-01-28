@@ -55,10 +55,26 @@ body.colorscheme-dark {
   font-feature-settings: "kern";
   font-kerning: normal;
   font-size: 1.6rem;
-  font-family: nunito-sans, sans-serif;
+  font-family: worksans, sans-serif;
   letter-spacing: -0.015em;
   line-height: 1.6;
   min-height: 100vh;
+}
+
+@font-face {
+  font-family: "worksans";
+  src: url("/fonts/WorkSans-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "paint-factory";
+  src: url("/fonts/PaintFactory-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 @font-face {
@@ -72,22 +88,6 @@ body.colorscheme-dark {
 @font-face {
   font-family: "nunito-sans";
   src: url("/fonts/NunitoSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "rubik";
-  src: url("/fonts/Rubik-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "lato";
-  src: url("/fonts/Lato-Light.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -129,8 +129,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  font-family: nunito, sans-serif;
-  font-variation-settings: "wght" 700;
+  font-family: paint-factory, sans-serif;
 }
 
 .navigation-title,
@@ -736,20 +735,64 @@ dl#exif dd:last-of-type::after {
  * Blog
  **************************************************************************/
 
-#post {
-  max-width: 720px;
+.post {
+  .post-meta {
+    font-size: 21px;
+    color: light-dark(var(--c-dark), var(--c-med-gray));
+    margin-bottom: 0.75em;
+  }
+
+  .title {
+    font-size: 96px;
+    letter-spacing: -0.015em;
+    line-height: 0.95;
+  }
+
+  p {
+    font-size: 21px;
+    line-height: 1.5;
+  }
+
+  p {
+    @media only screen and (min-width: 800px) {
+      font-size: 16px;
+    }
+  }
+
+  .title {
+    @media only screen and (min-width: 800px) {
+      font-size: 64px;
+    }
+  }
+  .post-meta {
+    @media only screen and (min-width: 800px) {
+      font-size: 18px;
+    }
+  }
+  @media only screen and (min-width: 800px) {
+    width: 62.5%;
+  }
 }
 
 .content .blog-post-summary {
   margin-bottom: 6rem;
 
   .post-title {
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: -0.015em;
+    line-height: 0.95;
     margin-bottom: 1rem;
+    margin-top: 0;
   }
 
   .post-meta {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
+}
+
+.content .blog-post-summary:first-child {
+  margin-top: 4rem;
 }
 
 /**************************************************************************
