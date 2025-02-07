@@ -137,7 +137,6 @@ h6 a {
 .navigation-link,
 .navigation a {
   font-family: worksans, sans-serif;
-  font-variation-settings: "wght" 700;
 }
 
 /* normalize global nav colors */
