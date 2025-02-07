@@ -2,7 +2,6 @@
 title: "Kew Gardens and Colonialism"
 date: 2025-01-25T09:48:13-08:00
 type: blog
-draft: true
 ---
 
 {{< himage src="kew-gardens-sunset.webp" alt="Kew Gardens At Sunset" >}}
