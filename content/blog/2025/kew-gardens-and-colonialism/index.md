@@ -2,19 +2,22 @@
 title: "Kew Gardens and Colonialism"
 date: 2025-01-25T09:48:13-08:00
 type: blog
-draft: true
 ---
 
-My friend Joel recently shared the Empire podcast with me (which I was unfamiliar with) and an episode in particular: # Empire of Plants: From Kew Gardens to Botany Bay. Anita Anand and William Dalrymple in conversation with Sathnam Sanghera discuss the history of botanic gardens and their role in colonialism.
+{{< himage src="kew-gardens-sunset.webp" alt="Kew Gardens At Sunset" >}}
 
-As background, in 2016 Joël took my family and I to the Kew Gardens on a trip we had made to the UK. We had a lovely day there. It was near Christmas time and we brought my then 4-year old daughter to explore. During the winter holidays, Kew Gardens put together a spectacular light show that adds a touch of magic to a place already rich to the senses: exotic palms housed in Victorian glass, giant lily pads floating on tranqil ponds, vibrant flowers spilling from manicured beds, and centuries old trees of so many varieties including black walnut, coastal redwood, mountain gum, and more. I have vivid memories of my daughter running playfully through the mature gardens, and watching into the sunset as the holiday lights put on a magical show. The Kew Gardens are a testament to human curiosity in the natural world and commitment to continued study of it’s beauty and diversity.
+My friend Joël recently shared the [Empire podcast](https://empirepod.supportingcast.fm/) with me (which I was unfamiliar with) and an episode in particular: [Empire of Plants: From Kew Gardens to Botany Bay](https://pod.link/1639561921/episode/ebcd9f4b23c3d45037b0618b6586f82b). Anita Anand and William Dalrymple in conversation with Sathnam Sanghera discuss the history of botanic gardens and their role in colonialism.
 
-But it also speaks to the complex and troubling history of British Colonialism, and how botany was a powerful tool for their empire. In the economic exploitation of Britain's colonies, Kew played a central role, with its scientists working to cultivate and transport valuable plants like rubber and quinine, often with devastating consequences for indigenous communities.
+As background, in 2016 Joël took my family and I to the Kew Gardens on a trip we had made to the UK. We had a lovely day there. It was near Christmas time and we brought my then 4-year old daughter to explore. During the winter holidays, Kew Gardens put together a spectacular light show that adds a touch of magic to a place already rich to the senses: giant palms housed in Victorian glass, oversized lily pads floating on ponds, flowers spilling from manicured beds, and centuries old trees of so many varieties including black walnut, coastal redwood, mountain gum, and more. I have vivid memories of my daughter running playfully through the mature gardens, and watching into the sunset as the holiday lights put on a magical show. The Kew Gardens are a testament to human curiosity in the natural world and commitment to continued study of it’s beauty and diversity.
 
-The rubber industry in Malay particularly resonated with me as, in 2007 I spent the better part of a year living in Borneo and saw the legacy of the rubber trees introduced by British colonists.
+But it also speaks to the complex and troubling history of British Colonialism, and how botany was a powerful tool for their empire. I was admittedly unaware of this aspect on our visit there. The podcast did a good job of framing how, in the economic exploitation of Britain's colonies, Kew played a central role, with its scientists working to cultivate and transport valuable plants like rubber and quinine, often with devastating consequences for indigenous communities.
 
-My experience in Borneo, witnessing the lasting impact of the rubber trade, brought this complex history into sharp focus. History, including that of Kew Gardens, is often complex, a story of human curiosity and cruelty, beauty and barbarism. It seems they are now grappling with this legacy, quoting from an article on their own website:
+The rubber industry in Malay particularly resonated with me as, in 2006–2007 I spent the better part of a year living in Borneo and saw the legacy of the rubber trees introduced by British colonists.
+
+{{< himage src="rubber-making-malaysia.webp" alt="Rubber making in Malaysia" caption="Photo from 2007 of a small, family-based rubber making farm in Malaysian Borneo" max-width=60% >}}
+
+My experience in Borneo, witnessing the lasting impact of the rubber trade, brought this complex history into sharp focus. History, including that of Kew Gardens, is often complex, a story of human curiosity and cruelty, beauty and barbarism. It seems they are now grappling with this legacy, quoting from [an article on their own website](https://www.kew.org/read-and-watch/kew-empire-indigo-factory-model):
 
 > Currently, Kew is in the middle of a journey; we are looking at our language, our collections, our scientific practices, our policies, and the histories we do and don’t tell about Kew’s entanglement with the British Empire.…In the words of the museum's founder Sir William Hooker, our purpose was to show plants and ‘the uses which the ingenuity of man has derived from them’ – and to harness them at quite a cost
 
-I encourage you to listen to the podcast and learn more about the history of Kew Gardens. And the next time you visit a historical site, take a moment to consider its full story, the good and the bad. Let's engage with these places in a more critical and informed way, acknowledging both their beauty and their shadows.
+Thanks for the share, Joël!

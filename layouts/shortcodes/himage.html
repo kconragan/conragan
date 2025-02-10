@@ -2,6 +2,7 @@
 {{ $image := "" }}
 {{ $alt := .Get "alt" }}
 {{ $caption := .Get "caption" }}
+{{ $maxwidth := .Get "max-width" | default "100%"}}
 {{ $size := .Get "size" | default "800x" }}
 
 <!--prettier-ignore-->
@@ -15,7 +16,7 @@
 </figure>
 {{ else }} {{ $image = .Page.Resources.GetMatch (.Get "src") }} {{ with $image
 }} {{ $resized := $image.Resize $size }} {{ if $resized }}
-<figure>
+<figure class="blog-image">
   <picture>
     {{ with $resized.RelPermalink }} {{ $webpPermalink := replace . ".jpg"
     ".webp" | replace ".JPG" ".webp" | replace ".png" ".webp" }} {{ if
@@ -26,7 +27,7 @@
       src="{{ . }}"
       alt="{{ $alt }}"
       width="{{ $resized.Width }}"
-      height="{{ $resized.Height }}"
+      style="max-width: {{$maxwidth}}"
       loading="lazy"
     />
     {{ end }}
