@@ -34,6 +34,7 @@
     var(--blockquote-bg-color-light),
     var(--blockquote-bg-color-dark)
   );
+  --blockquote-border-color: light-dark(var(--c-med-gray), var(--c-light-gray));
 }
 
 @media (max-width: 767px) {
@@ -154,11 +155,25 @@ body.colorscheme-dark .navigation i:hover {
 }
 
 .content blockquote {
+  position: relative;
   background-color: var(--blockquote-bg-color);
-  border-left: 5px solid #393e41;
+  border-left: 5px solid var(--blockquote-border-color);
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 1rem 4rem 1em 60px;
   line-height: 1.6;
+}
+
+.content blockquote:before {
+  content: "\201C";
+  color: var(--blockquote-border-color);
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: 0.5rem;
+}
+
+.content blockquote:after {
+  content: "";
 }
 
 .content article a:where(.external-link):not(:has(img)):after {
@@ -793,9 +808,6 @@ dl#exif dd:last-of-type::after {
   .content article p {
     font-size: 18px;
   }
-  .post-title {
-    font-size: 48px;
-  }
 
   .post .title {
     font-size: 64px;
@@ -813,6 +825,10 @@ dl#exif dd:last-of-type::after {
   .post-meta {
     color: light-dark(var(--c-dark), var(--c-med-gray));
     margin-bottom: 0.75em;
+  }
+
+  .post-title .title {
+    font-size: 64px;
   }
 
   .title {
