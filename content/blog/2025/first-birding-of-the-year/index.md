@@ -4,7 +4,7 @@ title: "First Bird Photos of 2025"
 slug: "first-bird-photos-of-the-year"
 ---
 
-It's been a bit of a slow start to the year photographically. That's not a bad thing as a big part is due to our [recent trip to the Florida Keys]({{< ref "/blog/2025/diving-florida-keys-2024/" >}}) where we got to do a bunch of diving. Besides spending as much time as possible underwater, I also had a goal of making my [first short dive video](https://youtu.be/5W0FeY__CUY). I’m pretty happy with the results, but I’m equally eager to get some photos made this year.
+It's been a bit of a slow start to the year photographically. That's not a bad thing as a big part is due to our [recent trip to the Florida Keys]({{< ref "blog/2025/diving-florida-keys-2024" >}}) where we got to do a bunch of diving. Besides spending as much time as possible underwater, I also had a goal of making my [first short dive video](https://youtu.be/5W0FeY__CUY). I’m pretty happy with the results, but I’m equally eager to get some photos made this year.
 
 With some time to kill this afternoon, I headed to one of my favorite places to see birds along the coast: the plot of land between Frenchman’s Creek and Dunes Beach in Half Moon Bay. I'm still a relatively inexperienced birder, which I honestly love as it means every outing I’m bound to experience something new by just paying attention. The beauty of the beginner’s mindset!
 
