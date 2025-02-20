@@ -83,17 +83,7 @@
     </div>
   </div>
 </article>
-{{ if hugo.IsServer }}
-  {{ $masonry := resources.Get "js/masonry.min.js" }}
-  {{ $js := resources.Get "js/conragan.js" }}
-  <script src="{{ $masonry.RelPermalink }}"></script>
-  <script src="{{ $js.RelPermalink }}"></script>
-{{ else }}
-  {{ $masonry := resources.Get "js/masonry.min.js" | fingerprint }}
-  {{ $js := resources.Get "js/conragan.js" | minify | fingerprint }}
-  <script src="{{ $masonry.Permalink }}" integrity="{{ $masonry.Data.Integrity }}" crossorigin="anonymous"></script>
-  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
-{{ end }}
+{{ partial "photo-scripts.html" }}
 <noscript>
   <style>
     #photo-image {
