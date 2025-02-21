@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1"
+  ],
+  "id": "https://conragan.com/actor.json",
+  "type": "Person",
+  "preferredUsername": "kai",
+  "inbox": "https://conragan.com/inbox.json",
+  "outbox": "https://conragan.com/outbox.json",
+  "following": "https://conragan.com/following.json",
+  "followers": "https://conragan.com/followers.json",
+  "publicKey": {
+    "id": "https://conragan.com/actor.json#main-key",
+    "owner": "https://conragan.com/actor.json",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwdR5Tq41qNHHM1sU7MiF nRwi9gyRUe/yZ6ZrsAURmTJKgNzC3rPn9HjdoHEidqda8Na3ZQyMYvcPIvIN5zcD Z6kx/P2GfKqHIyWDv5lbXN4ySFJ0CY6GuSN6LIuxY2rtpdosGX0On+I21vcL0MFp UDKdU7kT/wi5mtokmTluBA05H1XCaNS2kAzdl5An5HKFlHoWJd+kOnnkQwDDFFlF V3QlDjN+PKgZGRNsxwrhOIFaD8PedHaowlacBJuW0B/RutxaXc4WfdHMqjGe8nBJ X7c5xVUjAGqscoKX5qI5NfaYasmIG9jWKNNHFlBdV5VXYc95fk9eQ0sLc66JJmph fwIDAQAB -----END PUBLIC KEY-----"
+  },
+  "name": "Kai Conragan",
+  "summary": "Senior Director of UX at Google. Photographer. Blogger.",
+  "url": "https://conragan.com/about/",
+  "icon": {
+    "type": "Image",
+    "mediaType": "image/webp",
+    "url": "https://conragan.com/img/headshot.webp"
+  }
+}
