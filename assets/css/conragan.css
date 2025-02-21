@@ -99,7 +99,8 @@ body.colorscheme-dark {
 }
 
 .fa.fa-threads,
-.fa.fa-bluesky {
+.fa.fa-bluesky,
+.fa.fa-mastodon {
   font-family: "Font Awesome 6 Brands";
   font-weight: 400;
 }
@@ -109,6 +110,9 @@ body.colorscheme-dark {
 }
 .fa-bluesky:before {
   content: "\E671";
+}
+.fa-mastodon:before {
+  content: "\F4F6";
 }
 
 /* override theme setting of 500 */
