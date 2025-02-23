@@ -25,7 +25,7 @@ Want to read your Kindle books on other devices? Check out [Calibre](https://cal
 
 I've decided to stop buying ebooks through Amazon. I've been a happy user of [Libby](https://libbyapp.com/), which offers a fantastic way to support local libraries—something more important now than ever. Libby provides a great user experience and generally has an excellent catalog, but it does have some caveats. You're tied to the quality of your local library's collection, and there can be long wait times for popular titles, just like with physical books.
 
-If I'm impatient or want to own a copy, [Bookshop.org](https://bookshop.org) has recently started selling ebooks. Most of the books currently are also DRM-protected. However, here is a [post from CEO Andy Hunter on Threads](https://www.threads.net/@andyhunter777/post/DFaoinuOqE4):
+If I'm impatient or want to own a copy, [Bookshop.org](https://bookshop.org) has recently started selling ebooks. most of the books currently are also DRM-protected. However, here is a [post from CEO Andy Hunter on Threads](https://www.threads.net/@andyhunter777/post/DFaoinuOqE4):
 
 >Hi all, CEO of Bookshop.org here. We love DRM-free books and are working hard to add lots of them to our catalog. For launch, we have mostly large corporate publishers who insist on DRM and don’t allow downloading books. That’s a publisher decision, not ours. But soon we’ll have a way to filter for DRM-free titles which will be downloadable! Also, it’s my holy grail to allow you to buy an ebook from a local bookstore and read it on your Kindle. It requires Amazon’s cooperation—we are trying!
 
