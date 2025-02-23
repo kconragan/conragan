@@ -2,3 +2,6 @@
 public/
 docs/
 resources/_gen
+repomix-output.txt
+temp_private.pem
+temp_public.pem
