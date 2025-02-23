@@ -115,7 +115,7 @@ plausible_domain = "" #OK as is
   [server.headers.values]
     Referrer-Policy = 'strict-origin-when-cross-origin'
 
-[module] # OK as is
+[module]
   [[module.mounts]]
     source = "assets"
     target = "assets"
