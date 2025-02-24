@@ -1,11 +1,11 @@
 {{ define "content" }}
-  <section id="post" class="container post">
+  <section id="post" class="container post h-entry">
     <article>
       <header>
         <div class="post-meta">
           <div class="date">
             <span class="posted-on">
-              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+              <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                 {{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
               </time>
             </span>
@@ -19,7 +19,7 @@
           {{ with .GetTerms "tags" }}{{ partial "taxonomy/tags.html" . }}{{ end }}
         </div>
         <div class="post-title">
-          <h1 class="title">
+          <h1 class="title p-name">
             <a class="title-link" href="{{ .Permalink | safeURL }}">
               {{ .Title }}
             </a>
@@ -27,7 +27,7 @@
         </div>
       </header>
 
-      <div class="post-content">
+      <div class="post-content e-content">
         {{ if .Params.featuredImage }}
           <img src="{{ .Params.featuredImage | relURL }}" alt="Featured image"/>
         {{ end }}

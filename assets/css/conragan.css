@@ -37,6 +37,21 @@
   --blockquote-border-color: light-dark(var(--c-med-gray), var(--c-light-gray));
 }
 
+@font-face {
+  font-family: "worksans";
+  src: url("/fonts/WorkSans-Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "bespoke-serif"
+  src: url("/fonts/BespokeSerif-subset.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 @media (max-width: 767px) {
   :root {
     --h1-size: 3.2rem !important;
@@ -52,46 +67,14 @@ body,
 body.colorscheme-dark {
   color: var(--fg-color);
   background-color: var(--bg-color);
+  font-family: worksans, sans-serif;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
   font-kerning: normal;
   font-size: 1.6rem;
-  font-family: worksans, sans-serif;
   letter-spacing: -0.015em;
   line-height: 1.6;
   min-height: 100vh;
-}
-
-@font-face {
-  font-family: "worksans";
-  src: url("/fonts/WorkSans-Variable.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "paint-factory";
-  src: url("/fonts/PaintFactory-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "nunito";
-  src: url("/fonts/Nunito-VariableFont-subset.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "nunito-sans";
-  src: url("/fonts/NunitoSans-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
 }
 
 .fa-2x {
@@ -130,14 +113,13 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  font-family: paint-factory, sans-serif;
+  font-family: bespoke-serif, serif;
 }
 
 .navigation-title,
 .navigation-item,
 .navigation-link,
 .navigation a {
-  font-family: worksans, sans-serif;
 }
 
 /* normalize global nav colors */
@@ -233,7 +215,6 @@ body.colorscheme-dark .navigation i:hover {
 
 .centered .about h2,
 .centered .about h2 a {
-  font-family: worksans, sans-serif;
   margin-top: 1em;
 }
 
@@ -245,7 +226,7 @@ body.colorscheme-dark .content .centered .about ul li a:focus {
 h1 {
   font-size: 5rem;
   line-height: 3.4rem;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .content h1 {
@@ -257,7 +238,7 @@ h1 {
 .content li {
   font-size: 1.6rem;
   @media (min-width: 1152px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -490,22 +471,20 @@ a.paginate.disabled {
   ) !important;
 }
 
-#metadata h1 {
+#metadata h1,
+h2#camera-make {
   font-family: worksans, sans-serif;
-  font-variation-settings: "wght" 600;
+  font-weight: 800;
 }
 
 h2#camera-make {
-  font-family: worksans, sans-serif;
-  font-variation-settings: "wght" 400;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   margin: 2rem 0 0.5rem;
 }
 
 dl#exif {
   display: flex;
   flex-wrap: wrap;
-  font-family: worksans, sans-serif;
   justify-content: left;
   margin: 0;
 }
@@ -764,12 +743,20 @@ dl#exif dd:last-of-type::after {
  * Blog
  **************************************************************************/
 
+/* single blog post styles */
+#post header {
+  margin-bottom: 12rem;
+}
+
 .post-title {
-  font-weight: normal;
   letter-spacing: -0.015em;
   line-height: 0.95;
   margin-bottom: 1rem;
   margin-top: 0;
+}
+
+body .post-title a {
+  font-weight: 800;
 }
 
 /* Small screens */
@@ -843,20 +830,43 @@ dl#exif dd:last-of-type::after {
   }
   @media only screen and (min-width: 800px) {
     width: 62.5%;
+    max-width: 73rem;
   }
 }
 
 .content .blog-post-summary {
+  padding-bottom: 3rem;
   margin-bottom: 6rem;
+  border-bottom: 1px solid light-dark(var(--c-light-gray), var(--c-med-gray));
 
   .post-meta {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    font-size: 90%;
+  }
+
+  blockquote {
+    margin-bottom: 2rem;
+  }
+
+  .post-meta a {
+    color: light-dark(var(--c-dark), var(--c-med-gray));
   }
 }
 
 .content .blog-post-summary:first-child {
   margin-top: 4rem;
 }
+
+.blog-post-summary .post-title a {
+  display: flex;
+  align-items: center;
+}
+.blog-post-summary .post-title a .fa {
+  margin-right: 1em;
+  font-size: 75%;
+  padding-top: 2px;
+}
+
 
 /**************************************************************************
  * About
