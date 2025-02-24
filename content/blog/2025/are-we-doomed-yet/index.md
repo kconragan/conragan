@@ -5,7 +5,6 @@ type: blog
 tags: []
 subtype: 'link' 
 linkurl: 'https://arewedoomedyet.org/'
-draft: true
 ---
 
 A fun little webpage that provides a live estimate of chances that [2024 YR](https://en.wikipedia.org/wiki/2024_YR4) asteroid makes contact with Earth. Today the chance is 1 in 279 (I've seen it go as high as 1 in 47).
