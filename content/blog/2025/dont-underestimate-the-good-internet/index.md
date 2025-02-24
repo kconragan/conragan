@@ -1,7 +1,8 @@
 +++ 
 date = 2025-01-14T19:13:53-08:00
 title = "Don't Underestimate The Good Internet"
-slug = "" 
+subtype = "link"
+linkurl = "https://www.anildash.com/2024/01/03/human-web-renaissance/"
 +++
 
 Anil Dash in his post [The Web Renaissance takes off](https://www.anildash.com/2024/01/03/human-web-renaissance/)
