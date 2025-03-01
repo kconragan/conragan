@@ -1,0 +1,37 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => {
+    const parts = post.slug.split('/');
+    let year, slug;
+
+    if (parts.length > 1) {
+      // Year/slug format
+      year = parts[0];
+      slug = parts.slice(1).join('/');
+    } else {
+      // Single-slug format - Handle this as a default case.
+      year = 'default'; // Or another default year
+      slug = parts[0];
+    }
+
+    return {
+      params: { year, slug },
+      props: { post, year, slug }, // Pass year and slug as props
+    };
+  });
+}
+
+const { post, year, slug } = Astro.props;
+const { Content } = await post.render();
+
+---
+
+<Base title="">
+  <h1>{post.data.title}</h1>
+  <Content />
+</Base>

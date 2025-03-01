@@ -1,0 +1,126 @@
+---
+import Base from '../../../layouts/Base.astro'; // Import the base layout component
+import { Image } from 'astro:assets'; // Import Astro's Image component for optimized images
+import imageData from '../../../image-data.json'; // Import the JSON data containing image EXIF information
+
+// Define the interface for type-checking Astro component props
+interface Props {
+  gallery: string; // The gallery name
+  slug: string; // The image slug (filename without extension)
+  imagePath: string; // The relative path to the image
+  imageModule: { default: ImageMetadata }; // The imported image module from import.meta.glob
+}
+
+// getStaticPaths: Generates static routes for each image in the photography directory
+export async function getStaticPaths() {
+  // Use import.meta.glob to get all images in the photography directory
+  const allImages = import.meta.glob<{ default: ImageMetadata }>('../../../photography/*/*.{jpg,jpeg,png,gif}');
+
+  const paths = []; // Initialize an empty array to hold the generated paths
+
+  // Iterate over all the images found by import.meta.glob
+  for (const path in allImages) {
+    const parts = path.split('/'); // Split the path into segments
+    const gallery = parts[parts.length - 2]; // Extract the gallery name from the path
+    const slugWithExtension = parts.pop(); // Get the filename with extension
+    const slug = slugWithExtension?.split('.')[0] || ''; // Extract the slug (filename without extension)
+
+    const transformedImagePath = path.replace('../../../', 'src/'); // transform the image path so it matches the path in src
+
+    paths.push({
+      params: { gallery, slug }, // Set the route parameters (gallery and slug)
+      props: {
+        gallery: gallery, // Pass the gallery name as a prop
+        slug: slug, // Pass the slug as a prop
+        imagePath: transformedImagePath, // Pass the transformed image path as a prop
+        imageModule: await allImages[path](), // Import the image module and pass it as a prop
+      },
+    });
+  }
+
+  return paths; // Return the generated paths
+}
+
+// Extract the props passed to the component
+const { gallery, slug, imagePath, imageModule } = Astro.props;
+
+// Get the EXIF data for the image from the imported JSON file
+const imageEXIF = imageData[imagePath];
+
+// formatDate: Formats a date string into "Month Year" format
+const formatDate = (dateString: string) => {
+  if (!dateString) return ''; // Return an empty string if the date string is empty
+
+  const parts = dateString.split(' '); // Split the date string into date and time
+  const dateParts = parts[0].split(':'); // Split the date into year, month, and day
+
+  const year = parseInt(dateParts[0]); // Get the year
+
+  const monthNumber = parseInt(dateParts[1]) - 1; // Month (0-11)
+  const date = new Date(year, monthNumber); // Create a Date object
+
+  const monthName = date.toLocaleString('default', { month: 'long' }); // Get the month name
+
+  return `${monthName} ${year}`; // Return the formatted date string
+};
+
+// Get all images for the current gallery
+const galleryImagePaths = Object.keys(imageData).filter(path => path.startsWith(`src/photography/${gallery}`));
+
+// Find the index of the current image in the gallery
+const currentIndex = galleryImagePaths.indexOf(imagePath);
+
+// Get the previous and next image paths, or null if they don't exist
+const prevImagePath = galleryImagePaths[currentIndex - 1] || null;
+const nextImagePath = galleryImagePaths[currentIndex + 1] || null;
+
+---
+
+<Base title="">
+
+
+  {imageEXIF && (
+    <Image loading="eager" src={imageModule.default} alt={imageEXIF.Headline?.description ?? slug } width="1200"/>
+    <h1>{imageEXIF.Headline?.description ?? slug}</h1>
+    <ul>
+      {imageEXIF.Make && imageEXIF.Make.description && (
+        <li>Make: {imageEXIF.Make.description}</li>
+      )}
+      {imageEXIF.Model && imageEXIF.Model.description && (
+        <li>Model: {imageEXIF.Model.description}</li>
+      )}
+      {imageEXIF.LensModel && imageEXIF.LensModel.description && (
+        <li>Lens Model: {imageEXIF.LensModel.description}</li>
+      )}
+      {imageEXIF.FocalLength && imageEXIF.FocalLength.description && (
+        <li>Focal Length: {imageEXIF.FocalLength.description}</li>
+      )}
+      {imageEXIF.FNumber && imageEXIF.FNumber.description && (
+        <li>Aperture: {imageEXIF.FNumber.description}</li>
+      )}
+      {imageEXIF.ExposureTime && imageEXIF.ExposureTime.description && (
+        <li>Exposure Time: {imageEXIF.ExposureTime.description}</li>
+      )}
+      {imageEXIF.ISOSpeedRatings && imageEXIF.ISOSpeedRatings.description && (
+        <li>ISO: {imageEXIF.ISOSpeedRatings.description}</li>
+      )}
+      {imageEXIF.DateTimeOriginal && imageEXIF.DateTimeOriginal.value && (
+        <li>Date Taken: {formatDate(imageEXIF.DateTimeOriginal.value[0])}</li>
+      )}
+    </ul>
+  )}
+      <nav>
+      {prevImagePath ? (
+        <a href={`/photography/${gallery}/${prevImagePath.split('/').pop().split('.')[0]}`}>Previous</a>
+      ) : (
+        <span>Previous</span>
+      )}
+
+      {nextImagePath ? (
+        <a href={`/photography/${gallery}/${nextImagePath.split('/').pop().split('.')[0]}`}>Next</a>
+      ) : (
+        <span>Next</span>
+      )}
+    </nav>
+
+</Base>

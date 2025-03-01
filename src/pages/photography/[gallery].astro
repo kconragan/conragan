@@ -1,0 +1,69 @@
+---
+import { Picture } from 'astro:assets';
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const galleries = await getCollection("photography");
+
+  return galleries.map((gallery) => {
+    return {
+      params: {
+        gallery: gallery.data.name,
+      },
+      props: {
+        gallery,
+      },
+    };
+  });
+}
+
+const { gallery } = Astro.props;
+
+// Import all images under src/photography
+const allImages = import.meta.glob<{ default: ImageMetadata }>('../../photography/*/*.{jpg,jpeg,png,gif}');
+
+// Create a function to filter images based on the gallery name
+async function getGalleryImages(galleryName: string) {
+  const imageList: { src: ImageMetadata, alt: string, slug: string}[] = [];
+
+  for (const path in allImages) {
+    if (path.includes(`../../photography/${galleryName}/`) && !path.includes('cover.jpg')) {
+      const imageModule = await allImages[path]();
+       const parts = path.split('/');
+       const slugWithExtension = parts.pop();
+       const slug = slugWithExtension.split('.')[0];
+      imageList.push({
+        src: imageModule.default,
+        alt: path.split('/').pop()?.split('.')[0] || "Gallery Image",
+        slug: slug,
+      });
+    }
+  }
+
+  return imageList;
+}
+
+const imageList = await getGalleryImages(gallery.data.name);
+
+---
+
+<Base title="Photography">
+  <h1>{gallery.data.title}</h1>
+  <ul id="photos">
+    {imageList.map((image) => (
+    <li class="photograph">
+      <figure>
+        <a href={`/photography/${gallery.data.name}/${image.slug}`}>
+          <Picture src={image.src}
+                   width="800"
+                   formats={['avif', 'webp']}
+                   alt="View " />
+        </a>
+        <h2 class="photograph-title">{image.alt}</h2>
+      </figure>
+    </li>
+    ))}
+  </ul>
+</Base>

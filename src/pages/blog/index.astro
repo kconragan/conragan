@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { format, parseISO } from 'date-fns';
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+
+function extractYearAndSlug(id: string): { slug: string } {
+  const parts = id.split('/');
+  const slug = parts[0] + '/' + parts[1] + '/';
+  return { slug };
+}
+
+// Change this to control the number of posts show at /blog/
+const MAX_POSTS = 20;
+
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, MAX_POSTS);
+
+---
+
+<Base title="Latest Posts">
+  <ol class="h-feed">
+  {
+    posts.map(async (post) => {
+    const { slug } = extractYearAndSlug(post.id);
+    const { Content } = await post.render()
+
+    // Date formatting
+    let isoDate = '';
+    let humanFriendlyDate = '';
+    try {
+      isoDate = post.data.date.toISOString();
+      humanFriendlyDate = format(post.data.date, 'MMMM dd, yyyy');
+    } catch (error) {
+      console.error('Error formatting date:', post.data.date, error);
+      // Handle the error, e.g., set a default date or skip the post
+    }
+    return (
+    <li>
+      <article class="h-entry">
+        <h2 class="title p-name">
+          <a href={`/blog/${slug}/`}>{post.data.title}</a>
+        </h2>
+        <section class="e-content">
+          <Content />
+        </section>
+        <p class="date">
+          <time class="dt-published" datetime={ isoDate }>{ humanFriendlyDate }</time>
+        </p>
+      </article>
+    </li>
+    )
+    })
+  }
+  </ol>
+</Base>

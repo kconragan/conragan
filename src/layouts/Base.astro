@@ -1,0 +1,79 @@
+---
+interface Props {
+    title: string;
+    description?: string;
+}
+const { title, description, class } = Astro.props;
+import '../styles/reset.css';
+import '../styles/typography.css';
+import '../styles/conragan.css';
+
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="p:domain_verify" content="5e42b91db4d05707d32a9894e67423c5">
+    <meta name="robots" content="noai">
+    <meta name="robots" content="index, follow">
+
+    <!-- le Google -->
+    <meta name="author" content="Kai Conragan">
+    <meta name="keywords" content="landscape photography, sports photography, wildlife photogrpahy, bird photography, design, travel, ux, user experience">
+    <meta name="description" content={description}>
+
+    <!-- fediverse -->
+    <link rel="me" href="https://mastodon.social/@kconragan">
+    <link rel="canonical" href="https://conragan.com/">
+    <meta name="fediverse:creator" content="@kconragan@mastodon.social">
+
+    <!-- Brand -->
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Kai Conragan">
+</head>
+<body>
+  <div class="wrapper">
+    <header role="banner">
+      <div role="navigation">
+        <a href="/" class="logo">Kai <span class="surname">Conragan</span></a>
+        <nav>
+          <ul class="global-nav">
+            <li class="navigation-item">
+              <a class="navigation-link " href="/photography/">Photography</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link " href="/blog/">Blog</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+            <li class="navigation-item">
+              <span id="dark-mode-toggle" class="colorscheme-toggle">
+                <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+              </span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main role="main">
+        <div class="container { const class }">
+        <slot />
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      © {new Date().getFullYear()} Kai Conragan
+    </footer>
+    </div>
+  </body>
+</html>
