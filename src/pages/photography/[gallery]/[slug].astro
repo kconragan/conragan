@@ -73,12 +73,10 @@ const currentIndex = galleryImagePaths.indexOf(imagePath);
 // Get the previous and next image paths, or null if they don't exist
 const prevImagePath = galleryImagePaths[currentIndex - 1] || null;
 const nextImagePath = galleryImagePaths[currentIndex + 1] || null;
-
+console.log(imageModule, imageEXIF);
 ---
 
 <Base title="">
-
-
   {imageEXIF && (
     <Image loading="eager" src={imageModule.default} alt={imageEXIF.Headline?.description ?? slug } width="1200"/>
     <h1>{imageEXIF.Headline?.description ?? slug}</h1>
