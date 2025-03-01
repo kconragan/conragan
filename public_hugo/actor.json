@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1"
+  ],
+  "id": "https://conragan.com/actor.json",
+  "type": "Person",
+  "preferredUsername": "kai",
+  "inbox": "https://conragan.com/inbox.json",
+  "outbox": "https://conragan.com/outbox.json",
+  "following": "https://mastodon.social/users/kconragan/following",
+  "followers": "https://mastodon.social/users/kconragan/followers",
+  "publicKey": {
+    "id": "https://conragan.com/actor.json#main-key",
+    "owner": "https://conragan.com/actor.json",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1C/KhCI9dyhkz9/GF+5S\n9rvML5uaMzi/74Ihqh3CcSmwl8THnX78YLwwVYU85fO9C9/db4LBEMbnDrLiuNsP\nUANCjazghoYMQqUsxbhsO+ZIAtTl3u9PnQz5HBSBbnWKKtSZciI0rIFVJBzTsKmc\nydEdwdEHgNVxFd3StnuiM/imw5mPcoI+Mq6aS765XRTJO6Ex2hpBQpTDo40V1Xq+\ng/0uIXdgbMS/89Q0J+nbH61cegBXEJMbtLqivRdIdtJOedqB67Ahn4LCyAU8dc9x\nVf9uFHC9hL/+pougOZW3omDXSIyCbD7oAoJzvJzH3JzZwTd6f3udZaaJ9Yisdn6d\n/QIDAQAB\n-----END PUBLIC KEY-----"
+  },
+  "name": "Kai Conragan",
+  "summary": "Senior Director of UX at Google. Photographer. Blogger.",
+  "url": "https://conragan.com/about/",
+  "icon": {
+    "type": "Image",
+    "mediaType": "image/webp",
+    "url": "https://conragan.com/img/headshot.webp"
+  },
+  "attachment": [
+    {
+      "type": "PropertyValue",
+      "name": "Mastodon",
+      "value": "<a rel=\"me\" href=\"https://mastodon.social/@kconragan\">Mastodon</a>"
+    },
+    {
+      "type": "PropertyValue",
+      "name": "GitHub",
+      "value": "<a rel=\"me\" href=\"https://github.com/kconragan/\">GitHub</a>"
+    },
+    {
+      "type": "PropertyValue",
+      "name": "LinkedIn",
+      "value": "<a rel=\"me\" href=\"https://www.linkedin.com/in/kconragan/\">LinkedIn</a>"
+    }
+  ]
+}
