@@ -5,18 +5,18 @@ const galleries = await getCollection('photography');
 import Base from '../../layouts/Base.astro';
 ---
 <Base title="Photography">
-  <ul>
-    {galleries.map((gallery) => (
-    <li>
-      <a href={`/photography/${gallery.data.name}/`}>
-        <Image src={gallery.data.cover}
-          alt={gallery.data.title}
-          width={800}
-          height={600}
-          format="webp" />
-        {gallery.data.title}
-      </a>
-    </li>
-    ))}
-  </ul>
+  <nav class="gallery-navigation">
+    <ul class="gallery-list">
+      {galleries.map((gallery) => (
+        <li class="gallery-item">
+        <a href={`/photography/${gallery.data.name}/`} title={`View images in ${gallery.data.name} gallery`}>
+            <figure>
+              <Image src={gallery.data.cover} alt={gallery.data.title} width={800} height={600} format="webp" />
+              <figcaption>{gallery.data.title}</figcaption>
+            </figure>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
 </Base>

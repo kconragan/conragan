@@ -53,7 +53,7 @@ function getImageOrientation(width: number, height: number): 'portrait' | 'lands
 ---
 
 <Base title="Photography">
-  <h1>{gallery.data.title}</h1>
+  <h1 class="gallery-title">{gallery.data.title}</h1>
   <ul id="photos" class="photo-grid">
     {imageList.map((image) => {
       const orientation = getImageOrientation(image.src.width, image.src.height);

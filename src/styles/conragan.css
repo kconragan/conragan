@@ -371,6 +371,92 @@ h1, h2, h3, h4, h5, h6 {
  * SINGLE IMAGE VIEW
  **************************************************************************/
 
+/* --- Gallery List --- */
+
+:root {
+  --gallery-gap: 1.5em;
+  --gallery-items-per-row: 1;
+}
+
+.gallery-navigation {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.gallery-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gallery-gap);
+}
+
+.gallery-item {
+  font-family: "ShipsWhistleBold", sans-serif;
+  text-align: center;
+  flex: 0 0
+  calc(
+    (100% - (var(--gallery-gap) * (var(--gallery-items-per-row) - 1))) /
+      var(--gallery-items-per-row)
+  );
+
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+
+  figure {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+
+  figcaption {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.2);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    text-shadow: 1px 1px 12px #000;
+    transition: background-color .2s ease-out;
+  }
+
+  :hover figcaption {
+    background-color: transparent;
+  }
+}
+
+@media only screen and (width >= 1024px) {
+  .gallery-list {
+    --gallery-items-per-row: 3;
+  }
+}
+
+@media only screen and (768px < width < 1024px) {
+  .gallery-list {
+    --gallery-items-per-row: 2;
+  }
+}
+
+@media only screen and (540px < width < 768px) {
+  .gallery-list {
+    --gallery-items-per-row: 1;
+  }
+}
+
 /* --- Photo Image --- */
 
 /* holds the single large photograph */
@@ -714,6 +800,13 @@ a.paginate.disabled:hover {
   font-style: normal;
 }
 
+
+/* Gallery grid */
+
+.gallery-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
 .image-grid .photo-grid {
   margin: 0 2rem;
