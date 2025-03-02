@@ -1,9 +1,14 @@
-/* VARIABLES & ROOT ------------------------------------------ */
+/**
+ * @file Stylesheet for image gallery, providing layout, typography,
+ * color theming, and responsive design for various screen sizes and orientations.
+ */
+
+/* FONTS ----------------------------------------------------- */
 
 @font-face {
   font-family: 'ShipsWhistle';
   src: url('/fonts/ShipsWhistle.woff2') format('woff2');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: block;
 }
@@ -11,35 +16,43 @@
 @font-face {
   font-family: 'ShipsWhistleBold';
   src: url('/fonts/ShipsWhistle-Bold.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 700;
+  font-style: bold;
   font-display: block;
 }
 
 @font-face {
   font-family: "WorkSans";
   src: url("/fonts/WorkSans-Variable.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: block;
 }
 
---c-white: #fff; /*utility color */
---c-light: #f8f9fa;
---c-light-gray: #dee2e6;
---c-med-gray: #545c64;
---c-med-dark-gray: #25292d;
---c-dark: #1b1e22;
---c-black: #000;
---link-color-light: #33739e; /* default link color for light theme */
---link-color-dark: #f08aa1; /* $link-color-dark */
-
---transition-duration: 0.4s;
+/* VARIABLES -------------------------------------------------- */
 
 :root {
-  /* Indicate site supports light & dark */
+  /* Color Palette */
+  --c-white: #fff; /* Utility color */
+  --c-light: #f8f9fa;
+  --c-light-gray: #dee2e6;
+  --c-med-gray: #545c64;
+  --c-med-dark-gray: #25292d;
+  --c-dark: #1b1e22;
+  --c-black: #000;
+
+  /* Link Colors (Theme-Aware) */
+  --link-color-light: #33739e; /* Default link color for light theme */
+  --link-color-dark: #f08aa1; /* $link-color-dark */
+
+  /* Transition Durations */
+  --transition-duration: 0.4s;
+
+  /* Theme Support (Light & Dark) */
   color-scheme: light dark;
 }
+
+/* THEME OVERRIDES (Light & Dark) ---------------------------- */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -57,6 +70,8 @@
   }
 }
 
+/* BASE STYLES ------------------------------------------------ */
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -70,7 +85,8 @@ body {
   width: 100%;
 }
 
-/* Header + Global Nav */
+/* HEADER & GLOBAL NAVIGATION --------------------------------- */
+
 header[role=banner] {
   position: relative;
   z-index: 1;
@@ -81,6 +97,7 @@ header[role=banner] {
   text-transform: uppercase;
   font-feature-settings: 'ss01';
 
+  /* Header Navigation container */
   div[role=navigation] {
     display: flex;
     justify-content: space-between;
@@ -92,7 +109,6 @@ header[role=banner] {
     font-size: 18px;
     max-width: 90rem;
   }
-
 }
 
 .global-nav {
@@ -111,12 +127,15 @@ header[role=banner] {
   margin-left: 36px;
 }
 
+/* FOOTER ----------------------------------------------------- */
+
 footer[role=contentinfo] {
   width: 100%;
   text-align: center;
   margin-bottom: 1rem;
 }
 
+/* RESPONSIVE STYLES (Global Nav) ----------------------------- */
 @media only screen and (max-width: 600px) {
   .surname {
     display: none;
@@ -127,8 +146,11 @@ footer[role=contentinfo] {
   }
 }
 
-main[role=main] {
-}
+/* MAIN CONTENT ------------------------------------------------ */
+
+main[role=main] {}
+
+/* LINKS ------------------------------------------------------ */
 
 a {
   color: var(--color-text);
@@ -139,6 +161,7 @@ a {
   transition: all 0.4s;
 }
 
+/*Microformats for semantic HTML with decorative link underline effects */
 .h-entry:hover a {
   text-decoration-color: var(--color-text);
 }
@@ -150,9 +173,7 @@ a {
 }
 
 
-/*------------------------
- * Blog posts
- * ----------------------*/
+/* BLOG POSTS ------------------------------------------------- */
 
 .h-feed,
 .single-article .container {
@@ -219,11 +240,9 @@ h1, h2, h3, h4, h5, h6 {
 .single-article .h-entry2 p:first-of-type::first-letter {
   font-family: "ShipsWhistleBold";
   font-feature-settings: "ss01";
-  font-size: 1.5rem;
-  font-weight: bold;
-  float: left;
   font-size: 75px;
   line-height: 60px;
+  float: left;
   padding-top: 4px;
   padding-right: 8px;
   padding-left: 3px;
@@ -256,6 +275,8 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   height: 6rem; /* Set the fixed height here */
 }
+
+/* --- Photo Content --- */
 
 #photo-content {
   transform: translateY(
@@ -360,8 +381,6 @@ dl#exif dd:last-of-type::after {
   font: inherit;
   cursor: pointer;
   background-color: transparent;
-  -webkit-transition: color 0.3s;
-  -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 
@@ -372,8 +391,6 @@ dl#exif dd:last-of-type::after {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   transition: background 0.3s;
 }
@@ -386,12 +403,6 @@ dl#exif dd:last-of-type::after {
 .project-content-toggle::after {
   height: 24px;
   width: 8px;
-  -webkit-transition:
-    height 0.3s,
-    width 0.3s;
-  -o-transition:
-    height 0.3s,
-    width 0.3s;
   transition:
     height 0.3s,
     width 0.3s;
@@ -415,12 +426,6 @@ dl#exif dd:last-of-type::after {
   line-height: 120%;
   position: fixed;
   bottom: 0; /* Position from the bottom */
-  -webkit-transition:
-    background-color 0.3s,
-    transform 0.3s;
-  -o-transition:
-    background-color 0.3s,
-    transform 0.3s;
   transition:
     background-color 0.3s,
     transform 0.3s;
@@ -460,6 +465,7 @@ dl#exif dd:last-of-type::after {
   width: auto;
   border: 2px solid var(--fg-color-medium-dark);
   transition: border 03s;
+  object-fit: contain; /* Ensure the image fits inside the container */
 }
 
 #photo-image.fade-in {
@@ -469,7 +475,7 @@ dl#exif dd:last-of-type::after {
 /* Media queries for different screen sizes */
 
 /* Small screens */
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   #photo-content .photo-title {
     font-size: 18px;
   }
