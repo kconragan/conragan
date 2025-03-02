@@ -477,6 +477,11 @@ dl#exif dd:last-of-type::after {
   font: inherit;
   cursor: pointer;
   transition: color 0.3s;
+  transition: 0.1s transform;
+}
+
+.project-content-toggle:hover {
+  transform: scale(1.1);
 }
 
 /* CSS to construct a visual '+' symbol */
@@ -529,7 +534,7 @@ a.paginate {
   var(--fg-color-medium-light),
   var(--bg-color-light)
   ) !important;
-  transition: 0.3s color;
+  transition: 0.1s color transform ease-out;
   font-feature-settings: "ss01";
   span {
     display: none;
@@ -542,17 +547,25 @@ a.paginate.left:before {
 a.paginate.right:before {
   content: ">";
 }
-
 a.paginate:hover {
   color: light-dar(var(--color-black), var(--color-white)) !important;
   text-decoration: none;
 }
 
+a.paginate.right:hover {
+  transform: translate(4px, 0);
+}
+a.paginate.left:hover {
+  transform: translate(-4px, 0);
+}
+
 a.paginate.disabled {
-  color: light-dark(
-    var(--fg-color-dark),
-    var(--fg-color-medium-light)
-  ) !important;
+  opacity: 0.1;
+  cursor: default;
+}
+
+a.paginate.disabled:hover {
+  transform: none;
 }
 
 .navigation-hint {
