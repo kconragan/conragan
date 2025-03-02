@@ -133,6 +133,8 @@ footer[role=contentinfo] {
   width: 100%;
   text-align: center;
   margin-bottom: 1rem;
+  font-family: "worksans", sans-serif;
+  font-size: smaller;
 }
 
 /* hide footer on photo page so it doesn't conflict

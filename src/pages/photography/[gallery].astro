@@ -60,7 +60,7 @@ function getImageOrientation(width: number, height: number): 'portrait' | 'lands
       return (
         <li class={`photo-item ${orientation}`}>
           <figure>
-            <a href={`/photography/${gallery.data.name}/${image.slug}`}>
+          <a href={`/photography/${gallery.data.name}/${image.slug}/`}>
               <Picture src={image.src}
                        width="600"
                        formats={['avif', 'webp']}
