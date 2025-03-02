@@ -566,3 +566,32 @@ dl#exif dd:last-of-type::after {
 #metadata em {
   font-style: normal;
 }
+
+
+.image-grid .photo-grid {
+  margin: 0 2rem;
+}
+
+#photos {
+  width: 80%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-gap: 2px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.photo-item.landscape {
+  grid-column: span 1;
+}
+
+.photo-item.portrait {
+  grid-row: span 2;
+}
+
+.photo-item img {
+  max-width: 100%;
+  height: auto;
+}
