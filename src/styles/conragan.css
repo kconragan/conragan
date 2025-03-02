@@ -314,26 +314,17 @@ a.paginate.disabled {
   ) !important;
 }
 
-#metadata h1,
-h2#camera-make {
-  font-family: worksans, sans-serif;
-  font-weight: 800;
-}
-
-h2#camera-make {
-  font-size: 1.8rem;
-  margin: 2rem 0 0.5rem;
-}
 
 dl#exif {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   margin: 0;
+  font-family: "worksans", sans-serif;
+  font-size: smaller;
 }
 
 dl#exif dt {
-  font-variation-settings: "wght" 700;
   margin-right: 0.5em;
 }
 
@@ -554,9 +545,17 @@ dl#exif dd:last-of-type::after {
 /* --- Metadata --- */
 
 #photo-content .photo-title {
-  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.6;
+  margin: 0;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+}
+
+#photo-content .camera-make {
+  font-size: 1.2rem;
+  line-height: 1;
+  margin: 0 0 1em 0;
 }
 
 #photo-content .photo-title.fade-in {

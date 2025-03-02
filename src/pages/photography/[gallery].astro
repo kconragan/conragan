@@ -31,9 +31,9 @@ async function getGalleryImages(galleryName: string) {
   for (const path in allImages) {
     if (path.includes(`../../photography/${galleryName}/`) && !path.includes('cover.jpg')) {
       const imageModule = await allImages[path]();
-       const parts = path.split('/');
-       const slugWithExtension = parts.pop();
-       const slug = slugWithExtension.split('.')[0];
+      const parts = path.split('/');
+      const slugWithExtension = parts.pop();
+      const slug = slugWithExtension.split('.')[0];
       imageList.push({
         src: imageModule.default,
         alt: path.split('/').pop()?.split('.')[0] || "Gallery Image",
@@ -47,23 +47,36 @@ async function getGalleryImages(galleryName: string) {
 
 const imageList = await getGalleryImages(gallery.data.name);
 
+function getImageOrientation(width: number, height: number): 'portrait' | 'landscape' {
+    return width > height ? 'landscape' : 'portrait';
+}
 ---
 
 <Base title="Photography">
   <h1>{gallery.data.title}</h1>
-  <ul id="photos">
-    {imageList.map((image) => (
-    <li class="photograph">
-      <figure>
-        <a href={`/photography/${gallery.data.name}/${image.slug}`}>
-          <Picture src={image.src}
-                   width="800"
-                   formats={['avif', 'webp']}
-                   alt="View " />
-        </a>
-        <h2 class="photograph-title">{image.alt}</h2>
-      </figure>
-    </li>
-    ))}
+  <ul id="photos" class="photo-grid">
+    {imageList.map((image) => {
+      const orientation = getImageOrientation(image.src.width, image.src.height);
+      return (
+        <li class={`photo-item ${orientation}`}>
+          <figure>
+            <a href={`/photography/${gallery.data.name}/${image.slug}`}>
+              <Picture src={image.src}
+                       width="600"
+                       formats={['avif', 'webp']}
+                       alt="View " />
+            </a>
+          </figure>
+        </li>
+      );
+    })}
   </ul>
+  <script>
+    import { initializeMacy } from '../../scripts/macy';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOM is fully loaded');
+      initializeMacy();
+    });
+</script>
 </Base>
