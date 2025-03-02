@@ -73,52 +73,75 @@ const currentIndex = galleryImagePaths.indexOf(imagePath);
 // Get the previous and next image paths, or null if they don't exist
 const prevImagePath = galleryImagePaths[currentIndex - 1] || null;
 const nextImagePath = galleryImagePaths[currentIndex + 1] || null;
-console.log(imageModule, imageEXIF);
 ---
 
 <Base title="">
   {imageEXIF && (
-    <Image loading="eager" src={imageModule.default} alt={imageEXIF.Headline?.description ?? slug } width="1200"/>
-    <h1>{imageEXIF.Headline?.description ?? slug}</h1>
-    <ul>
-      {imageEXIF.Make && imageEXIF.Make.description && (
-        <li>Make: {imageEXIF.Make.description}</li>
-      )}
-      {imageEXIF.Model && imageEXIF.Model.description && (
-        <li>Model: {imageEXIF.Model.description}</li>
-      )}
-      {imageEXIF.LensModel && imageEXIF.LensModel.description && (
-        <li>Lens Model: {imageEXIF.LensModel.description}</li>
-      )}
-      {imageEXIF.FocalLength && imageEXIF.FocalLength.description && (
-        <li>Focal Length: {imageEXIF.FocalLength.description}</li>
-      )}
-      {imageEXIF.FNumber && imageEXIF.FNumber.description && (
-        <li>Aperture: {imageEXIF.FNumber.description}</li>
-      )}
-      {imageEXIF.ExposureTime && imageEXIF.ExposureTime.description && (
-        <li>Exposure Time: {imageEXIF.ExposureTime.description}</li>
-      )}
-      {imageEXIF.ISOSpeedRatings && imageEXIF.ISOSpeedRatings.description && (
-        <li>ISO: {imageEXIF.ISOSpeedRatings.description}</li>
-      )}
-      {imageEXIF.DateTimeOriginal && imageEXIF.DateTimeOriginal.value && (
-        <li>Date Taken: {formatDate(imageEXIF.DateTimeOriginal.value[0])}</li>
-      )}
-    </ul>
+  <div id="photo-container">
+    <div id="photo-image" class="fade-in">
+      <Image loading="eager" src={imageModule.default} alt={imageEXIF.Headline?.description ?? slug } width="1200"/>
+    </div>
+    <div id="photo-content">
+      <nav id="page-navigation">
+        <div class="metadata-toggle">
+          <button id="toggleMetadata" class="project-content-toggle">
+            <span class="u-visually-hide">Info</span>
+          </button>
+        </div>
+        <div class="pagination-links">
+          <nav>
+          {prevImagePath ? (
+          <a id="prevLink"
+             class="paginate arrow left"
+              href={`/photography/${gallery}/${prevImagePath.split('/').pop().split('.')[0]}`}>Previous</a>
+          ) : (
+            <span>Prev</span>
+          )}
+
+          {nextImagePath ? (
+          <a id="nextLink"
+              class="paginate arrow right"
+              href={`/photography/${gallery}/${nextImagePath.split('/').pop().split('.')[0]}`}>Next</a>
+          ) : (
+            <span>Next</span>
+          )}
+          </nav>
+        </div>
+      </nav>
+      <h1 class="photo-title fade-in">{imageEXIF.Headline?.description ?? slug}</h1>
+      <section id="exif">
+        <ul>
+          {imageEXIF.Make && imageEXIF.Make.description && (
+            <li>Make: {imageEXIF.Make.description}</li>
+          )}
+          {imageEXIF.Model && imageEXIF.Model.description && (
+            <li>Model: {imageEXIF.Model.description}</li>
+          )}
+          {imageEXIF.LensModel && imageEXIF.LensModel.description && (
+            <li>Lens Model: {imageEXIF.LensModel.description}</li>
+          )}
+          {imageEXIF.FocalLength && imageEXIF.FocalLength.description && (
+            <li>Focal Length: {imageEXIF.FocalLength.description}</li>
+          )}
+          {imageEXIF.FNumber && imageEXIF.FNumber.description && (
+            <li>Aperture: {imageEXIF.FNumber.description}</li>
+          )}
+          {imageEXIF.ExposureTime && imageEXIF.ExposureTime.description && (
+            <li>Exposure Time: {imageEXIF.ExposureTime.description}</li>
+          )}
+          {imageEXIF.ISOSpeedRatings && imageEXIF.ISOSpeedRatings.description && (
+            <li>ISO: {imageEXIF.ISOSpeedRatings.description}</li>
+          )}
+          {imageEXIF.DateTimeOriginal && imageEXIF.DateTimeOriginal.value && (
+            <li>Date Taken: {formatDate(imageEXIF.DateTimeOriginal.value[0])}</li>
+          )}
+        </ul>
+      </section>
+    </div>
+  </div>
+
   )}
-      <nav>
-      {prevImagePath ? (
-        <a href={`/photography/${gallery}/${prevImagePath.split('/').pop().split('.')[0]}`}>Previous</a>
-      ) : (
-        <span>Previous</span>
-      )}
-
-      {nextImagePath ? (
-        <a href={`/photography/${gallery}/${nextImagePath.split('/').pop().split('.')[0]}`}>Next</a>
-      ) : (
-        <span>Next</span>
-      )}
-    </nav>
-
+  <script>
+    import "../../../scripts/gallery.js";
+  </script>
 </Base>

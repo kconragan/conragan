@@ -242,3 +242,321 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
+
+
+/**************************************************************************
+ * SINGLE IMAGE VIEW
+ **************************************************************************/
+
+/* --- Page Navigation --- */
+
+#page-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem; /* Set the fixed height here */
+}
+
+#photo-content {
+  transform: translateY(
+    calc(100% - 6rem)
+  ); /* Hide most of the container initially and ensure this matches #page-navigation */
+  background-color: light-dark(var(--c-light), var(--c-dark));
+}
+
+#toggleMetadata,
+a.paginate {
+  display: inline-block;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a.paginate {
+  color: light-dark(
+    var(--fg-color-medium-light),
+    var(--bg-color-light)
+  ) !important;
+  transition: 0.3s color;
+}
+
+a.paginate:hover {
+  color: light-dar(var(--color-black), var(--color-white)) !important;
+  text-decoration: none;
+}
+
+a.paginate.disabled {
+  color: light-dark(
+    var(--fg-color-dark),
+    var(--fg-color-medium-light)
+  ) !important;
+}
+
+#metadata h1,
+h2#camera-make {
+  font-family: worksans, sans-serif;
+  font-weight: 800;
+}
+
+h2#camera-make {
+  font-size: 1.8rem;
+  margin: 2rem 0 0.5rem;
+}
+
+dl#exif {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 0;
+}
+
+dl#exif dt {
+  font-variation-settings: "wght" 700;
+  margin-right: 0.5em;
+}
+
+dl#exif dt::after {
+  margin-right: 0.5em; /* Space after colon */
+}
+
+dl#exif dd {
+  margin: 0; /* Remove default margin */
+}
+
+dl#exif dd::after {
+  content: " |"; /* Add separator */
+  margin-right: 0.5em;
+  font-weight: normal;
+}
+
+dl#exif dd:last-of-type::after {
+  content: ""; /* Add period to last item */
+}
+
+/* --- Toggle Button --- */
+
+#metadata-toggle {
+  transform: scale(90%);
+}
+
+#toggleMetadata {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.project-content-toggle {
+  position: relative;
+  float: left;
+  height: 24px;
+  width: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.project-content-toggle::before,
+.project-content-toggle::after {
+  background-color: light-dark(var(--c-dark), var(--c-light));
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: background 0.3s;
+}
+
+.project-content-toggle::before {
+  height: 9px;
+  width: 24px;
+}
+
+.project-content-toggle::after {
+  height: 24px;
+  width: 8px;
+  -webkit-transition:
+    height 0.3s,
+    width 0.3s;
+  -o-transition:
+    height 0.3s,
+    width 0.3s;
+  transition:
+    height 0.3s,
+    width 0.3s;
+}
+
+.project-content-toggle:hover::before,
+.project-content-toggle:hover::after {
+  background-color: light-dark(var(--c-black), var(--c-white));
+}
+
+.is-active .project-content-toggle::after {
+  height: 8px;
+  width: 24px;
+}
+
+/* --- Photo Content --- */
+
+#photo-content {
+  height: 50%; /* Adjust this if your content height is different */
+  left: 0;
+  line-height: 120%;
+  position: fixed;
+  bottom: 0; /* Position from the bottom */
+  -webkit-transition:
+    background-color 0.3s,
+    transform 0.3s;
+  -o-transition:
+    background-color 0.3s,
+    transform 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+  width: 100%;
+  padding: 0 2rem; /* Add some padding */
+}
+
+/* Adjust this padding if needed */
+.is-active #photo-content {
+  transform: translateY(0); /* Show the container when active */
+}
+
+/* --- Photo Image --- */
+
+#photo-image {
+  opacity: 0;
+  transition:
+    opacity 200ms ease-in-out,
+    transform 0.3s; /* Add a smooth transition for opacity */
+  text-align: center;
+  width: 100%; /* Ensure the container takes full width */
+  transform: translateY(0); /* Initial state: no vertical translation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add a class to move the image up when #photo-content is active */
+.is-active #photo-image {
+  transform: translateY(-50%); /* Adjust this value as needed */
+}
+
+#photo-image img {
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  border: 2px solid var(--fg-color-medium-dark);
+  transition: border 03s;
+}
+
+#photo-image.fade-in {
+  opacity: 1;
+}
+
+/* Media queries for different screen sizes */
+
+/* Small screens */
+@media (max-width: 767px) {
+  #photo-content .photo-title {
+    font-size: 18px;
+  }
+
+  #photo-image img {
+    border-width: 2px;
+  }
+
+  #photo-image.image-portrait {
+    max-height: 70vh;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #photo-image img {
+    border-width: 4px;
+  }
+
+  #photo-content .photo-title {
+    font-size: 20px;
+  }
+
+  #photo-image.image-portrait {
+    margin: 0 auto;
+  }
+  #photo-image.image-landscape {
+    margin: 0 auto;
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #photo-image.image-landscape {
+    margin: 0 auto;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  #photo-content .photo-title {
+    font-size: 24px;
+  }
+
+  #photo-image img {
+    border-width: 6px;
+  }
+
+  #photo-image.image-landscape {
+    margin: 0 auto;
+  }
+}
+
+/* Landscape orientation on devices with small viewport heights */
+@media (max-height: 500px) and (orientation: landscape) {
+  #photo-image.image-landscape {
+    margin: 0 auto;
+  }
+
+  #photo-image.image-portrait {
+    margin: 0 auto;
+  }
+
+  #photo-image.image-portrait img {
+    max-height: 80vh;
+  }
+}
+
+/* Large screens AND Landscape Orientation */
+@media (min-width: 1025px) and (orientation: landscape) {
+  #photo-image.image-portrait {
+    margin: 0 auto;
+  }
+}
+
+/* --- Metadata --- */
+
+#photo-content .photo-title {
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#photo-content .photo-title.fade-in {
+  opacity: 1;
+}
+
+#metadata em {
+  font-style: normal;
+}
