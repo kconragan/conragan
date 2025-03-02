@@ -135,6 +135,13 @@ footer[role=contentinfo] {
   margin-bottom: 1rem;
 }
 
+/* hide footer on photo page so it doesn't conflict
+ * with the photo pagination and toggle
+ * TODO: figure out a better solution */
+.single-photo footer[role=contentinfo] {
+  display: none;
+}
+
 /* RESPONSIVE STYLES (Global Nav) ----------------------------- */
 @media only screen and (max-width: 600px) {
   .surname {
@@ -267,53 +274,50 @@ h1, h2, h3, h4, h5, h6 {
  * SINGLE IMAGE VIEW
  **************************************************************************/
 
-/* --- Page Navigation --- */
+/* --- Photo Image --- */
 
-#page-navigation {
+/* holds the single large photograph */
+#photo-image {
+  opacity: 0;
+  transition:
+    opacity 200ms ease-in-out,
+    transform 0.3s; /* Add a smooth transition for opacity */
+  text-align: center;
+  width: 100%; /* Ensure the container takes full width */
+  transform: translateY(0); /* Initial state: no vertical translation */
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 6rem; /* Set the fixed height here */
+  justify-content: center;
+}
+
+/* Add a class to move the image up when #photo-content is active */
+.is-active #photo-image {
+  transform: translateY(-50%); /* Adjust this value as needed */
+}
+
+#photo-image img {
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  border: 2px solid var(--fg-color-medium-dark);
+  transition: border 03s;
+  object-fit: contain; /* Ensure the image fits inside the container */
+}
+
+#photo-image.fade-in {
+  opacity: 1;
 }
 
 /* --- Photo Content --- */
 
+/* Holds photo title and exif content */
 #photo-content {
   transform: translateY(
     calc(100% - 6rem)
   ); /* Hide most of the container initially and ensure this matches #page-navigation */
   background-color: light-dark(var(--c-light), var(--c-dark));
 }
-
-#toggleMetadata,
-a.paginate {
-  display: inline-block;
-  margin: 0;
-  line-height: 1.4;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-a.paginate {
-  color: light-dark(
-    var(--fg-color-medium-light),
-    var(--bg-color-light)
-  ) !important;
-  transition: 0.3s color;
-}
-
-a.paginate:hover {
-  color: light-dar(var(--color-black), var(--color-white)) !important;
-  text-decoration: none;
-}
-
-a.paginate.disabled {
-  color: light-dark(
-    var(--fg-color-dark),
-    var(--fg-color-medium-light)
-  ) !important;
-}
-
 
 dl#exif {
   display: flex;
@@ -346,21 +350,23 @@ dl#exif dd:last-of-type::after {
   content: ""; /* Add period to last item */
 }
 
-/* --- Toggle Button --- */
+/* --- Page Navigation --- */
 
-#metadata-toggle {
-  transform: scale(90%);
+#page-navigation {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem; /* Set the fixed height here */
 }
 
-#toggleMetadata {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  outline: inherit;
+.navigation-hint {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* button element that toggles showing / hiding exif */
 .project-content-toggle {
   position: relative;
   float: left;
@@ -369,12 +375,15 @@ dl#exif dd:last-of-type::after {
   margin: 0;
   padding: 0;
   border: 0;
+  background-color: transparent;
+  color: inherit;
+  outline: inherit;
   font: inherit;
   cursor: pointer;
-  background-color: transparent;
   transition: color 0.3s;
 }
 
+/* CSS to construct a visual '+' symbol */
 .project-content-toggle::before,
 .project-content-toggle::after {
   background-color: light-dark(var(--c-dark), var(--c-light));
@@ -409,6 +418,69 @@ dl#exif dd:last-of-type::after {
   width: 24px;
 }
 
+#metadata-toggle {
+  transform: scale(90%);
+}
+
+a.paginate {
+  margin: 0 0 0 1rem;
+  display: inline-block;
+  font-family: "ShipsWhistleBold", sans-serif;
+  font-size: 48px;
+  line-height: 1.4;
+  height: 24px;
+  color: light-dark(
+  var(--fg-color-medium-light),
+  var(--bg-color-light)
+  ) !important;
+  transition: 0.3s color;
+  font-feature-settings: "ss01";
+  span {
+    display: none;
+  }
+}
+
+a.paginate.left:before {
+  content: "<";
+}
+a.paginate.right:before {
+  content: ">";
+}
+
+a.paginate:hover {
+  color: light-dar(var(--color-black), var(--color-white)) !important;
+  text-decoration: none;
+}
+
+a.paginate.disabled {
+  color: light-dark(
+    var(--fg-color-dark),
+    var(--fg-color-medium-light)
+  ) !important;
+}
+
+.navigation-hint {
+  font-size: 0.6rem;
+  font-family: "worksans", sans-serif;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+#page-navigation:hover .navigation-hint {
+  opacity: 0.4;
+}
+
+
+.u-visually-hide {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 /* --- Photo Content --- */
 
 #photo-content {
@@ -429,39 +501,6 @@ dl#exif dd:last-of-type::after {
   transform: translateY(0); /* Show the container when active */
 }
 
-/* --- Photo Image --- */
-
-#photo-image {
-  opacity: 0;
-  transition:
-    opacity 200ms ease-in-out,
-    transform 0.3s; /* Add a smooth transition for opacity */
-  text-align: center;
-  width: 100%; /* Ensure the container takes full width */
-  transform: translateY(0); /* Initial state: no vertical translation */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Add a class to move the image up when #photo-content is active */
-.is-active #photo-image {
-  transform: translateY(-50%); /* Adjust this value as needed */
-}
-
-#photo-image img {
-  margin: 0 auto;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  border: 2px solid var(--fg-color-medium-dark);
-  transition: border 03s;
-  object-fit: contain; /* Ensure the image fits inside the container */
-}
-
-#photo-image.fade-in {
-  opacity: 1;
-}
 
 /* Media queries for different screen sizes */
 

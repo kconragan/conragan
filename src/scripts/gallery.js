@@ -31,12 +31,11 @@ function prefetchPage(url) {
  */
 function adjustImageSize() {
   const imgFrame = document.getElementById("photo-image");
-  const img = imgFrame.querySelector("img");
+  const img = imgFrame?.querySelector("img");
+  if (!imgFrame || !img) return; // Exit early if not found
 
   const photoContent = document.getElementById("photo-content");
-  const globalNav = document.querySelector(
-    "div.wrapper > header:first-of-type",
-  );
+  const globalNav = document.querySelector("div.wrapper > header:first-of-type");
   const pageNav = document.getElementById("page-navigation");
 
   if (img.complete) {
@@ -72,7 +71,7 @@ function adjustImageSize() {
 
     // Fade in the title after resizing
     const title = document.querySelector("h1.photo-title");
-    title.classList.add("fade-in");
+    title?.classList.add("fade-in");
   } else {
     img.onload = () => {
       adjustImageSize();
@@ -89,18 +88,18 @@ function categorizeImage(img) {
   const aspectRatio = img.naturalWidth / img.naturalHeight;
   const imgFrame = document.getElementById("photo-image");
 
-  imgFrame.classList.remove(
+  imgFrame?.classList.remove(
     "image-landscape",
     "image-portrait",
     "image-square",
   );
 
   if (aspectRatio > 1.2) {
-    imgFrame.classList.add("image-landscape");
+    imgFrame?.classList.add("image-landscape");
   } else if (aspectRatio < 0.8) {
-    imgFrame.classList.add("image-portrait");
+    imgFrame?.classList.add("image-portrait");
   } else {
-    imgFrame.classList.add("image-square");
+    imgFrame?.classList.add("image-square");
   }
 }
 
@@ -110,15 +109,15 @@ function categorizeImage(img) {
  */
 function updateTransition() {
   const article = document.getElementById("photo-image");
-  article.style.visibility = "hidden";
-  article.classList.remove("fade-in");
+  article?.style.setProperty("visibility", "hidden");
+  article?.classList.remove("fade-in");
 
   // Use requestAnimationFrame for smoother transition
   requestAnimationFrame(() => {
     setTimeout(() => {
       requestAnimationFrame(() => {
-        article.classList.add("fade-in");
-        article.style.visibility = "visible";
+        article?.classList.add("fade-in");
+        article?.style.setProperty("visibility", "visible");
       });
     }, 200);
   });
@@ -129,16 +128,24 @@ function updateTransition() {
  * and adjust the image position accordingly.
  */
 function setupToggleEventListener() {
-  document.addEventListener("click", (event) => {
-    if (event.target.closest("#toggleMetadata")) {
-      const metadataSection = document.getElementById("photo-container");
-      const photoImage = document.getElementById("photo-image");
+  const toggleButton = document.getElementById("toggleMetadata"); // More Specific
+  if (!toggleButton) return;
 
-      metadataSection.classList.toggle("is-active");
-      photoImage.style.transform = ""; // Remove inline style, let CSS handle it
-      adjustImageSize(); // Adjust image size after toggling
-    }
-  });
+  const clickHandler = () => { // Define as Named Function
+    const metadataSection = document.getElementById("photo-container");
+    const photoImage = document.getElementById("photo-image");
+
+    metadataSection?.classList.toggle("is-active");
+    photoImage?.style.removeProperty("transform"); // Remove inline style, let CSS handle it
+    adjustImageSize(); // Adjust image size after toggling
+  };
+
+  toggleButton.addEventListener("click", clickHandler);
+
+  // Return a cleanup function
+  return () => {
+    toggleButton.removeEventListener("click", clickHandler);
+  };
 }
 
 /**
@@ -185,7 +192,7 @@ function navigateToPage(url) {
   if (!url) return;
 
   const article = document.getElementById("photo-image");
-  article.style.visibility = "hidden";
+  article?.style.setProperty("visibility", "hidden");
 
   fetch(url)
     .then((response) => response.text())
@@ -198,16 +205,19 @@ function navigateToPage(url) {
       document.getElementById("photo-content").innerHTML =
         doc.getElementById("photo-content").innerHTML;
 
-      article.style.visibility = "visible";
+      article.style.setProperty("visibility", "visible");
       history.pushState(null, "", url);
 
       // Update navigation without replacing the element
       const newPageNavigation = doc.getElementById("page-navigation");
       const existingPageNavigation = document.getElementById("page-navigation");
-      existingPageNavigation.innerHTML = newPageNavigation.innerHTML;
+      if(newPageNavigation && existingPageNavigation) {
+           existingPageNavigation.innerHTML = newPageNavigation.innerHTML;
+      }
+
 
       // Re-initialize setup functions
-      setupToggleEventListener();
+      const toggleCleanup = setupToggleEventListener(); // capture result
       setupClickableItems();
 
       const img = article.querySelector("img");
@@ -238,6 +248,7 @@ function navigateToPage(url) {
     if (prevPageUrl) {
       navigateToPage(prevPageUrl);
     }
+    event.preventDefault(); // Prevent default link behavior
   });
 
   document.getElementById("nextLink")?.addEventListener("click", (event) => {
@@ -245,6 +256,7 @@ function navigateToPage(url) {
     if (nextPageUrl) {
       navigateToPage(nextPageUrl);
     }
+      event.preventDefault(); // Prevent default link behavior
   });
 })();
 
@@ -266,11 +278,18 @@ function getNextPageUrl() {
   return nextLink?.href || null;
 }
 
+let toggleCleanup
+
 /**
  * Initializes the page by adjusting image size, categorizing the image, setting up
  * event listeners, and applying transition effects.
  */
 window.addEventListener("load", () => {
+
+  if(toggleCleanup && typeof toggleCleanup === 'function'){
+     toggleCleanup()
+  }
+
   const imgFrame = document.getElementById("photo-image");
   if (!imgFrame) return;
 
@@ -288,7 +307,7 @@ window.addEventListener("load", () => {
   }
 
   updateTransition();
-  setupToggleEventListener();
+  toggleCleanup = setupToggleEventListener();
   setupClickableItems();
 });
 

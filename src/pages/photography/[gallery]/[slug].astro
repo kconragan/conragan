@@ -98,7 +98,7 @@ const prevImagePath = galleryImagePaths[currentIndex - 1] || null;
 const nextImagePath = galleryImagePaths[currentIndex + 1] || null;
 ---
 
-<Base title="">
+<Base title="" body="single-photo">
   {imageEXIF && (
   <div id="photo-container">
     <div id="photo-image" class="fade-in">
@@ -106,29 +106,28 @@ const nextImagePath = galleryImagePaths[currentIndex + 1] || null;
     </div>
     <div id="photo-content">
       <nav id="page-navigation">
-        <div class="metadata-toggle">
-          <button id="toggleMetadata" class="project-content-toggle">
-            <span class="u-visually-hide">Info</span>
-          </button>
-        </div>
+        <button id="toggleMetadata" class="project-content-toggle">
+          <span class="u-visually-hide">Info</span>
+        </button>
+        <span class="navigation-hint">Use keyboard arrows to navigate</span>
         <div class="pagination-links">
-          <nav>
-          {prevImagePath ? (
-          <a id="prevLink"
-             class="paginate arrow left"
-              href={`/photography/${gallery}/${prevImagePath.split('/').pop().split('.')[0]}`}>Previous</a>
-          ) : (
-            <span>Prev</span>
-          )}
+          <a
+            id="prevLink"
+            class={`paginate arrow left ${prevImagePath ? '' : 'disabled'}`}
+            href={prevImagePath ? `/photography/${gallery}/${prevImagePath.split('/').pop().split('.')[0]}` : null}
+            aria-disabled={!prevImagePath}
+          >
+            <span>Previous</span>
+          </a>
 
-          {nextImagePath ? (
-          <a id="nextLink"
-              class="paginate arrow right"
-              href={`/photography/${gallery}/${nextImagePath.split('/').pop().split('.')[0]}`}>Next</a>
-          ) : (
+          <a
+            id="nextLink"
+            class={`paginate arrow right ${nextImagePath ? '' : 'disabled'}`}
+            href={nextImagePath ? `/photography/${gallery}/${nextImagePath.split('/').pop().split('.')[0]}` : null}
+            aria-disabled={!nextImagePath}
+          >
             <span>Next</span>
-          )}
-          </nav>
+          </a>
         </div>
       </nav>
       <h1 class="photo-title fade-in">{imageEXIF.Headline?.description ?? slug}</h1>
