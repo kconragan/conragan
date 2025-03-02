@@ -40,6 +40,7 @@ import '../styles/conragan.css';
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Kai Conragan">
+
 </head>
   <body class={body}>
   <div class="wrapper">
@@ -57,10 +58,18 @@ import '../styles/conragan.css';
             <li class="navigation-item">
               <a class="navigation-link " href="/about/">About</a>
             </li>
-            <li class="navigation-item">
-              <span id="dark-mode-toggle" class="colorscheme-toggle">
-                <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-              </span>
+            <li class="navigation-item" id="theme-controller">
+              <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon fa-fw" aria-hidden="true"></i> <span class="sr-only">Toggle dark mode</span> 
+              </button>
+              <div class="theme-options" aria-hidden="true"> 
+                <input type="radio" id="theme-light" name="theme" value="light">
+                <label for="theme-light">Light</label>
+                <input type="radio" id="theme-dark" name="theme" value="dark">
+                <label for="theme-dark">Dark</label>
+                <input type="radio" id="theme-system" name="theme" value="auto" checked>
+                <label for="theme-system">Auto</label>
+              </div>
             </li>
           </ul>
         </nav>
@@ -76,5 +85,6 @@ import '../styles/conragan.css';
       © {new Date().getFullYear()} Kai Conragan
     </footer>
     </div>
+    <script defer src="/src/scripts/global.js"></script>
   </body>
 </html>
