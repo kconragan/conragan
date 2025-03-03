@@ -3,6 +3,7 @@ import { Picture } from 'astro:assets';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import imageData from '../../image-data.json';
 
 export async function getStaticPaths() {
   const galleries = await getCollection("photography");
@@ -56,17 +57,25 @@ function getImageOrientation(width: number, height: number): 'portrait' | 'lands
   <h1 class="gallery-title">{gallery.data.title}</h1>
   <ul id="photos" class="photo-grid">
     {imageList.map((image) => {
+      const imagePath = `src/photography/${gallery.data.name}/${image.slug}.jpg`;
+      console.log("Image path:", imagePath); // Log the constructed image path
+      const imageEXIF = imageData[imagePath];
+      console.log("EXIF data:", imageEXIF); // Log the retrieved EXIF data
       const orientation = getImageOrientation(image.src.width, image.src.height);
+
       return (
         <li class={`photo-item ${orientation}`}>
-          <figure>
           <a href={`/photography/${gallery.data.name}/${image.slug}/`}>
+            <figure class="image-title">
               <Picture src={image.src}
                        width="600"
                        formats={['avif', 'webp']}
                        alt="View " />
-            </a>
-          </figure>
+              <figcaption>
+                {imageEXIF?.Headline?.description ?? 'View Image'} 
+              </figcaption>
+            </figure>
+          </a>
         </li>
       );
     })}

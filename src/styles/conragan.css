@@ -378,6 +378,41 @@ h1, h2, h3, h4, h5, h6 {
   --gallery-items-per-row: 1;
 }
 
+/* used on both /photography/ and /photography/[gallery]/
+ * to render title overlay on image-title */
+figure.image-title {
+  position: relative;
+
+    figcaption {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "ShipsWhistleBold", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.2);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    text-shadow: 1px 1px 12px #000;
+    transition: all .2s ease-out;
+  }
+}
+
+.photo-item figure.image-title figcaption {
+  opacity: 0;
+}
+
+.photo-item a:hover figure.image-title figcaption {
+  opacity: 1;
+}
+
 .gallery-navigation {
   width: 90%;
   margin: 0 auto;
@@ -392,8 +427,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gallery-item {
-  font-family: "ShipsWhistleBold", sans-serif;
-  text-align: center;
   flex: 0 0
   calc(
     (100% - (var(--gallery-gap) * (var(--gallery-items-per-row) - 1))) /
@@ -409,29 +442,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   figure {
-    position: relative;
     margin: 0;
     padding: 0;
     line-height: 1;
   }
 
   figcaption {
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0 1rem;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,.2);
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    text-shadow: 1px 1px 12px #000;
-    transition: background-color .2s ease-out;
   }
 
   :hover figcaption {
