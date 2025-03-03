@@ -26,44 +26,58 @@ interface Props {
 const formatDate = (dateString: string): string => {
   if (!dateString) return '';
 
-  // Split the date string into date and time components, then further split the date
   const [datePart] = dateString.split(' ');
   const dateParts = datePart.split(':');
 
-  // Ensure the date parts array has the correct number of elements
-  if (dateParts.length !== 3) return ''; // Return an empty string if the date format is invalid
+  if (dateParts.length !== 3) return '';
 
-  const [year, month, _day] = dateParts.map(Number); // Extract and convert year, month, and day to numbers
+  const [year, month, _day] = dateParts.map(Number);
 
-  // Months in JavaScript Date objects are 0-indexed (0 for January, 11 for December)
   const monthIndex = month - 1;
 
-  // Validate the year and month
-  if (isNaN(year) || isNaN(monthIndex) || monthIndex < 0 || monthIndex > 11) return ''; // Check if parsing results in NaN
+  if (isNaN(year) || isNaN(monthIndex) || monthIndex < 0 || monthIndex > 11) return '';
   const date = new Date(year, monthIndex);
 
-  // Get the month name from the Date object.
-  const monthName = date.toLocaleString('default', { month: 'long' }); // Use options to get full month name.
-  return `${monthName} ${year}`; // Output date as "Month Year"
+  const monthName = date.toLocaleString('default', { month: 'long' });
+  return `${monthName} ${year}`;
 };
+
+// Define a type for the imageData JSON
+interface ImageDataEntry {
+    Headline?: { description?: string };
+    Make?: { description?: string };
+    Model?: { description?: string };
+    LensModel?: { description?: string };
+    FocalLength?: { description?: string };
+    FNumber?: { description?: string };
+    ExposureTime?: { description?: string };
+    ISOSpeedRatings?: { description?: string };
+    DateTimeOriginal?: { value: string[] };
+    [key: string]: any; // Allow other properties
+}
+
+interface ImageData {
+    [key: string]: ImageDataEntry;
+}
+
+// Narrowly type the import, then expand to any
+const typedImageData: ImageData = imageData as any;
 
 /**
  * Generates static routes for each image in the photography directory using Astro's getStaticPaths.
  * @returns {Promise<{params: {gallery: string, slug: string}, props: Props}[]>} An array of objects containing the parameters and properties for each static route.
  */
 export async function getStaticPaths() {
-  // Use import.meta.glob to get all images in the photography directory
   const allImages = import.meta.glob<{ default: ImageMetadata }>('../../../photography/*/*.{jpg,jpeg,png,gif}');
 
   const paths = [];
 
-  // Iterate over each image found by import.meta.glob
   for (const path in allImages) {
     if (Object.hasOwn(allImages, path)) {
-      const parts = path.split('/'); // Split the path into segments
-      const gallery = parts.at(-2) as string; // Extract gallery name from path
+      const parts = path.split('/');
+      const gallery = parts.at(-2) as string;
       const slugWithExtension = parts.at(-1) as string;
-      const slug = slugWithExtension?.split('.')[0] || ''; // Extract slug
+      const slug = slugWithExtension?.split('.')[0] || '';
       const transformedImagePath = path.replace('../../../', 'src/');
 
       paths.push({
@@ -85,10 +99,10 @@ export async function getStaticPaths() {
 const { gallery, slug, imagePath, imageModule } = Astro.props;
 
 // Retrieve image EXIF data using the imagePath.
-const imageEXIF = imageData[imagePath];
+const imageEXIF = typedImageData[imagePath];
 
 //Get paths to sibling images.
-const galleryImagePaths = Object.keys(imageData).filter(path => path.startsWith(`src/photography/${gallery}`));
+const galleryImagePaths = Object.keys(typedImageData).filter(path => path.startsWith(`src/photography/${gallery}`));
 
 // Find the index of the current image in the gallery
 const currentIndex = galleryImagePaths.indexOf(imagePath);
@@ -114,7 +128,7 @@ const nextImagePath = galleryImagePaths[currentIndex + 1] || null;
           <a
             id="prevLink"
             class={`paginate arrow left ${prevImagePath ? '' : 'disabled'}`}
-            href={prevImagePath ? `/photography/${gallery}/${prevImagePath.split('/').pop().split('.')[0]}/` : null}
+            href={prevImagePath ? `/photography/${gallery}/${prevImagePath.split('/').pop()?.split('.')[0]}/` : null}
             aria-disabled={!prevImagePath}
           >
             <span>Previous</span>
@@ -123,7 +137,7 @@ const nextImagePath = galleryImagePaths[currentIndex + 1] || null;
           <a
             id="nextLink"
             class={`paginate arrow right ${nextImagePath ? '' : 'disabled'}`}
-            href={nextImagePath ? `/photography/${gallery}/${nextImagePath.split('/').pop().split('.')[0]}/` : null}
+            href={nextImagePath ? `/photography/${gallery}/${nextImagePath.split('/').pop()?.split('.')[0]}/` : null}
             aria-disabled={!nextImagePath}
           >
             <span>Next</span>
