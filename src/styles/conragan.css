@@ -1,6 +1,22 @@
 /**
- * @file Stylesheet for image gallery, providing layout, typography,
- * color theming, and responsive design for various screen sizes and orientations.
+ * @file  Global stylesheet for Kai Conragan's (that's me) website, encompassing
+ *        layout, typography, color theming, and responsive design.
+ *
+ *  * This stylesheet is organized into the following sections (roughly):
+ *   - Fonts: Defines custom font faces for the website.
+ *   - Variables: Declares CSS variables for color theming and layout consistency.
+ *   - Base Styles: Sets global styles for the body and wrapper elements.
+ *   - Header & Global Navigation: Styles the header and navigation menus.
+ *   - Footer: Styles the footer area.
+ *   - Main Content: Styles the main content area.
+ *   - Links: Styles anchor links.
+ *   - Homepage: Styles the homepage layout and elements.
+ *   - Blog Posts: Styles blog post layouts and elements.
+ *   - Single Image View: Styles the individual image view.
+ *   - Gallery Grid: Styles the image gallery grid.
+ *
+ * It also provides theming support and responsive design for various screen sizes and orientations.
+
  */
 
 /* FONTS ----------------------------------------------------- */
@@ -10,7 +26,7 @@
   src: url('/fonts/ShipsWhistle.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-  font-display: block;
+  font-display: block; /* Ensures font is not rendered invisibly while loading */
 }
 
 @font-face {
@@ -18,7 +34,7 @@
   src: url('/fonts/ShipsWhistle-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: bold;
-  font-display: block;
+  font-display: block; /* Ensures font is not rendered invisibly while loading */
 }
 
 @font-face {
@@ -26,14 +42,14 @@
   src: url("/fonts/WorkSans-Variable.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: block;
+  font-display: block; /* Ensures font is not rendered invisibly while loading */
 }
 
 /* VARIABLES -------------------------------------------------- */
 
 :root {
   /* Color Palette */
-  --c-white: #fff; /* Utility color */
+  --c-white: #fff; /* Utility color: pure white */
   --c-light: #f8f9fa;
   --c-light-gray: #dee2e6;
   --c-med-gray: #545c64;
@@ -42,106 +58,107 @@
   --c-black: #000;
 
   /* Theme Support (Light & Dark) */
-  color-scheme: light dark; /* Allow browser to handle default light/dark preference */
+  color-scheme: light dark; /* Allow browser to handle default light/dark preference based on system settings */
 
   /* Default Theme Colors (Light) */
-  --color-bg: var(--c-light); 
-  --color-text: var(--c-dark);
+  --color-bg: var(--c-light);  /* Default background color for light theme */
+  --color-text: var(--c-dark);  /* Default text color for light theme */
   --color-links: #33739e;
 }
 
 /* Dark Theme Overrides */
 :root[data-color-scheme="dark"] {
-  --color-bg: var(--c-dark);
-  --color-text: var(--c-light);
-  --color-links: #f08aa1;
+  --color-bg: var(--c-dark);   /* Override background color for dark theme */
+  --color-text: var(--c-light);  /* Override text color for dark theme */
+  --color-links: #f08aa1;   /* Override link color for dark theme */
 }
 
+/* Theme Toggle Styles */
 #theme-toggle {
   vertical-align: middle;
   height: 24px;
   width: 24px;
   border: 0;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s; /* Smooth transition for background color change */
 
   /* Store the SVGs in variables */
   --svg-light: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M192 64C86 64 0 150 0 256S86 448 192 448l192 0c106 0 192-86 192-192s-86-192-192-192L192 64zm192 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>');
   --svg-dark: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M384 128c70.7 0 128 57.3 128 128s-57.3 128-128 128l-192 0c-70.7 0-128-57.3-128-128s57.3-128 128-128l192 0zM576 256c0-106-86-192-192-192L192 64C86 64 0 150 0 256S86 448 192 448l192 0c106 0 192-86 192-192zM192 352a96 96 0 1 0 0-192 96 96 0 1 0 0 192z"/></svg>');
-  background-color: var(--color-text);
+  background-color: var(--color-text); /* Initial color of the theme toggle */
 
 }
 
-#theme-toggle.light { /* Style for light mode */
+#theme-toggle.light { /* Style for light mode: displays the light mode SVG */
   mask: var(--svg-light);
 }
 
-#theme-toggle.dark { /* Style for dark mode */
+#theme-toggle.dark {  /* Style for dark mode: displays the dark mode SVG */
   mask: var(--svg-dark);
 }
 
 #theme-toggle span {
-  display: none;
+  display: none; /* Hides the text label for accessibility (handled via aria labels) */
 }
 
 .theme-options {
-  display: none;
+  display: none; /* Hides the theme options element */
 }
 
 /* BASE STYLES ------------------------------------------------ */
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  min-height: 100vh;
+  background-color: var(--color-bg); /* Sets background color using the theme variable */
+  color: var(--color-text); /* Sets text color using the theme variable */
+  min-height: 100vh;  /* Ensures body covers at least the entire viewport height */
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
+  min-height: 100vh;  /* Ensures wrapper covers at least the entire viewport height */
+  width: 100%;  /* Takes full width of its parent */
 }
 
 /* HEADER & GLOBAL NAVIGATION --------------------------------- */
 
 header[role=banner] {
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Ensures the header is above other elements */
   height: 6rem;
   width: 100%;
   font-family: "ShipsWhistleBold", sans-serif;
   font-weight: bolder;
   text-transform: uppercase;
-  font-feature-settings: 'ss01';
+  font-feature-settings: 'ss01'; /* Enables stylistic sets for the font */
 
   /* Header Navigation container */
   div[role=navigation] {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Distributes space evenly between items */
+    align-items: center;  /* Vertically aligns items */
     padding-bottom: 0;
-    margin: 1rem auto;
+    margin: 1rem auto;  /* Centers the navigation horizontally */
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 18px;
-    max-width: 90rem;
+    max-width: 90rem; /* Limits the maximum width of the navigation */
   }
 }
 
 .global-nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Aligns navigation items to the right */
   margin-right: 30px;
-  list-style: none;
+  list-style: none; /* Removes bullet points from the list */
   margin-bottom: 0;
   margin-top: 0;
 }
 
 .global-nav li {
   text-align: center;
-  margin: 1.5em auto;
+  margin: 1.5em auto;  /* Adjust vertical spacing */
   margin-left: 36px;
 }
 
@@ -159,17 +176,17 @@ footer[role=contentinfo] {
  * with the photo pagination and toggle
  * TODO: figure out a better solution */
 .single-photo footer[role=contentinfo] {
-  display: none;
+  display: none; /* Hides footer on single photo page */
 }
 
 /* RESPONSIVE STYLES (Global Nav) ----------------------------- */
 @media only screen and (max-width: 600px) {
   .surname {
-    display: none;
+    display: none; /* Hides surname on small screens */
   }
 
   .global-nav li {
-    margin-left: 24px;
+    margin-left: 24px;  /* Adjust margin for small screens */
   }
 }
 
@@ -181,21 +198,21 @@ main[role=main] {}
 
 a {
   color: var(--color-text);
-  text-decoration-color: transparent;
+  text-decoration-color: transparent; /* Initially hide the text decoration */
   text-decoration-skip-ink: auto;
   text-decoration-thickness: 1px;
   text-decoration-style: dotted;
-  transition: all 0.4s;
+  transition: all 0.4s;  /* Smooth transition for all properties */
 }
 
 /*Microformats for semantic HTML with decorative link underline effects */
 .h-entry:hover a {
-  text-decoration-color: var(--color-text);
+  text-decoration-color: var(--color-text); /* Show underline on hover for h-entry */
 }
 
 .h-entry:hover a:hover {
-  color: var(--color-links);
-  text-decoration-style: solid;
+  color: var(--color-links); /* Change color on hover for h-entry links */
+  text-decoration-style: solid; /* Change underline style on hover */
   text-decoration-color: var(--color-links);
 }
 
@@ -270,7 +287,7 @@ a {
  * thanks to this codepen:
  * https://codepen.io/cssence/pen/JKozYq */
 .icon-link path {
-  fill: currentColor;
+  fill: currentColor; /* Allows the path to inherit the color from the parent */
 }
 
 .icon-link:hover {
@@ -304,7 +321,7 @@ hr.glyph {
   overflow: visible;
   color: var(--color-text);
   font-family: "ShipsWhistle";
-  font-feature-settings: 'ss01';
+  font-feature-settings: 'ss01'; /* Enables stylistic sets for the font */
   font-weight: normal;
 }
 
@@ -343,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .single-article .h-entry2 p:first-of-type::first-letter {
   font-family: "ShipsWhistleBold";
-  font-feature-settings: "ss01";
+  font-feature-settings: "ss01"; /* Enables stylistic sets for the font */
   font-size: 75px;
   line-height: 60px;
   float: left;
@@ -375,20 +392,20 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   --gallery-gap: 1.5em;
-  --gallery-items-per-row: 1;
+  --gallery-items-per-row: 1; /* Default number of items per row */
 }
 
 /* used on both /photography/ and /photography/[gallery]/
  * to render title overlay on image-title */
 figure.image-title {
-  position: relative;
+  position: relative; /* Allows absolute positioning of the figcaption */
 
     figcaption {
-    position: absolute;
+    position: absolute; /* Positions the caption over the image */
     z-index: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Vertically centers the text */
+    justify-content: center; /* Horizontally centers the text */
     font-family: "ShipsWhistleBold", sans-serif;
     text-align: center;
     margin: 0;
@@ -401,16 +418,16 @@ figure.image-title {
     text-transform: uppercase;
     letter-spacing: .1rem;
     text-shadow: 1px 1px 12px #000;
-    transition: all .2s ease-out;
+    transition: all .2s ease-out; /* Smooth transition for all properties */
   }
 }
 
 .photo-item figure.image-title figcaption {
-  opacity: 0;
+  opacity: 0; /* Hides the caption by default */
 }
 
 .photo-item a:hover figure.image-title figcaption {
-  opacity: 1;
+  opacity: 1; /* Shows caption on hover */
 }
 
 .gallery-navigation {
@@ -438,7 +455,7 @@ figure.image-title {
     vertical-align: middle;
     height: auto;
     aspect-ratio: 3 / 2;
-    object-fit: cover;
+    object-fit: cover; /* Ensures the image covers the entire area */
   }
 
   figure {
@@ -455,21 +472,22 @@ figure.image-title {
   }
 }
 
+/* Responsive media queries for gallery layout */
 @media only screen and (width >= 1024px) {
   .gallery-list {
-    --gallery-items-per-row: 3;
+    --gallery-items-per-row: 3; /* 3 items per row on larger screens */
   }
 }
 
 @media only screen and (768px < width < 1024px) {
   .gallery-list {
-    --gallery-items-per-row: 2;
+    --gallery-items-per-row: 2; /* 2 items per row on medium screens */
   }
 }
 
 @media only screen and (540px < width < 768px) {
   .gallery-list {
-    --gallery-items-per-row: 1;
+    --gallery-items-per-row: 1; /* 1 item per row on smaller screens */
   }
 }
 
