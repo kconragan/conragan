@@ -4,7 +4,6 @@ import { getCollection } from 'astro:content';
 import { format, parseISO } from 'date-fns';
 import { YouTube } from '@astro-community/astro-embed-youtube';
 
-
 function extractYearAndSlug(id: string): { slug: string } {
   const parts = id.split('/');
   const slug = parts[0] + '/' + parts[1] + '/';
@@ -14,14 +13,18 @@ function extractYearAndSlug(id: string): { slug: string } {
 // Change this to control the number of posts show at /blog/
 const MAX_POSTS = 20;
 
-
-const posts = (await getCollection('blog'))
+// Use a conditional filter to include all posts in development
+// and only public posts in production
+const posts = (await getCollection(
+  'blog',
+  (post) => import.meta.env.DEV || post.data.isPublic === true
+))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, MAX_POSTS);
 
 ---
 
-<Base title="Latest Posts">
+<Base title="Kai Conragan - Latest Blog Posts">
   <hr class="glyph lighthouse" />
   <ol class="h-feed">
   {
