@@ -1,6 +1,7 @@
 ---
 date: 2024-12-21T11:42:40-08:00
 title: "The Books I read in 2024"
+type: post
 ---
 
 BookTok, r/suggestmeabook, Tiermaker... Everywhere you look online, people are ranking their yearly reads. I'm going old-school and just listing mine here. I read about 26 books in total this year, although some were larger commitments than others (ahem Brandon Sanderson). I read quite a bit more fiction than non-fiction and have no regrets. I'd like to get to a point where I process each book more thoroughly as I go. However, it's also nice to look at the year in full, so here we go. This year I discovered some new favorite authors and genres, and found that themes of found family, resilience, and the power of nature resonated strongly with me.

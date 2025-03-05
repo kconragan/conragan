@@ -1,6 +1,7 @@
 ---
 date: 2025-01-15T10:30:00-08:00
 title: "A Forgotten Gist"
+type: post
 ---
 
 I was cleaning up some repos in GitHub and came across an [old gist I created back in 2012](https://gist.github.com/kconragan/2510186/revisions).

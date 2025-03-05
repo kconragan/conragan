@@ -2,8 +2,8 @@
 title: "My Llm Codegen Workflow Atm"
 date: 2025-02-23T11:33:40-08:00
 tags: []
-subtype: 'link' 
-linkurl: 'https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/'
+type: link 
+link: 'https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/'
 ---
 
 Harper Reed gives a nice overview for how he is using LLMs to write software. I like his simple breakdown of using successive steps to (1) brainstorm, (2) plan, and (3) execute. Execute is where I still am learning. Right now my process pretty much just looks like copying pasting a lot of code between my IDE and Gemini.

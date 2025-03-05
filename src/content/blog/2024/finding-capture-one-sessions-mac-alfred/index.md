@@ -1,6 +1,7 @@
 ---
 date : 2025-01-11T11:42:40-08:00
 title : "Finding Capture One Sessions on a Mac with Alfred"
+type: post
 ---
 
 One of the unique advantages of using Capture One is its concept of Sessions, which doesn’t exist in alternatives like Adobe Lightroom. In my workflow I use both: Sessions for individual shoots, and Catalogs as a way to aggregate sessions and photos.

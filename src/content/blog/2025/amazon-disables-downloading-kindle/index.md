@@ -1,12 +1,16 @@
 ---
-title: "Amazon’s killing a feature that let you download and backup Kindle books"
+title: Amazon’s killing a feature that let you download and backup Kindle books
 date: 2025-02-16T17:04:55-08:00
+type: post
+isPublic: true
 ---
 From [The Verge](https://www.theverge.com/news/612898/amazon-removing-kindle-book-download-transfer-usb):
 
 > Starting on February 26, 2025, Amazon is removing a feature from its website allowing you to download purchased books to a computer and then copy them manually to a [Kindle](https://www.theverge.com/24326185/amazon-kindle-paperwhite-signature-edition-2024-e-reader-review) over USB. It’s a feature that many Kindle users are probably unaware of, given books are more easily sent to devices over Wi-Fi. Still, it’s beneficial for backing up purchases or converting them to other formats compatible with non-Kindle e-readers.
 
-If you’ve bought Kindle books, download them now. Digital “ownership” is a thorny issue, but I’m personally not comfortable with content I’ve paid for living solely on Amazon’s servers. This change effectively locks your purchased books to Amazon's devices, limiting your freedom to read them where you want. The process, until February 26th, is straightforward:
+If you’ve bought Kindle books, download them now. Digital “ownership” is a thorny issue, but I’m personally not comfortable with content I’ve paid for living solely on Amazon’s servers. This change effectively locks your purchased books to Amazon's devices, limiting your freedom to read them where you want.
+
+The process, until February 26th, is straightforward:
 
 - Go to your [Digital Content Library](https://www.amazon.com/hz/mycd/digital-console/contentlist/booksAll/dateDsc/) on Amazon.
 - For each book, click the “More Actions” button and select “Download & Transfer via USB.”
@@ -14,7 +18,7 @@ If you’ve bought Kindle books, download them now. Digital “ownership” is a
 
 (No bulk downloads, unfortunately. One book at a time.)
 
-{{< himage src="amazon-screenshot.webp" alt="Screenshot of Amazon Kindle download selection" max-width="60%" >}}
+![Screenshot of Amazon Download page (before Feb 26, 2025)](amazon-screenshot.webp)
 
 You’ll then have a local copy. But these files are tied to the specific Kindle you chose. This download option is a relic from the early days of Kindle when Whispernet (a cellular connection) wasn't always reliable. USB downloads were essential then, but Wi-Fi has since made them largely unnecessary for most users. However, even in the Wi-Fi era, this feature became a lifeline for those who valued true ownership and control over their digital books. But here's the catch: even with a local copy, you’re still tied to Amazon’s discretion. And their discretion is that you can only read books purchased from them on devices _they_ manufacture and sell. Fortunately, tools exist to convert Kindle books to open formats like `.epub`. But this leads you into the wild world of DRM and copyright law.
 
@@ -28,7 +32,7 @@ If I'm impatient or want to own a copy, [Bookshop.org](https://bookshop.org) has
 
 >Hi all, CEO of Bookshop.org here. We love DRM-free books and are working hard to add lots of them to our catalog. For launch, we have mostly large corporate publishers who insist on DRM and don’t allow downloading books. That’s a publisher decision, not ours. But soon we’ll have a way to filter for DRM-free titles which will be downloadable! Also, it’s my holy grail to allow you to buy an ebook from a local bookstore and read it on your Kindle. It requires Amazon’s cooperation—we are trying!
 
-(Side note: Boox is a compatible e-ink device that works with bookshop.org)
+(Side note: [Boox](https://shop.boox.com) is a compatible e-ink device that works with bookshop.org)
 
 Bookshop.org also seem committed to protecting consumer access to their digital books (which started this whole post for me). From their [FAQ](https://bookshop.org/info/ebooks#DRMFREE):
 

@@ -1,7 +1,7 @@
 ---
 title: "Drunk on Freedom, Stuck on Choice"
 date: 2025-02-01T20:26:29-08:00
-type: blog
+type: post
 ---
 This morning, while drinking my coffee, I put on Jack Van Cleaf’s new song (featuring Zach Bryan), [“Rattlesnake”](https://song.link/i/1790934903)—I hadn’t heard it before and it’s a beautiful song. One line especially stuck with me: *“Drunk on freedom, stuck on choice.”*
 
