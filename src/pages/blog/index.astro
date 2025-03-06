@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 import { format, parseISO } from 'date-fns';
-import { YouTube } from '@astro-community/astro-embed-youtube';
+import YouTubeEmbed from '../../components/YouTubeEmbed.astro'
 
 function extractYearAndSlug(id: string): { slug: string } {
   const parts = id.split('/');
