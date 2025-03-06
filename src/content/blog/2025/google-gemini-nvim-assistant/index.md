@@ -2,6 +2,7 @@
 title: "Google Gemini: My Neovim Configuration Assistant"
 date: 2025-01-13T11:42:40-08:00
 type: post
+isPublic: true
 ---
 
 I love Vim. And while I'm a fan of its infinite customizability, I'm not a fan of having to remember every syntax and config parameter.

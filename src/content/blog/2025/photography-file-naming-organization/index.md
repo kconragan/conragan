@@ -2,6 +2,7 @@
 title: "File Naming & Organization For Photographers"
 date: 2025-02-07T17:14:25-08:00
 type: post
+isPublic: true
 ---
 
 File organization and naming is not exactly the most exciting topic for photographers. Most of us would rather discuss our next photo destination or piece of photography gear we want to purchase. But digital asset management becomes a much more significant part of being a photographer as your portfolio grows. These past couple of years I've been putting a lot more focus on my system: optimizing my import process in Capture One, getting a NAS established to store my photo collection, and publishing my best photos here and in Google Photos as a cloud-based backup.

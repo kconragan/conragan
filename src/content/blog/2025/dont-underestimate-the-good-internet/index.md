@@ -3,6 +3,7 @@ date : 2025-01-14T19:13:53-08:00
 title : "Don't Underestimate The Good Internet"
 type : link
 link : "https://www.anildash.com/2024/01/03/human-web-renaissance/"
+isPublic: true
 ---
 
 Anil Dash in his post [The Web Renaissance takes off](https://www.anildash.com/2024/01/03/human-web-renaissance/)

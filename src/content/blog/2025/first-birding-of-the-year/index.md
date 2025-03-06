@@ -2,6 +2,7 @@
 date: 2025-01-09T11:42:40-08:00
 title: "First Bird Photos of 2025"
 type: post
+isPublic: true
 ---
 
 It's been a bit of a slow start to the year photographically. That's not a bad thing as a big part is due to our [recent trip to the Florida Keys](/blog/2025/diving-florida-keys-2024/) where we got to do a bunch of diving. Besides spending as much time as possible underwater, I also had a goal of making my [first short dive video](https://youtu.be/5W0FeY__CUY). I’m pretty happy with the results, but I’m equally eager to get some photos made this year.

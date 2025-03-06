@@ -2,6 +2,7 @@
 date : 2024-03-01T13:00:18-08:00
 title : "Create The Orton Effect In Capture One...Kind Of!"
 type: post
+isPublic: true
 ---
 
 The Orton Effect is an extremely popular (some might say overused) technique that imbues images with a soft, ethereal glow and touch of blur to add a painterly quality to photographs. Used with restraint and on the right images, it is a wonderful effect for good reason.

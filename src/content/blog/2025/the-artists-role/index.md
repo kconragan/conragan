@@ -2,6 +2,7 @@
 title: "The Artist's Role In A Troubled World"
 date: 2025-02-04T18:14:33-08:00
 type: post
+isPublic: true
 ---
 
 In the midst of the constitutional chaos over federal spending is the disbanding of the [presidential committee on the arts and the humanities](https://en.wikipedia.org/wiki/President's_Committee_on_the_Arts_and_Humanities). From [Art Newspaper](https://www.theartnewspaper.com/2025/01/31/trump-disbands-presidential-committee-on-the-arts-and-the-humanities):
