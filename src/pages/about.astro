@@ -1,10 +1,9 @@
-
 ---
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import headshot from "../assets/headshot.jpg"
 ---
-<Base title="About | Kai Conragan">
+<Base title="About | Kai Conragan" body="bio">
   <article id="about" class="h-card">
     <div class="flex-column">
       <Image src={headshot} loading="eager" class="u-photo" alt="Headshot of Kai Conragan" />
@@ -21,7 +20,7 @@ import headshot from "../assets/headshot.jpg"
         <p>Today, my website serves primarily as a portfolio for my photography, a passion that continues to inspire and inform my work. Whether I’m designing for the vast scale of Google Search or capturing a fleeting moment through my lens, I’m driven by the same fundamental curiosity – to make sense of the world around us and to create experiences that harmonious with the human spirit.</p>
       </div>
       <footer>
-        <h3>Elsewhere</h3>
+        <h2>Elsewhere</h2>
         <ul>
           <li><a href="https://github.com/kconragan/" rel="me">Github</a></li>
           <li><a href="http://mastodon.social/@kconragan" rel="me">Mastodon</a></li>

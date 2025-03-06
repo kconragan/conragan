@@ -870,3 +870,53 @@ a.paginate.disabled:hover {
   max-width: 100%;
   height: auto;
 }
+
+
+/* ABOUT ----------------------------------------------------- */
+
+.bio main[role=main] {
+  margin: 1rem auto;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#about {
+  margin: 0 auto;
+  max-width: 35rem;
+
+  .flex-column {
+
+    img {
+      max-width: 15rem;
+      display: block;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  .flex-column:first-child {
+    /* width: 25%; */
+    /* margin-right: 10%; */
+  }
+
+  p {
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  p, li {
+    font-family: "worksans", sans-serif;
+  }
+
+  p a,
+  li a {
+    color: var(--color-links);
+  }
+
+}
+
+@media screen @media (min-width:1280px)
+#about .flex-column img {
+     max-width: 10rem;
+}
