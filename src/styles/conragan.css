@@ -57,6 +57,7 @@
   --c-med-dark-gray: #25292d;
   --c-dark: #1b1e22;
   --c-black: #000;
+  --mobile-gutters: 1.6rem;
 
   /* Theme Support (Light & Dark) */
   color-scheme: light dark; /* Allow browser to handle default light/dark preference based on system settings */
@@ -109,48 +110,42 @@
 /* BASE STYLES ------------------------------------------------ */
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
   background-color: var(--color-bg); /* Sets background color using the theme variable */
   color: var(--color-text); /* Sets text color using the theme variable */
-  min-height: 100vh;  /* Ensures body covers at least the entire viewport height */
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;  /* Ensures wrapper covers at least the entire viewport height */
-  width: 100%;  /* Takes full width of its parent */
 }
 
 /* HEADER & GLOBAL NAVIGATION --------------------------------- */
 
 header[role=banner] {
-  position: relative;
   z-index: 1; /* Ensures the header is above other elements */
+  position: relative;
+  display: flex;
   height: 6rem;
-  width: 100%;
+  padding: 0 var(--mobile-gutters);
   font-family: "ShipsWhistleBold", sans-serif;
   font-weight: bolder;
   text-transform: uppercase;
   font-feature-settings: 'ss01'; /* Enables stylistic sets for the font */
+  font-size: 18px;
+  align-items: center;
+}
 
-  /* Header Navigation container */
-  div[role=navigation] {
-    display: flex;
-    justify-content: space-between; /* Distributes space evenly between items */
-    align-items: center;  /* Vertically aligns items */
-    padding-bottom: 0;
-    margin: 1rem auto;  /* Centers the navigation horizontally */
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: 18px;
-    max-width: 90rem; /* Limits the maximum width of the navigation */
-  }
+.logo {
+  flex: 1;
+  display: block;
 }
 
 .global-nav {
-  display: flex;
-  flex-direction: row;
   justify-content: flex-end; /* Aligns navigation items to the right */
+  display: flex;
+  flex: 2;
+  flex-direction: row;
   margin-right: 30px;
   list-style: none; /* Removes bullet points from the list */
   margin-bottom: 0;
@@ -161,6 +156,30 @@ header[role=banner] {
   text-align: center;
   margin: 1.5em auto;  /* Adjust vertical spacing */
   margin-left: 36px;
+}
+
+@media screen and (max-width: 500px) {
+  header[role=banner] {
+    flex-direction: column;
+    height: 8rem;
+
+    .logo {
+      flex: 0;
+      font-size: 36px;
+      margin-top: 1.6rem;
+      margin-bottom: 0;
+      text-transform: none;
+    }
+  }
+
+  .global-nav li {
+    margin-top: .75rem;
+    margin-left: 16px;
+  }
+
+  .global-nav li:first-child {
+    margin-left: 0;
+  }
 }
 
 /* FOOTER ----------------------------------------------------- */
@@ -180,20 +199,11 @@ footer[role=contentinfo] {
   display: none; /* Hides footer on single photo page */
 }
 
-/* RESPONSIVE STYLES (Global Nav) ----------------------------- */
-@media only screen and (max-width: 600px) {
-  .surname {
-    display: none; /* Hides surname on small screens */
-  }
-
-  .global-nav li {
-    margin-left: 24px;  /* Adjust margin for small screens */
-  }
-}
-
 /* MAIN CONTENT ------------------------------------------------ */
 
-main[role=main] {}
+main[role=main] {
+  margin: 0 var(--mobile-gutters);  
+}
 
 /* LINKS ------------------------------------------------------ */
 
@@ -342,14 +352,40 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "ShipsWhistleBold", serif;
 }
 
+.single-article .h-entry header {
+  margin-bottom: 16vh;
+}
+
+@media only screen and (width < 800px) {
+  h1 {
+    font-size: 2.4rem;
+    margin-top: 1rem;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .single-article .h-entry header {
+    margin-bottom: 8vh;
+  }
+
+  .h-feed .h-entry p,
+  .h-feed .h-entry li,
+  .single-article .h-entry p,
+  .single-article .h-entry li {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
 .h-entry img {
   max-width: 100%;
   height: auto;
 }
 
-.single-article .h-entry header {
-  margin-bottom: 16vh;
-}
 
 .single-article .h-entry a {
   text-decoration-color: var(--color-text);
@@ -357,18 +393,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .single-article .dt-published {
   font-size: smaller;
-}
-
-.single-article .h-entry2 p:first-of-type::first-letter {
-  font-family: "ShipsWhistleBold";
-  font-feature-settings: "ss01"; /* Enables stylistic sets for the font */
-  font-size: 75px;
-  line-height: 60px;
-  float: left;
-  padding-top: 4px;
-  padding-right: 8px;
-  padding-left: 3px;
-
 }
 
 .h-entry blockquote,
@@ -394,6 +418,15 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   --gallery-gap: 1.5em;
   --gallery-items-per-row: 1; /* Default number of items per row */
+}
+
+.gallery-grid main[role=main] {
+  display: flex;
+
+  .container {
+    margin: auto;
+    flex: 2;
+  }
 }
 
 /* used on both /photography/ and /photography/[gallery]/
@@ -848,7 +881,6 @@ a.paginate.disabled:hover {
 }
 
 #photos {
-  width: 80%;
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));

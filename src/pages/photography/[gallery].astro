@@ -90,7 +90,7 @@ const typedImageData: ImageData = imageData; // Type cast imageData to ImageData
 
 ---
 
-<Base title={gallery.data.title + ' Photography | Kai Conragan'}>
+<Base title={gallery.data.title + ' Photography | Kai Conragan'} body='gallery-grid'>
   <h1 class="gallery-title">{gallery.data.title}</h1>
   <ul id="photos" class="photo-grid">
     {imageList.map((image) => {
@@ -122,7 +122,6 @@ const typedImageData: ImageData = imageData; // Type cast imageData to ImageData
      */
     import { initializeMacy } from '../../scripts/macy';
     document.addEventListener('DOMContentLoaded', () => {
-      console.log('DOM is fully loaded');
       initializeMacy();
     });
 </script>

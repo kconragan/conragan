@@ -21,28 +21,25 @@ export function initializeMacy() {
     useOwnImageLoader: true,
     debug: false,
     mobileFirst: true,
-    columns: 3,
+    columns: 1,
     margin: {
       x: 4,
       y: 4,
     },
     breakAt: {
       1200: 3,
-      1024: 2,
-      431: {
-        columns: 1,
-      },
+      600: 2,
     },
   });
 
   // Recalculate
   macyInstance.runOnImageLoad(() => {
-      macyInstance.recalculate(true);
-    }, true);
+    macyInstance.recalculate(true);
+  }, true);
 
   return () => {
-    if(macyInstance) {
-        macyInstance.remove();
+    if (macyInstance) {
+      macyInstance.remove();
     }
   };
 }
