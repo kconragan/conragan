@@ -27,8 +27,8 @@ export function initializeMacy() {
       y: 4,
     },
     breakAt: {
-      1200: 3,
       600: 2,
+      1200: 3,
     },
   });
 
