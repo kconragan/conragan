@@ -78,7 +78,7 @@
 /* Theme Toggle Styles */
 #theme-toggle {
   vertical-align: middle;
-  height: 24px;
+  height: 22px;
   width: 24px;
   border: 0;
   cursor: pointer;
@@ -109,15 +109,14 @@
 
 /* BASE STYLES ------------------------------------------------ */
 
+html, body, { height : 100%; }
+
 body {
   display: flex;
   flex-direction: column;
   min-block-size: 100vh;
   background-color: var(--color-bg); /* Sets background color using the theme variable */
   color: var(--color-text); /* Sets text color using the theme variable */
-}
-
-.wrapper {
 }
 
 /* HEADER & GLOBAL NAVIGATION --------------------------------- */
@@ -233,7 +232,8 @@ a {
 
 .home main[role=main] {
   display: flex;
-  flex: 1;
+  flex: 2;
+  min-block-size: 50ch;
   align-items: center;
   justify-content: center;
   text-align: center;

@@ -35,7 +35,7 @@ function adjustImageSize() {
   if (!imgFrame || !img) return; // Exit early if not found
 
   const photoContent = document.getElementById("photo-content");
-  const globalNav = document.querySelector("div.wrapper > header:first-of-type");
+  const globalNav = document.querySelector(".banner");
   const pageNav = document.getElementById("page-navigation");
 
   if (img.complete) {
@@ -211,8 +211,8 @@ function navigateToPage(url) {
       // Update navigation without replacing the element
       const newPageNavigation = doc.getElementById("page-navigation");
       const existingPageNavigation = document.getElementById("page-navigation");
-      if(newPageNavigation && existingPageNavigation) {
-           existingPageNavigation.innerHTML = newPageNavigation.innerHTML;
+      if (newPageNavigation && existingPageNavigation) {
+        existingPageNavigation.innerHTML = newPageNavigation.innerHTML;
       }
 
 
@@ -256,7 +256,7 @@ function navigateToPage(url) {
     if (nextPageUrl) {
       navigateToPage(nextPageUrl);
     }
-      event.preventDefault(); // Prevent default link behavior
+    event.preventDefault(); // Prevent default link behavior
   });
 })();
 
@@ -286,8 +286,8 @@ let toggleCleanup
  */
 window.addEventListener("load", () => {
 
-  if(toggleCleanup && typeof toggleCleanup === 'function'){
-     toggleCleanup()
+  if (toggleCleanup && typeof toggleCleanup === 'function') {
+    toggleCleanup()
   }
 
   const imgFrame = document.getElementById("photo-image");
