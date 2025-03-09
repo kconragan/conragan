@@ -68,7 +68,7 @@ If everything is set up correctly, Mastodon will automatically detect the `rel=
 - **Wait:** It can sometimes take a while (even a few hours) for Mastodon to update its information. Be patient, and check again later.
 - **Typos:** Double-check for any typos in the URL you added to your Mastodon profile and in the `href` attribute of the `rel="me"` link on your website.
 - **Other Attributes (Rare Issue):** In some _rare_ cases, other attributes on the `<a>` tag _might_ interfere with Mastodon's ability to recognize the `rel="me"` link. If you're still having trouble, try temporarily removing any other attributes (like `aria-label` or `class`) from the link, just to see if that helps.
-- **Use the Debugger:** The Mastodon Link Debugger (made by Rob Cannon) is a fantastic tool for diagnosing issues: [https://mastodon-link-debugger.vercel.app/](https://www.google.com/search?q=https://www.google.com/url%3Fsa%3DE%26source%3Dgmail%26q%3Dhttps://mastodon-link-debugger.vercel.app/). Enter your Mastodon profile URL, and it will show you any problems it finds.
+- **Use the Debugger:** The Mastodon Link Debugger (made by Rob Cannon) is a fantastic tool for diagnosing issues: [https://mastodon-link-debugger.vercel.app/](https://mastodon-link-debugger.vercel.app/). Enter your Mastodon profile URL, and it will show you any problems it finds.
 
 Hopefully by now you’ve got a green checkmark! With our identify verified, we can move to making ourselves discoverable. To do this, we will set up what is known as WebFinger
 
