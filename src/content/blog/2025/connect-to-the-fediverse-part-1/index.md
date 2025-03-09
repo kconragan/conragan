@@ -2,19 +2,24 @@
 title: Connecting Your Website To The Fediverse - Part 1
 date: 2025-03-02T20:34:00
 type: post
-isPublic: false
+isPublic: true
 ---
-In 2025, many people (myself included) are looking at how they can break-free of dependencies on large tech companies owning their data and providing the algorithms that decide what content they see. Enter the Fediverse. A catchy way to refer to a common set of protocols (really, [ActivityPub](https://activitypub.rocks)) [^1] and an independent but connected set of servers that can speak to each other through these protocols, thus creating a “decentralized” content ecosystem.
+I’m exploring ways to make my online presence feel more like [my home](https://nazhamid.com/journal/your-site-is-a-home/) and less like a rented space on someone else’s platform. The convenience of the big social networks came with a hidden cost: a loss of ownership and control. This _loss_ is something long-time blogger and technologist [Matt Webb captured in a recent post commemorating 25(!) years of publishing to his site](https://interconnected.org/home/2025/02/19/reflections):
 
-This weekend, I took my first steps to getting my website connected to the Fediverse, [Mastodon](https://joinmastodon.org) in this case (currently one of the most popular) I'll be documenting my progress in a series of blog posts, because even as someone comfortable with technology, I found it surprisingly challenging to get started. There's a lot of information out there, but it's often fragmented and assumes a level of technical expertise. While each individual step is relatively simple, figuring out _which_ steps to take, and in what order, can be surprisingly confusing.
+> Slowly, slowly, the web was taken over by platforms. Your feeling of success is based on your platform’s algorithm, which may not have your interests at heart. Feeding your words to a platform is a vote for its values, whether you like it or not. And they roach-motel you by owning your audience, making you feel that it’s a good trade because you get “discovery.”
 
-In this first post, we’ll be focusing on two key steps to establishing your presence on the Fediverse: verifying that your website and Mastodon profile belong to the same person, and setting up your domain as your Fediverse handle
+Enter the Fediverse. Not just an alternative to the centralized model; it represents a fundamental change. It’s not about building another centralized platform, but about fostering a modular, interconnected network. Built on open protocols like ActivityPub, the Fediverse allows independent servers to communicate directly. This serves the purpose of still facilitating content discovery and relationship connections while empowering individuals to own and control their own identities and data.
+
+It’s a return to the original spirit of the open web while embracing what we learned about discovery and reach of the large platforms.
+
+Hoping to pass it forward, I thought I would document my progress in a series of posts because, even as someone comfortable with technology (though not an expert), I found getting started challenging. (I have lots of thoughts on how broken the UX is for the open-web, but that’s for another post). There’s a lot of information out there, but it’s often fragmented and assumes a level of technical expertise. While each individual step is simple, figuring out _which_ steps to take, and in what order, can be confusing.
+
+To start we’ll focus on two key steps in establishing presence in the Fediverse:
+
+1. Connecting your website and Mastodon profile so the Fediverse knows they are the same person.
+2. Setting up your domain for use as your Fediverse handle.
 
 ## Claiming Your Fediverse Identity With rel="me" Links
-
-Everyone is familiar with a *handle*. You have one. It’s the username you pick when you sign up for anything from Gmail to Instagram to Twitter. If you are lucky or creative, you have a consistent handle across various services. More or less, mine is *kconragan* wherever I go. I’m lucky in that I don’t believe there is another Kai Conragan on the planet. At least, I’ve never heard of or met one. If you are one, say hi! But I digress.
-
-There are at least two problems with relying on a 3rd party for your handle. First, no matter what you do, it might just not be available because someone has already chosen it. That sucks for keeping your identity consistent and _discoverable_ across services. Second, that service owns your handle. It’s not just *kconragan*, it’s *kconragan* on Instagram. Or Twitter, or YouTube, or TikTok. You get the point.
 
 If you’ve signed up for Mastodon, you already picked a handle, one that is tied to the Mastodon server you registered with (for example, `mastodon.social` is the most popular server at the time of this writing).  The good news is that the Fediverse is designed for cross-server communication. Even if someone registers on a different Mastodon server (like `mastodon.lol`), they can still follow and interact with you.
 
@@ -38,7 +43,7 @@ This tells the Fediverse, "This website belongs to the same person as this Masto
 
 ### Step 2: Linking _From_ Your Mastodon Profile _To_ Your Website
 
-Now we need to do the reverse: link _from_ your Mastodon profile _back_ to your website. This creates a _two-way_verification, confirming that you control both.
+Now we need to do the reverse: link _from_ your Mastodon profile _back_ to your website. This creates a *two-way verification*, confirming that you control both.
 
 1. **Edit Your Mastodon Profile:**
     - Go to your Mastodon profile on your instance (e.g., [`https://mastodon.social/@kconragan`](https://mastodon.social/@kconragan)).
@@ -63,6 +68,8 @@ That’s it, time to check if it worked!
 
 If everything is set up correctly, Mastodon will automatically detect the `rel="me"` links and display a green checkmark next to your website link in your profile. This is the visual confirmation that the connection has been made. Huzzah!
 
+![screenshot](mastodon-verified.webp)
+
 **Troubleshooting:**
 
 - **Wait:** It can sometimes take a while (even a few hours) for Mastodon to update its information. Be patient, and check again later.
@@ -74,4 +81,70 @@ Hopefully by now you’ve got a green checkmark! With our identify verified, we 
 
 ## Telling The Fediverse You Exist
 
-[^1]: really cool stuff here guys
+The `rel="me"` links establish _verification_ – they prove you control both your website and your Mastodon profile. The next step is being able to use your own domain as your handle on the Fediverse. This allows you to use your own domain as your Fediverse handle, providing a consistent and memorable identity across services. Instead of relying on a platform-specific username, people can find you using the same address as your website.
+
+For this, we need WebFinger. WebFinger is a simple protocol: it's a file, named `webfinger` (no extension), placed in a specific directory on your site – `.well-known` – resulting in a full path of `domain.com/.well-known/webfinger`. This file, formatted as JSON, acts as a directory lookup, translating your `you@domain.com` address into the underlying Mastodon account information.
+
+The key pieces of information the `webfinger` file contains are:
+
+- **`subject`:** This is your Fediverse address, in a special format that starts with `acct:`. For now, we'll use your _actual_Mastodon address (e.g., `acct:yourusername@yourmastodon.instance`).
+- **`links`:** This is a list of places where Mastodon can find more information about you.
+- **`rel="self"`**: This points to your official profile.
+
+### Create Your WebFinger
+
+To get you started, here is my WebFinger:
+
+```
+{
+  "subject": "acct:kconragan@mastodon.social",
+  "aliases": [
+    "https://mastodon.social/@kconragan",
+    "https://mastodon.social/users/kconragan"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://mastodon.social/@kconragan"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://mastodon.social/users/kconragan"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://mastodon.social/authorize_interaction?uri={uri}"
+    }
+  ]
+}
+```
+
+
+Copy the code above, make the necessary replacements, and save the file as `webfinger` (with no extension) in your `static/.well-known/` directory. Once you've created and saved the `webfinger` file, deploy your changes to your website.
+
+### Testing Your WebFinger Setup
+
+After deploying, you need to verify that your WebFinger file is working correctly. Here are two ways to do that:
+
+**1. Using `curl` (Command Line):**
+
+Open your terminal and run the following command, replacing `yourusername` and `domain.com` with your _actual_information:
+
+```
+curl -H "Accept: application/jrd+json" 'https://domain.com/.well-known/webfinger?resource=acct:yourusername@domain.com
+```
+
+If everything is working, you should see output similar to the JSON code you pasted above, confirming that your WebFinger file is accessible and returns the correct information.
+
+**2. Using an Online WebFinger Lookup Tool:**
+
+You can also use a web service like [https://webfinger.net/lookup/](https://www.google.com/url?sa=E&source=gmail&q=https://webfinger.net/lookup/). Enter your full Fediverse address (`yourusername@domain.com`) and click "Lookup." The tool should show you the information from your WebFinger file.
+
+
+### Success
+
+With your WebFinger file in place and your rel="me" links configured, your website is now discoverable on Mastodon using your custom domain handle. Anyone searching for `username@domain.com` should be able to find your profile. If you've made it this far, congrats! You now have the foundation for managing your own identity across the Fediverse. If you have any questions, don't hesitate to email me (or better yet, reach out on Mastodon!). 
+
+
