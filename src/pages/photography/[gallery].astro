@@ -1,0 +1,128 @@
+---
+import { Picture } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import imageData from '../../image-data.json';
+
+/**
+ * Generates static paths for each photography gallery.
+ *
+ * @returns {Promise<Array<{params: {gallery: string}, props: {gallery: any}}>>} An array of objects, defining route params and gallery props.
+ */
+export async function getStaticPaths() {
+  const galleries = await getCollection("photography");
+
+  return galleries.map((gallery) => ({
+    params: { gallery: gallery.data.name },
+    props: { gallery },
+  }));
+}
+
+const { gallery } = Astro.props;
+
+/**
+ * Imports all images from the photography galleries.
+ */
+const allImages = import.meta.glob<{ default: ImageMetadata }>('../../photography/*/*.{jpg,jpeg,png,gif}', { eager: true });
+
+/**
+ * Represents the structure of an image object.
+ */
+interface GalleryImage {
+  src: ImageMetadata;
+  alt: string;
+  slug: string;
+}
+
+/**
+ * Retrieves the images belonging to a specific gallery.
+ *
+ * @param {string} galleryName The name of the gallery.
+ * @returns {GalleryImage[]} An array of image objects.
+ */
+function getGalleryImages(galleryName: string): GalleryImage[] {
+  const imageList: GalleryImage[] = [];
+
+  for (const path in allImages) {
+    if (path.includes(`../../photography/${galleryName}/`) && !path.includes('cover.jpg')) {
+      const imageModule = allImages[path];
+      const parts = path.split('/');
+      const slugWithExtension = parts.pop();
+      const slug = slugWithExtension ? slugWithExtension.split('.')[0] : '';
+      const filename = parts.pop();
+      const alt = filename ? filename.split('.')[0] : "Gallery Image";
+
+      imageList.push({
+        src: imageModule.default,
+        alt: alt || "Gallery Image",
+        slug: slug,
+      });
+    }
+  }
+
+  return imageList;
+}
+
+const imageList = getGalleryImages(gallery.data.name);
+
+/**
+ * Determines the orientation of an image (portrait or landscape).
+ *
+ * @param {number} width The width of the image.
+ * @param {number} height The height of the image.
+ * @returns {'portrait' | 'landscape'} 'landscape' if width > height, otherwise 'portrait'.
+ */
+function getImageOrientation(width: number, height: number): 'portrait' | 'landscape' {
+    return width > height ? 'landscape' : 'portrait';
+}
+
+// Define a type for the imageData JSON
+interface ImageData {
+  [key: string]: {
+    Headline?: {
+      description?: string;
+    };
+    [key: string]: any; // Allow other properties
+  };
+}
+
+const typedImageData: ImageData = imageData; // Type cast imageData to ImageData
+
+---
+
+<Base title={gallery.data.title + ' Photography | Kai Conragan'} body='gallery-grid'>
+  <h1 class="gallery-title">{gallery.data.title}</h1>
+  <ul id="photos" class="photo-grid">
+    {imageList.map((image) => {
+      const imagePath = `src/photography/${gallery.data.name}/${image.slug}.jpg`;
+      // Use the typed imageData and optional chaining to safely access the description.
+      const imageEXIF = typedImageData[imagePath];
+      const orientation = getImageOrientation(image.src.width, image.src.height);
+
+      return (
+        <li class={`photo-item ${orientation}`}>
+          <a href={`/photography/${gallery.data.name}/${image.slug}/`}>
+            <figure class="image-title">
+              <Picture src={image.src}
+                       width="600"
+                       formats={['avif', 'webp']}
+                       alt={imageEXIF?.Headline?.description ?? 'View'} />
+              <figcaption>
+                {imageEXIF?.Headline?.description ?? 'View Image'}
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+  <script>
+    /**
+     * Initializes the Macy grid layout for the photo gallery.
+     */
+    import { initializeMacy } from '../../scripts/macy';
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeMacy();
+    });
+</script>
+</Base>

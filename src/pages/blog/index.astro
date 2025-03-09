@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { format, parseISO } from 'date-fns';
+import YouTubeEmbed from '../../components/YouTubeEmbed.astro'
+
+function extractYearAndSlug(id: string): { slug: string } {
+  const parts = id.split('/');
+  const slug = parts[0] + '/' + parts[1] + '/';
+  return { slug };
+}
+
+// Change this to control the number of posts show at /blog/
+const MAX_POSTS = 20;
+
+// Use a conditional filter to include all posts in development
+// and only public posts in production
+const posts = (await getCollection(
+  'blog',
+  (post) => import.meta.env.DEV || post.data.isPublic === true
+))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, MAX_POSTS);
+
+---
+
+<Base title="Kai Conragan - Latest Blog Posts">
+  <hr class="glyph lighthouse" />
+  <ol class="h-feed">
+  {
+    posts.map(async (post) => {
+    const { slug } = extractYearAndSlug(post.id);
+    const { Content } = await post.render()
+
+    // Date formatting
+    let isoDate = '';
+    let humanFriendlyDate = '';
+    try {
+      isoDate = post.data.date.toISOString();
+      humanFriendlyDate = format(post.data.date, 'MMMM dd, yyyy');
+    } catch (error) {
+      console.error('Error formatting date:', post.data.date, error);
+      // Handle the error, e.g., set a default date or skip the post
+    }
+    return (
+    <li>
+      <article class="h-entry">
+        <h2 class="title p-name">
+          {post.data.type === 'post' && (
+            <a href={`/blog/${slug}`} title="View post">{post.data.title}</a>
+          )}
+          {post.data.type === 'link' && (
+          <a href={post.data.link}
+            class="u-url external-link"
+            title="Visit external link">
+            <span class="icon">&gt;</span>{post.data.title}
+            </a>
+          )}
+        </h2>
+        <section class="e-content">
+          <Content />
+        </section>
+        <p class="post-metadata">
+          <time class="dt-published" datetime={ isoDate }>{ humanFriendlyDate }</time>
+          &middot; <a href={`/blog/${slug}`} title="Permanent link to post">Permalink #</a>
+        </p>
+      </article>
+      <hr class="glyph sea" />
+    </li>
+    )
+    })
+  }
+  </ol>
+</Base>

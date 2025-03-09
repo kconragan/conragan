@@ -1,0 +1,993 @@
+
+/**
+ * @file  Global stylesheet for Kai Conragan's (that's me) website, encompassing
+ *        layout, typography, color theming, and responsive design.
+ *
+ *  * This stylesheet is organized into the following sections (roughly):
+ *   - Fonts: Defines custom font faces for the website.
+ *   - Variables: Declares CSS variables for color theming and layout consistency.
+ *   - Base Styles: Sets global styles for the body and wrapper elements.
+ *   - Header & Global Navigation: Styles the header and navigation menus.
+ *   - Footer: Styles the footer area.
+ *   - Main Content: Styles the main content area.
+ *   - Links: Styles anchor links.
+ *   - Homepage: Styles the homepage layout and elements.
+ *   - Blog Posts: Styles blog post layouts and elements.
+ *   - Single Image View: Styles the individual image view.
+ *   - Gallery Grid: Styles the image gallery grid.
+ *
+ *   It also provides theming support and responsive design for various
+ *   screen sizes and orientations.
+
+ */
+
+/* FONTS ----------------------------------------------------- */
+
+@font-face {
+  font-family: 'ShipsWhistle';
+  src: url('/fonts/ShipsWhistle.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block; /* Ensures font is not rendered invisibly while loading */
+}
+
+@font-face {
+  font-family: 'ShipsWhistleBold';
+  src: url('/fonts/ShipsWhistle-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: bold;
+  font-display: block; /* Ensures font is not rendered invisibly while loading */
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("/fonts/WorkSans-Variable.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block; /* Ensures font is not rendered invisibly while loading */
+}
+
+/* VARIABLES -------------------------------------------------- */
+
+:root {
+  /* Color Palette */
+  --c-white: #fff; /* Utility color: pure white */
+  --c-light: #f8f9fa;
+  --c-light-gray: #dee2e6;
+  --c-med-gray: #545c64;
+  --c-med-dark-gray: #25292d;
+  --c-dark: #1b1e22;
+  --c-black: #000;
+  --mobile-gutters: 1.6rem;
+
+  /* Theme Support (Light & Dark) */
+  color-scheme: light dark; /* Allow browser to handle default light/dark preference based on system settings */
+
+  /* Default Theme Colors (Light) */
+  --color-bg: var(--c-light);  /* Default background color for light theme */
+  --color-text: var(--c-dark);  /* Default text color for light theme */
+  --color-links: #33739e;
+}
+
+/* Dark Theme Overrides */
+:root[data-color-scheme="dark"] {
+  --color-bg: var(--c-dark);   /* Override background color for dark theme */
+  --color-text: var(--c-light);  /* Override text color for dark theme */
+  --color-links: #f08aa1;   /* Override link color for dark theme */
+}
+
+/* Theme Toggle Styles */
+#theme-toggle {
+  vertical-align: middle;
+  height: 22px;
+  width: 24px;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+
+  /* Store the SVGs in variables */
+  --svg-light: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M192 64C86 64 0 150 0 256S86 448 192 448l192 0c106 0 192-86 192-192s-86-192-192-192L192 64zm192 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>');
+  --svg-dark: url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M384 128c70.7 0 128 57.3 128 128s-57.3 128-128 128l-192 0c-70.7 0-128-57.3-128-128s57.3-128 128-128l192 0zM576 256c0-106-86-192-192-192L192 64C86 64 0 150 0 256S86 448 192 448l192 0c106 0 192-86 192-192zM192 352a96 96 0 1 0 0-192 96 96 0 1 0 0 192z"/></svg>');
+  background-color: var(--color-text); /* Initial color of the theme toggle */
+
+}
+
+#theme-toggle.light { /* Style for light mode: displays the light mode SVG */
+  mask: var(--svg-light);
+}
+
+#theme-toggle.dark {  /* Style for dark mode: displays the dark mode SVG */
+  mask: var(--svg-dark);
+}
+
+#theme-toggle span {
+  display: none; /* Hides the text label for accessibility (handled via aria labels) */
+}
+
+.theme-options {
+  display: none; /* Hides the theme options element */
+}
+
+/* BASE STYLES ------------------------------------------------ */
+
+html, body, { height : 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+  background-color: var(--color-bg); /* Sets background color using the theme variable */
+  color: var(--color-text); /* Sets text color using the theme variable */
+}
+
+/* HEADER & GLOBAL NAVIGATION --------------------------------- */
+
+header[role=banner] {
+  z-index: 1; /* Ensures the header is above other elements */
+  position: relative;
+  display: flex;
+  height: 6rem;
+  padding: 0 var(--mobile-gutters);
+  font-family: "ShipsWhistleBold", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-feature-settings: 'ss01'; /* Enables stylistic sets for the font */
+  font-size: 18px;
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+  display: block;
+}
+
+.global-nav {
+  justify-content: flex-end; /* Aligns navigation items to the right */
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+  margin-right: 30px;
+  list-style: none; /* Removes bullet points from the list */
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.global-nav li {
+  text-align: center;
+  margin: 1.5em auto;  /* Adjust vertical spacing */
+  margin-left: 36px;
+}
+
+@media screen and (max-width: 500px) {
+  header[role=banner] {
+    flex-direction: column;
+    height: 8rem;
+
+    .logo {
+      flex: 0;
+      font-size: 36px;
+      margin-top: 1.6rem;
+      margin-bottom: 0;
+      text-transform: none;
+    }
+  }
+
+  .global-nav li {
+    margin-top: .75rem;
+    margin-left: 16px;
+  }
+
+  .global-nav li:first-child {
+    margin-left: 0;
+  }
+}
+
+/* FOOTER ----------------------------------------------------- */
+
+footer[role=contentinfo] {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "worksans", sans-serif;
+  font-size: smaller;
+}
+
+/* hide footer on photo page so it doesn't conflict
+ * with the photo pagination and toggle
+ * TODO: figure out a better solution */
+.single-photo footer[role=contentinfo] {
+  display: none; /* Hides footer on single photo page */
+}
+
+/* MAIN CONTENT ------------------------------------------------ */
+
+main[role=main] {
+  margin: 0 var(--mobile-gutters);  
+}
+
+/* LINKS ------------------------------------------------------ */
+
+a {
+  color: var(--color-text);
+  text-decoration-color: transparent; /* Initially hide the text decoration */
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 1px;
+  text-decoration-style: dotted;
+  transition: all 0.4s;  /* Smooth transition for all properties */
+}
+
+/*Microformats for semantic HTML with decorative link underline effects */
+.h-entry:hover a {
+  text-decoration-color: var(--color-text); /* Show underline on hover for h-entry */
+}
+
+.h-entry:hover a:hover {
+  color: var(--color-links); /* Change color on hover for h-entry links */
+  text-decoration-style: solid; /* Change underline style on hover */
+  text-decoration-color: var(--color-links);
+}
+
+
+/* HOMEPAGE --------------------------------------------------- */
+
+
+.home main[role=main] {
+  display: flex;
+  flex: 2;
+  min-block-size: 50ch;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about h1,
+.about h2 {
+  margin: 0;
+}
+
+.about h1 {
+  font-size: 48px;
+}
+
+.about h2 {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.about h2 a {
+  color: var(--color-links);
+}
+.avatar img {
+  display: inline-block;
+  width: 10rem;
+  height: auto;
+  border-radius: 50%;
+}
+
+.about ul {
+  list-style: none;
+  margin: 1rem 0 2rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.about li {
+  display: inline-block;
+  position: relative;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}
+
+.icon-link {
+  text-transform: uppercase;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.6rem;
+  color: var(--color-text); /* Set the initial color */
+  transition: color 0.2s ease; /* Transition the color property */
+}
+
+.icon-link svg {
+  display: inline-block;
+}
+
+
+/* In order for animation to work must use currentColor
+ * from parent so CSS can control beginning and end state
+ * thanks to this codepen:
+ * https://codepen.io/cssence/pen/JKozYq */
+.icon-link path {
+  fill: currentColor; /* Allows the path to inherit the color from the parent */
+}
+
+.icon-link:hover {
+  color: var(--color-links); /* Change the color on hover */
+}
+
+/* BLOG POSTS ------------------------------------------------- */
+
+.h-feed,
+.single-article .container {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  max-width: 70ch;
+}
+
+.single-article .h-entry {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.h-entry {
+  font-family: "WorkSans", sans-serif;
+
+  .post-metadata {
+    font-size: smaller;
+    opacity: 0.6;
+  }
+
+  .post-metadata:hover {
+    opacity: 1;
+    transition: all 0.2s;
+  }
+}
+
+hr.glyph {
+  margin-top: 1em;
+  font-size: 48px;
+  text-align: center;
+  border: 0;
+  overflow: visible;
+  color: var(--color-text);
+  font-family: "ShipsWhistle";
+  font-feature-settings: 'ss01'; /* Enables stylistic sets for the font */
+  font-weight: normal;
+}
+
+hr.glyph.sea:after {
+  content: "_";
+}
+
+hr.glyph.lighthouse:after {
+  content: "!";
+}
+
+hr.glyph.anchor:after {
+  content: "&";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "ShipsWhistleBold", serif;
+}
+
+.single-article .h-entry header {
+  margin-bottom: 16vh;
+}
+
+@media only screen and (width < 800px) {
+  h1 {
+    font-size: 2.4rem;
+    margin-top: 1rem;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .single-article .h-entry header {
+    margin-bottom: 8vh;
+  }
+
+  .h-feed .h-entry p,
+  .h-feed .h-entry li,
+  .single-article .h-entry p,
+  .single-article .h-entry li {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+.h-entry img {
+  max-width: 100%;
+  height: auto;
+}
+
+.h-entry .title .icon {
+  float: left;
+  margin-right: 0.6rem;
+  font-feature-settings: 'ss01'; /* Enables stylistic sets for the font */
+  font-size: smaller;
+}
+
+
+.single-article .h-entry a {
+  text-decoration-color: var(--color-text);
+}
+
+.single-article .dt-published {
+  font-size: smaller;
+}
+
+.h-entry blockquote,
+.h-entry .astro-code {
+  padding: 0 3vw;
+  font-size: smaller;
+}
+
+.h-entry .astro-code {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+
+/**************************************************************************
+ * SINGLE IMAGE VIEW
+ **************************************************************************/
+
+/* --- Gallery List --- */
+
+:root {
+  --gallery-gap: 1.5em;
+  --gallery-items-per-row: 1; /* Default number of items per row */
+}
+
+.gallery-grid main[role=main] {
+  display: flex;
+
+  .container {
+    margin: auto;
+    flex: 2;
+  }
+}
+
+/* used on both /photography/ and /photography/[gallery]/
+ * to render title overlay on image-title */
+figure.image-title {
+  position: relative; /* Allows absolute positioning of the figcaption */
+
+    figcaption {
+    position: absolute; /* Positions the caption over the image */
+    z-index: 1;
+    display: flex;
+    align-items: center; /* Vertically centers the text */
+    justify-content: center; /* Horizontally centers the text */
+    font-family: "ShipsWhistleBold", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0 1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.2);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    text-shadow: 1px 1px 12px #000;
+    transition: all .2s ease-out; /* Smooth transition for all properties */
+  }
+}
+
+.photo-item figure.image-title figcaption {
+  opacity: 0; /* Hides the caption by default */
+}
+
+.photo-item a:hover figure.image-title figcaption {
+  opacity: 1; /* Shows caption on hover */
+}
+
+.gallery-navigation {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.gallery-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gallery-gap);
+}
+
+.gallery-item {
+  flex: 0 0
+  calc(
+    (100% - (var(--gallery-gap) * (var(--gallery-items-per-row) - 1))) /
+      var(--gallery-items-per-row)
+  );
+
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover; /* Ensures the image covers the entire area */
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+
+  figcaption {
+  }
+
+  :hover figcaption {
+    background-color: transparent;
+  }
+}
+
+/* Responsive media queries for gallery layout */
+@media only screen and (width >= 1024px) {
+  .gallery-list {
+    --gallery-items-per-row: 3; /* 3 items per row on larger screens */
+  }
+}
+
+@media only screen and (768px < width < 1024px) {
+  .gallery-list {
+    --gallery-items-per-row: 2; /* 2 items per row on medium screens */
+  }
+}
+
+@media only screen and (540px < width < 768px) {
+  .gallery-list {
+    --gallery-items-per-row: 1; /* 1 item per row on smaller screens */
+  }
+}
+
+/* --- Photo Image --- */
+
+/* holds the single large photograph */
+#photo-image {
+  opacity: 0;
+  transition:
+    opacity 200ms ease-in-out,
+    transform 0.3s; /* Add a smooth transition for opacity */
+  text-align: center;
+  width: 100%; /* Ensure the container takes full width */
+  transform: translateY(0); /* Initial state: no vertical translation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add a class to move the image up when #photo-content is active */
+.is-active #photo-image {
+  transform: translateY(-50%); /* Adjust this value as needed */
+}
+
+#photo-image img {
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  border: 2px solid var(--fg-color-medium-dark);
+  transition: border 03s;
+  object-fit: contain; /* Ensure the image fits inside the container */
+}
+
+#photo-image.fade-in {
+  opacity: 1;
+}
+
+/* --- Photo Content --- */
+
+/* Holds photo title and exif content */
+#photo-content {
+  transform: translateY(
+    calc(100% - 6rem)
+  ); /* Hide most of the container initially and ensure this matches #page-navigation */
+}
+
+dl#exif {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 0;
+  font-family: "worksans", sans-serif;
+  font-size: smaller;
+}
+
+dl#exif dt {
+  margin-right: 0.5em;
+}
+
+dl#exif dt::after {
+  margin-right: 0.5em; /* Space after colon */
+}
+
+dl#exif dd {
+  margin: 0; /* Remove default margin */
+}
+
+dl#exif dd::after {
+  content: " |"; /* Add separator */
+  margin-right: 0.5em;
+  font-weight: normal;
+}
+
+dl#exif dd:last-of-type::after {
+  content: ""; /* Add period to last item */
+}
+
+/* --- Page Navigation --- */
+
+#page-navigation {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem; /* Set the fixed height here */
+}
+
+.navigation-hint {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* button element that toggles showing / hiding exif */
+.project-content-toggle {
+  position: relative;
+  float: left;
+  height: 24px;
+  width: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+  outline: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition: color 0.3s;
+  transition: 0.1s transform;
+}
+
+.project-content-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* CSS to construct a visual '+' symbol */
+.project-content-toggle::before,
+.project-content-toggle::after {
+  background-color: var(--color-text);
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 0.3s;
+}
+
+.project-content-toggle::before {
+  height: 9px;
+  width: 24px;
+}
+
+.project-content-toggle::after {
+  height: 24px;
+  width: 8px;
+  transition:
+    height 0.3s,
+    width 0.3s;
+}
+
+.project-content-toggle:hover::before,
+.project-content-toggle:hover::after {
+  background-color: light-dark(var(--c-black), var(--c-white));
+}
+
+.is-active .project-content-toggle::after {
+  height: 8px;
+  width: 24px;
+}
+
+#metadata-toggle {
+  transform: scale(90%);
+}
+
+a.paginate {
+  margin: 0 0 0 1rem;
+  display: inline-block;
+  font-family: "ShipsWhistleBold", sans-serif;
+  font-size: 48px;
+  line-height: 1.4;
+  height: 24px;
+  color: light-dark(
+  var(--fg-color-medium-light),
+  var(--bg-color-light)
+  ) !important;
+  transition: 0.1s color transform ease-out;
+  font-feature-settings: "ss01";
+  span {
+    display: none;
+  }
+}
+
+a.paginate.left:before {
+  content: "<";
+}
+a.paginate.right:before {
+  content: ">";
+}
+a.paginate:hover {
+  color: light-dar(var(--color-black), var(--color-white)) !important;
+  text-decoration: none;
+}
+
+a.paginate.right:hover {
+  transform: translate(4px, 0);
+}
+a.paginate.left:hover {
+  transform: translate(-4px, 0);
+}
+
+a.paginate.disabled {
+  opacity: 0.1;
+  cursor: default;
+}
+
+a.paginate.disabled:hover {
+  transform: none;
+}
+
+.navigation-hint {
+  font-size: 0.6rem;
+  font-family: "worksans", sans-serif;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+#page-navigation:hover .navigation-hint {
+  opacity: 0.4;
+}
+
+
+.u-visually-hide {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* --- Photo Content --- */
+
+#photo-content {
+  height: 50%; /* Adjust this if your content height is different */
+  left: 0;
+  line-height: 120%;
+  position: fixed;
+  bottom: 0; /* Position from the bottom */
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+  width: 100%;
+  padding: 0 2rem; /* Add some padding */
+}
+
+/* Adjust this padding if needed */
+.is-active #photo-content {
+  transform: translateY(0); /* Show the container when active */
+}
+
+
+/* Media queries for different screen sizes */
+
+/* Small screens */
+@media (max-width: 600px) {
+  #photo-content .photo-title {
+    font-size: 18px;
+  }
+
+  #photo-image img {
+    border-width: 2px;
+  }
+
+  #photo-image.image-portrait {
+    max-height: 70vh;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #photo-image img {
+    border-width: 4px;
+  }
+
+  #photo-content .photo-title {
+    font-size: 20px;
+  }
+
+  #photo-image.image-portrait {
+    margin: 0 auto;
+  }
+  #photo-image.image-landscape {
+    margin: 0 auto;
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #photo-image.image-landscape {
+    margin: 0 auto;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  #photo-content .photo-title {
+    font-size: 24px;
+  }
+
+  #photo-image img {
+    border-width: 6px;
+  }
+
+  #photo-image.image-landscape {
+    margin: 0 auto;
+  }
+}
+
+/* Landscape orientation on devices with small viewport heights */
+@media (max-height: 500px) and (orientation: landscape) {
+  #photo-image.image-landscape {
+    margin: 0 auto;
+  }
+
+  #photo-image.image-portrait {
+    margin: 0 auto;
+  }
+
+  #photo-image.image-portrait img {
+    max-height: 80vh;
+  }
+}
+
+/* Large screens AND Landscape Orientation */
+@media (min-width: 1025px) and (orientation: landscape) {
+  #photo-image.image-portrait {
+    margin: 0 auto;
+  }
+}
+
+/* --- Metadata --- */
+
+#photo-content .photo-title {
+  font-size: 2.4rem;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#photo-content .camera-make {
+  font-size: 1.2rem;
+  line-height: 1;
+  margin: 0 0 1em 0;
+}
+
+#photo-content .photo-title.fade-in {
+  opacity: 1;
+}
+
+#metadata em {
+  font-style: normal;
+}
+
+
+/* Gallery grid */
+
+.gallery-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image-grid .photo-grid {
+  margin: 0 2rem;
+}
+
+#photos {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-gap: 2px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.photo-item.landscape {
+  grid-column: span 1;
+}
+
+.photo-item.portrait {
+  grid-row: span 2;
+}
+
+.photo-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ABOUT ----------------------------------------------------- */
+
+.bio main[role=main] {
+  margin: 1rem auto;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#about {
+  margin: 0 auto;
+  max-width: 35rem;
+
+  .flex-column {
+
+    img {
+      max-width: 15rem;
+      display: block;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  .flex-column:first-child {
+    /* width: 25%; */
+    /* margin-right: 10%; */
+  }
+
+  p {
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  p, li {
+    font-family: "worksans", sans-serif;
+  }
+
+  p a,
+  li a {
+    color: var(--color-links);
+  }
+
+}
+
+@media screen @media (min-width:1280px)
+#about .flex-column img {
+     max-width: 10rem;
+}
+
+.youtube-embed-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: calc(100% /(var(--aspect-ratio)));
+    overflow: hidden;
+    background-color:black
+}
+
+.h-entry .youtube-embed-container {
+  margin-top: 2rem;
+}
+
+.youtube-embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  galleries: CollectionEntry<"photography">[];
+}
+
+const { galleries } = Astro.props;
+---
+
+<ul>
+  {galleries.map((gallery) => (
+    <li>
+      <a href={`/photography/${gallery.slug}/`}>
+        <Image src={`/src/content/photography/${gallery.slug}/cover.jpg`} alt={`Cover image for ${gallery.data.title}`} width={200} />
+        {gallery.data.title}
+      </a>
+    </li>
+  ))}
+</ul>

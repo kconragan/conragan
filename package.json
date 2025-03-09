@@ -1,0 +1,24 @@
+{
+  "name": "astro-conragan",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "concurrently \"astro dev\" \"nodemon -L --watch 'src/photography/**' --ext 'jpg,jpeg,png,gif' --exec 'node image-exif.js'\"",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.1.0",
+    "astro": "^5.3.1",
+    "date-fns": "^4.1.0",
+    "exifreader": "^4.26.1",
+    "macy": "^2.5.1",
+    "shufflejs": "^6.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  }
+}

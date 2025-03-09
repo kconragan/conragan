@@ -1,0 +1,199 @@
+---
+// Imports and Type Definitions
+import Base from '../../../layouts/Base.astro';
+import { Image } from 'astro:assets';
+import imageData from '../../../image-data.json';
+
+/**
+ * @typedef {object} Props
+ * @property {string} gallery - The gallery name.
+ * @property {string} slug - The image slug (filename without extension).
+ * @property {string} imagePath - The relative path to the image.
+ * @property {{ default: ImageMetadata }} imageModule - The imported image module from import.meta.glob.
+ */
+interface Props {
+  gallery: string;
+  slug: string;
+  imagePath: string;
+  imageModule: { default: ImageMetadata };
+}
+
+/**
+ * Formats a date string into "Month Year" format.
+ * @param {string} dateString - The date string to format (e.g., "2023:10:26 12:00:00").
+ * @returns {string} The formatted date string (e.g., "October 2023") or an empty string if the input is invalid.
+ */
+const formatDate = (dateString: string): string => {
+  if (!dateString) return '';
+
+  const [datePart] = dateString.split(' ');
+  const dateParts = datePart.split(':');
+
+  if (dateParts.length !== 3) return '';
+
+  const [year, month, _day] = dateParts.map(Number);
+
+  const monthIndex = month - 1;
+
+  if (isNaN(year) || isNaN(monthIndex) || monthIndex < 0 || monthIndex > 11) return '';
+  const date = new Date(year, monthIndex);
+
+  const monthName = date.toLocaleString('default', { month: 'long' });
+  return `${monthName} ${year}`;
+};
+
+// Define a type for the imageData JSON
+interface ImageDataEntry {
+    Headline?: { description?: string };
+    Make?: { description?: string };
+    Model?: { description?: string };
+    LensModel?: { description?: string };
+    FocalLength?: { description?: string };
+    FNumber?: { description?: string };
+    ExposureTime?: { description?: string };
+    ISOSpeedRatings?: { description?: string };
+    DateTimeOriginal?: { value: string[] };
+    [key: string]: any; // Allow other properties
+}
+
+interface ImageData {
+    [key: string]: ImageDataEntry;
+}
+
+// Narrowly type the import, then expand to any
+const typedImageData: ImageData = imageData as any;
+
+/**
+ * Generates static routes for each image in the photography directory using Astro's getStaticPaths.
+ * @returns {Promise<{params: {gallery: string, slug: string}, props: Props}[]>} An array of objects containing the parameters and properties for each static route.
+ */
+export async function getStaticPaths() {
+  const allImages = import.meta.glob<{ default: ImageMetadata }>('../../../photography/*/*.{jpg,jpeg,png,gif}');
+
+  const paths = [];
+
+  for (const path in allImages) {
+    if (Object.hasOwn(allImages, path)) {
+      const parts = path.split('/');
+      const gallery = parts.at(-2) as string;
+      const slugWithExtension = parts.at(-1) as string;
+      const slug = slugWithExtension?.split('.')[0] || '';
+      const transformedImagePath = path.replace('../../../', 'src/');
+
+      paths.push({
+        params: { gallery, slug },
+        props: {
+          gallery,
+          slug,
+          imagePath: transformedImagePath,
+          imageModule: await allImages[path](),
+        } satisfies Props
+      });
+    }
+  }
+
+  return paths;
+}
+
+// Component Logic
+const { gallery, slug, imagePath, imageModule } = Astro.props;
+
+// Retrieve image EXIF data using the imagePath.
+const imageEXIF = typedImageData[imagePath];
+
+//Get paths to sibling images.
+const galleryImagePaths = Object.keys(typedImageData).filter(path => path.startsWith(`src/photography/${gallery}`));
+
+// Find the index of the current image in the gallery
+const currentIndex = galleryImagePaths.indexOf(imagePath);
+
+//Get paths to sibling images.
+const prevImagePath = galleryImagePaths[currentIndex - 1] || null;
+const nextImagePath = galleryImagePaths[currentIndex + 1] || null;
+---
+
+<Base title="" body="single-photo">
+  {imageEXIF && (
+  <div id="photo-container">
+    <div id="photo-image" class="fade-in">
+      <Image loading="eager" src={imageModule.default} alt={imageEXIF.Headline?.description ?? slug } width="1200"/>
+    </div>
+    <div id="photo-content">
+      <nav id="page-navigation">
+        <button id="toggleMetadata" class="project-content-toggle">
+          <span class="u-visually-hide">Info</span>
+        </button>
+        <span class="navigation-hint">Use keyboard arrows to navigate</span>
+        <div class="pagination-links">
+          <a
+            id="prevLink"
+            class={`paginate arrow left ${prevImagePath ? '' : 'disabled'}`}
+            href={prevImagePath ? `/photography/${gallery}/${prevImagePath.split('/').pop()?.split('.')[0]}/` : null}
+            aria-disabled={!prevImagePath}
+          >
+            <span>Previous</span>
+          </a>
+
+          <a
+            id="nextLink"
+            class={`paginate arrow right ${nextImagePath ? '' : 'disabled'}`}
+            href={nextImagePath ? `/photography/${gallery}/${nextImagePath.split('/').pop()?.split('.')[0]}/` : null}
+            aria-disabled={!nextImagePath}
+          >
+            <span>Next</span>
+          </a>
+        </div>
+      </nav>
+      <h1 class="photo-title fade-in">{imageEXIF.Headline?.description ?? slug}</h1>
+      <h2 class="camera-make">
+        {imageEXIF.Make?.description ? (
+          <>
+            {imageEXIF.Make.description}
+            {imageEXIF.Model?.description ? (
+              <>
+                / {imageEXIF.Model.description}
+                {imageEXIF.LensModel?.description ? ` ${imageEXIF.LensModel.description}` : null}
+              </>
+            ) : null}
+          </>
+        ) : null}
+      </h2>
+      <dl id="exif">
+        {imageEXIF.FocalLength && imageEXIF.FocalLength.description && (
+          <>
+            <dt>Focal Length</dt>
+            <dd>{imageEXIF.FocalLength.description}</dd>
+          </>
+        )}
+        {imageEXIF.FNumber && imageEXIF.FNumber.description && (
+          <>
+            <dt>Aperture</dt>
+            <dd>{imageEXIF.FNumber.description}</dd>
+          </>
+        )}
+        {imageEXIF.ExposureTime && imageEXIF.ExposureTime.description && (
+          <>
+            <dt>Exposure Time</dt>
+            <dd>{imageEXIF.ExposureTime.description}</dd>
+          </>
+        )}
+        {imageEXIF.ISOSpeedRatings && imageEXIF.ISOSpeedRatings.description && (
+          <>
+            <dt>ISO</dt>
+            <dd>{imageEXIF.ISOSpeedRatings.description}</dd>
+          </>
+        )}
+        {imageEXIF.DateTimeOriginal && imageEXIF.DateTimeOriginal.value && (
+          <>
+            <dt>Captured</dt>
+            <dd>{formatDate(imageEXIF.DateTimeOriginal.value[0])}</dd>
+          </>
+        )}
+      </dl>
+    </div>
+  </div>
+  )}
+  <script>
+    import "../../../scripts/gallery.js";
+  </script>
+</Base>

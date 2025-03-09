@@ -1,0 +1,67 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import YouTubeEmbed from '../../../components/YouTubeEmbed.astro'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => {
+    const parts = post.slug.split('/');
+    let year, slug;
+
+    if (parts.length > 1) {
+      // Year/slug format
+      year = parts[0];
+      slug = parts.slice(1).join('/');
+    } else {
+      // Single-slug format - Handle this as a default case.
+      year = 'default'; // Or another default year
+      slug = parts[0];
+    }
+
+    return {
+      params: { year, slug },
+      props: { post, year, slug }, // Pass year and slug as props
+    };
+  });
+}
+
+const { post, year, slug } = Astro.props;
+const { Content } = await post.render();
+
+---
+
+<Base title={post.data.title + ' | Kai Conragan'} body="single-article">
+  <article class="h-entry">
+    <header>
+      <div class="post-meta">
+        <div class="date">
+          <span class="posted-on">
+            <time class="dt-published" datetime="2025-02-23T11:33:40-08:00">
+              February 23, 2025
+            </time>
+          </span>
+      </div>
+      <div class="post-title">
+          {post.data.type === 'post' && (
+            <h1 class="title p-name">
+              {post.data.title}
+            </h1>
+          )}
+          {post.data.type === 'link' && (
+            <h1 class="title p-name">
+              <a href={post.data.link}
+                class="u-url external-link">
+                <span class="icon">&gt;</span>{post.data.title}
+              </a>
+            </h1>
+          )}
+      </div>
+        <hr class="glyph sea" />
+    </header>
+    <section class="post-content e-content">
+      <Content />
+    </section>
+  </article>
+  <hr class="glyph anchor" />
+</Base>
