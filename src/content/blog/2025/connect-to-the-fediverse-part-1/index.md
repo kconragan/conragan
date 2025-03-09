@@ -95,7 +95,7 @@ The key pieces of information the `webfinger` file contains are:
 
 To get you started, here is my WebFinger:
 
-```
+```javascript
 {
   "subject": "acct:kconragan@mastodon.social",
   "aliases": [
@@ -132,7 +132,7 @@ After deploying, you need to verify that your WebFinger file is working correctl
 
 Open your terminal and run the following command, replacing `yourusername` and `domain.com` with your _actual_information:
 
-```
+```bash
 curl -H "Accept: application/jrd+json" 'https://domain.com/.well-known/webfinger?resource=acct:yourusername@domain.com
 ```
 
