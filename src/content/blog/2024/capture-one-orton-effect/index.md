@@ -13,32 +13,33 @@ Creating this effect digitally is trivial in applications like Adobe Photoshop. 
 
 This article guides you through the steps required to create the Orton Effect in Capture One, allowing you to bring that ethereal touch to your landscape photographs without ever needing to step into Photoshop.
 
-# Step-by-Step Breakdown
+## Step-by-Step Breakdown
 
-## Step 1: Create a Filled Adjustment Layer
+### Step 1: Create a Filled Adjustment Layer
 
 In the Layers panel, click the "+" icon and select "Filled Adjustment Layer" -> "Exposure." This creates a virtual layer dedicated to modifying the highlights and adding the dreamy glow.
 
-## Step 2: Boost Brightness, Contrast, and Saturation
+### Step 2: Boost Brightness, Contrast, and Saturation
 
 Within the adjustment layer, increase the Brightness by 15, Contrast by 10, and Saturation by 10. This initial boost lays the groundwork for the dreamy effect.
 Blur and Soften:
 
-## Step 3: Utilize the Clarity tool to add the characteristic blur.
+### Step 3: Utilize the Clarity tool to add the characteristic blur.
 
 Set Clarity to -100 and Texture to -50. This introduces a gentle blur, softening the details and enhancing the dreamy quality.
 Target the Highlights:
 
-## Step 4: Apply Luma Range to target highlights
+### Step 4: Apply Luma Range to target highlights
 
 To ensure the glow effect primarily affects the highlights, apply a Luma Range to the adjustment layer. Click the small dropdown menu next to "Exposure" within the layer and choose "Luma Range." Adjust the slider to target a range of 75 to 255. This concentrates the glow on the brighter areas, creating a more natural and balanced appearance.
 
-# Optional Step 5: Save as a Style
+## Optional Step 5: Save as a Style
 
 Click the three dots in the top right corner of the adjustment layer and choose "Save as Style." Name your style descriptively, like "Orton Effect." This allows you to easily apply the same effect to other images with a single click.
 
-# Power Tip: Save as a Custom Brush
+## Power Tip: Save as a Custom Brush
 
 Right-click on the adjustment layer and choose "Convert to Brush." This transforms the entire effect into a brush tool.
 Adjust the brush size and feathering to your preference. You can now selectively paint the Orton Effect onto specific areas of your image, offering even greater control and artistic expression.
+
 By following these simple steps, you can unlock the magic of the Orton Effect in Capture One. Remember, experimentation is key! Adjust the values to find your own creative balance and personal aesthetic preferences. As you explore this technique, don't hesitate to save your frequently used styles and brushes for a streamlined and efficient workflow.
