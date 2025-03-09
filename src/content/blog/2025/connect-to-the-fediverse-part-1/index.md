@@ -27,7 +27,7 @@ This tells the Fediverse, "This website belongs to the same person as this Masto
 1. **Decide Where to Put the Link:** Choose where on your website you want to link to your Mastodon profile. Common places are your homepage, "About" page, footer, or a dedicated social links section. The most important thing is that it's on a page that you'll link to from your Mastodon profile in the next step.
    
 2. **Add the `rel="me"` Link:** Add a normal link to your Mastodon profile, but include the `rel="me"` attribute. Here's the HTML code:
-    ```
+    ```html
     <a rel="me" href="https://mastodon.social/@yourusername">Mastodon</a>
     ```
     Replace `https://mastodon.social/@yourusername` with your Mastodon profile URL.
