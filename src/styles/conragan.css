@@ -323,6 +323,16 @@ a {
 
 .h-entry {
   font-family: "WorkSans", sans-serif;
+
+  .post-metadata {
+    font-size: smaller;
+    opacity: 0.6;
+  }
+
+  .post-metadata:hover {
+    opacity: 1;
+    transition: all 0.2s;
+  }
 }
 
 hr.glyph {
@@ -385,6 +395,13 @@ h1, h2, h3, h4, h5, h6 {
 .h-entry img {
   max-width: 100%;
   height: auto;
+}
+
+.h-entry .title .icon {
+  float: left;
+  margin-right: 0.6rem;
+  font-feature-settings: 'ss01'; /* Enables stylistic sets for the font */
+  font-size: smaller;
 }
 
 

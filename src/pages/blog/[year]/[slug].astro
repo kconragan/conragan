@@ -43,7 +43,19 @@ const { Content } = await post.render();
           </span>
       </div>
       <div class="post-title">
-        <h1 class="title p-name"> {post.data.title} </h1>
+          {post.data.type === 'post' && (
+            <h1 class="title p-name">
+              {post.data.title}
+            </h1>
+          )}
+          {post.data.type === 'link' && (
+            <h1 class="title p-name">
+              <a href={post.data.link}
+                class="u-url external-link">
+                <span class="icon">&gt;</span>{post.data.title}
+              </a>
+            </h1>
+          )}
       </div>
         <hr class="glyph sea" />
     </header>

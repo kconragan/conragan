@@ -46,13 +46,23 @@ const posts = (await getCollection(
     <li>
       <article class="h-entry">
         <h2 class="title p-name">
-          <a href={`/blog/${slug}/`}>{post.data.title}</a>
+          {post.data.type === 'post' && (
+            <a href={`/blog/${slug}`} title="View post">{post.data.title}</a>
+          )}
+          {post.data.type === 'link' && (
+          <a href={post.data.link}
+            class="u-url external-link"
+            title="Visit external link">
+            <span class="icon">&gt;</span>{post.data.title}
+            </a>
+          )}
         </h2>
         <section class="e-content">
           <Content />
         </section>
-        <p class="date">
+        <p class="post-metadata">
           <time class="dt-published" datetime={ isoDate }>{ humanFriendlyDate }</time>
+          &middot; <a href={`/blog/${slug}`} title="Permanent link to post">Permalink #</a>
         </p>
       </article>
       <hr class="glyph sea" />
