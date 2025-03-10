@@ -1,8 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-import { format, parseISO } from 'date-fns';
-import YouTubeEmbed from '../../components/YouTubeEmbed.astro'
+import { format } from 'date-fns';
 
 function extractYearAndSlug(id: string): { slug: string } {
   const parts = id.split('/');

@@ -6,8 +6,6 @@ import imageData from '../../image-data.json';
 
 /**
  * Generates static paths for each photography gallery.
- *
- * @returns {Promise<Array<{params: {gallery: string}, props: {gallery: any}}>>} An array of objects, defining route params and gallery props.
  */
 export async function getStaticPaths() {
   const galleries = await getCollection("photography");

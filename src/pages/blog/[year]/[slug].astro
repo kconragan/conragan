@@ -1,7 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
-import { getCollection } from 'astro:content';
-import YouTubeEmbed from '../../../components/YouTubeEmbed.astro'
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -10,23 +9,26 @@ export async function getStaticPaths() {
     let year, slug;
 
     if (parts.length > 1) {
-      // Year/slug format
       year = parts[0];
       slug = parts.slice(1).join('/');
     } else {
-      // Single-slug format - Handle this as a default case.
-      year = 'default'; // Or another default year
+      year = 'default';
       slug = parts[0];
     }
 
     return {
       params: { year, slug },
-      props: { post, year, slug }, // Pass year and slug as props
+      props: { post }, // Pass the entire post object
     };
   });
 }
 
-const { post, year, slug } = Astro.props;
+// Correct type definition for Astro.props
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props as Props;
 const { Content } = await post.render();
 
 ---
@@ -37,12 +39,17 @@ const { Content } = await post.render();
       <div class="post-meta">
         <div class="date">
           <span class="posted-on">
-            <time class="dt-published" datetime="2025-02-23T11:33:40-08:00">
-              February 23, 2025
+            <time class="dt-published" datetime={post.data.date.toISOString()}>
+              {post.data.date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
             </time>
           </span>
-      </div>
-      <div class="post-title">
+        </div>
+        </div>
+        <div class="post-title">
           {post.data.type === 'post' && (
             <h1 class="title p-name">
               {post.data.title}
@@ -50,14 +57,14 @@ const { Content } = await post.render();
           )}
           {post.data.type === 'link' && (
             <h1 class="title p-name">
-              <a href={post.data.link}
-                class="u-url external-link">
-                <span class="icon">&gt;</span>{post.data.title}
+              <a href={post.data.link} class="u-url external-link" target="_blank" rel="noopener noreferrer">
+                {post.data.title} ↗
               </a>
             </h1>
           )}
-      </div>
-        <hr class="glyph sea" />
+        </div>
+
+      <hr class="glyph sea" />
     </header>
     <section class="post-content e-content">
       <Content />
