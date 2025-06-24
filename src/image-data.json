@@ -66282,6 +66282,837 @@
       "description": "JPEG"
     }
   },
+  "src/photography/landscape/sentinel-balance.jpg": {
+    "Bits Per Sample": {
+      "value": 8,
+      "description": "8"
+    },
+    "Image Height": {
+      "value": 2048,
+      "description": "2048px"
+    },
+    "Image Width": {
+      "value": 1536,
+      "description": "1536px"
+    },
+    "Color Components": {
+      "value": 3,
+      "description": "3"
+    },
+    "Subsampling": {
+      "value": [
+        [
+          1,
+          17,
+          0
+        ],
+        [
+          2,
+          17,
+          1
+        ],
+        [
+          3,
+          17,
+          1
+        ]
+      ],
+      "description": "YCbCr4:4:4 (1 1)"
+    },
+    "JFIF Version": {
+      "value": 257,
+      "description": "1.1"
+    },
+    "Resolution Unit": {
+      "value": 1,
+      "description": "inches"
+    },
+    "XResolution": {
+      "id": 282,
+      "value": [
+        72,
+        1
+      ],
+      "description": "72"
+    },
+    "YResolution": {
+      "id": 283,
+      "value": [
+        72,
+        1
+      ],
+      "description": "72"
+    },
+    "JFIF Thumbnail Width": {
+      "value": 0,
+      "description": "0px"
+    },
+    "JFIF Thumbnail Height": {
+      "value": 0,
+      "description": "0px"
+    },
+    "Thumbnail": {
+      "Compression": {
+        "id": 259,
+        "value": 6,
+        "description": 6
+      },
+      "JPEGInterchangeFormat": {
+        "id": 513,
+        "value": 1208,
+        "description": 1208
+      },
+      "JPEGInterchangeFormatLength": {
+        "id": 514,
+        "value": 2802,
+        "description": 2802
+      },
+      "type": "image/jpeg",
+      "image": {},
+      "base64": "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"
+    },
+    "Make": {
+      "value": "FUJIFILM",
+      "attributes": {},
+      "description": "FUJIFILM"
+    },
+    "Model": {
+      "value": "X-T3",
+      "attributes": {},
+      "description": "X-T3"
+    },
+    "ResolutionUnit": {
+      "id": 296,
+      "value": 2,
+      "description": "inches"
+    },
+    "Software": {
+      "id": 305,
+      "value": [
+        "Capture One Macintosh"
+      ],
+      "description": "Capture One Macintosh"
+    },
+    "DateTime": {
+      "id": 306,
+      "value": [
+        "2025:06:23 16:55:38"
+      ],
+      "description": "2025:06:23 16:55:38"
+    },
+    "Artist": {
+      "id": 315,
+      "value": [
+        "Kai Conragan"
+      ],
+      "description": "Kai Conragan"
+    },
+    "Copyright": {
+      "id": 33432,
+      "value": [
+        "                                                                                                                                                                                                                                                               "
+      ],
+      "description": "                                                                                                                                                                                                                                                               "
+    },
+    "Exif IFD Pointer": {
+      "id": 34665,
+      "value": 484,
+      "description": 484
+    },
+    "ExposureTime": {
+      "id": 33434,
+      "value": [
+        1,
+        250
+      ],
+      "description": "1/250"
+    },
+    "FNumber": {
+      "id": 33437,
+      "value": [
+        9,
+        1
+      ],
+      "description": "f/9"
+    },
+    "ExposureProgram": {
+      "id": 34850,
+      "value": 1,
+      "description": "Manual"
+    },
+    "ISOSpeedRatings": {
+      "id": 34855,
+      "value": 160,
+      "description": 160
+    },
+    "SensitivityType": {
+      "id": 34864,
+      "value": 1,
+      "description": "Standard Output Sensitivity"
+    },
+    "ExifVersion": {
+      "id": 36864,
+      "value": [
+        48,
+        50,
+        51,
+        48
+      ],
+      "description": "0230"
+    },
+    "DateTimeOriginal": {
+      "id": 36867,
+      "value": [
+        "2021:04:05 16:45:18"
+      ],
+      "description": "2021:04:05 16:45:18"
+    },
+    "DateTimeDigitized": {
+      "id": 36868,
+      "value": [
+        "2021:04:05 16:45:18"
+      ],
+      "description": "2021:04:05 16:45:18"
+    },
+    "ShutterSpeedValue": {
+      "id": 37377,
+      "value": [
+        7965784,
+        1000000
+      ],
+      "description": "1/250"
+    },
+    "ApertureValue": {
+      "id": 37378,
+      "value": [
+        633985,
+        100000
+      ],
+      "description": "9.00"
+    },
+    "BrightnessValue": {
+      "id": 37379,
+      "value": [
+        929,
+        100
+      ],
+      "description": "9.29"
+    },
+    "ExposureBiasValue": {
+      "id": 37380,
+      "value": [
+        0,
+        100
+      ],
+      "description": "0"
+    },
+    "MaxApertureValue": {
+      "id": 37381,
+      "value": [
+        400,
+        100
+      ],
+      "description": "4.00"
+    },
+    "MeteringMode": {
+      "id": 37383,
+      "value": 3,
+      "description": "Spot"
+    },
+    "LightSource": {
+      "id": 37384,
+      "value": 0,
+      "description": "Unknown"
+    },
+    "Flash": {
+      "id": 37385,
+      "value": 0,
+      "description": "Flash did not fire"
+    },
+    "FocalLength": {
+      "id": 37386,
+      "value": [
+        1000,
+        100
+      ],
+      "description": "10 mm"
+    },
+    "PixelXDimension": {
+      "id": 40962,
+      "value": 1536,
+      "description": 1536
+    },
+    "PixelYDimension": {
+      "id": 40963,
+      "value": 2048,
+      "description": 2048
+    },
+    "FocalPlaneXResolution": {
+      "id": 41486,
+      "value": [
+        61669376,
+        32768
+      ],
+      "description": "1882"
+    },
+    "FocalPlaneYResolution": {
+      "id": 41487,
+      "value": [
+        61669376,
+        32768
+      ],
+      "description": "1882"
+    },
+    "FocalPlaneResolutionUnit": {
+      "id": 41488,
+      "value": 3,
+      "description": "centimeters"
+    },
+    "SensingMethod": {
+      "id": 41495,
+      "value": 2,
+      "description": "One-chip color area sensor"
+    },
+    "FileSource": {
+      "id": 41728,
+      "value": 3,
+      "description": "DSC"
+    },
+    "SceneType": {
+      "id": 41729,
+      "value": 1,
+      "description": "A directly photographed image"
+    },
+    "CustomRendered": {
+      "id": 41985,
+      "value": 0,
+      "description": "Normal process"
+    },
+    "ExposureMode": {
+      "id": 41986,
+      "value": 1,
+      "description": "Manual exposure"
+    },
+    "WhiteBalance": {
+      "id": 41987,
+      "value": 0,
+      "description": "Auto white balance"
+    },
+    "FocalLengthIn35mmFilm": {
+      "id": 41989,
+      "value": 15,
+      "description": 15
+    },
+    "SceneCaptureType": {
+      "id": 41990,
+      "value": 0,
+      "description": "Standard"
+    },
+    "Sharpness": {
+      "id": 41994,
+      "value": 0,
+      "description": "Normal"
+    },
+    "SubjectDistanceRange": {
+      "id": 41996,
+      "value": 0,
+      "description": "Unknown"
+    },
+    "BodySerialNumber": {
+      "id": 42033,
+      "value": [
+        "8DA10481"
+      ],
+      "description": "8DA10481"
+    },
+    "LensSpecification": {
+      "id": 42034,
+      "value": [
+        [
+          1000,
+          100
+        ],
+        [
+          1000,
+          100
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "description": "10-10 mm f/4"
+    },
+    "LensMake": {
+      "value": "FUJIFILM",
+      "attributes": {},
+      "description": "FUJIFILM"
+    },
+    "LensModel": {
+      "value": "Fujifilm Fujinon XF10-24mmF4 R OIS",
+      "attributes": {},
+      "description": "Fujifilm Fujinon XF10-24mmF4 R OIS"
+    },
+    "LensSerialNumber": {
+      "value": "87A05384",
+      "attributes": {},
+      "description": "87A05384"
+    },
+    "Coded Character Set": {
+      "id": 346,
+      "value": [
+        27,
+        37,
+        71
+      ],
+      "description": "UTF-8"
+    },
+    "Record Version": {
+      "id": 512,
+      "value": [
+        0,
+        4
+      ],
+      "description": "4"
+    },
+    "Category": {
+      "value": "bw rocks",
+      "attributes": {},
+      "description": "bw rocks"
+    },
+    "Date Created": {
+      "id": 567,
+      "value": [
+        50,
+        48,
+        50,
+        49,
+        48,
+        52,
+        48,
+        53
+      ],
+      "description": "2021-04-05"
+    },
+    "Time Created": {
+      "id": 572,
+      "value": [
+        49,
+        54,
+        52,
+        53,
+        49,
+        56
+      ],
+      "description": "16:45:18"
+    },
+    "Digital Creation Date": {
+      "id": 574,
+      "value": [
+        50,
+        48,
+        50,
+        49,
+        48,
+        52,
+        48,
+        53
+      ],
+      "description": "2021-04-05"
+    },
+    "Digital Creation Time": {
+      "id": 575,
+      "value": [
+        49,
+        54,
+        52,
+        53,
+        49,
+        56
+      ],
+      "description": "16:45:18"
+    },
+    "By-line": {
+      "id": 592,
+      "value": [
+        75,
+        97,
+        105,
+        32,
+        67,
+        111,
+        110,
+        114,
+        97,
+        103,
+        97,
+        110
+      ],
+      "description": "Kai Conragan"
+    },
+    "Headline": {
+      "value": "Sentinels -  Balance",
+      "attributes": {},
+      "description": "Sentinels -  Balance"
+    },
+    "Copyright Notice": {
+      "id": 628,
+      "value": [
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32
+      ],
+      "description": "                                                                                                                                "
+    },
+    "about": {
+      "value": "",
+      "attributes": {},
+      "description": ""
+    },
+    "CreateDate": {
+      "value": "2021-04-05T16:45:18",
+      "attributes": {},
+      "description": "2021-04-05T16:45:18"
+    },
+    "ModifyDate": {
+      "value": "2025-06-23T16:55:38-07:00",
+      "attributes": {},
+      "description": "2025-06-23T16:55:38-07:00"
+    },
+    "MetadataDate": {
+      "value": "2025-06-23T16:55:38-07:00",
+      "attributes": {},
+      "description": "2025-06-23T16:55:38-07:00"
+    },
+    "CreatorTool": {
+      "value": "Capture One Macintosh",
+      "attributes": {},
+      "description": "Capture One Macintosh"
+    },
+    "SerialNumber": {
+      "value": "8DA10481",
+      "attributes": {},
+      "description": "8DA10481"
+    },
+    "LensInfo": {
+      "value": "1000/100 1000/100 4/1 4/1",
+      "attributes": {},
+      "description": "1000/100 1000/100 4/1 4/1"
+    },
+    "Lens": {
+      "value": "Fujifilm Fujinon XF10-24mmF4 R OIS",
+      "attributes": {},
+      "description": "Fujifilm Fujinon XF10-24mmF4 R OIS"
+    },
+    "FlashCompensation": {
+      "value": "0/100",
+      "attributes": {},
+      "description": "0/100"
+    },
+    "DateCreated": {
+      "value": "2021-04-05T16:45:18",
+      "attributes": {},
+      "description": "2021-04-05T16:45:18"
+    },
+    "LegacyIPTCDigest": {
+      "value": "A1ED782291A37327544F8CF793B45836",
+      "attributes": {},
+      "description": "A1ED782291A37327544F8CF793B45836"
+    },
+    "InstanceID": {
+      "value": "xmp.iid:39f3567a-3245-46ec-a368-af9c4b5f7e04",
+      "attributes": {},
+      "description": "xmp.iid:39f3567a-3245-46ec-a368-af9c4b5f7e04"
+    },
+    "DocumentID": {
+      "value": "xmp.did:39f3567a-3245-46ec-a368-af9c4b5f7e04",
+      "attributes": {},
+      "description": "xmp.did:39f3567a-3245-46ec-a368-af9c4b5f7e04"
+    },
+    "OriginalDocumentID": {
+      "value": "xmp.did:39f3567a-3245-46ec-a368-af9c4b5f7e04",
+      "attributes": {},
+      "description": "xmp.did:39f3567a-3245-46ec-a368-af9c4b5f7e04"
+    },
+    "rights": {
+      "value": [
+        {
+          "value": "                                                                                                                                                                                                                                                               ",
+          "attributes": {
+            "lang": "x-default"
+          },
+          "description": "                                                                                                                                                                                                                                                               "
+        }
+      ],
+      "attributes": {},
+      "description": "                                                                                                                                                                                                                                                               "
+    },
+    "creator": {
+      "value": [
+        {
+          "value": "Kai Conragan",
+          "attributes": {},
+          "description": "Kai Conragan"
+        }
+      ],
+      "attributes": {},
+      "description": "Kai Conragan"
+    },
+    "History": {
+      "value": [
+        {
+          "action": {
+            "value": "saved",
+            "attributes": {},
+            "description": "saved"
+          },
+          "instanceID": {
+            "value": "xmp.iid:39f3567a-3245-46ec-a368-af9c4b5f7e04",
+            "attributes": {},
+            "description": "xmp.iid:39f3567a-3245-46ec-a368-af9c4b5f7e04"
+          },
+          "when": {
+            "value": "2025-06-23T16:55:38-07:00",
+            "attributes": {},
+            "description": "2025-06-23T16:55:38-07:00"
+          },
+          "softwareAgent": {
+            "value": "Adobe Photoshop 26.7 (Macintosh)",
+            "attributes": {},
+            "description": "Adobe Photoshop 26.7 (Macintosh)"
+          },
+          "changed": {
+            "value": "/",
+            "attributes": {},
+            "description": "/"
+          }
+        }
+      ],
+      "attributes": {},
+      "description": "action: saved; instanceID: xmp.iid:39f3567a-3245-46ec-a368-af9c4b5f7e04; when: 2025-06-23T16:55:38-07:00; softwareAgent: Adobe Photoshop 26.7 (Macintosh); changed: /"
+    },
+    "CreatorContactInfo": {
+      "value": {
+        "CiEmailWork": {
+          "value": "kai.conragan@gmail.com",
+          "attributes": {},
+          "description": "kai.conragan@gmail.com"
+        },
+        "CiUrlWork": {
+          "value": "https://conragan.com",
+          "attributes": {},
+          "description": "https://conragan.com"
+        }
+      },
+      "attributes": {},
+      "description": "CreatorWorkEmail: kai.conragan@gmail.com; CreatorWorkUrl: https://conragan.com"
+    },
+    "Preferred CMM type": {
+      "value": "Lino",
+      "description": "Lino"
+    },
+    "Profile Version": {
+      "value": "2.1.0",
+      "description": "2.1.0"
+    },
+    "Profile/Device class": {
+      "value": "mntr",
+      "description": "Display Device profile"
+    },
+    "Color Space": {
+      "value": "RGB ",
+      "description": "RGB "
+    },
+    "Connection Space": {
+      "value": "XYZ ",
+      "description": "XYZ "
+    },
+    "ICC Profile Date": {
+      "value": "1998-02-09T06:49:00.000Z",
+      "description": "1998-02-09T06:49:00.000Z"
+    },
+    "ICC Signature": {
+      "value": "acsp",
+      "description": "acsp"
+    },
+    "Primary Platform": {
+      "value": "MSFT",
+      "description": "Microsoft"
+    },
+    "Device Manufacturer": {
+      "value": "IEC ",
+      "description": "IEC "
+    },
+    "Device Model Number": {
+      "value": "sRGB",
+      "description": "sRGB"
+    },
+    "Rendering Intent": {
+      "value": 0,
+      "description": "Perceptual"
+    },
+    "Profile Creator": {
+      "value": "HP  ",
+      "description": "HP  "
+    },
+    "ICC Copyright": {
+      "value": "Copyright (c) 1998 Hewlett-Packard C",
+      "description": "Copyright (c) 1998 Hewlett-Packard C"
+    },
+    "ICC Description": {
+      "value": "sRGB IEC61966-2.1",
+      "description": "sRGB IEC61966-2.1"
+    },
+    "ICC Device Manufacturer for Display": {
+      "value": "IEC http://www.iec.ch",
+      "description": "IEC http://www.iec.ch"
+    },
+    "ICC Device Model Description": {
+      "value": "IEC 61966-2.1 Default RGB colour space - sRGB",
+      "description": "IEC 61966-2.1 Default RGB colour space - sRGB"
+    },
+    "ICC Viewing Conditions Description": {
+      "value": "Reference Viewing Condition in IEC61966-2.1",
+      "description": "Reference Viewing Condition in IEC61966-2.1"
+    },
+    "Technology": {
+      "value": "CRT ",
+      "description": "CRT "
+    },
+    "FileType": {
+      "value": "jpeg",
+      "description": "JPEG"
+    }
+  },
   "src/photography/landscape/shed-with-a-view-ii.jpg": {
     "Bits Per Sample": {
       "value": 8,
