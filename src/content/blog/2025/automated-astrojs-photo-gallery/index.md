@@ -2,7 +2,7 @@
 title: Building An Automated Photo Gallery With Astro.js
 date: 2025-08-24T10:34:00-10:36
 type: post
-isPublic: false
+isPublic: true
 ---
 
 When I rebuilt my website using Astro.js, a primary goal was to make publishing my photos easier. Because of the ease of publishing on social media platforms, I had fallen into the trap of only posting there. Inevitably, when you post on social media, you evaluate your work through the lens of engagement. This is not my goal. I create photos for myself. For the sake of the creative process. And to watch my progress over time.
