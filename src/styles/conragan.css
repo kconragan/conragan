@@ -335,6 +335,19 @@ a {
   }
 }
 
+.feed-footer {
+  text-align: center;
+  font-family: "ShipsWhistle", sans-serif;
+  font-feature-settings: 'ss01'; /* Enables stylistic sets for the font */
+  line-height: 48px;
+  font-size: 36px;
+  margin-bottom: 2em;
+
+  a:after {
+    content: " >";
+  }
+}
+
 hr.glyph {
   margin-top: 1em;
   font-size: 48px;
@@ -424,6 +437,33 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
   padding-top: 1vh;
   padding-bottom: 1vh;
+}
+
+/* Archive styles */
+
+.h-feed.archive {
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+
+  h2 + p {
+    margin-top: 0;
+  }
+
+  hr.glyph {
+    opacity: 0.08;
+    border: 1px solid var(--color-text);
+    font-size: 24px;
+
+  }
+
+  li:last-child hr.glyph {
+    visibility: hidden;
+    margin-bottom: 2rem;
+  }
 }
 
 
