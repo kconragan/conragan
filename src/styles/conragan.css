@@ -1031,3 +1031,24 @@ a.paginate.disabled:hover {
   height: 100%;
   border: 0;
 }
+
+/* CHARTS ----------------------------------------------------- */
+
+.chart-container {
+  /* Default height for small screens (mobile-first) */
+  height: 350px; 
+}
+
+/* Medium screens (matches your gallery and photo breakpoints) */
+@media (min-width: 768px) {
+  .chart-container {
+    height: 450px;
+  }
+}
+
+/* Large screens (matches your gallery and photo breakpoints) */
+@media (min-width: 1025px) {
+  .chart-container {
+    height: 550px;
+  }
+}

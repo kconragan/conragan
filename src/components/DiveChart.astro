@@ -1,0 +1,74 @@
+---
+// src/components/DiveChart.astro
+interface DiveProfilePoint {
+  time: number;
+  depth: number;
+  temp: number | null;
+  pressure: number | null;
+}
+
+interface Props {
+  post: {
+    dive_profile: DiveProfilePoint[];
+  }
+}
+
+const { post } = Astro.props;
+const profileData = post.dive_profile;
+---
+
+<div class="chart-container relative">
+  <canvas 
+    id="diveProfileChart"
+    data-profile={JSON.stringify(profileData)}
+  ></canvas>
+</div>
+
+<div class="chart-controls mt-4 text-center">
+    <div id="unitToggle" class="unit-toggle">
+        <button data-unit="metric" class="active">Metric</button>
+        <button data-unit="imperial">Imperial</button>
+    </div>
+    <button id="downloadChartBtn" class="download-btn">
+        Download Chart
+    </button>
+</div>
+
+<script>
+  import "/src/scripts/diveChartInitializer.js";
+</script>
+
+<style>
+  .chart-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .unit-toggle {
+    display: inline-flex;
+    border: 1px solid var(--c-med-gray);
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  .unit-toggle button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .unit-toggle button.active {
+    background-color: var(--c-med-gray);
+    color: var(--c-light);
+  }
+  .download-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--c-med-gray);
+    background-color: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+  }
+</style>
