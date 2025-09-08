@@ -1,4 +1,6 @@
 ---
+// src/layouts/Base.astro
+
 interface Props {
     title: string;
     description?: string;
@@ -9,7 +11,6 @@ import '../styles/reset.css';
 import '../styles/typography.css';
 import '../styles/prism.css';
 import '../styles/conragan.css';
-
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -18,31 +19,80 @@ import '../styles/conragan.css';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
+
     <meta name="p:domain_verify" content="5e42b91db4d05707d32a9894e67423c5">
     <meta name="robots" content="noai">
     <meta name="robots" content="index, follow">
-
-    <!-- le Google -->
     <meta name="author" content="Kai Conragan">
     <meta name="keywords" content="landscape photography, sports photography, wildlife photogrpahy, bird photography, design, travel, ux, user experience">
     <meta name="description" content={description}>
 
-    <!-- fediverse -->
     <link rel="me" href="https://mastodon.social/@kconragan">
     <link rel="canonical" href="https://conragan.com/">
     <meta name="fediverse:creator" content="@kconragan@mastodon.social">
 
-    <!-- Brand -->
     <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
     <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
 
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
-</head>
+    
+    <script is:inline>
+      const themeKey = 'theme';
+
+      // Function to apply the theme.
+      function applyTheme(theme) {
+        document.documentElement.dataset.colorScheme = theme;
+        localStorage.setItem(themeKey, theme);
+      }
+
+      // **STEP 1: Runs instantly**
+      // Add 'js-loading' class to hide the header via CSS for the fade-in effect.
+      document.documentElement.classList.add('js-loading');
+
+      // Determine and set the color theme immediately to prevent content flash.
+      const initialTheme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem(themeKey)) {
+          return localStorage.getItem(themeKey);
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+      applyTheme(initialTheme);
+
+      // **STEP 2: Runs after the page is ready**
+      const setupInteractions = () => {
+        // **THE FIX**: Remove the loading class, which triggers the CSS fade-in transition.
+        document.documentElement.classList.remove('js-loading');
+
+        const themeToggle = document.getElementById('theme-toggle');
+        if (!themeToggle) return;
+
+        // Set the correct initial icon on the toggle button.
+        const currentTheme = document.documentElement.dataset.colorScheme;
+        themeToggle.classList.add(currentTheme);
+        themeToggle.setAttribute('aria-pressed', currentTheme === 'dark');
+
+        // Add the click listener for future theme switches.
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = document.documentElement.dataset.colorScheme;
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          applyTheme(newTheme);
+          
+          themeToggle.classList.remove('light', 'dark');
+          themeToggle.classList.add(newTheme);
+          themeToggle.setAttribute('aria-pressed', newTheme === 'dark');
+        });
+      };
+
+      document.addEventListener('DOMContentLoaded', setupInteractions);
+    </script>
+  </head>
   <body class={body}>
     <header role="banner" class="banner">
         <a href="/" class="logo">Kai <span class="surname">Conragan</span></a>
@@ -59,9 +109,9 @@ import '../styles/conragan.css';
             </li>
             <li class="navigation-item" id="theme-controller">
               <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
-                <i class="fa-solid fa-moon fa-fw" aria-hidden="true"></i> <span class="sr-only">Toggle dark mode</span> 
+                <i class="fa-solid fa-moon fa-fw" aria-hidden="true"></i> <span class="sr-only">Toggle dark mode</span>  
               </button>
-              <div class="theme-options" aria-hidden="true"> 
+              <div class="theme-options" aria-hidden="true">  
                 <input type="radio" id="theme-light" name="theme" value="light">
                 <label for="theme-light">Light</label>
                 <input type="radio" id="theme-dark" name="theme" value="dark">
@@ -78,13 +128,8 @@ import '../styles/conragan.css';
         <slot />
       </div>
     </main>
-
     <footer role="contentinfo">
       © {new Date().getFullYear()} Kai Conragan
     </footer>
-    </div>
-    <script>
-      import '../scripts/global.js';
-    </script>
   </body>
 </html>

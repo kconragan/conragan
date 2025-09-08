@@ -67,6 +67,8 @@
   --color-bg: var(--c-light);  /* Default background color for light theme */
   --color-text: var(--c-dark);  /* Default text color for light theme */
   --color-links: #33739e;
+  --color-grid: rgba(0, 0, 0, 0.1); /* for dive charts primarily */
+
 }
 
 /* Dark Theme Overrides */
@@ -74,6 +76,7 @@
   --color-bg: var(--c-dark);   /* Override background color for dark theme */
   --color-text: var(--c-light);  /* Override text color for dark theme */
   --color-links: #f08aa1;   /* Override link color for dark theme */
+  --color-grid: rgba(255, 255, 255, 0.1); /* for dive charts */
 }
 
 /* Theme Toggle Styles */
@@ -134,6 +137,12 @@ header[role=banner] {
   font-feature-settings: 'ss01'; /* Enables stylistic sets for the font */
   font-size: 18px;
   align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.js-loading header.banner {
+  opacity: 0;
 }
 
 .logo {
@@ -188,7 +197,7 @@ footer[role=contentinfo] {
   width: 100%;
   text-align: center;
   margin-bottom: 1rem;
-  font-family: "worksans", sans-serif;
+  font-family: "Worksans", sans-serif;
   font-size: smaller;
 }
 
@@ -632,7 +641,7 @@ dl#exif {
   flex-wrap: wrap;
   justify-content: left;
   margin: 0;
-  font-family: "worksans", sans-serif;
+  font-family: "Worksans", sans-serif;
   font-size: smaller;
 }
 
@@ -782,7 +791,7 @@ a.paginate.disabled:hover {
 
 .navigation-hint {
   font-size: 0.6rem;
-  font-family: "worksans", sans-serif;
+  font-family: "Worksans", sans-serif;
   transition: opacity 0.3s;
   opacity: 0;
 }
@@ -996,7 +1005,7 @@ a.paginate.disabled:hover {
   }
 
   p, li {
-    font-family: "worksans", sans-serif;
+    font-family: "Worksans", sans-serif;
   }
 
   p a,
@@ -1036,19 +1045,59 @@ a.paginate.disabled:hover {
 
 .chart-container {
   /* Default height for small screens (mobile-first) */
-  height: 350px; 
+  height: 350px;  
 }
 
 /* Medium screens (matches your gallery and photo breakpoints) */
 @media (min-width: 768px) {
   .chart-container {
-    height: 450px;
+    height: 420px;
   }
 }
 
 /* Large screens (matches your gallery and photo breakpoints) */
 @media (min-width: 1025px) {
   .chart-container {
-    height: 550px;
+    height: 420px;
   }
+}
+
+/* NEW: Styles for the button controls */
+.chart-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  border: 1px solid var(--c-med-gray);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  max-width: 400px; /* Adjust width as needed */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.unit-toggle, .download-btn {
+  font-family: "WorkSans", sans-serif;
+  flex: 1 1 0; /* Allow all buttons to grow and shrink equally */
+}
+
+.unit-toggle button, .download-btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.6rem;
+}
+
+/* Add a separator between the toggle and the download button */
+.unit-toggle {
+  display: flex;
+  border-right: 1px solid var(--c-med-gray);
+}
+
+.unit-toggle button.active {
+  background-color: var(--c-med-gray);
+  color: var(--c-light);
 }
