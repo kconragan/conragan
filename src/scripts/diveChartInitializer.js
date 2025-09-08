@@ -57,15 +57,24 @@ function initializeCharts() {
             grid: { drawOnChartArea: false },
           },
           yPressure: {
+            // *** THIS IS THE ONLY CHANGE ***
+            display: false, // This hides the entire axis
             type: 'linear',
             position: 'right',
-            title: { display: true, text: 'Pressure' },
             grid: { drawOnChartArea: false },
             min: 0,
           }
         },
         plugins: {
-          datalabels: {}
+          datalabels: {},
+          legend: {
+            labels: {
+              boxWidth: 12,
+              boxHeight: 12,
+              padding: 20 // Adds some space between legend items
+            }
+
+          }
         }
       }
     });
@@ -90,18 +99,15 @@ function initializeCharts() {
 
       const allScales = [diveChart.options.scales.x, diveChart.options.scales.yDepth, diveChart.options.scales.yTemp, diveChart.options.scales.yPressure];
       allScales.forEach(scale => {
-        scale.title.color = fontColor;
-        scale.ticks.color = fontColor;
-        if (scale.grid) {
-          scale.grid.color = gridColor;
-        }
+        if (scale.title) scale.title.color = fontColor;
+        if (scale.ticks) scale.ticks.color = fontColor;
+        if (scale.grid) scale.grid.color = gridColor;
       });
 
       diveChart.options.scales.yDepth.title.text = `Depth (${isMetric ? 'm' : 'ft'})`;
       diveChart.options.scales.yDepth.min = 0;
       diveChart.options.scales.yDepth.max = isMetric ? 30 : 100;
       diveChart.options.scales.yTemp.title.text = `Temp (${isMetric ? '°C' : '°F'})`;
-      diveChart.options.scales.yPressure.title.text = `Pressure (${isMetric ? 'bar' : 'psi'})`;
 
       diveChart.options.plugins.datalabels = {
         display: (context) => context.dataset.label.includes('Pressure'),
@@ -156,5 +162,4 @@ function initializeCharts() {
   });
 }
 
-// Defer the execution of the entire chart initialization process
 requestAnimationFrame(initializeCharts);

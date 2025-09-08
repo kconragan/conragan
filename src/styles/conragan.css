@@ -1045,32 +1045,17 @@ a.paginate.disabled:hover {
 
 .chart-container {
   /* Default height for small screens (mobile-first) */
-  height: 350px;  
+  height: 260px;  
 }
 
-/* Medium screens (matches your gallery and photo breakpoints) */
-@media (min-width: 768px) {
-  .chart-container {
-    height: 420px;
-  }
-}
-
-/* Large screens (matches your gallery and photo breakpoints) */
-@media (min-width: 1025px) {
-  .chart-container {
-    height: 420px;
-  }
-}
-
-/* NEW: Styles for the button controls */
 .chart-controls {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0.25rem;
   border: 1px solid var(--c-med-gray);
   border-radius: 0.25rem;
   overflow: hidden;
-  max-width: 400px; /* Adjust width as needed */
+  max-width: 360px; /* Adjust width as needed */
   margin-left: auto;
   margin-right: auto;
 }
@@ -1082,13 +1067,17 @@ a.paginate.disabled:hover {
 
 .unit-toggle button, .download-btn {
   width: 100%;
-  padding: 0.5rem 1rem;
   border: none;
   background-color: transparent;
   color: var(--color-text);
   cursor: pointer;
   transition: background-color 0.2s;
   font-size: 0.6rem;
+  text-align: center;
+}
+
+.download-btn {
+  display: none;
 }
 
 /* Add a separator between the toggle and the download button */
@@ -1101,3 +1090,21 @@ a.paginate.disabled:hover {
   background-color: var(--c-med-gray);
   color: var(--c-light);
 }
+
+/* Medium screens (matches your gallery and photo breakpoints) */
+@media (min-width: 768px) {
+  .chart-container {
+    height: 420px;
+  }
+  .download-btn {
+    display: block;
+  }
+}
+
+/* Large screens (matches your gallery and photo breakpoints) */
+@media (min-width: 1025px) {
+  .chart-container {
+    height: 420px;
+  }
+}
+
