@@ -449,7 +449,16 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1vh;
 }
 
+.h-entry .book-cover {
+  max-width: 10rem;
+}
+
 /* Archive styles */
+
+.archive-year {
+  margin: 2rem auto;
+  max-width: 70ch;
+}
 
 .h-feed.archive {
   h2 {

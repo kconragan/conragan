@@ -46,7 +46,7 @@ type AnyPost = CollectionEntry<'posts' | 'divelogs' | 'links' | 'notes'>;
   {/* Loop through each year, from newest to oldest */}
   {years.map(year => (
     <section class="archive-year">
-      <h2>{year}</h2>
+      <h1 class="archive-year">{year}</h1>
       <ol class="h-feed archive">
         {
           postsByYear[year].map((post: AnyPost) => {
