@@ -1,42 +1,69 @@
 ---
 // src/components/DiveChart.astro
+
 interface DiveProfilePoint {
   time: number;
   depth: number;
-  temp: number | null;
-  pressure: number | null;
+  temp?: number | null;
+  pressure?: number | null;
 }
 
+// --- FIX: Expect a `frontmatter` prop directly ---
 interface Props {
-  post: {
-    dive_profile: DiveProfilePoint[];
+  frontmatter: {
+    dive_profile?: DiveProfilePoint[];
+    dive_details?: {
+      average_depth_m?: string;
+    }
   }
 }
 
-const { post } = Astro.props;
-const profileData = post.dive_profile;
+const { frontmatter } = Astro.props;
+
+// Access properties directly on the frontmatter object
+// Optional chaining (`?.`) keeps it safe if used in unexpected places.
+const profileData = frontmatter?.dive_profile;
+const avgDepth = frontmatter?.dive_details?.average_depth_m
+  ? parseFloat(frontmatter.dive_details.average_depth_m)
+  : null;
+
+const hasProfileData = profileData && profileData.length > 0;
 ---
 
-<div class="astro-dive-chart">
-  <div class="chart-container relative">
-    <canvas 
-      class="dive-chart-canvas"
-      data-profile={JSON.stringify(profileData)}
-    ></canvas>
-  </div>
-
-  <div class="chart-controls mt-4 text-center">
+{hasProfileData && (
+  <div class="astro-dive-chart">
+    <div class="chart-container relative">
+      <canvas 
+        class="dive-chart-canvas"
+        data-profile={JSON.stringify(profileData)}
+        data-avg-depth={avgDepth ?? ''}
+      ></canvas>
+    </div>
+    <div class="chart-controls">
       <div class="unit-toggle">
-          <button data-unit="metric" class="active">Metric</button>
-          <button data-unit="imperial">Imperial</button>
+        <button class="active" data-unit="metric">Metric</button>
+        <button data-unit="imperial">Imperial</button>
       </div>
-      <button class="download-btn">
-          Download Chart
-      </button>
+      <button class="download-btn">Download</button>
+    </div>
   </div>
-</div>
-
+)}
 
 <script>
+  // The client-side script is correct and does not need changes.
   import "/src/scripts/diveChartInitializer.js";
 </script>
+
+<style>
+  .chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .chart-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+</style>
