@@ -63,7 +63,7 @@ type AnyPost = CollectionEntry<'posts' | 'divelogs' | 'links' | 'notes'>;
                     {/* Use the collection name to determine the link type */}
                     {post.collection === 'links' ? (
                       <a 
-                        href={post.data.externalUrl}
+                        href={post.data.externalURL}
                         class="u-url external-link"
                         title="Visit external link"
                         target="_blank" 
