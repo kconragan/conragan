@@ -1,0 +1,68 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { format } from 'date-fns';
+import Base from '../../layouts/Base.astro';
+import CollectionNav from '../../components/BlogCollectionNav.astro';
+
+// --- CONFIGURATION ---
+const MAX_POSTS = 200; /*TODO: make this all w/ pagination */
+
+// --- DATA FETCHING ---
+// Fetch entries for THIS collection only.
+const allPosts = await getCollection('notes');
+
+// Filter and sort the posts.
+const posts = allPosts
+  .filter(post => import.meta.env.DEV || post.data.isPublic === true)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, MAX_POSTS);
+
+// A simpler type helper for just this collection.
+type Post = CollectionEntry<'notes'>;
+---
+<Base title="Kai Conragan - Blog / Notes">
+  <hr class="glyph lighthouse" />
+  
+  <CollectionNav activeCollection="notes" />
+
+  <ol class="h-feed">
+    {
+      posts.map(async (post: Post) => {
+        const { Content } = await post.render();
+        const permalink = `/blog/${post.slug}/`;
+        const isoDate = post.data.date.toISOString();
+        const humanFriendlyDate = format(post.data.date, 'MMMM dd, yyyy');
+        
+        return (
+          <li>
+            <article class="h-entry">
+              <h2 class="title p-name">
+                {/* The conditional logic for the title is still needed for link posts */}
+                <a
+                  href={permalink} title="View note">
+                  {post.data.title}
+                </a>
+              </h2>
+
+              <section class="e-content">
+                <Content />
+              </section>
+
+              <p class="post-metadata">
+                <time class="dt-published" datetime={isoDate}>{humanFriendlyDate}</time>
+                &middot; <a href={permalink} title="Permanent link to post">Permalink #</a>
+              </p>
+            </article>
+            <hr class="glyph sea" />
+          </li>
+        )
+      })
+    }
+  </ol>
+
+  <footer class="feed-footer">
+    <p>
+      <a href="/blog/archive/">All posts</a>
+    </p>
+  </footer>
+</Base>

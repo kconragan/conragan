@@ -318,6 +318,7 @@ a {
 /* BLOG POSTS ------------------------------------------------- */
 
 .h-feed,
+.post-filter,
 .single-article .container {
   margin: 0 auto;
   padding: 0;
@@ -472,6 +473,34 @@ h1, h2, h3, h4, h5, h6 {
   li:last-child hr.glyph {
     visibility: hidden;
     margin-bottom: 2rem;
+  }
+}
+
+.post-filter {
+  text-align: center;
+  font-family: 'WorkSans', sans-serif;
+
+  li {
+    display: inline-block;
+    margin: 1rem;
+
+    a {
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 1px;
+    text-decoration-style: dotted;
+    transition: all 0.4s;  /* Smooth transition for all properties */
+    }
+    a:hover {
+      text-decoration-color: var(--color-text);
+    }
+
+    a[aria-current="page"] {
+      color: var(--color-links);
+    }
+    a:hover[aria-current="page"] {
+      pointer: default;
+      text-decoration-color: transparent;
+    }
   }
 }
 
