@@ -1,75 +1,108 @@
 ---
-import Base from '../../layouts/Base.astro';
-import { getCollection } from 'astro:content';
+/**
+ * @file This page serves as the main blog index, aggregating posts from all content collections.
+ * @description It fetches, combines, and sorts entries from 'posts', 'divelogs', 'links', and 'notes'
+ * to create a unified, chronologically ordered feed.
+ * @see /src/content/config.ts - for collection schema definitions.
+ */
+
+// --- IMPORTS ---
+import { getCollection, type CollectionEntry } from 'astro:content';
 import { format } from 'date-fns';
+import Base from '../../layouts/Base.astro';
 
-function extractYearAndSlug(id: string): { slug: string } {
-  const parts = id.split('/');
-  const slug = parts[0] + '/' + parts[1] + '/';
-  return { slug };
-}
-
-// Change this to control the number of posts show at /blog/
+// --- CONFIGURATION ---
+/** @constant {number} MAX_POSTS - The maximum number of recent posts to display on this page. */
 const MAX_POSTS = 20;
 
-// Use a conditional filter to include all posts in development
-// and only public posts in production
-const posts = (await getCollection(
-  'blog',
-  (post) => import.meta.env.DEV || post.data.isPublic === true
-))
+// --- DATA FETCHING & PROCESSING ---
+// 1. Fetch all entries from their respective content collections.
+const posts = await getCollection('posts');
+const divelogs = await getCollection('divelogs');
+const links = await getCollection('links');
+const notes = await getCollection('notes');
+
+// 2. Combine all collections into a single array for unified processing.
+//    - Filters out posts marked with `isPublic: false` in production builds.
+//    - Sorts the combined feed by date in descending order (newest first).
+//    - Slices the array to only show the most recent posts, based on MAX_POSTS.
+const allContent = [...posts, ...divelogs, ...links, ...notes]
+  .filter(post => import.meta.env.DEV || post.data.isPublic === true)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, MAX_POSTS);
 
----
+/**
+ * @typedef {CollectionEntry<'posts' | 'divelogs' | 'links' | 'notes'>} AnyPost
+ * A type helper to represent an entry from any of the defined content collections.
+ * This provides type safety and autocompletion for the `post` object in the template.
+ */
+type AnyPost = CollectionEntry<'posts' | 'divelogs' | 'links' | 'notes'>;
 
+---
 <Base title="Kai Conragan - Latest Blog Posts">
   <hr class="glyph lighthouse" />
-  <ol class="h-feed">
-  {
-    posts.map(async (post) => {
-    const { slug } = extractYearAndSlug(post.id);
-    const { Content } = await post.render()
+  
+  {/* TODO: Wire up this filter UI to dynamically filter the `allContent` array. */}
+  <ul class="post-filter">
+    <li><a href="">Posts</a></li>
+    <li><a href="">Links</a></li>
+    <li><a href="">Notes</a></li>
+    <li><a href="">Dive Logs</a></li>
+  </ul>
 
-    // Date formatting
-    let isoDate = '';
-    let humanFriendlyDate = '';
-    try {
-      isoDate = post.data.date.toISOString();
-      humanFriendlyDate = format(post.data.date, 'MMMM dd, yyyy');
-    } catch (error) {
-      console.error('Error formatting date:', post.data.date, error);
-      // Handle the error, e.g., set a default date or skip the post
+  {/* Renders the list of all posts using the h-feed microformat for syndication. */}
+  <ol class="h-feed">
+    {
+      allContent.map(async (post: AnyPost) => {
+        // Render the MDX/Markdown content to HTML.
+        const { Content } = await post.render();
+        // The `post.slug` from Astro includes the year-based subdirectory (e.g., "2025/my-post").
+        const permalink = `/blog/${post.slug}/`;
+
+        // Format dates for semantic HTML and human-readable display.
+        const isoDate = post.data.date.toISOString();
+        const humanFriendlyDate = format(post.data.date, 'MMMM dd, yyyy');
+        
+        return (
+          <li>
+            <article class="h-entry">
+              <h2 class="title p-name">
+                {/* Conditionally render the title based on the post's collection type. */}
+                {post.collection === 'links' ? (
+                  // For 'links', the title is an external link.
+                  <a 
+                    href={post.data.externalURL}
+                    class="u-url external-link"
+                    title="Visit external link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="icon">&gt;</span>{post.data.title}
+                  </a>
+                ) : (
+                  // For all other types, the title links to the local permalink.
+                  <a href={permalink} title="View post">{post.data.title}</a>
+                )}
+              </h2>
+
+              {/* Renders the main body of the post. */}
+              <section class="e-content">
+                <Content />
+              </section>
+
+              {/* Renders the post metadata footer. */}
+              <p class="post-metadata">
+                <time class="dt-published" datetime={isoDate}>{humanFriendlyDate}</time>
+                &middot; <a href={permalink} title="Permanent link to post">Permalink #</a>
+              </p>
+            </article>
+            <hr class="glyph sea" />
+          </li>
+        )
+      })
     }
-    return (
-    <li>
-      <article class="h-entry">
-        <h2 class="title p-name">
-          {post.data.type === 'post' && (
-            <a href={`/blog/${slug}`} title="View post">{post.data.title}</a>
-          )}
-          {post.data.type === 'link' && (
-          <a href={post.data.link}
-            class="u-url external-link"
-            title="Visit external link">
-            <span class="icon">&gt;</span>{post.data.title}
-            </a>
-          )}
-        </h2>
-        <section class="e-content">
-          <Content />
-        </section>
-        <p class="post-metadata">
-          <time class="dt-published" datetime={ isoDate }>{ humanFriendlyDate }</time>
-          &middot; <a href={`/blog/${slug}`} title="Permanent link to post">Permalink #</a>
-        </p>
-      </article>
-      <hr class="glyph sea" />
-    </li>
-    )
-    })
-  }
   </ol>
+
   <footer class="feed-footer">
     <p>
       <a href="/blog/archive/">All posts</a>

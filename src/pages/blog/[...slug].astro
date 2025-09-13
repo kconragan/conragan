@@ -1,0 +1,88 @@
+---
+/**
+ * @file This page renders the full content for any single entry from any content collection.
+ * @description It uses a "catch-all" route to handle slugs for posts, divelogs, links, and notes,
+ * and conditionally renders special components like the DiveChart based on the collection type.
+ */
+
+// --- IMPORTS ---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { format } from 'date-fns';
+import Base from '../../layouts/Base.astro';
+import DiveChart from '../../components/DiveChart.astro';
+
+// --- TYPE DEFINITIONS ---
+/**
+ * @typedef {CollectionEntry<'posts' | 'divelogs' | 'links' | 'notes'>} AnyPost
+ * A type helper for an entry from any of the defined content collections.
+ */
+type AnyPost = CollectionEntry<'posts' | 'divelogs' | 'links' | 'notes'>;
+
+interface Props {
+  post: AnyPost;
+}
+
+// --- DATA FETCHING FOR STATIC PATHS ---
+/**
+ * @description This function tells Astro which pages to build at build time.
+ * It fetches all entries from all collections and creates a page for each one.
+ * The URL is generated automatically from the file path (e.g., `posts/2025/my-post.md` becomes `/blog/2025/my-post`).
+ */
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  const divelogs = await getCollection('divelogs');
+  const links = await getCollection('links');
+  const notes = await getCollection('notes');
+  
+  const allContent: AnyPost[] = [...posts, ...divelogs, ...links, ...notes];
+
+  return allContent.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+// --- PROPS & DATA PREPARATION ---
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+// Date formatting logic from your original template.
+const isoDate = post.data.date.toISOString();
+const humanFriendlyDate = format(post.data.date, 'MMMM dd, yyyy');
+---
+
+<Base title={post.data.title + ' | Kai Conragan'} body="single-article">
+  <article class="h-entry">
+    <header>
+      <div class="post-meta">
+        <div class="date">
+          <span class="posted-on">
+            <time class="dt-published" datetime={isoDate}>
+              {humanFriendlyDate}
+            </time>
+          </span>
+        </div>
+      </div>
+      <div class="post-title">
+        {/* Logic is now based on `post.collection` instead of `post.data.type` */}
+        {post.collection === 'links' ? (
+          <h1 class="title p-name">
+            <a href={post.data.externalUrl} class="u-url external-link" target="_blank" rel="noopener noreferrer">
+              {post.data.title} ↗
+            </a>
+          </h1>
+        ) : (
+          <h1 class="title p-name">
+            {post.data.title}
+          </h1>
+        )}
+      </div>
+      <hr class="glyph sea" />
+    </header>
+
+    <section class="post-content e-content">
+      <Content />
+    </section>
+  </article>
+  <hr class="glyph anchor" />
+</Base>
