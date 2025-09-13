@@ -10,7 +10,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { format } from 'date-fns';
 import Base from '../../layouts/Base.astro';
-import CollectionNav from '../../components/BlogCollectionNav.astro';
 
 // --- CONFIGURATION ---
 /** @constant {number} MAX_POSTS - The maximum number of recent posts to display on this page. */
@@ -44,7 +43,12 @@ type AnyPost = CollectionEntry<'posts' | 'divelogs' | 'links' | 'notes'>;
   <hr class="glyph lighthouse" />
   
   {/* TODO: Wire up this filter UI to dynamically filter the `allContent` array. */}
-  <CollectionNav activeCollection="all"/>
+  <ul class="post-filter">
+    <li><a href="">Posts</a></li>
+    <li><a href="">Links</a></li>
+    <li><a href="">Notes</a></li>
+    <li><a href="">Dive Logs</a></li>
+  </ul>
 
   {/* Renders the list of all posts using the h-feed microformat for syndication. */}
   <ol class="h-feed">
