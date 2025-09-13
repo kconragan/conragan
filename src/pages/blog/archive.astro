@@ -1,56 +1,90 @@
 ---
+/**
+ * @file This page serves as a complete archive of all content, grouped by year.
+ * @description It fetches, combines, sorts, and groups all entries from the content collections.
+ */
+
+// --- IMPORTS ---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { format } from 'date-fns';
 import Base from '../../layouts/Base.astro';
-import { getCollection } from 'astro:content';
 
-// Fetch all public blog posts
-const posts = (await getCollection(
-  'blog',
-  (post) => import.meta.env.DEV || post.data.isPublic === true
-))
-  // Sort posts by date, newest first
+// --- DATA FETCHING & PROCESSING ---
+// 1. Fetch all entries from their respective content collections.
+const posts = await getCollection('posts');
+const divelogs = await getCollection('divelogs');
+const links = await getCollection('links');
+const notes = await getCollection('notes');
+
+// 2. Combine and filter all posts.
+const allContent = [...posts, ...divelogs, ...links, ...notes]
+  .filter(post => import.meta.env.DEV || post.data.isPublic === true)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// 3. Group the sorted posts by year.
+const postsByYear = allContent.reduce((acc, post) => {
+  const year = post.data.date.getFullYear();
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(post);
+  return acc;
+}, {} as Record<number, AnyPost[]>);
+
+// 4. Get a sorted list of years to display (e.g., 2025, 2024).
+const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
+
+/**
+ * @typedef {CollectionEntry<'posts' | 'divelogs' | 'links' | 'notes'>} AnyPost
+ * A type helper for an entry from any of the defined content collections.
+ */
+type AnyPost = CollectionEntry<'posts' | 'divelogs' | 'links' | 'notes'>;
 ---
-
-<Base title="Blog Archives | Kai Conragan">
+<Base title="Kai Conragan - Archive">
   <hr class="glyph lighthouse" />
-  <ol class="h-feed archive">
-    {posts.map((post) => {
-      // Format the date for display
-      const displayDate = post.data.date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      });
-      const isoDate = post.data.date.toISOString();
+  
+  {/* Loop through each year, from newest to oldest */}
+  {years.map(year => (
+    <section class="archive-year">
+      <h2>{year}</h2>
+      <ol class="h-feed archive">
+        {
+          postsByYear[year].map((post: AnyPost) => {
+            const permalink = `/blog/${post.slug}/`;
 
-      return (
-        <li>
-          <article class="h-entry">
-            <h2 class="title p-name">
-              {/* Use a ternary operator for cleaner conditional links */}
-              {post.data.type === 'link' ? (
-                <a
-                  href={post.data.link}
-                  class="u-url external-link"
-                  title="Visit external link"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <span class="icon">&gt;</span>{post.data.title}
-                </a>
-              ) : (
-                <a href={`/blog/${post.slug}/`} title="View post">
-                  {post.data.title}
-                </a>
-              )}
-            </h2>
-            <p class="post-metadata">
-              <time class="dt-published" datetime={isoDate}>{displayDate}</time>
-            </p>
-          </article>
-          <hr class="glyph" />
-        </li>
-      );
-    })}
-  </ol>
+            // Date formatting
+            const isoDate = post.data.date.toISOString();
+            const humanFriendlyDate = format(post.data.date, 'MMMM dd, yyyy');
+            
+            return (
+              <li>
+                <article class="h-entry">
+                  <h2 class="title p-name">
+                    {/* Use the collection name to determine the link type */}
+                    {post.collection === 'links' ? (
+                      <a 
+                        href={post.data.externalURL}
+                        class="u-url external-link"
+                        title="Visit external link"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <span class="icon">&gt;</span>{post.data.title}
+                      </a>
+                    ) : (
+                      <a href={permalink} title="View post">{post.data.title}</a>
+                    )}
+                  </h2>
+                  <p class="post-metadata">
+                    <time class="dt-published" datetime={isoDate}>{humanFriendlyDate}</time>
+                  </p>
+                </article>
+                <hr class="glyph" />
+              </li>
+            )
+          })
+        }
+      </ol>
+    </section>
+  ))}
 </Base>
