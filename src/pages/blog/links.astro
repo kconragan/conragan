@@ -1,0 +1,73 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { format } from 'date-fns';
+import Base from '../../layouts/Base.astro';
+import CollectionNav from '../../components/BlogCollectionNav.astro';
+
+// --- CONFIGURATION ---
+const MAX_POSTS = 20;
+
+// --- DATA FETCHING ---
+// Fetch entries for THIS collection only.
+const allPosts = await getCollection('links');
+
+// Filter and sort the posts.
+const posts = allPosts
+  .filter(post => import.meta.env.DEV || post.data.isPublic === true)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, MAX_POSTS);
+
+// A simpler type helper for just this collection.
+type Post = CollectionEntry<'links'>;
+---
+<Base title="Kai Conragan - Blog / Links">
+  <hr class="glyph lighthouse" />
+  
+  <CollectionNav activeCollection="links" />
+
+  <ol class="h-feed">
+    {
+      posts.map(async (post: Post) => {
+        const { Content } = await post.render();
+        const permalink = `/blog/${post.slug}/`;
+        const isoDate = post.data.date.toISOString();
+        const humanFriendlyDate = format(post.data.date, 'MMMM dd, yyyy');
+        
+        return (
+          <li>
+            <article class="h-entry">
+              <h2 class="title p-name">
+                {/* The conditional logic for the title is still needed for link posts */}
+                <a
+                  href={post.data.externalURL}
+                  class="u-url external-link"
+                  title="Visit external link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="icon">&gt;</span>{post.data.title}
+                </a>
+              </h2>
+
+              <section class="e-content">
+                <Content />
+              </section>
+
+              <p class="post-metadata">
+                <time class="dt-published" datetime={isoDate}>{humanFriendlyDate}</time>
+                &middot; <a href={permalink} title="Permanent link to post">Permalink #</a>
+              </p>
+            </article>
+            <hr class="glyph sea" />
+          </li>
+        )
+      })
+    }
+  </ol>
+
+  <footer class="feed-footer">
+    <p>
+      <a href="/blog/archive/">All posts</a>
+    </p>
+  </footer>
+</Base>
