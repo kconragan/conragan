@@ -612,7 +612,13 @@ figure.image-title {
 }
 
 /* Responsive media queries for gallery layout */
-@media only screen and (width >= 1024px) {
+@media only screen and (width >= 1880px) {
+  .gallery-list {
+    --gallery-items-per-row: 4; /* 2 items per row on medium screens */
+  }
+}
+
+@media only screen and (1024 < width < 1880) {
   .gallery-list {
     --gallery-items-per-row: 3; /* 3 items per row on larger screens */
   }
