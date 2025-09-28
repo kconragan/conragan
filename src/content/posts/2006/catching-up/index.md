@@ -1,136 +1,45 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
+---
+date: 2006-09-26T11:42:40-08:00
+title: "Catching Up"
+type: post
+isPublic: false
+---
 
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/beyond-shangri-la"
-  rel="next" title="Beyond Shangri-La"><span>Next </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/yixing" rel="prev"
-  title="Yixing"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Catching Up
-
-## Tuesday September 26, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/China/"
-rel="tag">China</a> | Comments: [9](#comments "Jump To Entry Comments")
-| Written By: [Kai Conragan](/about/ "Learn More About The Author")
-
-More than half-way through our time in China, we realize we still have a
-lot to see. The pace quickens: Nanjing; Xi’an; Chengdu; You know how the
-saying goes: What a long, strange trip it’s been…
+More than half-way through our time in China, we realize we still have a lot to see. The pace quickens: Nanjing; Xi’an; Chengdu; You know how the saying goes: What a long, strange trip it’s been…
 
 ### Nanjing
 
-A bus ride from Yixing delivers us to Nanjing, really just a stop-over
-point for us as we head for Xi’an. We hope for a train ticket for the
-same day we enter Nanjing, but find they are all sold until the next, so
-we find a nice backpacker and settle in. I know little about Nanjing,
-except for the infamous Japanese slaughter in the 1930s known as the
-[Rape of Nanking](http://en.wikipedia.org/wiki/Rape_of_Nanking).
-Regrettably, one night and half a day doesn’t tell me much more. The
-city definitely has a hip vibe—it’s a college town—and old streets that
-surely once peddled goods from the country now have vendors selling
-rip-off DVDs, live turtles, cheap jewelry, and jade of questionable
-quality. Of course, any one of these vendors happens to be standing in
-front of a building that’s centuries old. We enter one of these
-buildings—a six hundred year old structure that now serves as a
-teahouse.
+A bus ride from Yixing delivers us to Nanjing, really just a stop-over point for us as we head for Xi’an. We hope for a train ticket for the same day we enter Nanjing, but find they are all sold until the next, so we find a nice backpacker and settle in. I know little about Nanjing, except for the infamous Japanese slaughter in the 1930s known as the [Rape of Nanking](http://en.wikipedia.org/wiki/Rape_of_Nanking). Regrettably, one night and half a day doesn’t tell me much more. The city definitely has a hip vibe—it’s a college town—and old streets that surely once peddled goods from the country now have vendors selling rip-off DVDs, live turtles, cheap jewelry, and jade of questionable quality. Of course, any one of these vendors happens to be standing in front of a building that’s centuries old. We enter one of these buildings—a six hundred year old structure that now serves as a teahouse.
 
 ### Xi’an
 
-Full disclosure: the only reason we come to Xi’an is to see the
-[Terracotta Warriors](http://en.wikipedia.org/wiki/Terracotta_warriors).
-It’s an obligatory tourist stop, and one we feel necessary as we’re
-gonna miss the other quintessential Chinese postcard sights of Beijing,
-the Forbidden City, and the Great Wall. You know what? It’s worth it.
-The warriors happen to be one of those touristy things that are actually
-pretty cool. Really cool in fact.
+Full disclosure: the only reason we come to Xi’an is to see the [Terracotta Warriors](http://en.wikipedia.org/wiki/Terracotta_warriors). It’s an obligatory tourist stop, and one we feel necessary as we’re gonna miss the other quintessential Chinese postcard sights of Beijing, the Forbidden City, and the Great Wall. You know what? It’s worth it. The warriors happen to be one of those touristy things that are actually pretty cool. Really cool in fact.
 
-The warriors were made under the direction of [Qin Shi
-Huang](http://en.wikipedia.org/wiki/Qin_Shi_Huang). Besides
-standardizing Chinese script and small construction projects like the
-Great Wall, Qin Shi Huang was the first emperor to unite all of China—a
-unification that has lasted over two millennia. Unfortunately, he
-accomplished the unification by attacking every state not under his
-control. Because of this, he had many enemies and narrowly escaped
-several famous assassination attempts (the 2002 movie
-[Hero](http://imdb.com/title/tt0299977/) is a fictitious account of such
-an assassination)
+The warriors were made under the direction of [Qin Shi Huang](http://en.wikipedia.org/wiki/Qin_Shi_Huang). Besides standardizing Chinese script and small construction projects like the Great Wall, Qin Shi Huang was the first emperor to unite all of China—a unification that has lasted over two millennia. Unfortunately, he accomplished the unification by attacking every state not under his control. Because of this, he had many enemies and narrowly escaped several famous assassination attempts (the 2002 movie [Hero](http://imdb.com/title/tt0299977/) is a fictitious account of such an assassination)
 
-Besides having many enemies—or perhaps, because—Qin Shi Huang was
-tremendously fearful of death. So much so that he spent the greater
-portion of his life in search of the Islands of the Immortals, a fabled
-location on the East coast of China that promised the elixir of life
-and, thus, immortality. The Emperor actually died in search of the
-elixir, aided in no small part by the drinking of mercury, which his
-advisors assured him would help to extend his life.
+Besides having many enemies—or perhaps, because—Qin Shi Huang was tremendously fearful of death. So much so that he spent the greater portion of his life in search of the Islands of the Immortals, a fabled location on the East coast of China that promised the elixir of life and, thus, immortality. The Emperor actually died in search of the elixir, aided in no small part by the drinking of mercury, which his advisors assured him would help to extend his life.
 
-Qin Shi Huang was especially fearful of all the enemies that he would
-encounter in the afterlife—those who had died either directly or
-indirectly from his actions. In short, he knew he had pissed off a lot
-of people and they would be waiting. So what did he do? He built an
-army. The Terracotta Warriors to be exact. Other emperors had done this
-before, but these had just been doll size characters placed in their
-tomb. Qin Shi Huang wasn’t content with that. He amassed an army of over
-7,000 soldiers, each built by hand, and every one unique in appearance.
-Each one is a work of art—there are infantry men, captains, generals,
-and horse-drawn chariots. Basically, he built an army for some serious
-afterlife ass-kicking.
+Qin Shi Huang was especially fearful of all the enemies that he would encounter in the afterlife—those who had died either directly or indirectly from his actions. In short, he knew he had pissed off a lot of people and they would be waiting. So what did he do? He built an army. The Terracotta Warriors to be exact. Other emperors had done this before, but these had just been doll size characters placed in their tomb. Qin Shi Huang wasn’t content with that. He amassed an army of over 7,000 soldiers, each built by hand, and every one unique in appearance. Each one is a work of art—there are infantry men, captains, generals, and horse-drawn chariots. Basically, he built an army for some serious afterlife ass-kicking.
 
 <a href="/images/215.jpg" class="thickbox"
 title="Terracotta Warriors--standing guard for over 2,000 years."><img
 src="http://somedaynevercomes.com/images/215t.jpg" /></a><span class="caption">Terracotta
 Warriors—standing guard for over 2,000 years.</span>
 
-The warriors are not inside the tomb—they stand guard over it, facing
-east. The tomb is sandwiched between Mt. Li, the Wei river, and the
-Terracotta army. The mausoleum is well-protected—so much so that until
-recently it was believed to simply be a local hill. Of course, this is
-not surprising as many of the artisans most closely tied to the
-construction project were sealed inside the tomb—alive I should add—with
-emperor so as to protect it’s secrets.
+The warriors are not inside the tomb—they stand guard over it, facing east. The tomb is sandwiched between Mt. Li, the Wei river, and the Terracotta army. The mausoleum is well-protected—so much so that until recently it was believed to simply be a local hill. Of course, this is not surprising as many of the artisans most closely tied to the construction project were sealed inside the tomb—alive I should add—with emperor so as to protect it’s secrets.
 
-Today the mausoleum stands 45 meters high, believed to be half it’s
-original height due to erosion. The circumference is 13 kilometers, and
-the tomb consists of an inner city, an outer city, intricate gardens,
-gates and more—all underground.
+Today the mausoleum stands 45 meters high, believed to be half it’s original height due to erosion. The circumference is 13 kilometers, and the tomb consists of an inner city, an outer city, intricate gardens, gates and more—all underground.
 
-Most amazing of all is the inner tomb, the actual resting place of the
-emperor. Here, ancient documents describe a room with pearls inlayed
-into the ceiling in the pattern of constellations, rivers of mercury,
-and, of course, piles of treasure. Archaeological digs are
-time-consuming under the best circumstances. Here, not only do
-archaeologists have to contend with the sheer size of the tomb, but also
-with the fact that Qin Shi Huang set booby-traps at all entrances—both
-inner and outer. After thirty years of tedious digging and endless
-head-scratching, the tomb still remains sealed.
+Most amazing of all is the inner tomb, the actual resting place of the emperor. Here, ancient documents describe a room with pearls inlayed into the ceiling in the pattern of constellations, rivers of mercury, and, of course, piles of treasure. Archaeological digs are time-consuming under the best circumstances. Here, not only do archaeologists have to contend with the sheer size of the tomb, but also with the fact that Qin Shi Huang set booby-traps at all entrances—both inner and outer. After thirty years of tedious digging and endless head-scratching, the tomb still remains sealed.
 
-The city of Xi’an itself is nice, though it has a coarseness we haven’t
-felt previously—particularly at the train station where hundreds of
-Chinese families sleep on the cement waiting for standing-only tickets
-on an 18 hour train ride to who knows where. Julie is particularly
-amused by a naked 10 year boy with an unrivaled ability to piss fifteen
-feet in any direction at will—usually wherever people happen to be
-walking.
+The city of Xi’an itself is nice, though it has a coarseness we haven’t felt previously—particularly at the train station where hundreds of Chinese families sleep on the cement waiting for standing-only tickets on an 18 hour train ride to who knows where. Julie is particularly amused by a naked 10 year boy with an unrivaled ability to piss fifteen feet in any direction at will—usually wherever people happen to be walking.
 
-We also spend a glorious afternoon riding a rented tandem bike around
-the [Ming dynasty](http://en.wikipedia.org/wiki/Ming_Dynasty) wall that
-to this day encircles the center of the city.
+We also spend a glorious afternoon riding a rented tandem bike around the [Ming dynasty](http://en.wikipedia.org/wiki/Ming_Dynasty) wall that to this day encircles the center of the city.
 
 <a href="/images/214.jpg" class="thickbox"
 title="Encampment outside the train station."><img
 src="http://somedaynevercomes.com/images/214t.jpg" /></a><span class="caption">Encampment
 outside the train station.</span>
-
-  
 
 <a href="/images/218.jpg" class="thickbox"
 title="Looking cool on a tandem bike. Ming Dynasty wall."><img
@@ -139,59 +48,26 @@ cool on a tandem bike. Ming Dynasty wall.</span>
 
 ### Chengdu
 
-Chengdu greets us with a chill in the air—the first we’ve felt since
-leaving home six months ago (unless you count the overzealous
-air-conditioning in
-[Malaysia](http://somedaynevercomes.com/category/Malaysia/)). We warm
-ourselves with the famous Sichuan hotpot. My favorite is the pig heart,
-though Julie is a bit grossed out by it and suffers nightmares Indiana
-Jones style later that evening. Of course, the hotpot is spicy, but it’s
-all the oils that really get you. Beer becomes like water, and 1000ml of
-it later you realize you’re drunk, but your belly is warm. The next day,
-you realize it’s a lot better going in than going out.
+Chengdu greets us with a chill in the air—the first we’ve felt since leaving home six months ago (unless you count the overzealous air-conditioning in [Malaysia](http://somedaynevercomes.com/category/Malaysia/)). We warm ourselves with the famous Sichuan hotpot. My favorite is the pig heart, though Julie is a bit grossed out by it and suffers nightmares Indiana Jones style later that evening. Of course, the hotpot is spicy, but it’s all the oils that really get you. Beer becomes like water, and 1000ml of it later you realize you’re drunk, but your belly is warm. The next day, you realize it’s a lot better going in than going out.
 
 <a href="/images/216.jpg" class="thickbox" title="Sichuan Hotpot."><img
 src="http://somedaynevercomes.com/images/216t.jpg" /></a><span class="caption">Sichuan
 Hotpot.</span>
 
-Chengdu has half the population of Shanghai but the same number of tea
-houses. This is a tea city. Some of the best tea houses are nothing more
-than a collection of tables and chairs in some beautiful garden in the
-middle of a park, and we spend several afternoons drinking tea amidst
-the bamboo forest and riverside pagodas, sipping Bamboo Green Tea and
-some delicious oolongs.
+Chengdu has half the population of Shanghai but the same number of tea houses. This is a tea city. Some of the best tea houses are nothing more than a collection of tables and chairs in some beautiful garden in the middle of a park, and we spend several afternoons drinking tea amidst the bamboo forest and riverside pagodas, sipping Bamboo Green Tea and some delicious oolongs.
 
-Of course, if you come to Chengdu you must see the [Panda
-bears](http://en.wikipedia.org/wiki/Panda_bear), which we do. Luck is
-with us and we make it to the Wolong Panda Research Facility to find
-that a half-dozen baby pandas have been born, small enough to fit in the
-palm of your hand. We don’t get to hold them, but watching them being
-fed inside an incubator is enough to make you smile. Of course, the
-adults and young adults are pretty cute to look at as well.
+Of course, if you come to Chengdu you must see the [Panda bears](http://en.wikipedia.org/wiki/Panda_bear), which we do. Luck is with us and we make it to the Wolong Panda Research Facility to find that a half-dozen baby pandas have been born, small enough to fit in the palm of your hand. We don’t get to hold them, but watching them being fed inside an incubator is enough to make you smile. Of course, the adults and young adults are pretty cute to look at as well.
 
 <a href="/images/212.jpg" class="thickbox"
 title="Panda Bear at the Wolong Panda Research Facility."><img
 src="http://somedaynevercomes.com/images/212t.jpg" /></a><span class="caption">Panda
 Bear at the Wolong Panda Research Facility.</span>
 
-  
-
 <a href="/images/213.jpg" class="thickbox" title="Bamboo Snack"><img
 src="http://somedaynevercomes.com/images/213t.jpg" /></a><span class="caption">Bamboo
 Snack</span>
 
-Chengdu, which is the capital of the Sichuan provence, is also home to
-the famous Sichuan Opera House. The production is entirely for tourists,
-but gives a wonderful glimpse into the wit, humor, and beauty of this
-art. Face-changing—or [Bian
-Lian](http://en.wikipedia.org/wiki/Bian_Lian)—is what is most known
-about the Sichuan Opera, wherein a performer can change his or her mask
-in the blink of an eye before the audience. The technique began over
-three hundred years ago, and to this day remains a close-guarded secret.
-We see Bian Lian and are definitely amazed, as well by the shadow
-puppets and fire-breathers that perform. The performance is a tad
-expensive, but something we definitely cannot see at home, so well worth
-the price of admission.
+Chengdu, which is the capital of the Sichuan provence, is also home to the famous Sichuan Opera House. The production is entirely for tourists, but gives a wonderful glimpse into the wit, humor, and beauty of this art. Face-changing—or [Bian Lian](http://en.wikipedia.org/wiki/Bian_Lian)—is what is most known about the Sichuan Opera, wherein a performer can change his or her mask in the blink of an eye before the audience. The technique began over three hundred years ago, and to this day remains a close-guarded secret. We see Bian Lian and are definitely amazed, as well by the shadow puppets and fire-breathers that perform. The performance is a tad expensive, but something we definitely cannot see at home, so well worth the price of admission.
 
 <a href="/images/217.jpg" class="thickbox" title="Sichuan Opera"><img
 src="http://somedaynevercomes.com/images/217t.jpg" /></a><span class="caption">Sichuan
@@ -199,17 +75,7 @@ Opera</span>
 
 ### Moving On
 
-Up next is another long train ride to Kunming—a 6,000 foot high city
-nestled into the Tibetan plateau. What brings us here? You guessed
-it…tea. Kunming is the trading hub for the local tea of the
-area—pu-erh—hands down our favorite tea in China.
-
-**→ More photos for this post can be found on our [Flickr
-account](http://flickr.com/photos/kaiconragan/ "Go To Our Flickr Account"):**
-
-<a href="http://flickr.com/photos/kaiconragan/sets/72157594302840440/"
-class="flickr-photoset" title="View Photoset"><span>View the
-Photos</span></a>
+Up next is another long train ride to Kunming—a 6,000 foot high city nestled into the Tibetan plateau. What brings us here? You guessed it…tea. Kunming is the trading hub for the local tea of the area—pu-erh—hands down our favorite tea in China.
 
 #### <span id="comment">Comments</span>
 
@@ -408,12 +274,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

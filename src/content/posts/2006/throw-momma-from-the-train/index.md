@@ -1,36 +1,11 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
+---
+date: 2006-11-14T11:42:40-08:00
+title: "Throw Momma From The Train"
+type: post
+isPublic: false
+---
 
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/semporna-revisited"
-  rel="next" title="Semporna Revisited"><span>Next </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/beyond-shangri-la"
-  rel="prev" title="Beyond Shangri-La"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Throw Momma From the Train
-
-## Tuesday November 14, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Thailand/"
-rel="tag">Thailand</a> | Comments:
-[9](#comments "Jump To Entry Comments") | Written By: [Kai
-Conragan](/about/ "Learn More About The Author")
-
-In an amazing display of procrastination, we’ve managed to be in
-Thailand for an entire month without writing a single word about it.
-This is due to several factors, including wanting to finish our story
-about [Melie Snow
-Mountain](http://somedaynevercomes.com/article/beyond-shangri-la) before
-moving on to Thailand and a deep sense of apathy induced by too many
-Thai massages.
+In an amazing display of procrastination, we’ve managed to be in Thailand for an entire month without writing a single word about it. This is due to several factors, including wanting to finish our story about [Melie Snow Mountain](http://somedaynevercomes.com/article/beyond-shangri-la) before moving on to Thailand and a deep sense of apathy induced by too many Thai massages.
 
 Thailand has been quite a change from [China](/archives/china/). Though
 practically neighbors, the countries are worlds apart in culture: where
@@ -128,7 +103,7 @@ once were navigated by boats.
 On my arrival in Bangkok, I happened to be reading a book called
 <a href="href=" http:="" data-www.amazon.com="" data-gp=""
 data-redirect.html?ie="UTF8&amp;location=http%3A%2F%2Fwww.amazon.com%2FFortune-Teller-Told-Me-Earthbound-Travels%2Fdp%2F060980958X%2Fsr%3D11-1%2Fqid%3D1163583760&amp;tag=somedayneverc-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=9325&quot;">hi</a><img
-src="http://www.assoc-amazon.com/e/ir?t=somedayneverc-20&amp;l=ur2&amp;o=1"
+src="<http://www.assoc-amazon.com/e/ir?t=somedayneverc-20&amp;l=ur2&amp;o=1>"
 data-"="" />A Fortune-Teller Told Me: Earthbound Travels in the Far
 East, a book by the journalist
 <a href="http://www.tizianoterzani.com/" class="url fn">Tiziano
@@ -503,7 +478,7 @@ Your blog is sensational. You really know how to travel, write, and
 capture the magic in photographs.  
 You probably know all about this, but I thought of you recently. I was
 reading an article in the November 18-24 issue of The Economist (maybe
-you can buy it or get it online at www.economist.com). The article is
+you can buy it or get it online at <www.economist.com>). The article is
 under “Blogging” in the Business Section, byline San Francisco: “More
 people are quitting their day jobs to blog for a living.” Basically, you
 could run your blog as a small business, outsourcing the promotion and
@@ -639,12 +614,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

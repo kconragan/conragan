@@ -1,29 +1,9 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
-
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/the-borneo-highlands"
-  rel="next" title="The Borneo Highlands"><span>Next </span></a></span>
-- <span id="prev"><a
-  href="http://somedaynevercomes.com/article/bako-national-park-and-why-there-are-no-snakes-in-borneo"
-  rel="prev"
-  title="Bako National Park and Why There Are No Snakes in Borneo"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Semporna
-
-## Tuesday July 11, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Borneo/"
-rel="tag">Borneo</a> | Comments: [3](#comments "Jump To Entry Comments")
-| Written By: [Julie Brookman](/about/ "Learn More About The Author")
+---
+date: 2006-07-11T11:42:40-08:00
+title: "Semporna"
+type: post
+isPublic: false
+---
 
 We’ve made it to Semporna. There’s not much to Semporna, but we’ll be
 basing here to dive Pulau Sipidan- reputed to be one of the top dive
@@ -187,12 +167,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

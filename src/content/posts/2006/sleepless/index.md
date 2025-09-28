@@ -1,32 +1,10 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
+---
+date: 2006-07-21T11:42:40-08:00
+title: "Sleepless"
+type: post
+isPublic: false
+---
 
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/onward-to-kuching"
-  rel="next" title="Onward to Kuching"><span>Next </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/kuala-lumpur" rel="prev"
-  title="Kuala Lumpur"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Sleepless
-
-## Wednesday June 21, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Malaysia/"
-rel="tag">Malaysia</a> | Comments:
-[6](#comments "Jump To Entry Comments") | Written By: [Kai
-Conragan](/about/ "Learn More About The Author")
-
-When insomnia hits it always hits hard and at the worst possible time.
-Here we explore the affects of sleep deprivation at the finest hotel in
-Kuala Lumpur.
 
 <a href="/images/74.jpg" class="thickbox"
 title="The pride of Malaysia: The Petronas Twin Towers."><img
@@ -314,12 +292,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

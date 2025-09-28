@@ -1,30 +1,9 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
-
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a
-  href="http://somedaynevercomes.com/article/bako-national-park-and-why-there-are-no-snakes-in-borneo"
-  rel="next"
-  title="Bako National Park and Why There Are No Snakes in Borneo"><span>Next
-  </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/onward-to-kuching"
-  rel="prev" title="Onward to Kuching"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Kuching
-
-## Sunday June 25, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Borneo/"
-rel="tag">Borneo</a> | Comments: [7](#comments "Jump To Entry Comments")
-| Written By: [Kai Conragan](/about/ "Learn More About The Author")
+---
+date: 2006-06-25T11:42:40-08:00
+title: "Kuching"
+type: post
+isPublic: false
+---
 
 Usually if you say the word *Borneo* to someone they imagine rainforest.
 Then they think of things that live in rainforests like monkeys or big
@@ -226,6 +205,7 @@ id="c000151">5</a>
 Jun 30, 07:44 AM
 
 Reasons why I love this post:  
+
 1. That Katie also noticed Julie’s tan. Julie, I soon will be as tan as
 you (well, that is the goal at least). I will send pictures. We will
 compare and contrast. We will see who will be victorious.  
@@ -351,12 +331,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

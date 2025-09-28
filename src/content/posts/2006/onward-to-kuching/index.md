@@ -1,53 +1,19 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
+---
+date: 2006-06-23T11:42:40-08:00
+title: "Onward To Kuching"
+type: post
+isPublic: false
+---
 
-Someday Never Comes - A Travel Blog
+Just a quick update to let everyone know our next move. We’ve worked our way through the highlights of Kuala Lumpur and are moving on to Kuching in Malaysian Borneo.
 
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
+Reported to be one of the quaintest cities in Southeast Asia from other traveler’s and guidebooks alike, Kuching should be a nice change from the [sleepless nights of Kuala Lumpur](http://www.somedaynevercomes.com/article/sleepless). Kuching is also well-situated for some jungle walks through one of the oldest rainforests in the world, exploring deep limestone caves, as well as a visit to see an authentic [Borneo Longhouse](http://en.wikipedia.org/wiki/Longhouse#Borneo_Longhouse).
 
-- <span id="next"><a href="http://somedaynevercomes.com/article/kuching" rel="next"
-  title="Kuching"><span>Next </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/sleepless" rel="prev"
-  title="Sleepless"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Onward to Kuching
-
-## Friday June 23, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Malaysia/"
-rel="tag">Malaysia</a> | Comments:
-[7](#comments "Jump To Entry Comments") | Written By: [Kai
-Conragan](/about/ "Learn More About The Author")
-
-Just a quick update to let everyone know our next move. We’ve worked our
-way through the highlights of Kuala Lumpur and are moving on to Kuching
-in Malaysian Borneo.
-
-Reported to be one of the quaintest cities in Southeast Asia from other
-traveler’s and guidebooks alike, Kuching should be a nice change from
-the [sleepless nights of Kuala
-Lumpur](http://www.somedaynevercomes.com/article/sleepless). Kuching is
-also well-situated for some jungle walks through one of the oldest
-rainforests in the world, exploring deep limestone caves, as well as a
-visit to see an authentic [Borneo
-Longhouse](http://en.wikipedia.org/wiki/Longhouse#Borneo_Longhouse).
-
-We purchased our tickets from [Air Asia](http://airasia.com) for the 1
-1/2 hour flight from Kuala Lumpur, and are scheduled to land Friday
-afternoon. We’ll post more once we’ve gotten situated.
+We purchased our tickets from [Air Asia](http://airasia.com) for the 1 1/2 hour flight from Kuala Lumpur, and are scheduled to land Friday afternoon. We’ll post more once we’ve gotten situated.
 
 And one last thing…
 
-because apparently everyone forgot this momentious occasion in the
-ongoing history of this planet (even her mother), today is Julie’s
-half-birthday. So, umm, Happy Half-Birthday to Julie, let’s hear it
-everyone ( *Note from Kai: this last part was painful just to type, so I
-do apologize but Julie made me do it. OK, carry on* ).
+because apparently everyone forgot this momentious occasion in the ongoing history of this planet (even her mother), today is Julie’s half-birthday. So, umm, Happy Half-Birthday to Julie, let’s hear it everyone ( *Note from Kai: this last part was painful just to type, so I do apologize but Julie made me do it. OK, carry on* ).
 
 #### <span id="comment">Comments</span>
 
@@ -225,12 +191,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

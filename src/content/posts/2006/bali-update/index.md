@@ -1,64 +1,22 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
-
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/uluwatu-surfing"
-  rel="next" title="Uluwatu Surfing"><span>Next </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/a-walk-around-ubud"
-  rel="prev" title="A Walk Around Ubud"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Bali Update
-
-## Wednesday April 19, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Indonesia/"
-rel="tag">Indonesia</a> | Comments:
-[3](#comments "Jump To Entry Comments") | Written By: [Kai
-Conragan](/about/ "Learn More About The Author")
-
-Just a quick update…
+---
+date: 2006-04-19T11:42:40-08:00
+title: "Bali Update"
+type: post
+isPublic: false
+---
 
 <a href="/images/24.jpg" class="thickbox"
 title="Breakfast of Pineapple and Banana Jaffle"><img
 src="http://somedaynevercomes.com/images/24t.jpg" /></a><span class="caption">Breakfast
 of Pineapple and Banana Jaffle</span>
 
-We’ve spent the past 3 days hanging out Ubud, checking out the local art
-and doing some walks through the rural countryside. We stayed at the
-Sayong House, which is located in the middle of central Ubud near many
-great restaurants and shops. Our room was on the 3rd floor and had a
-lovely view of the Balinese rooftops and the stream that flows through
-the center of town. The room itself is very clean and simple, with two
-beds (one queen the other a single) and a small lockable wardrobe. Every
-thing in the bathroom is a dizzying blue and purple, and it had a
-bathtub with a hand shower and hot water. The rate for the room included
-breakfast: we had jaffles with bannana and pineapple and omelletes.
+We’ve spent the past 3 days hanging out Ubud, checking out the local art and doing some walks through the rural countryside. We stayed at the Sayong House, which is located in the middle of central Ubud near many great restaurants and shops. Our room was on the 3rd floor and had a lovely view of the Balinese rooftops and the stream that flows through the center of town. The room itself is very clean and simple, with two beds (one queen the other a single) and a small lockable wardrobe. Every thing in the bathroom is a dizzying blue and purple, and it had a bathtub with a hand shower and hot water. The rate for the room included breakfast: we had jaffles with bannana and pineapple and omelletes.
 
-We’re currently eating lunch at the Bali Buddha Cafe in Ubud waiting for
-our transport to take us back down to the Bukit Peninsula. A new swell
-is forecasted to hit tomorrow so it’s back to the beach for us.
+We’re currently eating lunch at the Bali Buddha Cafe in Ubud waiting for our transport to take us back down to the Bukit Peninsula. A new swell is forecasted to hit tomorrow so it’s back to the beach for us.
 
-We haven’t posted with as much frequency as we’d like to, partly due to
-limited internet access but also partly due to the time it takes to put
-together a well-written post complete with photos. As such, we are going
-to start putting up quick updates in addition to our longer, more
-narrative posts. The quick posts will be more nuts and bolts
-orienated—where we are staying, what we’ve been up to, etc.—which
-hopefully will keep everyone a bit more up-to-date with our daily life.
-Let us know what you think.
+We haven’t posted with as much frequency as we’d like to, partly due to limited internet access but also partly due to the time it takes to put together a well-written post complete with photos. As such, we are going to start putting up quick updates in addition to our longer, more narrative posts. The quick posts will be more nuts and bolts orienated—where we are staying, what we’ve been up to, etc.—which hopefully will keep everyone a bit more up-to-date with our daily life. Let us know what you think.
 
-In the meantime, we’ve posted some [our first set of images from Bali to
-the gallery](/gallery/), so go check them out. We also just put up a new
-post about a [walk through
-Ubud](http://www.somedaynevercomes.com/article/a-walk-around-ubud).
+In the meantime, we’ve posted some [our first set of images from Bali to the gallery](/gallery/), so go check them out. We also just put up a new post about a [walk through Ubud](http://www.somedaynevercomes.com/article/a-walk-around-ubud).
 
 #### <span id="comment">Comments</span>
 
@@ -194,12 +152,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

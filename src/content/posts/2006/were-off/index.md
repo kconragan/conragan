@@ -1,47 +1,21 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
+---
+date: 2006-03-17T11:42:40-08:00
+title: "We're Off"
+type: post
+isPublic: false
+---
 
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a
-  href="http://somedaynevercomes.com/article/heading-south-on-the-big-island-of-hawaii"
-  rel="next"
-  title="Heading South on the Big Island of Hawai&#39;i"><span>Next
-  </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/gear-kelty-redwing-3100"
-  rel="prev" title="Gear: Kelty Redwing 3100"><span>Previous</span></a></span>
-
-Latest Entry
-
-# We're Off!!!
-
-## Friday March 17, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Hawaii/"
-rel="tag">Hawaii</a> | Comments: [8](#comments "Jump To Entry Comments")
-| Written By: [Kai Conragan](/about/ "Learn More About The Author")
-
-5am wake up, sleepy drive to the Oakland airport (thanks Mom!), hugs to
-the family, and we’re off. Our trip is officially underway and here is
-the first post to prove it.
+5am wake up, sleepy drive to the Oakland airport (thanks Mom!), hugs to the family, and we’re off. Our trip is officially underway and here is the first post to prove it.
 
 <a href="/images/4.jpg" class="thickbox"
 title="Sunset from saddle road"><img
 src="http://somedaynevercomes.com/images/4t.jpg"
-title="The sun goes down over the Kona coast on the Big Island of Hawai&#39;i on the first day of our trip as we make the drive over 
+title="The sun goes down over the Kona coast on the Big Island of Hawai&#39;i on the first day of our trip as we make the drive over
 Saddle Road to Hilo. The clouds filler in over the coast and began working there way up the volcano."
 alt="Sunset over Saddle Road - Big Island, Hawai&#39;i" /></a><span class="caption">Sunset
 from saddle road</span>
 
-We have arrived in Hawaii and the trip is officially underway. We
-arrived on the Big Island of Hawai’i with pretty little headache though,
-as usual, my surfboards didn’t make it onto our connecting flight (from
-Oahu to the Big Island).
+We have arrived in Hawaii and the trip is officially underway. We arrived on the Big Island of Hawai’i with pretty little headache though, as usual, my surfboards didn’t make it onto our connecting flight (from Oahu to the Big Island).
 
 <a href="/images/5.jpg" class="thickbox" title="Were off!"><img
 src="http://somedaynevercomes.com/images/5t.jpg"
@@ -49,56 +23,17 @@ title="Julie and Kai on the plane for Hawaii"
 alt="Julie and Kai on the plane for Hawaii" /></a><span class="caption">Were
 off!</span>
 
-In all of my travels with surfboards—including Panama, Costa Rica,
-Mexico, Fiji, and more—I’ve only ever had my boards show up on-time and
-undamaged once. Don’t forget that *ALL* airlines charge extra fees for
-surfboards, anywhere from a flat rate of $50 to $50 *per board*. Let me
-ask you something: Have you ever been charged per golf club? I didn’t
-think so. It’s the airlines little way of making a cheap extra buck, as
-they know surfer’s have no other plausible options to get their boards
-to their destination. Don’t forget that we get to pay for the priviledge
-of having our boards show up damaged (we even have to sign a waiver) or
-several days late. The airline industry is truly one of the worst around
-for customer service. And yet they wonder why they are all bankrupt.
+In all of my travels with surfboards—including Panama, Costa Rica, Mexico, Fiji, and more—I’ve only ever had my boards show up on-time and undamaged once. Don’t forget that *ALL* airlines charge extra fees for surfboards, anywhere from a flat rate of $50 to $50 *per board*. Let me ask you something: Have you ever been charged per golf club? I didn’t think so. It’s the airlines little way of making a cheap extra buck, as they know surfer’s have no other plausible options to get their boards to their destination. Don’t forget that we get to pay for the priviledge of having our boards show up damaged (we even have to sign a waiver) or several days late. The airline industry is truly one of the worst around for customer service. And yet they wonder why they are all bankrupt.
 
-Anyhow, enough ranting. We’re in Hawai’i and it is beautiful! After
-Julie and I had picked up our rental car and grabbed some lunch, the
-surfboards had arrived safely on the flight behind our’s and we were
-able to get on our way.
+Anyhow, enough ranting. We’re in Hawai’i and it is beautiful! After Julie and I had picked up our rental car and grabbed some lunch, the surfboards had arrived safely on the flight behind our’s and we were able to get on our way.
 
-Before heading over to Hilo, which is on the other side of the island
-(if you’re wondering why we flew into Kona instead of Hilo, don’t ask),
-we stopped and took a quick dive in the ocean to remind ourselves that
-we are in fact, in Hawai’i. At the beach we went swimming at there were
-4 turtles just hanging out in the sand. Nice.
+Before heading over to Hilo, which is on the other side of the island (if you’re wondering why we flew into Kona instead of Hilo, don’t ask), we stopped and took a quick dive in the ocean to remind ourselves that we are in fact, in Hawai’i. At the beach we went swimming at there were 4 turtles just hanging out in the sand. Nice.
 
-I must admit that this whole experience doesn’t seem real yet. The
-excitement that I would have anticipated to be here hasn’t arrived yet,
-but I think much of that is due to the fact that we are starting in
-Hawaii, a place that is familiar and still very much at home for both of
-us. But I’m glad we decided to start here. Julie and I both felt we
-would need some time to unwind from the stress and demands that we’ve
-had of late, both getting prepared for this trip and wrapping up the
-engagments and commitments we needed to fulfill.
+I must admit that this whole experience doesn’t seem real yet. The excitement that I would have anticipated to be here hasn’t arrived yet, but I think much of that is due to the fact that we are starting in Hawaii, a place that is familiar and still very much at home for both of us. But I’m glad we decided to start here. Julie and I both felt we would need some time to unwind from the stress and demands that we’ve had of late, both getting prepared for this trip and wrapping up the engagments and commitments we needed to fulfill.
 
-It’s simply staggering how difficult it really is to completely pull
-yourself out of the flow of daily life. There are obvious demands such
-as exiting gracefully from work and saying goodbye to the family (which
-can be emotionally draining). But there are so many other things,
-mundane and underestimated, to take care of before leaving for an
-extended time. Taxes, stopping all reocurring payments on credit cards,
-vaccinations, getting rid of personal items and putting the more valued
-ones in storage. The list goes on. It’s funny how travel of this nature
-is often seen as an escape, a way to just blow off the demands of life.
-I think it’s quite the opposite: *you have to work if you want to take a
-trip like this*. I’ll be writing some more specific posts about this
-issue, but for now it’s suffice to say that long-term travel is
-certainly no vacation.
+It’s simply staggering how difficult it really is to completely pull yourself out of the flow of daily life. There are obvious demands such as exiting gracefully from work and saying goodbye to the family (which can be emotionally draining). But there are so many other things, mundane and underestimated, to take care of before leaving for an extended time. Taxes, stopping all reocurring payments on credit cards, vaccinations, getting rid of personal items and putting the more valued ones in storage. The list goes on. It’s funny how travel of this nature is often seen as an escape, a way to just blow off the demands of life. I think it’s quite the opposite: *you have to work if you want to take a trip like this*. I’ll be writing some more specific posts about this issue, but for now it’s suffice to say that long-term travel is certainly no vacation.
 
-For the now plan is simple: we are going to rest, unwind, and discover
-what Hilo has to offer us. Towards the end of March we’ll be meeting up
-with our friend Denise, who is a dive instructor and is starting a dive
-business on the Kona side of the island.
+For the now plan is simple: we are going to rest, unwind, and discover what Hilo has to offer us. Towards the end of March we’ll be meeting up with our friend Denise, who is a dive instructor and is starting a dive business on the Kona side of the island.
 
 #### <span id="comment">Comments</span>
 
@@ -299,12 +234,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

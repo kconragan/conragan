@@ -1,128 +1,30 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
+---
+date: 2006-07-31T11:42:40-08:00
+title: "Diving At Pulau Sipadan"
+type: post
+isPublic: false
+---
 
-Someday Never Comes - A Travel Blog
+As Mike, our Divemaster, along with the other four divers in our group began descending, I looked around and realized Kai was not following. *Oh shit, what’s going on*, I thought. I added some air to my BCD, returned to the surface, and saw Kai swimming madly towards the boat.
 
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a
-  href="http://somedaynevercomes.com/article/what-should-we-call-this-post"
-  rel="next" title="What Should We Call This Post?"><span>Next </span></a></span>
-- <span id="prev"><a
-  href="http://somedaynevercomes.com/article/out-with-the-old-in-with-the-new"
-  rel="prev"
-  title="Out With The Old, In With The New"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Diving at Pulau Sipadan
-
-## Monday July 31, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Borneo/"
-rel="tag">Borneo</a> | Comments:
-[15](#comments "Jump To Entry Comments") | Written By: [Julie
-Brookman](/about/ "Learn More About The Author")
-
-As Mike, our Divemaster, along with the other four divers in our group
-began descending, I looked around and realized Kai was not following.
-*Oh shit, what’s going on*, I thought. I added some air to my BCD,
-returned to the surface, and saw Kai swimming madly towards the boat.
-
-He’d forgotten to take off his watch, a crappy $20
-[Timex](http://timex.com) he’d picked up in
-[Hawai’i](/category/Hawaii/). Apparently, he was worried it wouldn’t
-survive the pressure from the depth we were about to dive. *Screw the
-watch*, I said to myself. The thought of steep walls, deep water, and
-strong currents already had me nervous and I wanted a good first dive.
-We were at Pulau Sipadan—one of the great dive destinations of the
-world.
+He’d forgotten to take off his watch, a crappy $20 [Timex](http://timex.com) he’d picked up in [Hawai’i](/category/Hawaii/). Apparently, he was worried it wouldn’t survive the pressure from the depth we were about to dive. *Screw the watch*, I said to myself. The thought of steep walls, deep water, and strong currents already had me nervous and I wanted a good first dive. We were at Pulau Sipadan—one of the great dive destinations of the world.
 
 <a href="/images/118.jpg" class="thickbox"
 title="Mike, our Divemaster, making sure everyone is OK."><img
 src="http://somedaynevercomes.com/images/118t.jpg" /></a><span class="caption">Mike,
 our Divemaster, making sure everyone is OK.</span>
 
-The island of Sipadan sits at the top of an extinct volcanic cone in the
-middle of the Celebes Sea. Beneath the island—and not more than 15
-meters from the shore—the walls of the volcano plunge near vertically
-600 meters down to the seabed. Coral has attached itself to these
-seawalls, creating one of the most diverse marine habitats on earth.
-Strong currents sweep past island, making it a converging point for the
-entire marine food chain—from plankton all the way up to turtles,
-sharks, rays, and even whale sharks.
+The island of Sipadan sits at the top of an extinct volcanic cone in the middle of the Celebes Sea. Beneath the island—and not more than 15 meters from the shore—the walls of the volcano plunge near vertically 600 meters down to the seabed. Coral has attached itself to these seawalls, creating one of the most diverse marine habitats on earth. Strong currents sweep past island, making it a converging point for the entire marine food chain—from plankton all the way up to turtles, sharks, rays, and even whale sharks.
 
-Kai, having gotten rid of his watch, quickly swam back from the boat. We
-gave each other the OK sign and began our descent. Below us, our dive
-group had already descended a good 8 meters and were swimming along the
-bottom. *That’s not so deep*. As I descended further, I realized the
-group was making their way to what appeared to be a small keyhole, or
-slot, in the reef. As I approached closer, the divers started swimming
-down the keyhole—headfirst. Kai and I followed, and as we made our way
-through the keyhole, below me I saw only deep, blue ocean. As we swam, I
-checked my depth gauge: 15 meters, 18 meters, 20 meters. At 22 meters,
-we emerged out of the keyhole. I turned my gaze out into the deep blue
-ahead, and immediately saw a giant grey shark swimming in the distance.
-I’d never seen a shark before, and my initial instinct I thought would
-have been fear. This animal, however, was far too graceful underwater to
-frighten me. It was beautiful.
+Kai, having gotten rid of his watch, quickly swam back from the boat. We gave each other the OK sign and began our descent. Below us, our dive group had already descended a good 8 meters and were swimming along the bottom. *That’s not so deep*. As I descended further, I realized the group was making their way to what appeared to be a small keyhole, or slot, in the reef. As I approached closer, the divers started swimming down the keyhole—headfirst. Kai and I followed, and as we made our way through the keyhole, below me I saw only deep, blue ocean. As we swam, I checked my depth gauge: 15 meters, 18 meters, 20 meters. At 22 meters, we emerged out of the keyhole. I turned my gaze out into the deep blue ahead, and immediately saw a giant grey shark swimming in the distance. I’d never seen a shark before, and my initial instinct I thought would have been fear. This animal, however, was far too graceful underwater to frighten me. It was beautiful.
 
-The current picked us up and began pulling us along the wall. As we
-drifted with the current we continued a slow descent to 32 meters.
-Remarkably, as we got deeper, the visibility only increased, perhaps
-reaching 30 meters, which is just average by Sipadan standards. Drifting
-along with the current, my mind shifted from worrying about
-things—depth, current, being annoyed at Kai over his stupid watch—too
-simply absorbing all that was around me. Large schools of fish and black
-and white tip sharks swimming in the depth; colorful coral, sponges, and
-reef fish on the wall to my right. My eyes felt wide, not wanting to
-blink out of fear I would miss something. The current carried us along
-comfortably like riding as a passenger in a car. All we had to do was
-sit back and enjoy the wall to our right with a kaleidoscope of colorful
-coral, and remember to look out into the blue for the sharks and other
-big stuff.
+The current picked us up and began pulling us along the wall. As we drifted with the current we continued a slow descent to 32 meters. Remarkably, as we got deeper, the visibility only increased, perhaps reaching 30 meters, which is just average by Sipadan standards. Drifting along with the current, my mind shifted from worrying about things—depth, current, being annoyed at Kai over his stupid watch—too simply absorbing all that was around me. Large schools of fish and black and white tip sharks swimming in the depth; colorful coral, sponges, and reef fish on the wall to my right. My eyes felt wide, not wanting to blink out of fear I would miss something. The current carried us along comfortably like riding as a passenger in a car. All we had to do was sit back and enjoy the wall to our right with a kaleidoscope of colorful coral, and remember to look out into the blue for the sharks and other big stuff.
 
-I had always like diving before, but moments of enjoyment had always
-been in between more moments of anxiety: *how much air do I have? how
-deep am I? where’s Kai?*. I grew up riding horses, where success is
-dictated by an ability to control things: the horse, myself, etc. The
-ocean is different—by nature it is ever changing and in fact nothing can
-be controlled. I had always struggled with this point. On this dive at
-Sipadan, though, I was completely relaxed. I understood why I had come
-here. Places like Sipadan are why people fall in love with diving.
+I had always like diving before, but moments of enjoyment had always been in between more moments of anxiety: *how much air do I have? how deep am I? where’s Kai?*. I grew up riding horses, where success is dictated by an ability to control things: the horse, myself, etc. The ocean is different—by nature it is ever changing and in fact nothing can be controlled. I had always struggled with this point. On this dive at Sipadan, though, I was completely relaxed. I understood why I had come here. Places like Sipadan are why people fall in love with diving.
 
-After 10 more minutes drifting with the current, our Divemaster Mike
-brought us up a few meters and onto a small plateau jutting out of the
-wall. He instructed us to grab hold to a fixed object on the seabed.
-Though the current had subsided here, it was still moving more than
-enough to pull us off the plateau. Once everyone found a handhold, Mike
-pointed out into the blue. Almost on cue, a giant school of chevron
-barracuda emerged and began swirling before us—perhaps three or four
-hundred in total. It was mesmerizing. This plateau is what gives the
-dive we were one it’s name: Baraccuda Point. We finished our dive along
-a slow ascent of the plateau. Mike, proving his worth as a divemaster,
-found us numerous, less obvious things to look at besides the
-innumerable sharks and turtles: nudibranches, scorpion fish, clouded
-moray eel. At our 3 minute safety stop in just 5 meters of water, we
-encountered a large school of very big bumphead parrotfish.
+After 10 more minutes drifting with the current, our Divemaster Mike brought us up a few meters and onto a small plateau jutting out of the wall. He instructed us to grab hold to a fixed object on the seabed. Though the current had subsided here, it was still moving more than enough to pull us off the plateau. Once everyone found a handhold, Mike pointed out into the blue. Almost on cue, a giant school of chevron barracuda emerged and began swirling before us—perhaps three or four hundred in total. It was mesmerizing. This plateau is what gives the dive we were one it’s name: Baraccuda Point. We finished our dive along a slow ascent of the plateau. Mike, proving his worth as a divemaster, found us numerous, less obvious things to look at besides the innumerable sharks and turtles: nudibranches, scorpion fish, clouded moray eel. At our 3 minute safety stop in just 5 meters of water, we encountered a large school of very big bumphead parrotfish.
 
-We did a total of 4 dives at Sipadan spread out over two days. My
-favorite dive was at Turtle Cavern, which is named so because turtle
-skeletons are often found in a cave along the dive. The romantic image
-is that this is where turtles go to die when it’s their time. The
-reality is that Turtle Cavern is a large labyrinth of underground caves,
-and more than one turtles has become lost in the labyrinth and drowned
-before finding their way out. Needless to say, entering the cave is
-dangerous and should only be done with the proper equipment and
-training. On our dive, we only entered the mouth of the cave, which was
-thrilling nonetheless. After leaving the cave, however, the real show
-began, as we found ourselves surrounded by turtles. There were turtles
-swimming above us, below us, resting in nooks on the wall besides. It
-felt like a scene straight out of Finding Nemo. A conservative estimate
-would be that we saw at least 50 turtles, 100 would not be exaggerating.
+We did a total of 4 dives at Sipadan spread out over two days. My favorite dive was at Turtle Cavern, which is named so because turtle skeletons are often found in a cave along the dive. The romantic image is that this is where turtles go to die when it’s their time. The reality is that Turtle Cavern is a large labyrinth of underground caves, and more than one turtles has become lost in the labyrinth and drowned before finding their way out. Needless to say, entering the cave is dangerous and should only be done with the proper equipment and training. On our dive, we only entered the mouth of the cave, which was thrilling nonetheless. After leaving the cave, however, the real show began, as we found ourselves surrounded by turtles. There were turtles swimming above us, below us, resting in nooks on the wall besides. It felt like a scene straight out of Finding Nemo. A conservative estimate would be that we saw at least 50 turtles, 100 would not be exaggerating.
 
 <a href="/images/117.jpg" class="thickbox"
 title="Looking up at one of Sipadan&#39;s many turtles."><img
@@ -131,164 +33,37 @@ up at one of Sipadan’s many turtles.</span>
 
 ### Scuba Junkie
 
-Until recently, accommodations could be had on the island of Sipadan
-itself. In 2004, the Malaysian government ordered all dive operators to
-move their facilities off the island—citing environmental concerns.
-Additionally, the Malaysian government enacted a permit system, allowing
-no more than 120 divers per day at Sipadan. Each permit costs RM40,
-which is paid by the diver. The changes instituted by the government
-resulted in a shake-up of the local dive operators, who were forced to
-move their operations to Semporna, the closest town to Sipadan back in
-Sabah.
+Until recently, accommodations could be had on the island of Sipadan itself. In 2004, the Malaysian government ordered all dive operators to move their facilities off the island—citing environmental concerns. Additionally, the Malaysian government enacted a permit system, allowing no more than 120 divers per day at Sipadan. Each permit costs RM40, which is paid by the diver. The changes instituted by the government resulted in a shake-up of the local dive operators, who were forced to move their operations to Semporna, the closest town to Sipadan back in Sabah.
 
-Semporna is a bit of a wild-west town, even in Borneo terms. Over the
-years, numerous diver operators have sprung up in Semporna, each vying
-for dive business. The problem is, due to the permit system, only 120
-divers are allowed on Sipadan each day. While there are other islands
-with excellent diving (especially Mabul for it’s famous muck diving),
-most people come here to dive Sipadan. What has resulted is that many
-dive companies operate at Sipdan without permits, paying Malaysian
-officials under the table to turn a blind eye. Not surprisingly, many of
-the companies operating illegally have actually gained priority on the
-island, as officials have recognized an opportunity to make some extra
-money on the side.
+Semporna is a bit of a wild-west town, even in Borneo terms. Over the years, numerous diver operators have sprung up in Semporna, each vying for dive business. The problem is, due to the permit system, only 120 divers are allowed on Sipadan each day. While there are other islands with excellent diving (especially Mabul for it’s famous muck diving), most people come here to dive Sipadan. What has resulted is that many dive companies operate at Sipdan without permits, paying Malaysian officials under the table to turn a blind eye. Not surprisingly, many of the companies operating illegally have actually gained priority on the island, as officials have recognized an opportunity to make some extra money on the side.
 
-When we arrived in Semporna, we visited multiple dive operators before
-settling on one. Prices were very competitive—indeed, near
-identical—with most companies charging RM300 for 3 dives per day at
-Sipadan (plus RM40 for the dive permit for the ones who used permits).
-Many of the companies we visited had locals working at the front
-counter. Though polite, they knew next to nothing about diving and could
-not answer any questions we had about diving in the area. We were
-repeatedly told to come back in the evening when the divers had
-returned.
+When we arrived in Semporna, we visited multiple dive operators before settling on one. Prices were very competitive—indeed, near identical—with most companies charging RM300 for 3 dives per day at Sipadan (plus RM40 for the dive permit for the ones who used permits). Many of the companies we visited had locals working at the front counter. Though polite, they knew next to nothing about diving and could not answer any questions we had about diving in the area. We were repeatedly told to come back in the evening when the divers had returned.
 
-The company we settled on diving with was [Scuba
-Junkie](http://scuba-junkie.com/). Walking into their dive shop for the
-first time were were greeted warmly and by someone knowledgeable about
-diving in the area. Scuba Junkie happens to be the only [PADI licensed
-and insured dive operator](http://padi.com) in Semporna. The company was
-started by Ric, who is from Scotland, and Tino, who is from Germany.
-Both Ric and Tino are PADI certified instructors and extremely
-experienced divers, despite the fact that they are both only in their
-20s. For the record, Scuba Junkie is one of the few companies diving
-with legal permits.
+The company we settled on diving with was [Scuba Junkie](http://scuba-junkie.com/). Walking into their dive shop for the first time were were greeted warmly and by someone knowledgeable about diving in the area. Scuba Junkie happens to be the only [PADI licensed and insured dive operator](http://padi.com) in Semporna. The company was started by Ric, who is from Scotland, and Tino, who is from Germany. Both Ric and Tino are PADI certified instructors and extremely experienced divers, despite the fact that they are both only in their 20s. For the record, Scuba Junkie is one of the few companies diving with legal permits.
 
-Rather than catering to rich tourists who want a packaged holiday, Scuba
-Junkie cater to independent travelers who simply want to dive. If you
-want your dives video-taped, gourmet lunches on the boat, and the latest
-dive gear to try, look elsewhere. If you’re looking for a place that
-simply lives and breathes for diving, check out Scuba Junkie. We met one
-girl who raved about diving with another company because they treated
-her like royalty; at Scuba Junkie it would be more accurate to say you
-are treated like part of the family. And indeed, it’s a large family. At
-any given time Scuba Junkie has a good handful of Divemasters working,
-and they are usually pushing through 2-3 Dive Masters in Training a
-month. The divemasters, along with Ric and Tino, are excellent to dive
-with. We dove with three different divemasters in our time there, and
-all were extremely knowledgeable. They found all sorts of things we
-would not have seen otherwise: many types of nudibranches, scorpion
-fish, frog fish, clouded morays, razor fish, flying gurnards, anemone
-shrimp, madarin fish, the list goes on. Additionally, the divemasters
-were extremely enthusiastic to be diving, a point not to be taken
-lightly. Too often you meet divemasters who are burned out on diving. In
-between dives, the divemasters at Scuba Junkie were just as excited as
-the guests about what had been seen.
+Rather than catering to rich tourists who want a packaged holiday, Scuba Junkie cater to independent travelers who simply want to dive. If you want your dives video-taped, gourmet lunches on the boat, and the latest dive gear to try, look elsewhere. If you’re looking for a place that simply lives and breathes for diving, check out Scuba Junkie. We met one girl who raved about diving with another company because they treated her like royalty; at Scuba Junkie it would be more accurate to say you are treated like part of the family. And indeed, it’s a large family. At any given time Scuba Junkie has a good handful of Divemasters working, and they are usually pushing through 2-3 Dive Masters in Training a month. The divemasters, along with Ric and Tino, are excellent to dive with. We dove with three different divemasters in our time there, and all were extremely knowledgeable. They found all sorts of things we would not have seen otherwise: many types of nudibranches, scorpion fish, frog fish, clouded morays, razor fish, flying gurnards, anemone shrimp, madarin fish, the list goes on. Additionally, the divemasters were extremely enthusiastic to be diving, a point not to be taken lightly. Too often you meet divemasters who are burned out on diving. In between dives, the divemasters at Scuba Junkie were just as excited as the guests about what had been seen.
 
-In addition to the dive shop, Ric and Tino, showing their business
-prowess, have established the Scuba Junkie Backpacker, which is a very
-comfortable place to stay while in Semporna with clean rooms,
-comfortable beds, and hot showers. As an added bonus, if you dive with
-Scuba Junkie, room rates are 50% off. Kai and I had a nice double room
-with a hot shower down the hall for just RM30 per day. They also offer
-free computers and internet to guests, plus a wireless connection for
-those with their own laptop. Next door to the backpacker, Ric and Tino
-have setup the Scuba Junkie bar (and soon to be pizza restaurant), where
-most people congregate in the evening, discussing the days dives while
-sharing Tiger beer served in cold, frosted mugs.
+In addition to the dive shop, Ric and Tino, showing their business prowess, have established the Scuba Junkie Backpacker, which is a very comfortable place to stay while in Semporna with clean rooms, comfortable beds, and hot showers. As an added bonus, if you dive with Scuba Junkie, room rates are 50% off. Kai and I had a nice double room with a hot shower down the hall for just RM30 per day. They also offer free computers and internet to guests, plus a wireless connection for those with their own laptop. Next door to the backpacker, Ric and Tino have setup the Scuba Junkie bar (and soon to be pizza restaurant), where most people congregate in the evening, discussing the days dives while sharing Tiger beer served in cold, frosted mugs.
 
 ### Rescue Diver Course
 
-Scuba Junkie could just as easily be called a school as a dive shop due
-to the large quantity of people taking scuba classes there at any given
-time, ranging from beginning Open Water students all the way to
-Divemasters in training. Many of the divemaster training students (DMT’s
-) had also done their [Rescue
-Diver](http://www.padi.com/english/common/courses/rec/continue/rescue.asp)
-course at Scuba Junkie, and consistently said how much fun it was and
-that it was the best PADI course they had ever done. Confidence is not a
-strong point for me in the water, so I thought it would be a good course
-for me to take. After some thought, Kai and I bit the bullet and forked
-out a RM900 a piece for the course.
+Scuba Junkie could just as easily be called a school as a dive shop due to the large quantity of people taking scuba classes there at any given time, ranging from beginning Open Water students all the way to Divemasters in training. Many of the divemaster training students (DMT’s) had also done their [Rescue Diver](http://www.padi.com/english/common/courses/rec/continue/rescue.asp) course at Scuba Junkie, and consistently said how much fun it was and that it was the best PADI course they had ever done. Confidence is not a strong point for me in the water, so I thought it would be a good course for me to take. After some thought, Kai and I bit the bullet and forked out a RM900 a piece for the course.
 
-The rescue training course was spread over 3 days, two of which were in
-the water and the last practicing CPR and rescue breathing on a well
-worn mannequin named Annie (Ric had hand-carried the mannequin all the
-way from Scotland, a funny story in itself).
+The rescue training course was spread over 3 days, two of which were in the water and the last practicing CPR and rescue breathing on a well worn mannequin named Annie (Ric had hand-carried the mannequin all the way from Scotland, a funny story in itself).
 
-The two days in the water were mostly comprised of mock rescue
-scenarios, where Ric, or other DM’s on hand, would start screaming
-*Pizza! Pizza!* (it’s bad etiquette to actually yell for help when other
-divers are present, so an unwavering love for pizza became the call for
-help). Kai and I would then have to rescue them from a number of
-situations: unconscious diver at the surface, unconscious diver
-underwater, panicked diver, etc.
+The two days in the water were mostly comprised of mock rescue scenarios, where Ric, or other DM’s on hand, would start screaming *Pizza! Pizza!* (it’s bad etiquette to actually yell for help when other divers are present, so an unwavering love for pizza became the call for help). Kai and I would then have to rescue them from a number of situations: unconscious diver at the surface, unconscious diver underwater, panicked diver, etc.
 
-In addition to the rescue scenarios, we also were taught search and
-recovery patterns. One patter in particular we performed is a circular
-search. This rescue pattern is used when the conditions and visibility
-are bad and there are limited divers on hand. The search pattern is
-performed by one person sitting in a fixed location and feeding string
-to another diver who swims circular around the diver. Each time the
-search diver completes a full rotation around the stationary diver, the
-rope is lengthened another meter, and the search pattern is continued
-until the missing person or object is found. The task seemed easy
-enough: *hold on to a rope and stay in one spot while Kai swims around
-me. Not so bad*, I thought. Wrong.
+In addition to the rescue scenarios, we also were taught search and recovery patterns. One patter in particular we performed is a circular search. This rescue pattern is used when the conditions and visibility are bad and there are limited divers on hand. The search pattern is performed by one person sitting in a fixed location and feeding string to another diver who swims circular around the diver. Each time the search diver completes a full rotation around the stationary diver, the rope is lengthened another meter, and the search pattern is continued until the missing person or object is found. The task seemed easy enough: *hold on to a rope and stay in one spot while Kai swims around me. Not so bad*, I thought. Wrong.
 
-Ric, wanting to make the exercise more difficult made us perform the
-search pattern with our masks off. Additionally, while Kai and I
-performed the search, a third diver swam in the area kicking up as much
-sand as possible, thus making the visibility next to zero and getting
-more than a little in our eyes.
+Ric, wanting to make the exercise more difficult made us perform the search pattern with our masks off. Additionally, while Kai and I performed the search, a third diver swam in the area kicking up as much sand as possible, thus making the visibility next to zero and getting more than a little in our eyes.
 
-I originally thought I wouldn’t have a problem taking my mask off
-underwater. I had done it successfully in my open water course. However,
-after about a minute of sitting stationary feeding Kai a rope, I started
-to feel panicked, mostly because the bubbles from my regulator were
-going up my nose coupled with how irritated my eyes were. One minute
-seemed like an eternity and I wanted nothing more than to bolt to the
-surface. Instead, I just froze, and Kai ended up dragging me around by
-the rope we were using for searching, which was a problem as I was
-supposed to be directing him. Ric noted my anxiety and instructed us all
-to return to the surface.
+I originally thought I wouldn’t have a problem taking my mask off underwater. I had done it successfully in my open water course. However, after about a minute of sitting stationary feeding Kai a rope, I started to feel panicked, mostly because the bubbles from my regulator were going up my nose coupled with how irritated my eyes were. One minute seemed like an eternity and I wanted nothing more than to bolt to the surface. Instead, I just froze, and Kai ended up dragging me around by the rope we were using for searching, which was a problem as I was supposed to be directing him. Ric noted my anxiety and instructed us all to return to the surface.
 
-Back at the surface he explained what I could do to help my problem with
-the bubbles: turn my head to the side as I exhaled so the bubbles would
-miss my nose. Then he had us descend again and start the search over.
-After about 5 minutes of searching, Kai found the object, which happened
-to be a weight resting on the ground. Once Kai found the object, we
-switched roles and performed the search one more time. By this point I
-was feeling pretty comfortable swimming around with my mask off, though
-my eyes were bright red and stinging.
+Back at the surface he explained what I could do to help my problem with the bubbles: turn my head to the side as I exhaled so the bubbles would miss my nose. Then he had us descend again and start the search over. After about 5 minutes of searching, Kai found the object, which happened to be a weight resting on the ground. Once Kai found the object, we switched roles and performed the search one more time. By this point I was feeling pretty comfortable swimming around with my mask off, though my eyes were bright red and stinging.
 
-The final of the course was spent back in Semporna practicing CPR on a
-life-sized mannequin dressed in a well-worn 1980’s running suit named
-Annie. The doll is specially designed to function like an actual person
-so you are able to practice chest compressions and rescue breathing
-without actually having to break someone’s ribs. Her chest rises and
-falls with rescue breaths when given correctly, giving you feedback on
-your rescue performance. It was nice to be able to practice without the
-pressure of having to actually save someone, but it was difficult to
-keep a straight face while Ric pantomimed in a high-pitched woman’s
-voice on behalf of Annie.
+The final of the course was spent back in Semporna practicing CPR on a life-sized mannequin dressed in a well-worn 1980’s running suit named Annie. The doll is specially designed to function like an actual person so you are able to practice chest compressions and rescue breathing without actually having to break someone’s ribs. Her chest rises and falls with rescue breaths when given correctly, giving you feedback on your rescue performance. It was nice to be able to practice without the pressure of having to actually save someone, but it was difficult to keep a straight face while Ric pantomimed in a high-pitched woman’s voice on behalf of Annie.
 
-Most of what we learned in the rescue course was about using common
-sense and recognizing problems before they occur. It feels good,
-however, to know what to do if an actual emergency were to occur. The
-rescue course was money and time well spent for both of us, not to
-mention a lot of fun. So much so that I am considering going back to
-become a divemaster later this year.
+Most of what we learned in the rescue course was about using common sense and recognizing problems before they occur. It feels good, however, to know what to do if an actual emergency were to occur. The rescue course was money and time well spent for both of us, not to mention a lot of fun. So much so that I am considering going back to become a divemaster later this year.
 
 <a href="/images/116.jpg" class="thickbox"
 title="A cute little Anemone Shrimp."><img
@@ -579,12 +354,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

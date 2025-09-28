@@ -1,30 +1,9 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
-
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a
-  href="http://somedaynevercomes.com/article/out-with-the-old-in-with-the-new"
-  rel="next" title="Out With The Old, In With The New"><span>Next
-  </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/the-borneo-highlands"
-  rel="prev" title="The Borneo Highlands"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Computer Woes
-
-## Saturday July 22, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Site-News/"
-rel="tag">Site-News</a> | Comments:
-[8](#comments "Jump To Entry Comments") | Written By: [Kai
-Conragan](/about/ "Learn More About The Author")
+---
+date: 2006-07-22T11:42:40-08:00
+title: "Computer Woes"
+type: post
+isPublic: false
+---
 
 Well, after 5 solid years of use, and now 4 months of hard travel
 through Southeast Asia, our Titanium Powerbook has finally bit the
@@ -279,12 +258,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

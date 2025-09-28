@@ -1,26 +1,9 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
-
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/were-off" rel="next"
-  title="We&#39;re Off!!!"><span>Next </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/general-travel-tips-1"
-  rel="prev" title="General Travel Tips #1"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Gear: Kelty Redwing 3100
-
-## Saturday February 11, 2006
-
-Posted In: | Comments: [0](#comments "Jump To Entry Comments") | Written
-By: [Kai Conragan](/about/ "Learn More About The Author")
+---
+date: 2006-02-11T11:42:40-08:00
+title: "Gear: Kelty Redwing 3100"
+type: post
+isPublic: false
+---
 
 After many trips to the various stores in my area and having checked out
 a number of bags, I’ve finally settled on the Kelty Redwing 3100 as my
@@ -117,12 +100,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

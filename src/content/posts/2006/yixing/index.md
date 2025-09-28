@@ -1,27 +1,9 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
-
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/catching-up" rel="next"
-  title="Catching Up"><span>Next </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/sea-of-bamboo" rel="prev"
-  title="Sea of Bamboo"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Yixing
-
-## Monday September 18, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/China/"
-rel="tag">China</a> | Comments: [14](#comments "Jump To Entry Comments")
-| Written By: [Kai Conragan](/about/ "Learn More About The Author")
+---
+date: 2006-09-18T11:42:40-08:00
+title: "Yixing"
+type: post
+isPublic: false
+---
 
 The bus comes to a sudden stop along the side of the freeway and the
 driver motions for us to get off. Confused, we look around and, not
@@ -790,12 +772,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

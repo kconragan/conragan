@@ -1,3 +1,10 @@
+---
+date: 2006-06-15T11:42:40-08:00
+title: "Something Seems Different. Did You Lose Weight?"
+type: post
+isPublic: false
+---
+
 [Skip to Navigation](#globalnav) | [Skip to Content](#content)
 
 Someday Never Comes - A Travel Blog
@@ -243,12 +250,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

@@ -1,27 +1,9 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
-
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/computer-woes" rel="next"
-  title="Computer Woes"><span>Next </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/semporna" rel="prev"
-  title="Semporna"><span>Previous</span></a></span>
-
-Latest Entry
-
-# The Borneo Highlands
-
-## Thursday July 13, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Borneo/"
-rel="tag">Borneo</a> | Comments: [9](#comments "Jump To Entry Comments")
-| Written By: [Kai Conragan](/about/ "Learn More About The Author")
+---
+date: 2006-07-13T11:42:40-08:00
+title: "The Borneo Highlands"
+type: post
+isPublic: false
+---
 
 Riding in the back of a Toyota pick-up truck headed back to Kuching, the
 rugged mountains—densely covered by lush, green vegetation—grow ever
@@ -865,12 +847,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

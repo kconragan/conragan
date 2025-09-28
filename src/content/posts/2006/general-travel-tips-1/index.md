@@ -1,26 +1,9 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
-
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/gear-kelty-redwing-3100"
-  rel="next" title="Gear: Kelty Redwing 3100"><span>Next </span></a></span>
-
-- 
-
-Latest Entry
-
-# General Travel Tips \#1
-
-## Tuesday February 7, 2006
-
-Posted In: | Comments: [2](#comments "Jump To Entry Comments") | Written
-By: [Kai Conragan](/about/ "Learn More About The Author")
+---
+date: 2006-02-07T11:42:40-08:00
+title: "General Travel Tips"
+type: post
+isPublic: false
+---
 
 Based on a discussion at [Bootsnall](http://bootsnall.com), I’ve
 compiled a list of some of the tips I found in useful for general,
@@ -32,26 +15,10 @@ at Uluwatu.</span>
 
 - Bring a small, wedge-shaped rubber door stop. This, coupled with any
   quality lock, will pretty much guarantee no one can enter your room.
-
-<!-- -->
-
 - Bring several sturdy zip-lock bags.
-
-<!-- -->
-
 - Bring a universal drain stopper plug.
-
-<!-- -->
-
 - Lavender oil is rumored to repel bed bugs.
-
-<!-- -->
-
-- Keep your passport in a sealable, clear plastic sleeve. These can
-  easily be found at most local camera stores.
-
-<!-- -->
-
+- Keep your passport in a sealable, clear plastic sleeve. These can easily be found at most local camera stores.
 - Gold Bond Medicated Powder is a godsend.
 
 #### <span id="comment">Comments</span>
@@ -162,12 +129,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

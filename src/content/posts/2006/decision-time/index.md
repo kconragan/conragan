@@ -1,128 +1,34 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
+---
+date: 2006-05-31T11:42:40-08:00
+title: "Decision Time"
+type: post
+isPublic: false
+---
 
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/more-bali-highlights"
-  rel="next" title="More Bali Highlights"><span>Next </span></a></span>
-- <span id="prev"><a
-  href="http://somedaynevercomes.com/article/diving-the-east-coast-of-bali"
-  rel="prev"
-  title="Diving the East Coast of Bali"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Decision Time
-
-## Wednesday May 31, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Indonesia/"
-rel="tag">Indonesia</a> | Comments:
-[19](#comments "Jump To Entry Comments") | Written By: [Kai
-Conragan](/about/ "Learn More About The Author")
-
-We’re in Ubud right now. Things have been busy the past two weeks – in a
-good way – and we both felt the need to get away to somewhere quiet and
-spend a few days regrouping. It’s hard to believe that we’ve been
-traveling for over 70 days. Our time, especially here in Bali, has been
-filled with diving, snorkeling, surfing, incredible food, wonderful
-people, exotic ceremonies, white-knuckled driving, but not a lot of time
-to sit and reflect about all of these experiences. Thus, we decided to
-head for the hills, find a quiet bungalow, and spend a few days sipping
-coffee and tea and taking walks through the region in order to slow
-things down and spend some time reflecting, as well as looking forward.
+We’re in Ubud right now. Things have been busy the past two weeks – in a good way – and we both felt the need to get away to somewhere quiet and spend a few days regrouping. It’s hard to believe that we’ve been traveling for over 70 days. Our time, especially here in Bali, has been filled with diving, snorkeling, surfing, incredible food, wonderful people, exotic ceremonies, white-knuckled driving, but not a lot of time to sit and reflect about all of these experiences. Thus, we decided to head for the hills, find a quiet bungalow, and spend a few days sipping coffee and tea and taking walks through the region in order to slow things down and spend some time reflecting, as well as looking forward.
 
 <a href="/images/54.jpg" class="thickbox"
 title="An offering is made at sunset, Bingin Beach, Bali."><img
 src="http://somedaynevercomes.com/images/54t.jpg" /></a><span class="caption">An
 offering is made at sunset, Bingin Beach, Bali.</span>
 
-We have 10 days left in Bali, at which time our visa expires and we need
-to make some decisions about what to do next. Our original intent was to
-leave Bali and head for Malaysia, making our way up the Malay peninsula
-and into Thailand. This is still our general itinerary, but we’re
-rethinking things a bit. Indonesia is just getting into it’s dry season,
-as is Malaysia. This is a good thing. If we head further north now,
-we’ll quickly hit the wet season in Thailand, as in Cambodia, Vietnam,
-Laos, and Bhurma. This is a bad thing. We’re not put off by a little bit
-of rain, but the rain brings brings mosquitos which brings Malaria.
+We have 10 days left in Bali, at which time our visa expires and we need to make some decisions about what to do next. Our original intent was to leave Bali and head for Malaysia, making our way up the Malay peninsula and into Thailand. This is still our general itinerary, but we’re rethinking things a bit. Indonesia is just getting into it’s dry season, as is Malaysia. This is a good thing. If we head further north now, we’ll quickly hit the wet season in Thailand, as in Cambodia, Vietnam, Laos, and Bhurma. This is a bad thing. We’re not put off by a little bit of rain, but the rain brings brings mosquitos which brings Malaria.
 
 Malaria.
 
-It’s simply astonishing how much conflicting information there is out
-there about Malaria. I have poured over government health websites,
-travel forums, guide books, spoke with health workers, other travelers,
-and still haven’t been able to get a comprehensive view of the best way
-to deal with Malaria. The only summary I can give that seems to be
-without conflict: The best way to prevent Malaria is to not get bit, and
-if you do get bit, no prophylactic is 100% effective. Wonderful. Did I
-mention side-effects?
+It’s simply astonishing how much conflicting information there is out there about Malaria. I have poured over government health websites, travel forums, guide books, spoke with health workers, other travelers, and still haven’t been able to get a comprehensive view of the best way to deal with Malaria. The only summary I can give that seems to be without conflict: The best way to prevent Malaria is to not get bit, and if you do get bit, no prophylactic is 100% effective. Wonderful. Did I mention side-effects?
 
-Before we left for our trip, we each got a 3 month supply of
-Doxycycline. Neither of us wanted Larium as it increases the likelihood
-of getting bent when diving, not to mention it is an opiate (though
-people do pay good money for that) that has been linked to suicidal
-thoughts and horrible nightmares. Also, many regions in Southeast Asia
-have Larium-resistant strains of Malaria, the result of misuse of the
-drug. Malarone, which is the new kid on the block, has none of the side
-effects of Larium and is new enough where resistance hasn’t been
-established yet, but it’s extremely expensive and would have cost us
-each several thousand dollars to buy enough pills to last us for the
-trip. That pretty much left us with Doxycycline, a general antibiotic
-that kills the good with the bad and leaves 10% of people with extreme
-sun sensitivity. I can almost see the freckles on my arm laughing at me
-as I type this.
+Before we left for our trip, we each got a 3 month supply of Doxycycline. Neither of us wanted Larium as it increases the likelihood of getting bent when diving, not to mention it is an opiate (though people do pay good money for that) that has been linked to suicidal thoughts and horrible nightmares. Also, many regions in Southeast Asia have Larium-resistant strains of Malaria, the result of misuse of the drug. Malarone, which is the new kid on the block, has none of the side effects of Larium and is new enough where resistance hasn’t been established yet, but it’s extremely expensive and would have cost us each several thousand dollars to buy enough pills to last us for the trip. That pretty much left us with Doxycycline, a general antibiotic that kills the good with the bad and leaves 10% of people with extreme sun sensitivity. I can almost see the freckles on my arm laughing at me as I type this.
 
-Almost all travelers we’ve met on this trip so far, including a Human
-Pathologist, have told us not to take the Doxycycline as a prophylactic.
-It’s a shotgun approach that does more harm than good and isn’t
-guaranteed to work anyway. A number of people have recommended taking
-Chloroquine coupled with either Paludrin or Proguanil. Maybe I’ll just
-rub citronella oil all over my body and run naked through the jungle.
+Almost all travelers we’ve met on this trip so far, including a Human Pathologist, have told us not to take the Doxycycline as a prophylactic. It’s a shotgun approach that does more harm than good and isn’t guaranteed to work anyway. A number of people have recommended taking Chloroquine coupled with either Paludrin or Proguanil. Maybe I’ll just rub citronella oil all over my body and run naked through the jungle.
 
-Anyhow, with the wet season in hitting full swing further north, we’ve
-considered our options and have come up with 3 possible itineraries.
-They are:
+Anyhow, with the wet season in hitting full swing further north, we’ve considered our options and have come up with 3 possible itineraries. They are:
 
-- Continue on with our original plan by heading to Malaysia and working
-  our way up to Thailand. In other words, quit worrying about Malaria
-  and the perfect time to be places. We could spend a month working our
-  way through Malaysia, and the better part of a month in Southern
-  Thailand, where it is malarial free (only the northern part of
-  Thailand, where it borders with Cambodia, is known to be Malarial). We
-  could then move north as the wet season diminishes.
+- Continue on with our original plan by heading to Malaysia and working our way up to Thailand. In other words, quit worrying about Malaria and the perfect time to be places. We could spend a month working our way through Malaysia, and the better part of a month in Southern Thailand, where it is malarial free (only the northern part of Thailand, where it borders with Cambodia, is known to be Malarial). We could then move north as the wet season diminishes.
+- We could fly to Kuala Lumpur and head right back to Indonesia for another 1 month visa. The problem is that, as much as we love it here, after two months in Bali we both feel ready to move on. We could, however, go visit some of the other islands. One idea is to fly to Flores, and then work our way back to Bali by bus and ferry over the course of several weeks. This would allow us to see the fabled colored lakes of Flores, the Kimodo Dragons of, err, Komodo, and the rice terraces and volcanoes of Lombok. These islands are all malarial but it is the dry season so risk is pretty low.
+- Lastly, we could fly to China, and work our way down through Southeast Asia instead of up. China is a big place and summer is a good time of year to be there. After our visa in China expires we could head for Thailand, via Laos or Cambodia.
 
-<!-- -->
-
-- We could fly to Kuala Lumpur and head right back to Indonesia for
-  another 1 month visa. The problem is that, as much as we love it here,
-  after two months in Bali we both feel ready to move on. We could,
-  however, go visit some of the other islands. One idea is to fly to
-  Flores, and then work our way back to Bali by bus and ferry over the
-  course of several weeks. This would allow us to see the fabled colored
-  lakes of Flores, the Kimodo Dragons of, err, Komodo, and the rice
-  terraces and volcanoes of Lombok. These islands are all malarial but
-  it is the dry season so risk is pretty low.
-
-<!-- -->
-
-- Lastly, we could fly to China, and work our way down through Southeast
-  Asia instead of up. China is a big place and summer is a good time of
-  year to be there. After our visa in China expires we could head for
-  Thailand, via Laos or Cambodia.
-
-Anyone have any thoughts or opinions on our next move? In the meantime,
-I’m heading to G-Land for 4 days to surf the wave of my dreams. I’ve
-done quite a bit of research and everything seems to be fine in G-Land,
-with no problems from the earthquake and no real threat from the
-volcano. Julie will be hanging back in Bali for this one. As nice as a
-camp in the jungle with a bunch of surfers and snakes sounds, she’s not
-too keen.
+Anyone have any thoughts or opinions on our next move? In the meantime, I’m heading to G-Land for 4 days to surf the wave of my dreams. I’ve done quite a bit of research and everything seems to be fine in G-Land, with no problems from the earthquake and no real threat from the volcano. Julie will be hanging back in Bali for this one. As nice as a camp in the jungle with a bunch of surfers and snakes sounds, she’s not too keen.
 
 #### <span id="comment">Comments</span>
 
@@ -583,12 +489,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

@@ -1,30 +1,9 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
-
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a
-  href="http://somedaynevercomes.com/article/living-and-diving-in-semporna"
-  rel="next" title="Living and Diving in Semporna"><span>Next </span></a></span>
-- <span id="prev"><a
-  href="http://somedaynevercomes.com/article/throw-momma-from-the-train"
-  rel="prev" title="Throw Momma From the Train"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Semporna Revisited
-
-## Sunday December 10, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Borneo/"
-rel="tag">Borneo</a> | Comments:
-[21](#comments "Jump To Entry Comments") | Written By: [Julie
-Brookman](/about/ "Learn More About The Author")
+---
+date: 2006-12-10T11:42:40-08:00
+title: "Semporna Revisted"
+type: post
+isPublic: false
+---
 
 Semporna: Philippine children—homeless refugees—begging for food;
 too-loud karaoke machines; stray dogs in the streets, not all of them
@@ -601,12 +580,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

@@ -1,28 +1,9 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
-
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/decision-time" rel="next"
-  title="Decision Time"><span>Next </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/3-days-in-singapore"
-  rel="prev" title="3 Days in Singapore"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Diving the East Coast of Bali
-
-## Sunday May 21, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/Indonesia/"
-rel="tag">Indonesia</a> | Comments:
-[10](#comments "Jump To Entry Comments") | Written By: [Kai
-Conragan](/about/ "Learn More About The Author")
+---
+date: 2006-05-21T11:42:40-08:00
+title: "Diving The East Coast Of Bali"
+type: post
+isPublic: false
+---
 
 Fresh from our visa renewal in Singapore, we’ve spent the past week on
 the east coast of Bali in Candidasa earning our Advanced Open Water
@@ -473,12 +454,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  

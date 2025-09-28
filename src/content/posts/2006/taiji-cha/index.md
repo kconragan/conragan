@@ -1,27 +1,10 @@
-[Skip to Navigation](#globalnav) | [Skip to Content](#content)
+---
+date: 2006-09-05T11:42:40-08:00
+title: "Taiji Cha"
+type: post
+isPublic: false
+---
 
-Someday Never Comes - A Travel Blog
-
-- <span id="home-btn">[Home](/ "Homepage")</span>
-- <span id="words-btn"><a href="/archives/" class="active"
-  title="View Site Archives"><span>Archives</span></a></span>
-- <span id="photos-btn">[Gallery](/gallery/ "Photos Taken On Our Trip")</span>
-- <span id="about-btn">[About](/about/ "View Site Archives")</span>
-
-- <span id="next"><a href="http://somedaynevercomes.com/article/dragonwell" rel="next"
-  title="Dragonwell"><span>Next </span></a></span>
-- <span id="prev"><a href="http://somedaynevercomes.com/article/shanghai" rel="prev"
-  title="Shanghai"><span>Previous</span></a></span>
-
-Latest Entry
-
-# Taiji Cha
-
-## Tuesday September 5, 2006
-
-Posted In: <a href="http://somedaynevercomes.com/category/China/"
-rel="tag">China</a> | Comments: [7](#comments "Jump To Entry Comments")
-| Written By: [Kai Conragan](/about/ "Learn More About The Author")
 
 Previously we [linked to a NY Times article featuring a unique teahouse
 in Hangzhou](http://somedaynevercomes.com/article/a-prelude-to-china).
@@ -47,7 +30,6 @@ them to give us a few demonstrations of all the different poses
 involved. The video shows more clearly just how much movement is
 involved.
 
-  
 For the record, the name of the style used at the teahouse is *Taiji
 Cha*. *Taiji* is the well-known martial arts form from China, and *cha*
 simply means tea.
@@ -276,12 +258,11 @@ rel="bookmark">Yixing</a>
 class="comments_invite">Comments</a> \[14\]
 
 ##### <img src="/media/interface/rss-icon.gif"
+
 style="vertical-align: middle; margin: -1px 4px 3px 0" width="16"
 height="16" />Subscribe Via:  [RSS](http://www.somedaynevercomes.com/rss/ "xml_feed_title") or [Atom](http://www.somedaynevercomes.com/atom/ "xml_feed_title")
 
 ### Latest Photos
-
- 
 
 All Photos and Content © Kai Conragan and Julie Brookman. All Rights
 Reserved.  
