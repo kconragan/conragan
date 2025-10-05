@@ -2,6 +2,9 @@
   "name": "astro-conragan",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=18.20.8"
+  },
   "scripts": {
     "dev": "concurrently \"astro dev\" \"nodemon -L --watch 'src/photography/**' --ext 'jpg,jpeg,png,gif' --exec 'node image-exif.js'\"",
     "build": "astro build",
