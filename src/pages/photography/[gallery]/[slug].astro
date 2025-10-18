@@ -2,7 +2,7 @@
 // Imports and Type Definitions
 import Base from '../../../layouts/Base.astro';
 import { Image } from 'astro:assets';
-import imageData from '../../../image-data.json';
+import { loadImageData } from '../../../utils/imageDataLoader.js';
 
 /**
  * Props for the Single Photography Image component.
@@ -50,24 +50,21 @@ const formatDate = (dateString: string): string => {
 
 // Define a type for the imageData JSON
 interface ImageDataEntry {
-    Headline?: { description?: string };
-    Make?: { description?: string };
-    Model?: { description?: string };
-    LensModel?: { description?: string };
-    FocalLength?: { description?: string };
-    FNumber?: { description?: string };
-    ExposureTime?: { description?: string };
-    ISOSpeedRatings?: { description?: string };
-    DateTimeOriginal?: { value: string[] };
+    Headline?: string;
+    Make?: string;
+    Model?: string;
+    LensModel?: string;
+    FocalLength?: string;
+    FNumber?: string;
+    ExposureTime?: string;
+    ISOSpeedRatings?: string;
+    DateTimeOriginal?: string;
     [key: string]: any; // Allow other properties
 }
 
 interface ImageData {
     [key: string]: ImageDataEntry;
 }
-
-// Narrowly type the import, then expand to any
-const typedImageData: ImageData = imageData as any;
 
 /**
  * Generates static paths for the photography image pages.
@@ -86,6 +83,15 @@ export async function getStaticPaths() {
   //   - Values: Functions returning Promises that resolve to the image module.
   const allImages = import.meta.glob<{ default: ImageMetadata }>('../../../photography/*/*.{jpg,jpeg,png,gif}');
 
+  // Load all gallery data
+  const galleryNames = ['birds-wildlife', 'equestrian', 'landscape', 'mavericks', 'travel'];
+  const allImageData: ImageData = {};
+
+  for (const galleryName of galleryNames) {
+    const galleryData = await loadImageData(galleryName);
+    Object.assign(allImageData, galleryData);
+  }
+
   // Array to store the generated paths.
   const paths: { params: { gallery: string; slug: string }; props: Props }[] = [];
 
@@ -98,7 +104,7 @@ export async function getStaticPaths() {
       const gallery = parts.at(-2) as string;
       const slugWithExtension = parts.at(-1) as string;
       const slug = slugWithExtension?.split('.')[0] || ''; // Remove extension
-      const transformedImagePath = path.replace('../../../photography/', 'src/photography/');
+      const transformedImagePath = path.replace('../../../photography/', '');
 
       // Get the image module function.
       const imageModule = allImages[path];
@@ -121,11 +127,14 @@ export async function getStaticPaths() {
 // Component Logic
 const { gallery, slug, imagePath, imageModule } = Astro.props;
 
+// Load gallery data for this specific gallery
+const galleryData = await loadImageData(gallery);
+
 // Retrieve image EXIF data using the imagePath.
-const imageEXIF = typedImageData[imagePath];
+const imageEXIF = galleryData[imagePath];
 
 //Get paths to sibling images.
-const galleryImagePaths = Object.keys(typedImageData).filter(path => path.startsWith(`src/photography/${gallery}`));
+const galleryImagePaths = Object.keys(galleryData);
 
 // Find the index of the current image in the gallery
 const currentIndex = galleryImagePaths.indexOf(imagePath);
@@ -167,49 +176,49 @@ const nextImagePath = galleryImagePaths[currentIndex + 1] || null;
           </a>
         </div>
       </nav>
-      <h1 class="photo-title fade-in">{imageEXIF.Headline?.description ?? slug}</h1>
+      <h1 class="photo-title fade-in">{imageEXIF?.Headline ?? slug}</h1>
       <h2 class="camera-make">
-        {imageEXIF.Make?.description ? (
+        {imageEXIF?.Make ? (
           <>
-            {imageEXIF.Make.description}
-            {imageEXIF.Model?.description ? (
+            {imageEXIF.Make}
+            {imageEXIF.Model ? (
               <>
-                / {imageEXIF.Model.description}
-                {imageEXIF.LensModel?.description ? ` ${imageEXIF.LensModel.description}` : null}
+                / {imageEXIF.Model}
+                {imageEXIF.LensModel ? ` ${imageEXIF.LensModel}` : null}
               </>
             ) : null}
           </>
         ) : null}
       </h2>
       <dl id="exif">
-        {imageEXIF.FocalLength && imageEXIF.FocalLength.description && (
+        {imageEXIF?.FocalLength && (
           <>
             <dt>Focal Length</dt>
-            <dd>{imageEXIF.FocalLength.description}</dd>
+            <dd>{imageEXIF.FocalLength}</dd>
           </>
         )}
-        {imageEXIF.FNumber && imageEXIF.FNumber.description && (
+        {imageEXIF?.FNumber && (
           <>
             <dt>Aperture</dt>
-            <dd>{imageEXIF.FNumber.description}</dd>
+            <dd>{imageEXIF.FNumber}</dd>
           </>
         )}
-        {imageEXIF.ExposureTime && imageEXIF.ExposureTime.description && (
+        {imageEXIF?.ExposureTime && (
           <>
             <dt>Exposure Time</dt>
-            <dd>{imageEXIF.ExposureTime.description}</dd>
+            <dd>{imageEXIF.ExposureTime}</dd>
           </>
         )}
-        {imageEXIF.ISOSpeedRatings && imageEXIF.ISOSpeedRatings.description && (
+        {imageEXIF?.ISOSpeedRatings && (
           <>
             <dt>ISO</dt>
-            <dd>{imageEXIF.ISOSpeedRatings.description}</dd>
+            <dd>{imageEXIF.ISOSpeedRatings}</dd>
           </>
         )}
-        {imageEXIF.DateTimeOriginal && imageEXIF.DateTimeOriginal.value && (
+        {imageEXIF?.DateTimeOriginal && (
           <>
             <dt>Captured</dt>
-            <dd>{formatDate(imageEXIF.DateTimeOriginal.value[0])}</dd>
+            <dd>{formatDate(imageEXIF.DateTimeOriginal)}</dd>
           </>
         )}
       </dl>

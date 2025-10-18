@@ -2,7 +2,7 @@
 import { Picture } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import imageData from '../../image-data.json';
+import { loadImageData } from '../../utils/imageDataLoader.js';
 
 /**
  * Generates static paths for each photography gallery.
@@ -17,6 +17,11 @@ export async function getStaticPaths() {
 }
 
 const { gallery } = Astro.props;
+
+/**
+ * Load EXIF data for this specific gallery
+ */
+const imageData = await loadImageData(gallery.data.name);
 
 /**
  * Imports all images from the photography galleries.
@@ -77,14 +82,10 @@ function getImageOrientation(width: number, height: number): 'portrait' | 'lands
 // Define a type for the imageData JSON
 interface ImageData {
   [key: string]: {
-    Headline?: {
-      description?: string;
-    };
+    Headline?: string;
     [key: string]: any; // Allow other properties
   };
 }
-
-const typedImageData: ImageData = imageData; // Type cast imageData to ImageData
 
 ---
 
@@ -92,9 +93,9 @@ const typedImageData: ImageData = imageData; // Type cast imageData to ImageData
   <h1 class="gallery-title">{gallery.data.title}</h1>
   <ul id="photos" class="photo-grid">
     {imageList.map((image) => {
-      const imagePath = `src/photography/${gallery.data.name}/${image.slug}.jpg`;
-      // Use the typed imageData and optional chaining to safely access the description.
-      const imageEXIF = typedImageData[imagePath];
+      const imagePath = `${gallery.data.name}/${image.slug}.jpg`;
+      // Use the imageData and optional chaining to safely access the headline.
+      const imageEXIF = imageData[imagePath];
       const orientation = getImageOrientation(image.src.width, image.src.height);
 
       return (
@@ -104,9 +105,9 @@ const typedImageData: ImageData = imageData; // Type cast imageData to ImageData
               <Picture src={image.src}
                        width="600"
                        formats={['avif', 'webp']}
-                       alt={imageEXIF?.Headline?.description ?? 'View'} />
+                       alt={imageEXIF?.Headline ?? 'View'} />
               <figcaption>
-                {imageEXIF?.Headline?.description ?? 'View Image'}
+                {imageEXIF?.Headline ?? 'View Image'}
               </figcaption>
             </figure>
           </a>
