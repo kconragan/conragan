@@ -1,0 +1,64 @@
+---
+title: "Connect Garmin Dive Computer To Arch Linux"
+date: 2025-09-27T20:30:35Z
+isPublic: false
+tags: ["garmin", "scuba", "diving", "linux", "arch"]
+---
+
+I use a [Garmin Mk3i dive](https://www.garmin.com/en-US/p/852159/) computer. While I generally like the [Garmin Dive app](https://www.garmin.com/en-US/p/707742/#devices), I don't want to be locked into one platform to log my dives. Thus, I use [Subsurface](https://subsurface-divelog.org/) as my central repository (though it could use some UI love), which works with a number of manufacturers and runs on multiple platforms (including Linux). Subsurface is also where I export my data from that I use to publish my [dive logs](/blog/logbook/) to this site.
+
+However, connecting the Garmin initially was a bit confusing. Here are the steps that ended up working for me.
+
+### 1. Install Tools
+
+Install the necessary MTP and FUSE libraries from the Arch repositories.
+
+```bash
+sudo pacman -S libmtp jmtpfs
+```
+
+### 2. Set Device Permissions with `udev`
+
+Create a `udev` rule to grant your user account access to the watch's USB device. This allows user-space tools to claim the interface.
+
+**Finding Device IDs:** To find the `idVendor` and `idProduct` for any USB device, connect it and run `lsusb`. Look for the line corresponding to your device:
+
+```bash
+❯ lsusb
+...
+Bus 001 Device 007: 091e:507e Garmin International
+...
+```
+
+Here, `091e` is the `idVendor` and `507e` is the `idProduct`.
+
+**Create the rule file:**
+
+Create a new file at `/etc/udev/rules.d/51-garmin-mtp.rules` and add this line:
+
+```bash
+ATTRS{idVendor}=="091e", ATTRS{idProduct}=="507e", MODE="0666"
+```
+
+`MODE="0666"` sets the permission model for the device file Linux creates (e.g. `/dev/bus/usb/001/007`). `666` makees the device file readable and writable.
+
+Finally, reload the `udev` rules for the change to take effect.
+
+```bash
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+### 3. Mount and unmount workflow
+
+Create a mount point for the Garmin device to connect (you only have to do this once), then use the `mount` and `unmount`
+
+```bash
+# Create a permanent mount point in your home directory
+mkdir -p ~/Garmin
+
+# To mount (eject from file manager if it auto-mounts first)
+jmtpfs ~/Garmin
+
+# To unmount when you're done
+fusermount -u ~/Garmin
+```
