@@ -12,12 +12,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.6",
-    "@astrojs/rss": "^4.0.12",
+    "@astrojs/mdx": "^4.3.8",
+    "@astrojs/rss": "^4.0.13",
     "@astrojs/sitemap": "^3.6.0",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/tailwind": "^6.0.2",
     "@atproto/api": "^0.16.9",
-    "astro": "^5.14.1",
+    "astro": "^5.15.1",
     "chart.js": "^4.5.0",
     "chartjs-plugin-datalabels": "^2.2.0",
     "date-fns": "^4.1.0",
