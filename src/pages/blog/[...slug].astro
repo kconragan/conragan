@@ -67,8 +67,8 @@ const humanFriendlyDate = format(post.data.date, 'MMMM dd, yyyy');
         {/* Logic is now based on `post.collection` instead of `post.data.type` */}
         {post.collection === 'links' ? (
           <h1 class="title p-name">
-            <a href={post.data.externalUrl} class="u-url external-link" target="_blank" rel="noopener noreferrer">
-              {post.data.title} ↗
+            <a href={post.data.externalURL} class="u-url external-link" title="Visit external link" target="_blank" rel="noopener noreferrer">
+              <span class="icon">&gt;</span>{post.data.title}
             </a>
           </h1>
         ) : (
