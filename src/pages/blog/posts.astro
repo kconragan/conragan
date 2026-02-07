@@ -37,15 +37,8 @@ type Post = CollectionEntry<'posts'>;
           <li>
             <article class="h-entry">
               <h2 class="title p-name">
-                {/* The conditional logic for the title is still needed for link posts */}
-                <a
-                  href={post.data.externalURL}
-                  class="u-url external-link"
-                  title="Visit external link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span class="icon">&gt;</span>{post.data.title}
+                <a href={permalink}>
+                  {post.data.title}
                 </a>
               </h2>
 
